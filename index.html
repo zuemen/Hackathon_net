@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trustworthy AI Hackathon｜可信 AI 黑客松｜TABEI</title>
+    <meta
+      name="description"
+      content="Trustworthy AI Hackathon｜可信 AI 黑客松，2026/08/29-31 於 N24 台北方舟舉行，聚焦 AI Agent 的身份、授權、驗證、隱私、安全與問責。"
+    />
+    <meta property="og:title" content="Trustworthy AI Hackathon｜可信 AI 黑客松" />
+    <meta
+      property="og:description"
+      content="Building the trust layer for the AI-Agent economy. 兩天一夜黑客松＋第三日 Demo Day。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/og-trustworthy-ai-hackathon.svg" />
+    <meta name="theme-color" content="#0C1A2B" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要內容</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#hero" aria-label="Trustworthy AI Hackathon">
+          <span class="brand-mark" aria-hidden="true">T</span>
+          <span>
+            <strong>TABEI</strong>
+            <small>Trustworthy AI Hackathon</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+          <span></span><span></span><span></span>
+          <span class="sr-only">開啟選單</span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="主要導覽">
+          <a href="#why" data-zh="Why Now" data-en="Why Now">Why Now</a>
+          <a href="#format" data-zh="流程" data-en="Format">流程</a>
+          <a href="#tracks" data-zh="賽道" data-en="Tracks">賽道</a>
+          <a href="#rules" data-zh="規則" data-en="Rules">規則</a>
+          <a href="#prizes" data-zh="獎項" data-en="Prizes">獎項</a>
+          <a href="#partners" data-zh="夥伴" data-en="Partners">夥伴</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="language-toggle" aria-label="語言切換">
+            <button type="button" data-lang-button="zh">中</button>
+            <button type="button" class="is-active" data-lang-button="en">EN</button>
+          </div>
+          <a class="button button-small button-primary" href="#contact" data-zh="報名 Coming Soon" data-en="Registration Coming Soon">報名 Coming Soon</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="hero">
+        <div class="network-bg" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Trustworthy AI Hackathon</p>
+            <h1>可信 AI 黑客松</h1>
+            <p class="hero-subtitle">Building the trust layer for the AI-Agent economy</p>
+            <p class="hero-lede" data-zh="當 AI Agent 開始代表人或組織執行任務，身份、授權、行動邊界與追溯機制必須被清楚設計。" data-en="When AI Agents start acting for people or organizations, identity, authorization, action boundaries and auditability must be designed clearly.">
+              當 AI Agent 開始代表人或組織執行任務，身份、授權、行動邊界與追溯機制必須被清楚設計。
+            </p>
+            <div class="hero-meta" aria-label="活動資訊">
+              <span>2026/08/29-31</span>
+              <span>N24 台北方舟</span>
+              <span>兩天一夜黑客松＋第三日 Demo Day</span>
+            </div>
+            <div class="hero-cta">
+              <a class="button button-primary" href="#contact" data-zh="報名即將開放 / Stay Tuned" data-en="Registration Coming Soon / Stay Tuned">報名即將開放 / Stay Tuned</a>
+            </div>
+          </div>
+          <aside class="hero-panel reveal" aria-label="核心主軸">
+            <p class="panel-kicker">Identity · Authorization · Accountability</p>
+            <h2>技術棧自由，信任要求明確</h2>
+            <ul class="trust-list">
+              <li>Principal 代表誰</li>
+              <li>Authorization 被授權做什麼</li>
+              <li>Policy Gate 高風險動作如何被擋</li>
+              <li>Audit Log 如何追溯行動</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="why">
+        <div class="container two-column">
+          <div class="section-heading reveal">
+            <p class="section-kicker">01 | Why Now</p>
+            <h2 data-zh="為什麼是現在" data-en="Why Now">為什麼是現在</h2>
+            <p data-zh="AI Agent 的信任缺口，不能只靠更好的回答品質解決。" data-en="The trust gap around AI Agents cannot be solved only by better answers.">AI Agent 的信任缺口，不能只靠更好的回答品質解決。</p>
+          </div>
+          <div class="prose-card reveal">
+            <p>
+              當 AI Agent 開始代替人決定、查詢、下單、送件或簽署時，風險不再只是模型答錯，而是可能發生越權操作、個資外洩、責任不明、授權無法撤銷，或無法證明某個行動由誰授意。
+            </p>
+            <div class="question-grid">
+              <span>它代表誰？</span>
+              <span>被授權做什麼？</span>
+              <span>授權何時失效？</span>
+              <span>哪些動作需人類確認？</span>
+              <span>出事後如何追溯與問責？</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="positioning">
+        <div class="container">
+          <div class="section-heading narrow reveal">
+            <p class="section-kicker">02 | What It Is</p>
+            <h2 data-zh="活動定位" data-en="What It Is">活動定位</h2>
+            <p data-zh="一場以可信 AI Agent 為核心的高密度 builder program。" data-en="A focused builder program centered on trustworthy AI Agents.">一場以可信 AI Agent 為核心的高密度 builder program。</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <span class="feature-icon">01</span>
+              <h3>兩天一夜實作</h3>
+              <p>從入選隊伍進入現場開發，完成可運作原型與 Demo Day 中文簡報。</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-icon">02</span>
+              <h3>20 隊混合組隊</h3>
+              <p>學生、業界開發者與領域專家共同實作，兼顧技術能力與場景理解。</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-icon">03</span>
+              <h3>治理缺口 memo</h3>
+              <p>每隊交付一頁台灣落地治理缺口 memo，成為後續白皮書素材。</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-icon">04</span>
+              <h3>週末實作到 POC</h3>
+              <p>把可信 Agent 原型、場景問題與合作管線接到後續 POC 討論。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="format">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">03 | Format & Scale</p>
+            <h2 data-zh="形式與規模／三日流程" data-en="Format, Scale & Three-day Flow">形式與規模／三日流程</h2>
+            <p data-zh="公開頁面只呈現參賽者需要知道的流程重點。" data-en="This public page presents the participant-facing flow only.">公開頁面只呈現參賽者需要知道的流程重點。</p>
+          </div>
+          <div class="stat-grid reveal" aria-label="活動規模">
+            <div><strong>20</strong><span>入選隊伍</span></div>
+            <div><strong>2-5</strong><span>每隊人數</span></div>
+            <div><strong>40-100</strong><span>預計參賽者</span></div>
+            <div><strong>4</strong><span>落地賽道</span></div>
+            <div><strong>2</strong><span>賽前工作坊</span></div>
+            <div><strong>6</strong><span>主獎得主</span></div>
+          </div>
+          <div class="day-grid">
+            <article class="day-card reveal">
+              <span>Day 1 · 8/29</span>
+              <h3>開幕與組隊確認</h3>
+              <p>報到、夥伴出題、活動規則說明與組隊確認。</p>
+            </article>
+            <article class="day-card reveal">
+              <span>Day 2 · 8/30</span>
+              <h3>實作與交件</h3>
+              <p>Build sprint、mentor office hours、收尾與正式交件。</p>
+            </article>
+            <article class="day-card reveal">
+              <span>Demo Day · 8/31</span>
+              <h3>成果簡報與頒獎</h3>
+              <p>中文成果簡報、評審、頒獎與完賽 VC。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="tracks">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">04 | Tracks</p>
+            <h2 data-zh="四大賽道" data-en="Four Tracks">四大賽道</h2>
+            <p data-zh="One backbone, four scenarios. 每個作品都需回應具體場景中的可信問題。" data-en="One backbone, four scenarios. Every project should address a concrete trust problem in context.">One backbone, four scenarios. 每個作品都需回應具體場景中的可信問題。</p>
+          </div>
+          <div class="track-grid">
+            <article class="track-card reveal">
+              <div class="track-icon">SC</div>
+              <h3>供應鏈與貿易金融</h3>
+              <dl>
+                <dt>場景痛點</dt>
+                <dd>供應商資格、訂單融資、ESG／碳資料可信度。</dd>
+                <dt>核心可信問題</dt>
+                <dd>Agent 是否代表採購人／法人？能否讀取供應商憑證、草擬訂單，但禁止自行付款？</dd>
+                <dt>示例 POC</dt>
+                <dd>供應商資格 VC、訂單即融資證明、ESG／碳盤查選擇性揭露、採購 Agent 授權。</dd>
+              </dl>
+            </article>
+            <article class="track-card reveal">
+              <div class="track-icon">EP</div>
+              <h3>電商與第三方支付</h3>
+              <dl>
+                <dt>場景痛點</dt>
+                <dd>高頻代購、支付授權、反詐騙、資格驗證。</dd>
+                <dt>核心可信問題</dt>
+                <dd>Agent 是否僅能比價與建立付款意向？何時必須由本人確認？</dd>
+                <dt>示例 POC</dt>
+                <dd>Agent 代購授權、商家可信驗證、年齡／資格選擇性揭露、付款前 human approval。</dd>
+              </dl>
+            </article>
+            <article class="track-card reveal">
+              <div class="track-icon">HI</div>
+              <h3>醫療保險</h3>
+              <dl>
+                <dt>場景痛點</dt>
+                <dd>高敏感個資、理賠、同意與核保稽核。</dd>
+                <dt>核心可信問題</dt>
+                <dd>Agent 可以讀取哪些醫療資料？是否有有效 consent？送件前如何確認？</dd>
+                <dt>示例 POC</dt>
+                <dd>理賠資料可信交換、同意 VC、隱私保護下聯合分析、AI 核保 action log。</dd>
+              </dl>
+            </article>
+            <article class="track-card reveal">
+              <div class="track-icon">GS</div>
+              <h3>政府服務</h3>
+              <dl>
+                <dt>場景痛點</dt>
+                <dd>公部門憑證、跨部會、代辦與國際互認。</dd>
+                <dt>核心可信問題</dt>
+                <dd>Agent 可以代填、代查或代送到何種程度？哪些動作需本人確認？</dd>
+                <dt>示例 POC</dt>
+                <dd>公部門憑證升級 VC、Agent 代辦申請、資格驗證、跨境互認概念。</dd>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="trust">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">05 | Trust Foundation</p>
+            <h2 data-zh="共同主軸「信任地基」" data-en="Trust Foundation">共同主軸「信任地基」</h2>
+            <p data-zh="所有賽道都需處理 identity · authorization · verification · privacy · security · accountability。" data-en="Every track must address identity · authorization · verification · privacy · security · accountability.">所有賽道都需處理 identity · authorization · verification · privacy · security · accountability。</p>
+          </div>
+          <div class="pill-row reveal" aria-label="信任地基">
+            <span>identity</span>
+            <span>authorization</span>
+            <span>verification</span>
+            <span>privacy</span>
+            <span>security</span>
+            <span>accountability</span>
+          </div>
+          <div class="minimum-grid" id="minimum">
+            <article class="minimum-card reveal">
+              <span>1</span>
+              <h3>Principal</h3>
+              <p>代表誰？Agent 代表哪一個人、團隊、法人或公部門單位。</p>
+            </article>
+            <article class="minimum-card reveal">
+              <span>2</span>
+              <h3>Authorization</h3>
+              <p>被授權做什麼？誰授權、允許做什麼、禁止做什麼。</p>
+            </article>
+            <article class="minimum-card reveal">
+              <span>3</span>
+              <h3>Tool / Action</h3>
+              <p>能呼叫什麼工具？每個工具需要哪些權限與邊界。</p>
+            </article>
+            <article class="minimum-card reveal">
+              <span>4</span>
+              <h3>Policy Gate</h3>
+              <p>高風險動作如何被擋？付款、送件、簽署或讀取敏感資料需明確把關。</p>
+            </article>
+            <article class="minimum-card reveal">
+              <span>5</span>
+              <h3>Audit Log</h3>
+              <p>如何追溯行動？記錄 Agent 的行動、決策與授權依據。</p>
+            </article>
+            <article class="minimum-card reveal">
+              <span>6</span>
+              <h3>Expiry / Revocation</h3>
+              <p>何時失效或撤銷？授權過期或撤銷後，Agent 必須停止執行。</p>
+            </article>
+          </div>
+          <p class="callout reveal">單純 chatbot 包裝不足以拿高分。作品應展示 Agent 在明確信任限制下完成真實任務，且能被驗證、限制、追溯。</p>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="rules">
+        <div class="container split-layout">
+          <div class="section-heading reveal">
+            <p class="section-kicker">06 | Eligibility & Rules</p>
+            <h2 data-zh="參賽資格與規則" data-en="Eligibility & Rules">參賽資格與規則</h2>
+            <p data-zh="鼓勵跨校、跨公司、跨技術與領域組隊。" data-en="Cross-school, cross-company, cross-technical and domain teams are encouraged.">鼓勵跨校、跨公司、跨技術與領域組隊。</p>
+          </div>
+          <div class="rule-stack">
+            <article class="info-card reveal">
+              <h3>參賽對象</h3>
+              <ul class="check-list">
+                <li>學生、青年開發者與業界開發者。</li>
+                <li>AI／資料、資安、區塊鏈、產品、設計或專案管理人才。</li>
+                <li>供應鏈、支付、醫療保險、政府服務等領域參與者。</li>
+              </ul>
+            </article>
+            <article class="info-card reveal">
+              <h3>隊伍與出席</h3>
+              <ul class="check-list">
+                <li>每隊 2-5 人，每位參賽者限加入一隊。</li>
+                <li>可個人報名，再由主辦方協助媒合。</li>
+                <li>入選隊伍需完整參與 8/29-31 主要流程。</li>
+              </ul>
+            </article>
+            <article class="info-card reveal">
+              <h3>交付與注意事項</h3>
+              <ul class="check-list">
+                <li>需完成 demo、中文簡報與一頁治理缺口 memo。</li>
+                <li>僅使用具合法授權的模型、資料、工具與第三方服務。</li>
+                <li>敏感資料以匿名、合成或測試資料替代，並遵守 sponsor 使用規範。</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="judging">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">07 | Judging Criteria</p>
+            <h2 data-zh="評分標準" data-en="Judging Criteria">評分標準</h2>
+            <p data-zh="初選重視題目相關性；決選聚焦信任設計、技術完成度與場景適配。" data-en="Initial screening prioritizes topic relevance; final judging focuses on trust architecture, technical execution and scenario fit.">初選重視題目相關性；決選聚焦信任設計、技術完成度與場景適配。</p>
+          </div>
+          <div class="score-grid">
+            <article class="score-card reveal">
+              <h3>初選評估</h3>
+              <div class="score-row"><span>題目相關性</span><strong>50%</strong></div>
+              <div class="score-row"><span>可行性</span><strong>30%</strong></div>
+              <div class="score-row"><span>團隊能力</span><strong>20%</strong></div>
+            </article>
+            <article class="score-card reveal">
+              <h3>決選評估</h3>
+              <div class="score-row"><span>信任架構</span><strong>40%</strong></div>
+              <div class="score-row"><span>技術執行</span><strong>35%</strong></div>
+              <div class="score-row"><span>場景適配</span><strong>25%</strong></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="prizes">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">08 | Prize Architecture</p>
+            <h2 data-zh="獎項與開發資源" data-en="Prizes & Builder Resources">獎項與開發資源</h2>
+            <p data-zh="主現金獎、Builder Kit、四大賽道獎與選配特別獎。" data-en="Main cash prizes, Builder Kits, Best Track Awards and optional special awards.">主現金獎、Builder Kit、四大賽道獎與選配特別獎。</p>
+          </div>
+          <div class="prize-grid">
+            <article class="prize-card prize-main reveal">
+              <span class="award-label">Main Cash Prizes</span>
+              <h3>USD 12,000</h3>
+              <p>主現金獎池，分配給 6 隊主獎得主。</p>
+              <ul>
+                <li>冠軍 Grand Prize：1 x USD 5,000</li>
+                <li>亞軍 Excellence Award：2 x USD 2,000</li>
+                <li>季軍 Merit Award：3 x USD 1,000</li>
+              </ul>
+            </article>
+            <article class="prize-card reveal">
+              <span class="award-label">Builder Kit</span>
+              <h3>20 隊入選皆有</h3>
+              <p>含 OpenAI、Gemini、Claude Code 等開發資源，以隊伍為單位分段發放。</p>
+            </article>
+            <article class="prize-card reveal">
+              <span class="award-label">Best Track Award</span>
+              <h3>四大賽道獎</h3>
+              <p>硬體以 Mac mini 為目標；以贊助到位為準 / subject to sponsor confirmation。</p>
+            </article>
+            <article class="prize-card reveal">
+              <span class="award-label">Special Award</span>
+              <h3>選配特別獎</h3>
+              <p>DGX Spark 等列為選配特別獎；以贊助到位為準 / subject to sponsor confirmation。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="vc">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">09 | Credential Experience</p>
+            <h2 data-zh="憑證體驗（VC）作為亮點" data-en="Credential Experience as a Highlight">憑證體驗（VC）作為亮點</h2>
+            <p data-zh="用於活動流程，但不綁死參賽技術棧。" data-en="Used for event operations, without locking teams into a required development stack.">用於活動流程，但不綁死參賽技術棧。</p>
+          </div>
+          <div class="vc-flow reveal" aria-label="VC 流程">
+            <span>入選<br /><small>Finalist VC</small></span>
+            <span>報到<br /><small>Participant Badge</small></span>
+            <span>隊伍<br /><small>Team Membership</small></span>
+            <span>交件<br /><small>Submission Receipt</small></span>
+            <span>完賽<br /><small>Completion VC</small></span>
+            <span>得獎<br /><small>Award VC</small></span>
+          </div>
+          <p class="muted center reveal">
+            活動以可驗證憑證串接關鍵節點；KERI、vLEI 與政府錢包可作為鼓勵或進階場景，不是所有隊伍的硬性門檻。
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="workshops">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">10 | Pre-event Workshops</p>
+            <h2 data-zh="賽前工作坊" data-en="Pre-event Workshops">賽前工作坊</h2>
+            <p data-zh="協助入選隊伍建立共同語言與技術起點。" data-en="Helping selected teams build a shared vocabulary and technical starting point.">協助入選隊伍建立共同語言與技術起點。</p>
+          </div>
+          <div class="workshop-grid">
+            <article class="workshop-card reveal">
+              <span>Workshop 01</span>
+              <h3>VC／DID 與活動憑證流程</h3>
+              <p>理解入選、報到、交件、完賽與得獎證明如何串接活動流程。</p>
+            </article>
+            <article class="workshop-card reveal">
+              <span>Workshop 02</span>
+              <h3>KERI／vLEI 與可信授權</h3>
+              <p>聚焦法人、組織角色、Agent 委派授權與可撤銷的信任流程。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="roadmap">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">11 | Roadmap</p>
+            <h2 data-zh="時間軸" data-en="Roadmap">時間軸</h2>
+            <p data-zh="從框架對齊到 Hackathon＋Demo Day。" data-en="From framework alignment to Hackathon + Demo Day.">從框架對齊到 Hackathon＋Demo Day。</p>
+          </div>
+          <ol class="timeline reveal">
+            <li><time>6 月</time><span>框架與夥伴對齊</span></li>
+            <li><time>7 月初</time><span>正式公告、開放報名</span></li>
+            <li><time>7 月中</time><span>說明會與組隊媒合</span></li>
+            <li><time>7 月下旬</time><span>初選與入選確認</span></li>
+            <li><time>8 月</time><span>賽前工作坊與技術彩排</span></li>
+            <li><time>8/29-31</time><span>Hackathon＋Demo Day</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="partners">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">12 | Partners & Ecosystem</p>
+            <h2 data-zh="合作夥伴與生態系" data-en="Partners & Ecosystem">合作夥伴與生態系</h2>
+            <p data-zh="實際角色以正式邀請與合作確認為準 / Roles confirmed through formal invitation and partner alignment." data-en="Roles confirmed through formal invitation and partner alignment.">實際角色以正式邀請與合作確認為準 / Roles confirmed through formal invitation and partner alignment.</p>
+          </div>
+          <div class="partner-groups">
+            <article class="partner-group reveal">
+              <h3>技術夥伴 Technology Partners</h3>
+              <div class="partner-grid">
+                <div class="partner-box"><strong>GLEIF</strong><span>洽談中／擬邀 · In discussion</span></div>
+                <div class="partner-box"><strong>KERI</strong><span>洽談中／擬邀 · In discussion</span></div>
+                <div class="partner-box"><strong>Cardano</strong><span>洽談中／擬邀 · In discussion</span></div>
+              </div>
+            </article>
+            <article class="partner-group reveal">
+              <h3>開發社群 Developer Communities</h3>
+              <div class="partner-grid">
+                <div class="partner-box"><strong>XueDAO</strong><span>洽談中／擬邀 · In discussion</span></div>
+                <div class="partner-box"><strong>DefiHackLabs</strong><span>洽談中／擬邀 · In discussion</span></div>
+              </div>
+            </article>
+            <article class="partner-group reveal">
+              <h3>指導單位 Guidance</h3>
+              <div class="partner-grid">
+                <div class="partner-box"><strong>國發會</strong><span>洽談中／擬邀 · In discussion</span></div>
+                <div class="partner-box"><strong>資訊軟體公會</strong><span>洽談中／擬邀 · In discussion</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section partner-cta" id="sponsor">
+        <div class="container sponsor-grid">
+          <div class="section-heading reveal">
+            <p class="section-kicker">13 | Become a Partner</p>
+            <h2 data-zh="成為夥伴／徵求贊助" data-en="Become a Partner">Become a Partner</h2>
+            <p data-zh="把品牌放在可信 AI Agent 生態系的根部。" data-en="Put your brand at the root of the trustworthy AI Agent ecosystem.">Put your brand at the root of the trustworthy AI Agent ecosystem.</p>
+          </div>
+          <div class="value-grid">
+            <article class="value-card reveal"><h3>Talent</h3><p>Direct access to mixed student and industry builders.</p></article>
+            <article class="value-card reveal"><h3>Standards</h3><p>Help shape Taiwan's trustworthy-AI white paper and adoption.</p></article>
+            <article class="value-card reveal"><h3>Visibility</h3><p>Visibility through international partners, government guidance and media.</p></article>
+            <article class="value-card reveal"><h3>Pipeline</h3><p>Engage prototypes and POCs after the event.</p></article>
+          </div>
+          <div class="cta-row reveal">
+            <a class="button button-primary" href="mailto:taka@chain.tw">Contact us: taka@chain.tw</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="faq">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">14 | FAQ</p>
+            <h2 data-zh="常見問答" data-en="FAQ">常見問答</h2>
+            <p data-zh="報名前可先確認資格、交付與規則。" data-en="Confirm eligibility, deliverables and rules before registration opens.">報名前可先確認資格、交付與規則。</p>
+          </div>
+          <div class="faq-list reveal">
+            <details>
+              <summary data-zh="誰可以參加？" data-en="Who can participate?">誰可以參加？</summary>
+              <p>學生、青年開發者、業界開發者、設計／產品人才，以及四大賽道相關領域參與者皆可報名。</p>
+            </details>
+            <details>
+              <summary data-zh="需要什麼背景？" data-en="What background do I need?">需要什麼背景？</summary>
+              <p>活動鼓勵跨領域組隊。隊伍可包含開發、AI／資料、資安、區塊鏈、產品、設計、專案管理或領域專家。</p>
+            </details>
+            <details>
+              <summary data-zh="可以個人報名嗎？" data-en="Can I register as an individual?">可以個人報名嗎？</summary>
+              <p>可以。個人可先報名，再由主辦方協助媒合；最終隊伍需為 2-5 人。</p>
+            </details>
+            <details>
+              <summary data-zh="簡報語言是什麼？" data-en="What is the presentation language?">簡報語言是什麼？</summary>
+              <p>Demo Day 以中文簡報與現場成果展示為主，技術名稱、程式碼與專有名詞可使用英文。</p>
+            </details>
+            <details>
+              <summary data-zh="可以用哪些技術棧？" data-en="What technology stacks are allowed?">可以用哪些技術棧？</summary>
+              <p>程式語言、模型、Agent framework、wallet、DID method、雲端或本地端環境皆可自由選擇；信任成果必須能被展示。</p>
+            </details>
+            <details>
+              <summary data-zh="需要交什麼？" data-en="What must teams submit?">需要交什麼？</summary>
+              <p>需完成可運作 demo、中文簡報與一頁台灣落地治理缺口 memo，並展示 Agent workflow、授權模型、工具行動與 audit trail。</p>
+            </details>
+            <details>
+              <summary data-zh="智財與資料規則如何處理？" data-en="How are IP and data rules handled?">智財與資料規則如何處理？</summary>
+              <p>作品若使用既有程式或開源套件，應揭露並符合授權。敏感資料一律以匿名、合成或測試資料替代。</p>
+            </details>
+            <details>
+              <summary data-zh="報名何時開放？" data-en="When will registration open?">報名何時開放？</summary>
+              <p>報名即將開放。可在本頁留下 email 訂閱搶先通知。</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+          <div class="section-heading reveal">
+            <p class="section-kicker">15 | Registration & Contact</p>
+            <h2 data-zh="報名／聯絡" data-en="Registration & Contact">報名／聯絡</h2>
+            <p data-zh="報名即將開放 Coming Soon。" data-en="Registration is coming soon.">報名即將開放 Coming Soon。</p>
+          </div>
+          <form class="subscribe-form reveal" action="#" method="post" data-form>
+            <label for="email">訂閱搶先通知</label>
+            <div class="input-row">
+              <input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required />
+              <button class="button button-primary" type="submit">Subscribe</button>
+            </div>
+            <p class="form-note" data-form-note>此欄位為前端佔位，不會送出真實表單。</p>
+          </form>
+          <div class="contact-card reveal">
+            <h3>聯絡窗口</h3>
+            <p>Taka｜<a href="mailto:taka@chain.tw">taka@chain.tw</a></p>
+            <a class="button button-secondary" href="https://www.chain.tw/en">回 chain.tw 主站</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-row" aria-label="主辦與場地">
+            <img src="./assets/tabei-placeholder.svg" alt="TABEI logo placeholder" />
+            <img src="./assets/n24-placeholder.svg" alt="N24 台北方舟 logo placeholder" />
+          </div>
+          <p>Trustworthy AI Hackathon｜可信 AI 黑客松</p>
+          <p class="muted">Building the trust layer for the AI-Agent economy</p>
+        </div>
+        <div class="footer-subscribe">
+          <h2>Subscribe for the Latest Information</h2>
+          <form class="footer-form" action="#" method="post" data-form>
+            <input type="email" placeholder="Leave email for subscription" aria-label="Email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-links">
+          <h2>Follow us via social media</h2>
+          <a href="https://www.youtube.com/" aria-label="YouTube">YouTube</a>
+          <a href="https://www.facebook.com/" aria-label="Facebook">Facebook</a>
+          <a href="https://www.chain.tw/en">Back to chain.tw</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Taiwan Association for Blockchain Ecosystem Innovation.</span>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

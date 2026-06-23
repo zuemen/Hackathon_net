@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Trustworthy AI Hackathon OG image</title>
+  <desc id="desc">Open Graph image for the Trustworthy AI Hackathon page.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#081425"/>
+      <stop offset="0.56" stop-color="#0C1A2B"/>
+      <stop offset="1" stop-color="#14314D"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.8"/>
+  <circle cx="960" cy="110" r="180" fill="#1F6FEB" opacity="0.24"/>
+  <circle cx="180" cy="520" r="170" fill="#17B0A8" opacity="0.15"/>
+  <text x="80" y="116" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#17B0A8" letter-spacing="3">TRUSTWORTHY AI HACKATHON</text>
+  <text x="80" y="250" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="88" font-weight="800" fill="#FFFFFF">可信 AI 黑客松</text>
+  <text x="80" y="326" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700" fill="#DCE8F6">Building the trust layer for the AI-Agent economy</text>
+  <text x="80" y="430" font-family="Inter, Noto Sans TC, Arial, sans-serif" font-size="31" font-weight="700" fill="#FFFFFF">2026/08/29-31 · N24 台北方舟</text>
+  <text x="80" y="482" font-family="Inter, Noto Sans TC, Arial, sans-serif" font-size="25" font-weight="600" fill="#A9B8C9">Identity · Authorization · Verification · Accountability</text>
+</svg>
