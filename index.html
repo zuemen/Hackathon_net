@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+﻿<!doctype html>
+<html lang="zh-Hant">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,7 +14,11 @@
       content="Building the trust layer for the AI-Agent economy. 兩天一夜黑客松＋第三日 Demo Day。"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="./assets/og-trustworthy-ai-hackathon.svg" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:image" content="./assets/og-trustworthy-ai-hackathon.jpg" />
+    <link rel="canonical" href="https://hackathon-net.vercel.app/" />
+    <link rel="icon" href="./assets/official/tabei-logo.png" />
     <meta name="theme-color" content="#0C1A2B" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,14 +27,47 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Trustworthy AI Hackathon｜可信 AI 黑客松",
+        "startDate": "2026-08-29",
+        "endDate": "2026-08-31",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "N24 台北方舟",
+          "address": "Taipei, Taiwan"
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Taiwan Association for Blockchain Ecosystem Innovation (TABEI)",
+          "url": "https://www.chain.tw/"
+        }
+      }
+    </script>
   </head>
   <body>
-    <a class="skip-link" href="#main">跳到主要內容</a>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-network" viewBox="0 0 24 24"><path d="M6 8a3 3 0 1 1 2.8-4H15a3 3 0 1 1 0 2H8.8A3 3 0 0 1 6 8Zm12 8a3 3 0 0 1-2.8 2H9a3 3 0 1 1 0-2h6.2a3 3 0 1 1 2.8 0ZM7.7 7.3l8.6 8.6M16.3 6.7 7.7 15.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.7 2.8 8.1 7 10 4.2-1.9 7-5.3 7-10V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m9 12 2 2 4-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-card" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 10h7M7 14h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24"><path d="m9 8-4 4 4 4M15 8l4 4-4 4M13 6l-2 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V8a4 4 0 0 1 8 0v2M12 14v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="icon-log" viewBox="0 0 24 24"><path d="M6 4h10l2 2v14H6V4Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 10h6M9 14h6M9 18h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="icon-cart" viewBox="0 0 24 24"><path d="M4 5h2l2 10h9l2-7H8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></symbol>
+      <symbol id="icon-health" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 12h6M12 9v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="icon-building" viewBox="0 0 24 24"><path d="M5 20V5h14v15M8 9h2M14 9h2M8 13h2M14 13h2M10 20v-4h4v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    </svg>
+    <a class="skip-link" href="#main" data-i18n="auto.1">跳到主要內容</a>
 
     <header class="site-header" data-header>
       <div class="container header-inner">
-        <a class="brand" href="#hero" aria-label="Trustworthy AI Hackathon">
-          <span class="brand-mark" aria-hidden="true">T</span>
+        <a class="brand" href="#hero" aria-label="TABEI Trustworthy AI Hackathon">
+          <img class="brand-logo" src="./assets/official/tabei-logo.png" alt="TABEI" />
           <span>
             <strong>TABEI</strong>
             <small>Trustworthy AI Hackathon</small>
@@ -39,25 +76,27 @@
 
         <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
           <span></span><span></span><span></span>
-          <span class="sr-only">開啟選單</span>
+          <span class="sr-only" data-i18n="auto.2">開啟選單</span>
         </button>
 
-        <nav class="site-nav" id="site-nav" aria-label="主要導覽">
-          <a href="#why" data-zh="Why Now" data-en="Why Now">Why Now</a>
-          <a href="#format" data-zh="流程" data-en="Format">流程</a>
-          <a href="#tracks" data-zh="賽道" data-en="Tracks">賽道</a>
-          <a href="#rules" data-zh="規則" data-en="Rules">規則</a>
-          <a href="#prizes" data-zh="獎項" data-en="Prizes">獎項</a>
-          <a href="#partners" data-zh="夥伴" data-en="Partners">夥伴</a>
-          <a href="#faq">FAQ</a>
-        </nav>
+        <div class="nav-panel" id="site-nav" data-nav-panel>
+          <nav class="site-nav" aria-label="主要導覽">
+            <a href="#why" data-i18n="auto.3">Why Now</a>
+            <a href="#format" data-i18n="auto.4">流程</a>
+            <a href="#tracks" data-i18n="auto.5">賽道</a>
+            <a href="#rules" data-i18n="auto.6">規則</a>
+            <a href="#prizes" data-i18n="auto.7">獎項</a>
+            <a href="#partners" data-i18n="auto.8">夥伴</a>
+            <a href="#faq" data-i18n="auto.9">FAQ</a>
+          </nav>
 
-        <div class="header-actions">
-          <div class="language-toggle" aria-label="語言切換">
-            <button type="button" data-lang-button="zh">中</button>
-            <button type="button" class="is-active" data-lang-button="en">EN</button>
+          <div class="header-actions">
+            <div class="language-toggle" aria-label="語言切換">
+              <button type="button" class="is-active" data-lang-button="zh-Hant" aria-pressed="true">中</button>
+              <button type="button" data-lang-button="en" aria-pressed="false">EN</button>
+            </div>
+            <a class="button button-small button-primary" href="#contact" data-i18n="auto.10">報名 Coming Soon</a>
           </div>
-          <a class="button button-small button-primary" href="#contact" data-zh="報名 Coming Soon" data-en="Registration Coming Soon">報名 Coming Soon</a>
         </div>
       </div>
     </header>
@@ -68,28 +107,32 @@
         <div class="container hero-grid">
           <div class="hero-copy reveal">
             <p class="eyebrow">Trustworthy AI Hackathon</p>
-            <h1>可信 AI 黑客松</h1>
+            <h1 data-i18n="auto.11">可信 AI 黑客松</h1>
             <p class="hero-subtitle">Building the trust layer for the AI-Agent economy</p>
-            <p class="hero-lede" data-zh="當 AI Agent 開始代表人或組織執行任務，身份、授權、行動邊界與追溯機制必須被清楚設計。" data-en="When AI Agents start acting for people or organizations, identity, authorization, action boundaries and auditability must be designed clearly.">
+            <p class="hero-lede" data-i18n="auto.12">
               當 AI Agent 開始代表人或組織執行任務，身份、授權、行動邊界與追溯機制必須被清楚設計。
             </p>
             <div class="hero-meta" aria-label="活動資訊">
               <span>2026/08/29-31</span>
-              <span>N24 台北方舟</span>
-              <span>兩天一夜黑客松＋第三日 Demo Day</span>
+              <span data-i18n="auto.13">N24 台北方舟</span>
+              <span data-i18n="auto.14">兩天一夜黑客松＋第三日 Demo Day</span>
             </div>
             <div class="hero-cta">
-              <a class="button button-primary" href="#contact" data-zh="報名即將開放 / Stay Tuned" data-en="Registration Coming Soon / Stay Tuned">報名即將開放 / Stay Tuned</a>
+              <a class="button button-primary" href="#contact" data-i18n="auto.15">報名即將開放 / Stay Tuned</a>
             </div>
           </div>
           <aside class="hero-panel reveal" aria-label="核心主軸">
-            <p class="panel-kicker">Identity · Authorization · Accountability</p>
-            <h2>技術棧自由，信任要求明確</h2>
+            <p class="panel-kicker">Minimum Trustworthy AI Agent</p>
+            <h2 data-i18n="auto.16">技術棧自由，信任要求明確</h2>
             <ul class="trust-list">
-              <li>Principal 代表誰</li>
-              <li>Authorization 被授權做什麼</li>
-              <li>Policy Gate 高風險動作如何被擋</li>
-              <li>Audit Log 如何追溯行動</li>
+              <li data-i18n="auto.17">Principal 代表誰</li>
+              <li data-i18n="trust.goal.short">Goal / Task 任務與完成條件</li>
+              <li data-i18n="auto.18">Authorization 被授權做什麼</li>
+              <li data-i18n="auto.19">Tool / Action 能呼叫什麼工具</li>
+              <li data-i18n="auto.20">Policy Gate 高風險動作如何被擋</li>
+              <li data-i18n="auto.21">Audit Log 如何追溯行動</li>
+              <li data-i18n="auto.22">Expiry / Revocation 何時失效撤銷</li>
+              <li data-i18n="trust.governance.short">Governance Gap 台灣落地治理缺口</li>
             </ul>
           </aside>
         </div>
@@ -99,19 +142,17 @@
         <div class="container two-column">
           <div class="section-heading reveal">
             <p class="section-kicker">01 | Why Now</p>
-            <h2 data-zh="為什麼是現在" data-en="Why Now">為什麼是現在</h2>
-            <p data-zh="AI Agent 的信任缺口，不能只靠更好的回答品質解決。" data-en="The trust gap around AI Agents cannot be solved only by better answers.">AI Agent 的信任缺口，不能只靠更好的回答品質解決。</p>
+            <h2 data-i18n="auto.23">為什麼是現在</h2>
+            <p data-i18n="auto.24">AI Agent 的信任缺口，不能只靠更好的回答品質解決。</p>
           </div>
           <div class="prose-card reveal">
-            <p>
-              當 AI Agent 開始代替人決定、查詢、下單、送件或簽署時，風險不再只是模型答錯，而是可能發生越權操作、個資外洩、責任不明、授權無法撤銷，或無法證明某個行動由誰授意。
-            </p>
+            <p data-i18n="auto.25">當 AI Agent 開始代替人決定、查詢、下單、送件或簽署時，風險不再只是模型答錯，而是可能發生越權操作、個資外洩、責任不明、授權無法撤銷，或無法證明某個行動由誰授意。</p>
             <div class="question-grid">
-              <span>它代表誰？</span>
-              <span>被授權做什麼？</span>
-              <span>授權何時失效？</span>
-              <span>哪些動作需人類確認？</span>
-              <span>出事後如何追溯與問責？</span>
+              <span data-i18n="auto.26">它代表誰？</span>
+              <span data-i18n="auto.27">被授權做什麼？</span>
+              <span data-i18n="auto.28">授權何時失效？</span>
+              <span data-i18n="auto.29">哪些動作需人類確認？</span>
+              <span data-i18n="auto.30">出事後如何追溯與問責？</span>
             </div>
           </div>
         </div>
@@ -121,29 +162,29 @@
         <div class="container">
           <div class="section-heading narrow reveal">
             <p class="section-kicker">02 | What It Is</p>
-            <h2 data-zh="活動定位" data-en="What It Is">活動定位</h2>
-            <p data-zh="一場以可信 AI Agent 為核心的高密度 builder program。" data-en="A focused builder program centered on trustworthy AI Agents.">一場以可信 AI Agent 為核心的高密度 builder program。</p>
+            <h2 data-i18n="auto.31">活動定位</h2>
+            <p data-i18n="auto.32">一場以可信 AI Agent 為核心的高密度 builder program。</p>
           </div>
           <div class="feature-grid">
             <article class="feature-card reveal">
-              <span class="feature-icon">01</span>
-              <h3>兩天一夜實作</h3>
-              <p>從入選隊伍進入現場開發，完成可運作原型與 Demo Day 中文簡報。</p>
+              <span class="feature-icon"><svg><use href="#icon-code"></use></svg></span>
+              <h3 data-i18n="auto.33">兩天一夜實作</h3>
+              <p data-i18n="auto.34">從入選隊伍進入現場開發，完成可運作原型與 Demo Day 中文簡報。</p>
             </article>
             <article class="feature-card reveal">
-              <span class="feature-icon">02</span>
-              <h3>20 隊混合組隊</h3>
-              <p>學生、業界開發者與領域專家共同實作，兼顧技術能力與場景理解。</p>
+              <span class="feature-icon"><svg><use href="#icon-network"></use></svg></span>
+              <h3 data-i18n="auto.35">20 隊混合組隊</h3>
+              <p data-i18n="auto.36">學生、業界開發者與領域專家共同實作，兼顧技術能力與場景理解。</p>
             </article>
             <article class="feature-card reveal">
-              <span class="feature-icon">03</span>
-              <h3>治理缺口 memo</h3>
-              <p>每隊交付一頁台灣落地治理缺口 memo，成為後續白皮書素材。</p>
+              <span class="feature-icon"><svg><use href="#icon-log"></use></svg></span>
+              <h3 data-i18n="auto.37">治理缺口 memo</h3>
+              <p data-i18n="auto.38">每隊交付一頁台灣落地治理缺口 memo，成為後續白皮書素材。</p>
             </article>
             <article class="feature-card reveal">
-              <span class="feature-icon">04</span>
-              <h3>週末實作到 POC</h3>
-              <p>把可信 Agent 原型、場景問題與合作管線接到後續 POC 討論。</p>
+              <span class="feature-icon"><svg><use href="#icon-card"></use></svg></span>
+              <h3 data-i18n="auto.39">週末實作到 POC</h3>
+              <p data-i18n="auto.40">把可信 Agent 原型、場景問題與合作管線接到後續 POC 討論。</p>
             </article>
           </div>
         </div>
@@ -153,32 +194,35 @@
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-kicker">03 | Format & Scale</p>
-            <h2 data-zh="形式與規模／三日流程" data-en="Format, Scale & Three-day Flow">形式與規模／三日流程</h2>
-            <p data-zh="公開頁面只呈現參賽者需要知道的流程重點。" data-en="This public page presents the participant-facing flow only.">公開頁面只呈現參賽者需要知道的流程重點。</p>
+            <h2 data-i18n="auto.41">形式與規模／三日流程</h2>
+            <p data-i18n="auto.42">公開頁面只呈現參賽者需要知道的流程重點。</p>
           </div>
           <div class="stat-grid reveal" aria-label="活動規模">
-            <div><strong>20</strong><span>入選隊伍</span></div>
-            <div><strong>2-5</strong><span>每隊人數</span></div>
-            <div><strong>40-100</strong><span>預計參賽者</span></div>
-            <div><strong>4</strong><span>落地賽道</span></div>
-            <div><strong>2</strong><span>賽前工作坊</span></div>
-            <div><strong>6</strong><span>主獎得主</span></div>
+            <div><strong>20</strong><span data-i18n="auto.43">入選隊伍</span></div>
+            <div><strong>2-5</strong><span data-i18n="auto.44">每隊人數</span></div>
+            <div><strong>40-100</strong><span data-i18n="auto.45">預計參賽者</span></div>
+            <div><strong>4</strong><span data-i18n="auto.46">落地賽道</span></div>
+            <div><strong>4</strong><span data-i18n="auto.47">賽前工作坊</span></div>
+            <div><strong>6</strong><span data-i18n="auto.48">主獎得主</span></div>
           </div>
           <div class="day-grid">
             <article class="day-card reveal">
+              <svg class="card-icon"><use href="#icon-network"></use></svg>
               <span>Day 1 · 8/29</span>
-              <h3>開幕與組隊確認</h3>
-              <p>報到、夥伴出題、活動規則說明與組隊確認。</p>
+              <h3 data-i18n="auto.49">開幕與組隊確認</h3>
+              <p data-i18n="auto.50">報到、夥伴出題、活動規則說明與組隊確認。</p>
             </article>
             <article class="day-card reveal">
+              <svg class="card-icon"><use href="#icon-code"></use></svg>
               <span>Day 2 · 8/30</span>
-              <h3>實作與交件</h3>
-              <p>Build sprint、mentor office hours、收尾與正式交件。</p>
+              <h3 data-i18n="auto.51">實作與交件</h3>
+              <p data-i18n="auto.52">Build sprint、mentor office hours、收尾與正式交件。</p>
             </article>
             <article class="day-card reveal">
+              <svg class="card-icon"><use href="#icon-card"></use></svg>
               <span>Demo Day · 8/31</span>
-              <h3>成果簡報與頒獎</h3>
-              <p>中文成果簡報、評審、頒獎與完賽 VC。</p>
+              <h3 data-i18n="auto.53">成果簡報與頒獎</h3>
+              <p data-i18n="auto.54">中文成果簡報、評審、頒獎與完賽 VC。</p>
             </article>
           </div>
         </div>
@@ -188,56 +232,56 @@
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-kicker">04 | Tracks</p>
-            <h2 data-zh="四大賽道" data-en="Four Tracks">四大賽道</h2>
-            <p data-zh="One backbone, four scenarios. 每個作品都需回應具體場景中的可信問題。" data-en="One backbone, four scenarios. Every project should address a concrete trust problem in context.">One backbone, four scenarios. 每個作品都需回應具體場景中的可信問題。</p>
+            <h2 data-i18n="auto.55">四大賽道</h2>
+            <p data-i18n="auto.56">One backbone, four scenarios. 每個作品都需回應具體場景中的可信問題。</p>
           </div>
           <div class="track-grid">
             <article class="track-card reveal">
-              <div class="track-icon">SC</div>
-              <h3>供應鏈與貿易金融</h3>
+              <div class="track-icon"><svg><use href="#icon-network"></use></svg></div>
+              <h3 data-i18n="auto.57">供應鏈與貿易金融</h3>
               <dl>
-                <dt>場景痛點</dt>
-                <dd>供應商資格、訂單融資、ESG／碳資料可信度。</dd>
-                <dt>核心可信問題</dt>
-                <dd>Agent 是否代表採購人／法人？能否讀取供應商憑證、草擬訂單，但禁止自行付款？</dd>
-                <dt>示例 POC</dt>
-                <dd>供應商資格 VC、訂單即融資證明、ESG／碳盤查選擇性揭露、採購 Agent 授權。</dd>
+                <dt data-i18n="auto.58">場景痛點</dt>
+                <dd data-i18n="auto.59">供應商資格、訂單融資、ESG／碳資料可信度。</dd>
+                <dt data-i18n="auto.60">核心可信問題</dt>
+                <dd data-i18n="auto.61">Agent 是否代表採購人／法人？能否讀取供應商憑證、草擬訂單，但禁止自行付款？</dd>
+                <dt data-i18n="auto.62">示例 POC</dt>
+                <dd data-i18n="auto.63">供應商資格 VC、訂單即融資證明、ESG／碳盤查選擇性揭露、採購 Agent 授權。</dd>
               </dl>
             </article>
             <article class="track-card reveal">
-              <div class="track-icon">EP</div>
-              <h3>電商與第三方支付</h3>
+              <div class="track-icon"><svg><use href="#icon-cart"></use></svg></div>
+              <h3 data-i18n="auto.64">電商與第三方支付</h3>
               <dl>
-                <dt>場景痛點</dt>
-                <dd>高頻代購、支付授權、反詐騙、資格驗證。</dd>
-                <dt>核心可信問題</dt>
-                <dd>Agent 是否僅能比價與建立付款意向？何時必須由本人確認？</dd>
-                <dt>示例 POC</dt>
-                <dd>Agent 代購授權、商家可信驗證、年齡／資格選擇性揭露、付款前 human approval。</dd>
+                <dt data-i18n="auto.65">場景痛點</dt>
+                <dd data-i18n="auto.66">高頻代購、支付授權、反詐騙、資格驗證。</dd>
+                <dt data-i18n="auto.67">核心可信問題</dt>
+                <dd data-i18n="auto.68">Agent 是否僅能比價與建立付款意向？何時必須由本人確認？</dd>
+                <dt data-i18n="auto.69">示例 POC</dt>
+                <dd data-i18n="auto.70">Agent 代購授權、商家可信驗證、年齡／資格選擇性揭露、付款前 human approval。</dd>
               </dl>
             </article>
             <article class="track-card reveal">
-              <div class="track-icon">HI</div>
-              <h3>醫療保險</h3>
+              <div class="track-icon"><svg><use href="#icon-health"></use></svg></div>
+              <h3 data-i18n="auto.71">醫療保險</h3>
               <dl>
-                <dt>場景痛點</dt>
-                <dd>高敏感個資、理賠、同意與核保稽核。</dd>
-                <dt>核心可信問題</dt>
-                <dd>Agent 可以讀取哪些醫療資料？是否有有效 consent？送件前如何確認？</dd>
-                <dt>示例 POC</dt>
-                <dd>理賠資料可信交換、同意 VC、隱私保護下聯合分析、AI 核保 action log。</dd>
+                <dt data-i18n="auto.72">場景痛點</dt>
+                <dd data-i18n="auto.73">高敏感個資、理賠、同意與核保稽核。</dd>
+                <dt data-i18n="auto.74">核心可信問題</dt>
+                <dd data-i18n="auto.75">Agent 可以讀取哪些醫療資料？是否有有效 consent？送件前如何確認？</dd>
+                <dt data-i18n="auto.76">示例 POC</dt>
+                <dd data-i18n="auto.77">理賠資料可信交換、同意 VC、隱私保護下聯合分析、AI 核保 action log。</dd>
               </dl>
             </article>
             <article class="track-card reveal">
-              <div class="track-icon">GS</div>
-              <h3>政府服務</h3>
+              <div class="track-icon"><svg><use href="#icon-building"></use></svg></div>
+              <h3 data-i18n="auto.78">政府服務</h3>
               <dl>
-                <dt>場景痛點</dt>
-                <dd>公部門憑證、跨部會、代辦與國際互認。</dd>
-                <dt>核心可信問題</dt>
-                <dd>Agent 可以代填、代查或代送到何種程度？哪些動作需本人確認？</dd>
-                <dt>示例 POC</dt>
-                <dd>公部門憑證升級 VC、Agent 代辦申請、資格驗證、跨境互認概念。</dd>
+                <dt data-i18n="auto.79">場景痛點</dt>
+                <dd data-i18n="auto.80">公部門憑證、跨部會、代辦與國際互認。</dd>
+                <dt data-i18n="auto.81">核心可信問題</dt>
+                <dd data-i18n="auto.82">Agent 可以代填、代查或代送到何種程度？哪些動作需本人確認？</dd>
+                <dt data-i18n="auto.83">示例 POC</dt>
+                <dd data-i18n="auto.84">公部門憑證升級 VC、Agent 代辦申請、資格驗證、跨境互認概念。</dd>
               </dl>
             </article>
           </div>
@@ -248,8 +292,8 @@
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-kicker">05 | Trust Foundation</p>
-            <h2 data-zh="共同主軸「信任地基」" data-en="Trust Foundation">共同主軸「信任地基」</h2>
-            <p data-zh="所有賽道都需處理 identity · authorization · verification · privacy · security · accountability。" data-en="Every track must address identity · authorization · verification · privacy · security · accountability.">所有賽道都需處理 identity · authorization · verification · privacy · security · accountability。</p>
+            <h2 data-i18n="auto.85">共同主軸「信任地基」</h2>
+            <p data-i18n="auto.86">所有賽道都需處理 identity · authorization · verification · privacy · security · accountability。</p>
           </div>
           <div class="pill-row reveal" aria-label="信任地基">
             <span>identity</span>
@@ -261,37 +305,47 @@
           </div>
           <div class="minimum-grid" id="minimum">
             <article class="minimum-card reveal">
-              <span>1</span>
+              <span><svg><use href="#icon-network"></use></svg></span>
               <h3>Principal</h3>
-              <p>代表誰？Agent 代表哪一個人、團隊、法人或公部門單位。</p>
+              <p data-i18n="auto.87">代表誰？Agent 代表哪一個人、團隊、法人或公部門單位。</p>
             </article>
             <article class="minimum-card reveal">
-              <span>2</span>
+              <span><svg><use href="#icon-card"></use></svg></span>
+              <h3>Goal / Task</h3>
+              <p data-i18n="trust.goal.body">Agent 的具體任務與完成條件是什麼？是否不是一般問答 chatbot？</p>
+            </article>
+            <article class="minimum-card reveal">
+              <span><svg><use href="#icon-shield"></use></svg></span>
               <h3>Authorization</h3>
-              <p>被授權做什麼？誰授權、允許做什麼、禁止做什麼。</p>
+              <p data-i18n="auto.88">被授權做什麼？誰授權、允許做什麼、禁止做什麼。</p>
             </article>
             <article class="minimum-card reveal">
-              <span>3</span>
+              <span><svg><use href="#icon-code"></use></svg></span>
               <h3>Tool / Action</h3>
-              <p>能呼叫什麼工具？每個工具需要哪些權限與邊界。</p>
+              <p data-i18n="auto.89">能呼叫什麼工具？每個工具需要哪些權限與邊界。</p>
             </article>
             <article class="minimum-card reveal">
-              <span>4</span>
+              <span><svg><use href="#icon-lock"></use></svg></span>
               <h3>Policy Gate</h3>
-              <p>高風險動作如何被擋？付款、送件、簽署或讀取敏感資料需明確把關。</p>
+              <p data-i18n="auto.90">高風險動作如何被擋？付款、送件、簽署或讀取敏感資料需明確把關。</p>
             </article>
             <article class="minimum-card reveal">
-              <span>5</span>
+              <span><svg><use href="#icon-log"></use></svg></span>
               <h3>Audit Log</h3>
-              <p>如何追溯行動？記錄 Agent 的行動、決策與授權依據。</p>
+              <p data-i18n="auto.91">如何追溯行動？記錄 Agent 的行動、決策與授權依據。</p>
             </article>
             <article class="minimum-card reveal">
-              <span>6</span>
+              <span><svg><use href="#icon-clock"></use></svg></span>
               <h3>Expiry / Revocation</h3>
-              <p>何時失效或撤銷？授權過期或撤銷後，Agent 必須停止執行。</p>
+              <p data-i18n="auto.92">何時失效或撤銷？授權過期或撤銷後，Agent 必須停止執行。</p>
+            </article>
+            <article class="minimum-card reveal">
+              <span><svg><use href="#icon-card"></use></svg></span>
+              <h3>Governance Gap</h3>
+              <p data-i18n="trust.governance.body">以一頁 memo 說明台灣落地所需的法規、標準、責任或資料治理缺口。</p>
             </article>
           </div>
-          <p class="callout reveal">單純 chatbot 包裝不足以拿高分。作品應展示 Agent 在明確信任限制下完成真實任務，且能被驗證、限制、追溯。</p>
+          <p class="callout reveal" data-i18n="auto.93">單純 chatbot 包裝不足以拿高分。作品應展示 Agent 在明確信任限制下完成真實任務，且能被驗證、限制、追溯。</p>
         </div>
       </section>
 
@@ -299,32 +353,32 @@
         <div class="container split-layout">
           <div class="section-heading reveal">
             <p class="section-kicker">06 | Eligibility & Rules</p>
-            <h2 data-zh="參賽資格與規則" data-en="Eligibility & Rules">參賽資格與規則</h2>
-            <p data-zh="鼓勵跨校、跨公司、跨技術與領域組隊。" data-en="Cross-school, cross-company, cross-technical and domain teams are encouraged.">鼓勵跨校、跨公司、跨技術與領域組隊。</p>
+            <h2 data-i18n="auto.94">參賽資格與規則</h2>
+            <p data-i18n="auto.95">鼓勵跨校、跨公司、跨技術與領域組隊。</p>
           </div>
           <div class="rule-stack">
             <article class="info-card reveal">
-              <h3>參賽對象</h3>
+              <h3 data-i18n="auto.96">參賽對象</h3>
               <ul class="check-list">
-                <li>學生、青年開發者與業界開發者。</li>
-                <li>AI／資料、資安、區塊鏈、產品、設計或專案管理人才。</li>
-                <li>供應鏈、支付、醫療保險、政府服務等領域參與者。</li>
+                <li data-i18n="auto.97">學生、青年開發者與業界開發者。</li>
+                <li data-i18n="auto.98">AI／資料、資安、區塊鏈、產品、設計或專案管理人才。</li>
+                <li data-i18n="auto.99">供應鏈、支付、醫療保險、政府服務等領域參與者。</li>
               </ul>
             </article>
             <article class="info-card reveal">
-              <h3>隊伍與出席</h3>
+              <h3 data-i18n="auto.100">隊伍與出席</h3>
               <ul class="check-list">
-                <li>每隊 2-5 人，每位參賽者限加入一隊。</li>
-                <li>可個人報名，再由主辦方協助媒合。</li>
-                <li>入選隊伍需完整參與 8/29-31 主要流程。</li>
+                <li data-i18n="auto.101">每隊 2-5 人，每位參賽者限加入一隊。</li>
+                <li data-i18n="auto.102">可個人報名，再由主辦方協助媒合。</li>
+                <li data-i18n="auto.103">入選隊伍需完整參與 8/29-31 主要流程。</li>
               </ul>
             </article>
             <article class="info-card reveal">
-              <h3>交付與注意事項</h3>
+              <h3 data-i18n="auto.104">交付與注意事項</h3>
               <ul class="check-list">
-                <li>需完成 demo、中文簡報與一頁治理缺口 memo。</li>
-                <li>僅使用具合法授權的模型、資料、工具與第三方服務。</li>
-                <li>敏感資料以匿名、合成或測試資料替代，並遵守 sponsor 使用規範。</li>
+                <li data-i18n="auto.105">需完成 demo、中文簡報與一頁治理缺口 memo。</li>
+                <li data-i18n="auto.106">僅使用具合法授權的模型、資料、工具與第三方服務。</li>
+                <li data-i18n="auto.107">敏感資料以匿名、合成或測試資料替代，並遵守 sponsor 使用規範。</li>
               </ul>
             </article>
           </div>
@@ -335,21 +389,21 @@
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-kicker">07 | Judging Criteria</p>
-            <h2 data-zh="評分標準" data-en="Judging Criteria">評分標準</h2>
-            <p data-zh="初選重視題目相關性；決選聚焦信任設計、技術完成度與場景適配。" data-en="Initial screening prioritizes topic relevance; final judging focuses on trust architecture, technical execution and scenario fit.">初選重視題目相關性；決選聚焦信任設計、技術完成度與場景適配。</p>
+            <h2 data-i18n="auto.108">評分標準</h2>
+            <p data-i18n="auto.109">初選重視題目相關性；決選聚焦信任設計、技術完成度與場景適配。</p>
           </div>
           <div class="score-grid">
             <article class="score-card reveal">
-              <h3>初選評估</h3>
-              <div class="score-row"><span>題目相關性</span><strong>50%</strong></div>
-              <div class="score-row"><span>可行性</span><strong>30%</strong></div>
-              <div class="score-row"><span>團隊能力</span><strong>20%</strong></div>
+              <h3 data-i18n="auto.110">初選評估</h3>
+              <div class="score-row"><span data-i18n="auto.111">題目相關性</span><strong>50%</strong></div>
+              <div class="score-row"><span data-i18n="auto.112">可行性</span><strong>30%</strong></div>
+              <div class="score-row"><span data-i18n="auto.113">團隊能力</span><strong>20%</strong></div>
             </article>
             <article class="score-card reveal">
-              <h3>決選評估</h3>
-              <div class="score-row"><span>信任架構</span><strong>40%</strong></div>
-              <div class="score-row"><span>技術執行</span><strong>35%</strong></div>
-              <div class="score-row"><span>場景適配</span><strong>25%</strong></div>
+              <h3 data-i18n="auto.114">決選評估</h3>
+              <div class="score-row"><span data-i18n="auto.115">信任架構</span><strong>40%</strong></div>
+              <div class="score-row"><span data-i18n="auto.116">技術執行</span><strong>35%</strong></div>
+              <div class="score-row"><span data-i18n="auto.117">場景適配</span><strong>25%</strong></div>
             </article>
           </div>
         </div>
@@ -359,34 +413,34 @@
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-kicker">08 | Prize Architecture</p>
-            <h2 data-zh="獎項與開發資源" data-en="Prizes & Builder Resources">獎項與開發資源</h2>
-            <p data-zh="主現金獎、Builder Kit、四大賽道獎與選配特別獎。" data-en="Main cash prizes, Builder Kits, Best Track Awards and optional special awards.">主現金獎、Builder Kit、四大賽道獎與選配特別獎。</p>
+            <h2 data-i18n="auto.118">獎項與開發資源</h2>
+            <p data-i18n="auto.119">主現金獎、Builder Kit、四大賽道獎與選配特別獎。</p>
           </div>
           <div class="prize-grid">
             <article class="prize-card prize-main reveal">
               <span class="award-label">Main Cash Prizes</span>
               <h3>USD 12,000</h3>
-              <p>主現金獎池，分配給 6 隊主獎得主。</p>
+              <p data-i18n="auto.120">主現金獎池，分配給 6 隊主獎得主。</p>
               <ul>
-                <li>冠軍 Grand Prize：1 x USD 5,000</li>
-                <li>亞軍 Excellence Award：2 x USD 2,000</li>
-                <li>季軍 Merit Award：3 x USD 1,000</li>
+                <li data-i18n="auto.121">冠軍 Grand Prize：1 x USD 5,000</li>
+                <li data-i18n="auto.122">亞軍 Excellence Award：2 x USD 2,000</li>
+                <li data-i18n="auto.123">季軍 Merit Award：3 x USD 1,000</li>
               </ul>
             </article>
             <article class="prize-card reveal">
               <span class="award-label">Builder Kit</span>
-              <h3>20 隊入選皆有</h3>
-              <p>含 OpenAI、Gemini、Claude Code 等開發資源，以隊伍為單位分段發放。</p>
+              <h3 data-i18n="auto.124">20 隊入選皆有</h3>
+              <p data-i18n="auto.125">含 OpenAI、Gemini、Claude Code 等開發資源，以隊伍為單位分段發放。</p>
             </article>
             <article class="prize-card reveal">
               <span class="award-label">Best Track Award</span>
-              <h3>四大賽道獎</h3>
-              <p>硬體以 Mac mini 為目標；以贊助到位為準 / subject to sponsor confirmation。</p>
+              <h3 data-i18n="auto.126">四大賽道獎</h3>
+              <p data-i18n="auto.127">硬體以 Mac mini 為目標；以贊助到位為準 / subject to sponsor confirmation。</p>
             </article>
             <article class="prize-card reveal">
               <span class="award-label">Special Award</span>
-              <h3>選配特別獎</h3>
-              <p>DGX Spark 等列為選配特別獎；以贊助到位為準 / subject to sponsor confirmation。</p>
+              <h3 data-i18n="auto.128">選配特別獎</h3>
+              <p data-i18n="auto.129">DGX Spark 等列為選配特別獎；以贊助到位為準 / subject to sponsor confirmation。</p>
             </article>
           </div>
         </div>
@@ -396,20 +450,18 @@
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-kicker">09 | Credential Experience</p>
-            <h2 data-zh="憑證體驗（VC）作為亮點" data-en="Credential Experience as a Highlight">憑證體驗（VC）作為亮點</h2>
-            <p data-zh="用於活動流程，但不綁死參賽技術棧。" data-en="Used for event operations, without locking teams into a required development stack.">用於活動流程，但不綁死參賽技術棧。</p>
+            <h2 data-i18n="auto.130">憑證體驗（VC）作為亮點</h2>
+            <p data-i18n="auto.131">用於活動流程，但不綁死參賽技術棧。</p>
           </div>
           <div class="vc-flow reveal" aria-label="VC 流程">
-            <span>入選<br /><small>Finalist VC</small></span>
-            <span>報到<br /><small>Participant Badge</small></span>
-            <span>隊伍<br /><small>Team Membership</small></span>
-            <span>交件<br /><small>Submission Receipt</small></span>
-            <span>完賽<br /><small>Completion VC</small></span>
-            <span>得獎<br /><small>Award VC</small></span>
+            <span data-i18n="auto.132">入選<br /><small>Finalist VC</small></span>
+            <span data-i18n="auto.133">報到<br /><small>Participant Badge</small></span>
+            <span data-i18n="auto.134">隊伍<br /><small>Team Membership</small></span>
+            <span data-i18n="auto.135">交件<br /><small>Submission Receipt</small></span>
+            <span data-i18n="auto.136">完賽<br /><small>Completion VC</small></span>
+            <span data-i18n="auto.137">得獎<br /><small>Award VC</small></span>
           </div>
-          <p class="muted center reveal">
-            活動以可驗證憑證串接關鍵節點；KERI、vLEI 與政府錢包可作為鼓勵或進階場景，不是所有隊伍的硬性門檻。
-          </p>
+          <p class="muted center reveal" data-i18n="auto.138">活動以可驗證憑證串接關鍵節點；KERI、vLEI 與政府錢包可作為鼓勵或進階場景，不是所有隊伍的硬性門檻。</p>
         </div>
       </section>
 
@@ -417,19 +469,33 @@
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-kicker">10 | Pre-event Workshops</p>
-            <h2 data-zh="賽前工作坊" data-en="Pre-event Workshops">賽前工作坊</h2>
-            <p data-zh="協助入選隊伍建立共同語言與技術起點。" data-en="Helping selected teams build a shared vocabulary and technical starting point.">協助入選隊伍建立共同語言與技術起點。</p>
+            <h2 data-i18n="auto.139">賽前工作坊</h2>
+            <p data-i18n="auto.140">協助入選隊伍建立共同語言與技術起點。</p>
           </div>
           <div class="workshop-grid">
             <article class="workshop-card reveal">
+              <svg class="card-icon"><use href="#icon-card"></use></svg>
               <span>Workshop 01</span>
-              <h3>VC／DID 與活動憑證流程</h3>
-              <p>理解入選、報到、交件、完賽與得獎證明如何串接活動流程。</p>
+              <h3 data-i18n="auto.141">VC／DID 與活動憑證流程</h3>
+              <p data-i18n="auto.142">理解入選、報到、交件、完賽與得獎證明如何串接活動流程。</p>
             </article>
             <article class="workshop-card reveal">
+              <svg class="card-icon"><use href="#icon-shield"></use></svg>
               <span>Workshop 02</span>
-              <h3>KERI／vLEI 與可信授權</h3>
-              <p>聚焦法人、組織角色、Agent 委派授權與可撤銷的信任流程。</p>
+              <h3 data-i18n="workshop.2.title">AI Agent 基礎、tool calling 與最低可信作品要求</h3>
+              <p data-i18n="workshop.2.body">建立可展示的 Agent workflow、tool action、授權模型與交件基準。</p>
+            </article>
+            <article class="workshop-card reveal">
+              <svg class="card-icon"><use href="#icon-network"></use></svg>
+              <span>Workshop 03</span>
+              <h3 data-i18n="workshop.3.title">KERI／vLEI、法人角色與委派授權</h3>
+              <p data-i18n="workshop.3.body">聚焦法人、組織角色、Agent 委派授權與可撤銷的信任流程。</p>
+            </article>
+            <article class="workshop-card reveal">
+              <svg class="card-icon"><use href="#icon-lock"></use></svg>
+              <span>Workshop 04</span>
+              <h3 data-i18n="workshop.4.title">Agent Security、隱私與 red teaming</h3>
+              <p data-i18n="workshop.4.body">聚焦 prompt injection、tool misuse、privilege abuse 與資料外洩防護。</p>
             </article>
           </div>
         </div>
@@ -439,16 +505,16 @@
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-kicker">11 | Roadmap</p>
-            <h2 data-zh="時間軸" data-en="Roadmap">時間軸</h2>
-            <p data-zh="從框架對齊到 Hackathon＋Demo Day。" data-en="From framework alignment to Hackathon + Demo Day.">從框架對齊到 Hackathon＋Demo Day。</p>
+            <h2 data-i18n="auto.145">時間軸</h2>
+            <p data-i18n="auto.146">從框架對齊到 Hackathon＋Demo Day。</p>
           </div>
           <ol class="timeline reveal">
-            <li><time>6 月</time><span>框架與夥伴對齊</span></li>
-            <li><time>7 月初</time><span>正式公告、開放報名</span></li>
-            <li><time>7 月中</time><span>說明會與組隊媒合</span></li>
-            <li><time>7 月下旬</time><span>初選與入選確認</span></li>
-            <li><time>8 月</time><span>賽前工作坊與技術彩排</span></li>
-            <li><time>8/29-31</time><span>Hackathon＋Demo Day</span></li>
+            <li><time data-i18n="auto.147">6 月</time><span data-i18n="auto.148">框架與夥伴對齊</span></li>
+            <li><time data-i18n="auto.149">7 月初</time><span data-i18n="auto.150">正式公告、開放報名</span></li>
+            <li><time data-i18n="auto.151">7 月中</time><span data-i18n="auto.152">說明會與組隊媒合</span></li>
+            <li><time data-i18n="auto.153">7 月下旬</time><span data-i18n="auto.154">初選與入選確認</span></li>
+            <li><time data-i18n="auto.155">8 月</time><span data-i18n="roadmap.workshops">四場賽前工作坊與端到端技術彩排</span></li>
+            <li><time data-i18n="auto.157">8/29-31</time><span data-i18n="auto.158">Hackathon＋Demo Day</span></li>
           </ol>
         </div>
       </section>
@@ -457,30 +523,30 @@
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-kicker">12 | Partners & Ecosystem</p>
-            <h2 data-zh="合作夥伴與生態系" data-en="Partners & Ecosystem">合作夥伴與生態系</h2>
-            <p data-zh="實際角色以正式邀請與合作確認為準 / Roles confirmed through formal invitation and partner alignment." data-en="Roles confirmed through formal invitation and partner alignment.">實際角色以正式邀請與合作確認為準 / Roles confirmed through formal invitation and partner alignment.</p>
+            <h2 data-i18n="auto.159">合作夥伴與生態系</h2>
+            <p data-i18n="auto.160">實際角色以正式邀請與合作確認為準 / Roles confirmed through formal invitation and partner alignment.</p>
           </div>
           <div class="partner-groups">
             <article class="partner-group reveal">
-              <h3>技術夥伴 Technology Partners</h3>
+              <h3 data-i18n="auto.161">技術夥伴 Technology Partners</h3>
               <div class="partner-grid">
-                <div class="partner-box"><strong>GLEIF</strong><span>洽談中／擬邀 · In discussion</span></div>
-                <div class="partner-box"><strong>KERI</strong><span>洽談中／擬邀 · In discussion</span></div>
-                <div class="partner-box"><strong>Cardano</strong><span>洽談中／擬邀 · In discussion</span></div>
+                <div class="partner-box"><strong>GLEIF</strong><span data-i18n="auto.162">洽談中／擬邀 · In discussion</span></div>
+                <div class="partner-box"><strong>KERI</strong><span data-i18n="auto.163">洽談中／擬邀 · In discussion</span></div>
+                <div class="partner-box"><strong>Cardano</strong><span data-i18n="auto.164">洽談中／擬邀 · In discussion</span></div>
               </div>
             </article>
             <article class="partner-group reveal">
-              <h3>開發社群 Developer Communities</h3>
+              <h3 data-i18n="auto.165">開發社群 Developer Communities</h3>
               <div class="partner-grid">
-                <div class="partner-box"><strong>XueDAO</strong><span>洽談中／擬邀 · In discussion</span></div>
-                <div class="partner-box"><strong>DefiHackLabs</strong><span>洽談中／擬邀 · In discussion</span></div>
+                <div class="partner-box"><strong>XueDAO</strong><span data-i18n="auto.166">洽談中／擬邀 · In discussion</span></div>
+                <div class="partner-box"><strong>DefiHackLabs</strong><span data-i18n="auto.167">洽談中／擬邀 · In discussion</span></div>
               </div>
             </article>
             <article class="partner-group reveal">
-              <h3>指導單位 Guidance</h3>
+              <h3 data-i18n="auto.168">指導單位 Guidance</h3>
               <div class="partner-grid">
-                <div class="partner-box"><strong>國發會</strong><span>洽談中／擬邀 · In discussion</span></div>
-                <div class="partner-box"><strong>資訊軟體公會</strong><span>洽談中／擬邀 · In discussion</span></div>
+                <div class="partner-box"><strong>國發會</strong><span data-i18n="auto.169">洽談中／擬邀 · In discussion</span></div>
+                <div class="partner-box"><strong>資訊軟體公會</strong><span data-i18n="auto.170">洽談中／擬邀 · In discussion</span></div>
               </div>
             </article>
           </div>
@@ -491,8 +557,8 @@
         <div class="container sponsor-grid">
           <div class="section-heading reveal">
             <p class="section-kicker">13 | Become a Partner</p>
-            <h2 data-zh="成為夥伴／徵求贊助" data-en="Become a Partner">Become a Partner</h2>
-            <p data-zh="把品牌放在可信 AI Agent 生態系的根部。" data-en="Put your brand at the root of the trustworthy AI Agent ecosystem.">Put your brand at the root of the trustworthy AI Agent ecosystem.</p>
+            <h2 data-i18n="auto.171">Become a Partner</h2>
+            <p data-i18n="auto.172">Put your brand at the root of the trustworthy AI Agent ecosystem.</p>
           </div>
           <div class="value-grid">
             <article class="value-card reveal"><h3>Talent</h3><p>Direct access to mixed student and industry builders.</p></article>
@@ -501,7 +567,7 @@
             <article class="value-card reveal"><h3>Pipeline</h3><p>Engage prototypes and POCs after the event.</p></article>
           </div>
           <div class="cta-row reveal">
-            <a class="button button-primary" href="mailto:taka@chain.tw">Contact us: taka@chain.tw</a>
+            <a class="button button-primary" href="mailto:taka@chain.tw" data-i18n="contact.email">聯絡 Taka｜taka@chain.tw</a>
           </div>
         </div>
       </section>
@@ -510,42 +576,145 @@
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-kicker">14 | FAQ</p>
-            <h2 data-zh="常見問答" data-en="FAQ">常見問答</h2>
-            <p data-zh="報名前可先確認資格、交付與規則。" data-en="Confirm eligibility, deliverables and rules before registration opens.">報名前可先確認資格、交付與規則。</p>
+            <h2 data-i18n="auto.173">常見問答</h2>
+            <p data-i18n="auto.174">報名前可先確認資格、交付與規則。</p>
           </div>
-          <div class="faq-list reveal">
-            <details>
-              <summary data-zh="誰可以參加？" data-en="Who can participate?">誰可以參加？</summary>
-              <p>學生、青年開發者、業界開發者、設計／產品人才，以及四大賽道相關領域參與者皆可報名。</p>
-            </details>
-            <details>
-              <summary data-zh="需要什麼背景？" data-en="What background do I need?">需要什麼背景？</summary>
-              <p>活動鼓勵跨領域組隊。隊伍可包含開發、AI／資料、資安、區塊鏈、產品、設計、專案管理或領域專家。</p>
-            </details>
-            <details>
-              <summary data-zh="可以個人報名嗎？" data-en="Can I register as an individual?">可以個人報名嗎？</summary>
-              <p>可以。個人可先報名，再由主辦方協助媒合；最終隊伍需為 2-5 人。</p>
-            </details>
-            <details>
-              <summary data-zh="簡報語言是什麼？" data-en="What is the presentation language?">簡報語言是什麼？</summary>
-              <p>Demo Day 以中文簡報與現場成果展示為主，技術名稱、程式碼與專有名詞可使用英文。</p>
-            </details>
-            <details>
-              <summary data-zh="可以用哪些技術棧？" data-en="What technology stacks are allowed?">可以用哪些技術棧？</summary>
-              <p>程式語言、模型、Agent framework、wallet、DID method、雲端或本地端環境皆可自由選擇；信任成果必須能被展示。</p>
-            </details>
-            <details>
-              <summary data-zh="需要交什麼？" data-en="What must teams submit?">需要交什麼？</summary>
-              <p>需完成可運作 demo、中文簡報與一頁台灣落地治理缺口 memo，並展示 Agent workflow、授權模型、工具行動與 audit trail。</p>
-            </details>
-            <details>
-              <summary data-zh="智財與資料規則如何處理？" data-en="How are IP and data rules handled?">智財與資料規則如何處理？</summary>
-              <p>作品若使用既有程式或開源套件，應揭露並符合授權。敏感資料一律以匿名、合成或測試資料替代。</p>
-            </details>
-            <details>
-              <summary data-zh="報名何時開放？" data-en="When will registration open?">報名何時開放？</summary>
-              <p>報名即將開放。可在本頁留下 email 訂閱搶先通知。</p>
-            </details>
+          <div class="faq-list reveal" data-faq-root>
+            <section class="faq-group">
+              <h3>A. 報名與組隊</h3>
+              <details>
+                <summary>誰可以參加？</summary>
+                <p>學生、青年開發者、業界開發者、設計／產品人才，以及供應鏈、支付、醫療保險、政府服務等四大賽道相關領域參與者皆可報名。</p>
+              </details>
+              <details>
+                <summary>需要具備哪些背景？</summary>
+                <p>不限定單一背景。建議隊伍具備開發、AI／資料、資安、產品、設計、專案管理或領域知識。</p>
+              </details>
+              <details>
+                <summary>可以個人報名嗎？如何媒合？</summary>
+                <p>可以。個人可先報名，主辦方將依技能、賽道與可投入時段協助媒合。</p>
+              </details>
+              <details>
+                <summary>每隊幾人？每位參賽者可否加入多隊？</summary>
+                <p>每隊 2–5 人；每位參賽者限加入一隊。</p>
+              </details>
+              <details>
+                <summary>可以跨校、跨公司或跨領域組隊嗎？</summary>
+                <p>可以，也鼓勵跨校、跨公司、跨技術與領域組隊。</p>
+              </details>
+              <details>
+                <summary>每隊是否只能選一個賽道？跨賽道作品如何評審？</summary>
+                <p>每隊需指定一個主賽道；跨賽道作品仍以主賽道作為主要評審場景。</p>
+              </details>
+              <details>
+                <summary>入選後是否必須全程出席？</summary>
+                <p>入選隊伍需完整參與 8/29–31 主要流程與 Demo Day。</p>
+              </details>
+              <details>
+                <summary>初選如何評分？是否有候補機制？</summary>
+                <p>初選依題目相關性 50%、可行性 30%、團隊能力 20% 評分；候補機制以正式簡章為準。</p>
+              </details>
+              <details>
+                <summary>報名何時開放？</summary>
+                <p>報名即將開放，正式時間以活動公告為準。</p>
+              </details>
+            </section>
+            <section class="faq-group">
+              <h3>B. 開發與技術</h3>
+              <details>
+                <summary>什麼才算可信 AI Agent？一般 chatbot 可以嗎？</summary>
+                <p>作品需展示 Agent 代表誰、被授權做什麼、能呼叫什麼工具、如何被 policy gate 限制、如何追溯與撤銷；單純 chatbot wrapper 不足以拿高分。</p>
+              </details>
+              <details>
+                <summary>可以使用哪些模型、程式語言與 Agent framework？</summary>
+                <p>技術棧自由，可使用任一模型、程式語言、Agent framework、雲端或本地端環境。</p>
+              </details>
+              <details>
+                <summary>是否一定要使用 VC、DID、KERI、vLEI 或政府數位憑證皮夾？</summary>
+                <p>不強制。這些都是可選技術或加分方向，不是所有隊伍的硬性技術棧。</p>
+              </details>
+              <details>
+                <summary>可以使用既有程式碼與開源套件嗎？</summary>
+                <p>可以，但需揭露並遵守其授權條款。</p>
+              </details>
+              <details>
+                <summary>可以使用真實醫療、金融或政府資料嗎？</summary>
+                <p>不可以。敏感資料應使用匿名、合成或測試資料。</p>
+              </details>
+              <details>
+                <summary>哪些高風險動作需 human approval？</summary>
+                <p>付款、送件、簽署、讀取敏感資料或造成法律／業務效果的動作，應設計 human approval 或阻擋機制。</p>
+              </details>
+            </section>
+            <section class="faq-group">
+              <h3>C. 交件與評分</h3>
+              <details>
+                <summary>必須提交哪些內容？</summary>
+                <p>至少包含可運作原型、現場 Demo、中文簡報、程式碼／技術文件與一頁台灣落地治理缺口 memo。</p>
+              </details>
+              <details>
+                <summary>Demo Day 使用什麼語言？</summary>
+                <p>Demo Day 以中文簡報與現場成果展示為主；技術名稱、程式碼、專有名詞可使用英文。</p>
+              </details>
+              <details>
+                <summary>初選 50/30/20 的評分方式為何？</summary>
+                <p>題目相關性 50%、可行性 30%、團隊能力 20%。</p>
+              </details>
+              <details>
+                <summary>決選 40/35/25 的評分方式為何？</summary>
+                <p>信任架構 40%、技術執行 35%、場景適配 25%。</p>
+              </details>
+              <details>
+                <summary>完賽與取得 Completion VC 的條件為何？</summary>
+                <p>需到場參與、完成交件、完成 Demo Day 展示；細節以正式簡章為準。</p>
+              </details>
+            </section>
+            <section class="faq-group">
+              <h3>D. 資源與獎項</h3>
+              <details>
+                <summary>Builder Kit / AI credits 如何提供？</summary>
+                <p>提供給 20 隊入選隊伍，以隊伍為單位並可分階段發放。</p>
+              </details>
+              <details>
+                <summary>四場工作坊是否必須參加？</summary>
+                <p>入選隊伍應參與必要說明、工作坊與技術彩排；實際要求以正式簡章為準。</p>
+              </details>
+              <details>
+                <summary>現金獎如何分配？</summary>
+                <p>主現金獎池 USD 12,000：冠軍 1 隊 x USD 5,000、亞軍 2 隊 x USD 2,000、季軍 3 隊 x USD 1,000。</p>
+              </details>
+              <details>
+                <summary>主獎與 Best Track Award 可以重疊嗎？</summary>
+                <p>可以；同一隊原則最多一個主現金獎加一個賽道獎，特別獎另計。</p>
+              </details>
+              <details>
+                <summary>Mac mini／DGX Spark 是否確定？</summary>
+                <p>Mac mini 為四大賽道獎目標硬體，DGX Spark 為 sponsor-backed 選配特別獎；皆以正式贊助公告為準。</p>
+              </details>
+            </section>
+            <section class="faq-group">
+              <h3>E. 法務、場務與聯絡</h3>
+              <details>
+                <summary>智慧財產權、影像授權、獎金稅務如何處理？</summary>
+                <p>正式簡章另行公告，不在本頁自行創造條款。</p>
+              </details>
+              <details>
+                <summary>活動地點與日期？</summary>
+                <p>2026/08/29–8/30 黑客松；2026/08/31 Demo Day。地點為 N24 台北方舟。</p>
+              </details>
+              <details>
+                <summary>需要自行攜帶哪些設備？</summary>
+                <p>請自備開發所需筆電與周邊；其他現場設備需求以行前通知為準。</p>
+              </details>
+              <details>
+                <summary>夜間活動、餐飲、網路與休息安排何時公告？</summary>
+                <p>以正式簡章與入選後行前通知為準。</p>
+              </details>
+              <details>
+                <summary>有其他問題如何聯絡？</summary>
+                <p>請聯絡 Taka｜taka@chain.tw。</p>
+              </details>
+            </section>
           </div>
         </div>
       </section>
@@ -554,21 +723,13 @@
         <div class="container contact-grid">
           <div class="section-heading reveal">
             <p class="section-kicker">15 | Registration & Contact</p>
-            <h2 data-zh="報名／聯絡" data-en="Registration & Contact">報名／聯絡</h2>
-            <p data-zh="報名即將開放 Coming Soon。" data-en="Registration is coming soon.">報名即將開放 Coming Soon。</p>
+            <h2 data-i18n="auto.191">報名／聯絡</h2>
+            <p data-i18n="auto.192">報名即將開放 Coming Soon。</p>
           </div>
-          <form class="subscribe-form reveal" action="#" method="post" data-form>
-            <label for="email">訂閱搶先通知</label>
-            <div class="input-row">
-              <input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required />
-              <button class="button button-primary" type="submit">Subscribe</button>
-            </div>
-            <p class="form-note" data-form-note>此欄位為前端佔位，不會送出真實表單。</p>
-          </form>
           <div class="contact-card reveal">
-            <h3>聯絡窗口</h3>
-            <p>Taka｜<a href="mailto:taka@chain.tw">taka@chain.tw</a></p>
-            <a class="button button-secondary" href="https://www.chain.tw/en">回 chain.tw 主站</a>
+            <h3 data-i18n="auto.193">聯絡窗口</h3>
+            <p>Taka｜<a href="mailto:taka@chain.tw" data-contact-link>taka@chain.tw</a></p>
+            <a class="button button-secondary" href="https://www.chain.tw/en" target="_blank" rel="noopener noreferrer" data-i18n="auto.194">回 chain.tw 主站</a>
           </div>
         </div>
       </section>
@@ -578,31 +739,35 @@
       <div class="container footer-grid">
         <div class="footer-brand">
           <div class="footer-logo-row" aria-label="主辦與場地">
-            <img src="./assets/tabei-placeholder.svg" alt="TABEI logo placeholder" />
-            <img src="./assets/n24-placeholder.svg" alt="N24 台北方舟 logo placeholder" />
+            <img src="./assets/official/tabei-logo.png" alt="TABEI" />
+            <img src="./assets/official/n24-logo-white.png" alt="N24 台北方舟" />
           </div>
-          <p>Trustworthy AI Hackathon｜可信 AI 黑客松</p>
+          <p data-i18n="auto.195">Trustworthy AI Hackathon｜可信 AI 黑客松</p>
           <p class="muted">Building the trust layer for the AI-Agent economy</p>
         </div>
         <div class="footer-subscribe">
-          <h2>Subscribe for the Latest Information</h2>
-          <form class="footer-form" action="#" method="post" data-form>
-            <input type="email" placeholder="Leave email for subscription" aria-label="Email" required />
-            <button type="submit">Subscribe</button>
-          </form>
+          <h2 data-i18n="footer.newsletter">訂閱協會電子報</h2>
+          <a class="button button-primary" href="https://chaintw.substack.com/" target="_blank" rel="noopener noreferrer" data-newsletter-link>Newsletter</a>
         </div>
         <div class="footer-links">
-          <h2>Follow us via social media</h2>
-          <a href="https://www.youtube.com/" aria-label="YouTube">YouTube</a>
-          <a href="https://www.facebook.com/" aria-label="Facebook">Facebook</a>
-          <a href="https://www.chain.tw/en">Back to chain.tw</a>
+          <h2 data-i18n="footer.follow">追蹤臺灣區塊鏈愛好者協會</h2>
+          <a href="https://www.facebook.com/www.chain.tw" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+          <a href="https://www.youtube.com/@chain_tw" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+          <a href="https://x.com/TABEI_tw" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+          <a href="https://www.chain.tw/" target="_blank" rel="noopener noreferrer" data-i18n="footer.website">回到 chain.tw</a>
+          <a href="https://portaly.cc/chain.tw" target="_blank" rel="noopener noreferrer">Portaly</a>
         </div>
       </div>
       <div class="container footer-bottom">
-        <span>© 2026 Taiwan Association for Blockchain Ecosystem Innovation.</span>
+        <span data-i18n="footer.org.zh">臺灣區塊鏈愛好者協會</span>
+        <span data-i18n="footer.org.en">Taiwan Association for Blockchain Ecosystem Innovation (TABEI)</span>
       </div>
     </footer>
 
+    <script src="./site-config.js"></script>
+    <script src="./content.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>
+
+

@@ -6,21 +6,24 @@
 
 - `index.html`：單頁長捲動活動頁，含 SEO / OG meta。
 - `styles.css`：自包含樣式，使用 CSS variables 對齊 chain.tw 深藍、白底、時間軸視覺。
-- `main.js`：sticky header、手機導覽、語言切換狀態、scroll reveal、訂閱欄位佔位互動。
-- `assets/`：TABEI / N24 logo 佔位與 OG 圖。
+- `main.js`：sticky header、手機導覽、語言切換、CTA 狀態、FAQ 渲染與 progressive enhancement。
+- `site-config.js`：報名狀態、工作坊數量、聯絡信箱、官方社群與 newsletter 等易變資訊。
+- `content.js`：中英文翻譯與完整 FAQ 內容。
+- `assets/official/`：chain.tw 既有 TABEI / N24 品牌 logo。
+- `assets/og-trustworthy-ai-hackathon.jpg`：1200×630 社群預覽圖。
 
 ## 本機預覽
 
 可直接用瀏覽器開啟：
 
 ```powershell
-Start-Process C:\Users\sanketsu\trustworthy-ai-hackathon\index.html
+Start-Process C:\Users\sanketsu\Hackathon_net\index.html
 ```
 
 或用任一靜態伺服器預覽：
 
 ```powershell
-cd C:\Users\sanketsu\trustworthy-ai-hackathon
+cd C:\Users\sanketsu\Hackathon_net
 python -m http.server 8080
 ```
 
@@ -32,7 +35,14 @@ python -m http.server 8080
 2. 將 `styles.css` 放入 Wix 的自訂 CSS 或頁面 embed 區塊。
 3. 將 `main.js` 放入頁面自訂程式碼區，或改由 Wix 既有互動取代。
 4. 將 `assets/` 上傳到 Wix media / public asset 區，並更新 HTML 內的相對路徑。
-5. 待正式授權後，再以正式 TABEI / N24 / partner logo 取代目前的文字佔位圖。
+5. TABEI 與 N24 已使用 chain.tw 既有公開品牌素材；partner logo 仍需待正式授權後再替換目前文字版位。
+
+## 目前設定
+
+- 預設語言：繁體中文。
+- 工作坊：4 場賽前工作坊 + 1 次端到端技術彩排。
+- 報名：即將開放，未接假表單；後續可在 `site-config.js` 填入 `registrationUrl`。
+- Newsletter：使用協會 Substack 連結。
 
 ## 合規注意
 

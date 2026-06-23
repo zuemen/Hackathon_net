@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="220" height="64" viewBox="0 0 220 64" role="img" aria-labelledby="title desc">
-  <title id="title">N24 ARK Taipei logo placeholder</title>
-  <desc id="desc">Text placeholder for N24 Taipei Ark.</desc>
-  <rect width="220" height="64" rx="12" fill="#10243A"/>
-  <rect x="16" y="16" width="34" height="32" rx="6" fill="#17B0A8"/>
-  <text x="33" y="38" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#0C1A2B">N</text>
-  <text x="62" y="28" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">N24 ARK</text>
-  <text x="62" y="46" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#A9B8C9">台北方舟 placeholder</text>
-</svg>
