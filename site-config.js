@@ -1,6 +1,6 @@
 window.SITE_CONFIG = {
   defaultLocale: "zh-Hant",
-  workshopCount: 4,
+  workshopCount: 2,
   rehearsalCount: 1,
   registrationStatus: "coming-soon",
   registrationUrl: "",
