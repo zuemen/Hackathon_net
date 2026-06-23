@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "lang": "zh-Hant",
+    "horizontalOverflow": false,
+    "bodyTextStartsZh": true,
+    "hasFourWorkshops": false,
+    "hasBrokenText": false
+  },
+  "consoleErrors": []
+}

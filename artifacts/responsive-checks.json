@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "lang": "zh-Hant",
+      "overflow": false,
+      "hasFourWorkshops": false,
+      "hasBrokenText": false,
+      "titleVisible": true
+    },
+    {
+      "width": 390,
+      "lang": "zh-Hant",
+      "overflow": false,
+      "hasFourWorkshops": false,
+      "hasBrokenText": false,
+      "titleVisible": true
+    },
+    {
+      "width": 768,
+      "lang": "zh-Hant",
+      "overflow": false,
+      "hasFourWorkshops": false,
+      "hasBrokenText": false,
+      "titleVisible": true
+    },
+    {
+      "width": 1024,
+      "lang": "zh-Hant",
+      "overflow": false,
+      "hasFourWorkshops": false,
+      "hasBrokenText": false,
+      "titleVisible": true
+    },
+    {
+      "width": 1440,
+      "lang": "zh-Hant",
+      "overflow": false,
+      "hasFourWorkshops": false,
+      "hasBrokenText": false,
+      "titleVisible": true
+    }
+  ],
+  "consoleErrors": []
+}

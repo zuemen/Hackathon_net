@@ -1097,6 +1097,11 @@ body.js-on .reveal.is-visible {
   transform: translateY(0);
 }
 
+body.js-on .hero .reveal {
+  opacity: 1;
+  transform: none;
+}
+
 body.is-en .section-heading p:not(.section-kicker),
 body.is-en .hero-lede {
   letter-spacing: 0;
@@ -1298,5 +1303,333 @@ body.is-en .hero-lede {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Visual parity refactor: TABEI / chain.tw association style */
+:root {
+  --brand-deep: #123c49;
+  --brand-teal: #168fa3;
+  --brand-cyan: #58b9c5;
+  --brand-ice: #eaf6f7;
+  --paper: #ffffff;
+  --surface: #f5f8f8;
+  --ink: #24363d;
+  --muted: #687b82;
+  --line: #d8e4e7;
+  --danger: #b94a48;
+  --award-accent: #b79245;
+  --bg-dark: var(--brand-deep);
+  --bg: var(--paper);
+  --bg-soft: var(--surface);
+  --ink-soft: var(--muted);
+  --primary: var(--brand-teal);
+  --primary-dark: #0f6574;
+  --trust: var(--brand-teal);
+  --award: var(--award-accent);
+  --shadow: none;
+  --shadow-soft: 0 8px 18px rgba(18, 60, 73, 0.045);
+  --radius: 4px;
+  --radius-sm: 4px;
+  --max: 1180px;
+}
+
+body {
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.site-header,
+.site-header.is-solid,
+.site-header.is-open {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
+}
+
+.brand-logo {
+  width: 220px;
+  height: auto;
+  max-height: 52px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.brand span {
+  display: none;
+}
+
+.brand strong {
+  color: var(--brand-deep);
+  font-weight: 700;
+}
+
+.brand small,
+.site-nav {
+  color: var(--muted);
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--brand-teal);
+}
+
+.button {
+  border-radius: 2px;
+}
+
+.button-primary {
+  color: #fff;
+  background: var(--brand-teal);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: var(--primary-dark);
+}
+
+.language-toggle {
+  border-color: var(--line);
+  border-radius: 4px;
+}
+
+.language-toggle button {
+  border-radius: 2px;
+}
+
+.language-toggle button.is-active {
+  color: #fff;
+  background: var(--brand-deep);
+}
+
+.hero {
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(234, 246, 247, 0.72), rgba(255, 255, 255, 0.96) 44%, #fff),
+    linear-gradient(180deg, #fff, #fff);
+}
+
+.network-bg {
+  display: none !important;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.5fr);
+  gap: 72px;
+}
+
+.eyebrow,
+.section-kicker,
+.panel-kicker,
+.award-label {
+  color: var(--brand-teal);
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.hero h1 {
+  color: var(--brand-deep);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
+  font-size: clamp(3rem, 5vw, 4.6rem);
+  line-height: 1.08;
+}
+
+.hero-subtitle {
+  color: var(--brand-deep);
+}
+
+.hero-lede,
+.section-heading p:not(.section-kicker) {
+  color: var(--muted);
+}
+
+.hero-meta span {
+  border-color: var(--line);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--ink);
+}
+
+.hero-panel {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--brand-teal);
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.trust-list li {
+  border-color: var(--line);
+  border-radius: 2px;
+  color: var(--muted);
+  background: #fff;
+}
+
+.section-soft {
+  background: var(--brand-ice);
+}
+
+.section-heading h2 {
+  color: var(--brand-deep);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+}
+
+.prose-card,
+.feature-card,
+.track-card,
+.info-card,
+.score-card,
+.prize-card,
+.workshop-card,
+.partner-group,
+.contact-card,
+.value-card,
+.faq-list details,
+.vc-flow span,
+.day-card {
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.feature-card,
+.minimum-card,
+.prize-card,
+.workshop-card {
+  border-top: 4px solid var(--brand-teal);
+}
+
+.feature-icon,
+.minimum-card span {
+  border-radius: 2px;
+  color: var(--brand-teal);
+  background: var(--brand-ice);
+}
+
+.stat-grid {
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.stat-grid div {
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.stat-grid div:last-child {
+  border-right: 0;
+}
+
+.stat-grid strong,
+.score-row strong,
+.value-card h3 {
+  color: var(--brand-teal);
+}
+
+.track-icon {
+  border-radius: 2px;
+  background: var(--brand-teal);
+}
+
+.callout {
+  border-left-color: var(--award-accent);
+  border-radius: 2px;
+  background: #fff;
+  color: var(--brand-deep);
+}
+
+.prize-main {
+  border-color: var(--line);
+  border-top-color: var(--award-accent);
+  background: #fff;
+}
+
+.timeline li::before {
+  background: var(--brand-teal);
+  box-shadow: 0 0 0 1px var(--brand-teal);
+}
+
+.timeline li::after {
+  background: rgba(22, 143, 163, 0.1);
+}
+
+.partner-box {
+  border-color: var(--line);
+  border-radius: 2px;
+  background: #fff;
+}
+
+.partner-box span {
+  color: var(--brand-deep);
+  background: var(--brand-ice);
+}
+
+.faq-list summary:hover,
+.faq-list summary:focus-visible {
+  color: var(--brand-teal);
+}
+
+.site-footer {
+  background: var(--brand-deep);
+}
+
+@media (max-width: 820px) {
+  body {
+    font-size: 16px;
+  }
+
+  .brand-logo {
+    width: 150px;
+    max-height: 42px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .nav-panel {
+    background: rgba(255, 255, 255, 0.98);
+    border-color: var(--line);
+    box-shadow: 0 18px 42px rgba(18, 60, 73, 0.12);
+  }
+
+  .header-actions {
+    border-top-color: var(--line);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 11vw, 3.1rem);
+    max-width: 9em;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h1,
+  .hero-subtitle,
+  .hero-lede {
+    max-width: 100%;
+  }
+
+  .hero-meta {
+    align-items: stretch;
+  }
+
+  .hero-meta span {
+    width: 100%;
   }
 }

@@ -1,0 +1,122 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "title": "協會理念 | 臺灣區塊鏈愛好者年會",
+  "body": {
+    "selector": "body",
+    "size": {
+      "width": 1440,
+      "height": 1000,
+      "top": 0,
+      "left": 0
+    },
+    "color": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "borderRadius": "0px",
+    "boxShadow": "none",
+    "padding": "0px",
+    "margin": "0px",
+    "maxWidth": "none"
+  },
+  "header": {
+    "selector": "header, nav, [role=\"banner\"]",
+    "size": {
+      "width": 1440,
+      "height": 174,
+      "top": 0,
+      "left": 0
+    },
+    "color": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "borderRadius": "0px",
+    "boxShadow": "none",
+    "padding": "0px",
+    "margin": "0px",
+    "maxWidth": "none"
+  },
+  "logo": {
+    "selector": "img",
+    "size": {
+      "width": 317,
+      "height": 64,
+      "top": 33,
+      "left": 100
+    },
+    "color": "rgb(0, 0, 238)",
+    "background": "rgba(0, 0, 0, 0)",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "borderRadius": "0px",
+    "boxShadow": "none",
+    "padding": "0px",
+    "margin": "0px",
+    "maxWidth": "none"
+  },
+  "h1": null,
+  "h2": {
+    "selector": "h2",
+    "size": {
+      "width": 598,
+      "height": 127,
+      "top": 278,
+      "left": 100
+    },
+    "color": "rgb(38, 45, 46)",
+    "background": "rgba(0, 0, 0, 0)",
+    "fontSize": "44px",
+    "fontWeight": "400",
+    "lineHeight": "61.6px",
+    "borderRadius": "0px",
+    "boxShadow": "none",
+    "padding": "0px",
+    "margin": "0px",
+    "maxWidth": "none"
+  },
+  "linkOrButton": {
+    "selector": "a[href], button",
+    "size": {
+      "width": 48,
+      "height": 0,
+      "top": 60,
+      "left": 626
+    },
+    "color": "rgb(17, 109, 255)",
+    "background": "rgb(255, 255, 255)",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "borderRadius": "24px",
+    "boxShadow": "none",
+    "padding": "0px 24px",
+    "margin": "0px 0px 0px -94px",
+    "maxWidth": "none"
+  },
+  "footer": {
+    "selector": "footer",
+    "size": {
+      "width": 1440,
+      "height": 68,
+      "top": 4710,
+      "left": 0
+    },
+    "color": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "borderRadius": "0px",
+    "boxShadow": "none",
+    "padding": "0px",
+    "margin": "0px",
+    "maxWidth": "none"
+  }
+}

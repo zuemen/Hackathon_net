@@ -1,0 +1,34 @@
+{
+  "open": true,
+  "panel": {
+    "x": 14,
+    "y": 78,
+    "width": 362,
+    "height": 445.546875,
+    "top": 78,
+    "right": 376,
+    "bottom": 523.546875,
+    "left": 14
+  },
+  "actions": {
+    "x": 33,
+    "y": 441.546875,
+    "width": 324,
+    "height": 63,
+    "top": 441.546875,
+    "right": 357,
+    "bottom": 504.546875,
+    "left": 33
+  },
+  "nav": {
+    "x": 33,
+    "y": 97,
+    "width": 324,
+    "height": 328.546875,
+    "top": 97,
+    "right": 357,
+    "bottom": 425.546875,
+    "left": 33
+  },
+  "overlap": false
+}
