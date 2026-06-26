@@ -35,7 +35,7 @@ python -m http.server 8080
 - 賽道：4 個，每隊只能選擇一個賽道。
 - 工作坊：兩場，日期為 2026/08/15、2026/08/22。
 - 報名預計於 7/4 開放，8/5 截止。
-- 報名網址已填入 `site-config.js`：`https://forms.gle/dqPZQGaXCJPrSiJv5`。
+- 報名網址已填入 `site-config.js`：`https://forms.gle/XCL9CkH6Dps8MA5r5`。
 - 公開獎項資訊僅為現金獎金池 USD 12,000，持續加碼中。
 - 未確認夥伴、資源、硬體、VC 活動流程與工作坊細節均不公開。
 
@@ -47,7 +47,7 @@ python -m http.server 8080
 - 2026/07/04 至 2026/08/05 23:59:59：中文 `立即報名`，英文 `Apply Now`，連到 Google Forms。
 - 2026/08/05 23:59:59 後：中文 `報名已截止`，英文 `Registration Closed`。
 
-臨時需要提前或延後開關時，可在 `site-config.js` 設定 `registrationOverride` 為 `scheduled`、`open` 或 `closed`。
+目前已在 `site-config.js` 將 `registrationOverride` 設為 `open`，讓報名 CTA 直接連到 Google Forms。臨時需要提前或延後開關時，可設定為 `scheduled`、`open` 或 `closed`。
 
 ## Feature Flags
 

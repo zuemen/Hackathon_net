@@ -17,10 +17,10 @@ window.SITE_CONFIG = {
   workshopCount: 2,
 
   registrationStatus: "scheduled",
-  registrationOverride: null,
+  registrationOverride: "open",
   registrationOpenAt: "2026-07-04T00:00:00+08:00",
   registrationCloseAt: "2026-08-05T23:59:59+08:00",
-  registrationUrl: "https://forms.gle/dqPZQGaXCJPrSiJv5",
+  registrationUrl: "https://forms.gle/XCL9CkH6Dps8MA5r5",
 
   infoSessionDate: "2026-07-20",
   finalistAnnouncementDate: "2026-08-07",
