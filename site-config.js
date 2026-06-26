@@ -37,8 +37,8 @@ window.SITE_CONFIG = {
   showCredentialExperience: false,
   showWorkshopTopics: false,
 
-  contactName: "Taka",
-  contactEmail: "taka@chain.tw",
+  contactName: "臺灣區塊鏈愛好者協會",
+  contactEmail: "contact@chain.tw",
   canonicalUrl: "https://hackathon-net.vercel.app/",
   newsletterUrl: "https://chaintw.substack.com/"
 };

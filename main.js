@@ -171,7 +171,9 @@
       link.rel = "noopener noreferrer";
     });
     contactLinks.forEach((link) => {
-      link.href = `mailto:${config.contactEmail || "taka@chain.tw"}`;
+      const email = config.contactEmail || "contact@chain.tw";
+      link.href = `mailto:${email}`;
+      link.textContent = email;
     });
   }
 

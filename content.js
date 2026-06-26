@@ -152,9 +152,10 @@ window.TRANSLATIONS = {
     "faq.title": "常見問答",
     "faq.body": "報名前可先確認資格、交付與規則。",
     "contact.title": "報名／聯絡",
-    "contact.body": "報名由 Team Lead 代表完整隊伍提交；如有問題請聯絡 Taka。",
+    "contact.body": "報名由 Team Lead 代表完整隊伍提交；如有問題請聯絡臺灣區塊鏈愛好者協會。",
     "contact.name": "聯絡窗口",
-    "contact.email": "聯絡 Taka｜taka@chain.tw",
+    "contact.person": "臺灣區塊鏈愛好者協會",
+    "contact.email": "聯絡臺灣區塊鏈愛好者協會｜contact@chain.tw",
     "contact.website": "回 chain.tw 主站",
     "footer.newsletter": "訂閱協會電子報",
     "footer.follow": "追蹤臺灣區塊鏈愛好者協會",
@@ -315,9 +316,10 @@ window.TRANSLATIONS = {
     "faq.title": "FAQ",
     "faq.body": "Confirm eligibility, deliverables and rules before registration.",
     "contact.title": "Registration & Contact",
-    "contact.body": "The Team Lead submits registration on behalf of the complete team. Contact Taka with questions.",
+    "contact.body": "The Team Lead submits registration on behalf of the complete team. Contact Taiwan Association for Blockchain Ecosystem Innovation with questions.",
     "contact.name": "Contact",
-    "contact.email": "Contact Taka | taka@chain.tw",
+    "contact.person": "Taiwan Association for Blockchain Ecosystem Innovation",
+    "contact.email": "Contact Taiwan Association for Blockchain Ecosystem Innovation | contact@chain.tw",
     "contact.website": "Back to chain.tw",
     "footer.newsletter": "Subscribe to TABEI newsletter",
     "footer.follow": "Follow TABEI",
@@ -354,7 +356,7 @@ window.FAQ_GROUPS = {
       ["活動地點與日期？", "2026/08/29–8/30 為 Hackathon，2026/08/31 為 Demo Day；地點為 N24 台北方舟。"],
       ["需要自行攜帶哪些設備？", "請自備開發所需筆電與周邊；其他現場設備需求以行前通知為準。"],
       ["夜間活動、餐飲、網路與休息安排何時公告？", "以正式簡章與入選後行前通知為準。"],
-      ["有其他問題如何聯絡？", "請聯絡 Taka｜taka@chain.tw。"]
+      ["有其他問題如何聯絡？", "請聯絡臺灣區塊鏈愛好者協會｜contact@chain.tw。"]
     ]]
   ],
   en: [
@@ -383,7 +385,7 @@ window.FAQ_GROUPS = {
       ["When and where is the event?", "Hackathon is 2026/08/29–8/30, Demo Day is 2026/08/31, and the venue is N24 Taipei Ark."],
       ["What equipment should participants bring?", "Bring your development laptop and required peripherals. Other on-site requirements will be announced before the event."],
       ["When will overnight, meal, network and rest arrangements be announced?", "They will be announced in the official rules and selected-team briefing."],
-      ["Who can I contact for other questions?", "Contact Taka | taka@chain.tw."]
+      ["Who can I contact for other questions?", "Contact Taiwan Association for Blockchain Ecosystem Innovation | contact@chain.tw."]
     ]]
   ]
 };
