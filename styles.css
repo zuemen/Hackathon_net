@@ -743,13 +743,17 @@ input {
 }
 
 .prize-grid-conservative {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  max-width: 900px;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 .prize-main {
   border-color: rgba(226, 179, 57, 0.5);
   background: #fffdf4;
+  min-height: 220px;
+  display: grid;
+  align-content: center;
 }
 
 .prize-card h3 {
@@ -806,17 +810,32 @@ input {
 
 .workshop-grid-conservative {
   max-width: 900px;
+  margin: 0 auto;
 }
 
 .workshop-card {
   padding: 28px;
+  min-height: 230px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.workshop-card span {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--primary);
+  background: rgba(22, 143, 163, 0.1);
+  font-weight: 800;
 }
 
 .timeline {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -828,12 +847,17 @@ input {
 
 .timeline li {
   position: relative;
-  min-height: 118px;
-  padding: 18px;
+  min-height: 128px;
+  display: grid;
+  align-content: space-between;
+  gap: 18px;
+  padding: 22px;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   background: #fff;
   text-align: left;
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .timeline li::before {
@@ -845,14 +869,22 @@ input {
 }
 
 .timeline time {
-  display: block;
+  display: inline-flex;
+  width: fit-content;
+  padding: 7px 11px;
+  border-radius: 999px;
   color: var(--primary);
+  background: rgba(22, 143, 163, 0.1);
   font-weight: 800;
+  line-height: 1;
 }
 
 .timeline span {
+  position: relative;
+  z-index: 1;
   color: var(--ink-soft);
   font-weight: 700;
+  line-height: 1.45;
 }
 
 .partner-groups {
@@ -1148,6 +1180,10 @@ body.is-en .hero-lede {
   .stat-grid,
   .vc-flow {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .partner-groups {

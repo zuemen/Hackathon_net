@@ -206,6 +206,23 @@
     navToggle?.setAttribute("aria-expanded", "false");
   }
 
+  function scrollToInitialHash() {
+    if (!window.location.hash) return;
+    const target = document.querySelector(window.location.hash);
+    if (!target) return;
+    const scrollToTarget = () => {
+      const headerOffset = header?.offsetHeight || 88;
+      const targetTop = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+      window.scrollTo({ top: Math.max(targetTop, 0), behavior: "auto" });
+      setHeaderState();
+    };
+    window.requestAnimationFrame(scrollToTarget);
+    window.setTimeout(scrollToTarget, 250);
+    window.setTimeout(scrollToTarget, 700);
+    window.setTimeout(scrollToTarget, 1500);
+    window.addEventListener("load", () => window.setTimeout(scrollToTarget, 100), { once: true });
+  }
+
   wireLinks();
   renderJsonLd();
   applyFeatureFlags();
@@ -250,4 +267,6 @@
   } else {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
+
+  scrollToInitialHash();
 })();
