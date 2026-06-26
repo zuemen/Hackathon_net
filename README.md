@@ -1,26 +1,18 @@
 # Trustworthy AI Hackathon 活動頁
 
-此目錄是一個可移植的靜態活動頁，可併入 chain.tw / Wix 或獨立部署。
+此目錄是一個可移植的靜態活動頁，可併入 chain.tw / Wix 或獨立部署。公開版採「只公布已確認資訊」原則。
 
 ## 檔案
 
-- `index.html`：單頁長捲動活動頁，含 SEO / OG meta。
-- `styles.css`：自包含樣式，使用 CSS variables 對齊 chain.tw 深藍、白底、時間軸視覺。
-- `main.js`：sticky header、手機導覽、語言切換、CTA 狀態、FAQ 渲染與 progressive enhancement。
-- `site-config.js`：報名狀態、工作坊數量、聯絡信箱、官方社群與 newsletter 等易變資訊。
+- `index.html`：單頁長捲動活動頁，含 SEO / OG / Twitter meta 與 Event JSON-LD fallback。
+- `styles.css`：自包含樣式，沿用 TABEI / chain.tw 深藍綠、青綠與白色品牌視覺。
+- `main.js`：sticky header、手機導覽、語言切換、CTA 狀態、Event JSON-LD、FAQ 渲染與 progressive enhancement。
+- `site-config.js`：活動日期、人數、報名狀態、報名網址、feature flags、聯絡信箱、社群與 newsletter 等易變資訊。
 - `content.js`：中英文翻譯與完整 FAQ 內容。
 - `assets/official/`：chain.tw 既有 TABEI / N24 品牌 logo。
 - `assets/og-trustworthy-ai-hackathon.jpg`：1200×630 社群預覽圖。
 
 ## 本機預覽
-
-可直接用瀏覽器開啟：
-
-```powershell
-Start-Process C:\Users\sanketsu\Hackathon_net\index.html
-```
-
-或用任一靜態伺服器預覽：
 
 ```powershell
 cd C:\Users\sanketsu\Hackathon_net
@@ -29,23 +21,56 @@ python -m http.server 8080
 
 然後開啟 `http://localhost:8080`。
 
+## 目前設定
+
+- 預設語言：繁體中文。
+- 活動日期：2026/08/29–08/31。
+- 地點：N24 台北方舟。
+- 正式入選：20 隊。
+- 每隊：3-5 人。
+- 預計參賽者：60-100 人。
+- 報名：完整隊伍報名，由 Team Lead 代表提交。
+- 不接受個人報名或跨賽道投件。
+- 每位參賽者限加入一隊。
+- 賽道：4 個，每隊只能選擇一個賽道。
+- 工作坊：兩場，日期為 2026/08/15、2026/08/22。
+- 報名預計於 7/4 開放，8/5 截止。
+- 報名網址已填入 `site-config.js`：`https://forms.gle/CbJgpMaTh3GzgzUL8`。
+- 公開獎項資訊僅為現金獎金池 USD 12,000，持續加碼中。
+- 未確認夥伴、資源、硬體、VC 活動流程與工作坊細節均不公開。
+
+## CTA 狀態
+
+`main.js` 會依 `site-config.js` 的台灣時區時間判斷報名 CTA：
+
+- 2026/07/04 前：中文 `7/4 開放報名`，英文 `Registration Opens Jul 4`。
+- 2026/07/04 至 2026/08/05 23:59:59：中文 `立即報名`，英文 `Apply Now`，連到 Google Forms。
+- 2026/08/05 23:59:59 後：中文 `報名已截止`，英文 `Registration Closed`。
+
+臨時需要提前或延後開關時，可在 `site-config.js` 設定 `registrationOverride` 為 `scheduled`、`open` 或 `closed`。
+
+## Feature Flags
+
+`site-config.js` 內保留以下開關，預設皆為 `false`，避免未確認內容被公開：
+
+- `showPrizeBreakdown`
+- `showWinnerCount`
+- `showBuilderKit`
+- `showHardwarePrizes`
+- `showPartnerNames`
+- `showCredentialExperience`
+- `showWorkshopTopics`
+
+日後若獎項、資源、硬體、夥伴、VC 流程或工作坊主題正式確認，先補齊內容與中英文翻譯，再打開對應 flag。
+
 ## 併入 Wix / chain.tw
 
 1. 將 `index.html` 的 `<main>` 內容與對應的 `<header>` / `<footer>` 視需求移入 Wix 自訂頁面。
 2. 將 `styles.css` 放入 Wix 的自訂 CSS 或頁面 embed 區塊。
-3. 將 `main.js` 放入頁面自訂程式碼區，或改由 Wix 既有互動取代。
+3. 將 `site-config.js`、`content.js`、`main.js` 依序放入頁面自訂程式碼區。
 4. 將 `assets/` 上傳到 Wix media / public asset 區，並更新 HTML 內的相對路徑。
-5. TABEI 與 N24 已使用 chain.tw 既有公開品牌素材；partner logo 仍需待正式授權後再替換目前文字版位。
-
-## 目前設定
-
-- 預設語言：繁體中文。
-- 工作坊：4 場賽前工作坊 + 1 次端到端技術彩排。
-- 報名：即將開放，未接假表單；後續可在 `site-config.js` 填入 `registrationUrl`。
-- Newsletter：使用協會 Substack 連結。
+5. 夥伴 logo、講者、評審、硬體、開發資源與 VC 流程需待正式確認後再公開。
 
 ## 合規注意
 
-此第一版已刻意只保留公開活動頁需要的內容，未納入內部營運、未確認合作、後台資料設計或需另行校核的資訊。
-
-合作夥伴皆以文字佔位呈現，並標註「洽談中／擬邀 · In discussion」。
+公開頁只保留已確認活動資訊。未簽約或未定案的合作單位、贊助、講師、評審、Challenge Owner、硬體、開發資源、VC 流程與工作坊主題不得以既定事實呈現。
