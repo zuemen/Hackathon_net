@@ -35,7 +35,7 @@ python -m http.server 8080
 - 賽道：4 個，每隊只能選擇一個賽道。
 - 工作坊：兩場，日期為 2026/08/15、2026/08/22。
 - 報名預計於 7/4 開放，8/5 截止。
-- 報名網址已填入 `site-config.js`：`https://forms.gle/Sa6CqVQ1vn5aL7UFA`。
+- 報名網址已填入 `site-config.js`：`https://forms.gle/dqPZQGaXCJPrSiJv5`。
 - 公開獎項資訊僅為現金獎金池 USD 12,000，持續加碼中。
 - 未確認夥伴、資源、硬體、VC 活動流程與工作坊細節均不公開。
 
