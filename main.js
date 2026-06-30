@@ -39,11 +39,11 @@
     const override = config.registrationOverride || config.registrationStatusOverride;
     if (override === "open" || override === "closed" || override === "scheduled") return override;
     const status = config.registrationStatus;
-    if (status === "open" || status === "closed") return status;
-    if (status === "disabled") return "closed";
-
     const openAt = new Date(config.registrationOpenAt);
     const closeAt = new Date(config.registrationCloseAt);
+    if (status === "closed" || status === "disabled") return "closed";
+    if (status === "open") return now <= closeAt ? "open" : "closed";
+
     if (now < openAt) return "scheduled";
     if (now <= closeAt) return "open";
     return "closed";
@@ -52,12 +52,12 @@
   function getRegistrationLabel(locale = currentLocale, state = getRegistrationState()) {
     const labels = {
       "zh-Hant": {
-        scheduled: "7/4 開放報名",
+        scheduled: "即將開放報名",
         open: "立即報名",
         closed: "報名已截止"
       },
       en: {
-        scheduled: "Registration Opens Jul 4",
+        scheduled: "Applications Opening Soon",
         open: "Apply Now",
         closed: "Registration Closed"
       }

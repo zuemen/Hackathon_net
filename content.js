@@ -133,6 +133,8 @@ window.TRANSLATIONS = {
     "workshops.card2.body": "限入選隊伍，不開放旁聽。技術彩排與行前安排後續公告。",
     "roadmap.title": "時間軸",
     "roadmap.body": "已確認公開時程；工作坊限入選隊伍，不開放旁聽。",
+    "date.registration": "7/8（三）",
+    "timeline.registration": "正式開放報名",
     "date.info": "7/20（一）",
     "timeline.info": "線上說明會（線上）",
     "date.deadline": "8/5（三）",
@@ -297,6 +299,8 @@ window.TRANSLATIONS = {
     "workshops.card2.body": "For selected teams only; no auditing. Technical rehearsal and pre-event logistics will be announced later.",
     "roadmap.title": "Roadmap",
     "roadmap.body": "Confirmed public timeline; workshops are for selected teams only, with no auditing.",
+    "date.registration": "Jul 8 (Wed)",
+    "timeline.registration": "Applications Open",
     "date.info": "Jul 20 (Mon)",
     "timeline.info": "Online info session (online)",
     "date.deadline": "Aug 5 (Wed)",
@@ -336,7 +340,7 @@ window.FAQ_GROUPS = {
       ["是否接受個人報名或主辦方媒合？", "目前只接受完整隊伍報名，不提供個人報名或主辦方組隊媒合。"],
       ["每位參賽者可以加入多隊嗎？", "不可以，每位參賽者限加入一隊。"],
       ["可以跨賽道嗎？", "不可以。每隊只能選擇一個賽道，同一作品不得跨賽道投件或同時參與多個賽道評審。"],
-      ["報名何時開放？", "2026 年 7 月 4 日開放，報名截止時間為 2026 年 8 月 5 日；最新時間以官方公告為準。"]
+      ["報名何時開放？", "報名已於 2026 年 7 月 8 日正式開放，報名截止時間為 2026 年 8 月 5 日。請由本頁報名按鈕前往表單填寫。"]
     ]],
     ["B. 初選與作品", [
       ["初選如何評分？是否有候補機制？", "初選依題目相關性 50%、可行性 30%、團隊能力 20% 評分；候補機制以正式簡章為準。"],
@@ -365,7 +369,7 @@ window.FAQ_GROUPS = {
       ["Do you accept individual registration or organizer matching?", "At this stage, complete teams only. Individual registration and organizer-led team matching are not provided."],
       ["Can one participant join multiple teams?", "No. Each participant may join only one team."],
       ["Can we work across tracks?", "No. Each team may choose only one track. The same project may not be submitted across tracks or judged under multiple tracks."],
-      ["When does registration open?", "Registration opens on July 4, 2026 and closes on August 5, 2026. Latest timing is subject to official announcement."]
+      ["When do applications open?", "Applications opened on July 8, 2026 and close on August 5, 2026. Please use the application button on this page to submit your team application."]
     ]],
     ["B. Screening and Projects", [
       ["How does preliminary screening work? Is there a waitlist?", "Preliminary screening uses relevance 50%, feasibility 30% and team capability 20%. Waitlist details are subject to the official rules."],
