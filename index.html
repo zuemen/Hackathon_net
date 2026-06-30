@@ -137,16 +137,24 @@
           <aside class="hero-panel reveal" aria-label="核心主軸">
             <p class="panel-kicker">Minimum Trustworthy AI Agent</p>
             <h2 data-i18n="trust.panel.title">技術棧自由，信任要求明確</h2>
-            <ul class="trust-list">
-              <li data-i18n="trust.principal">Principal｜代表誰</li>
-              <li data-i18n="trust.goal.short">Goal / Task 任務與完成條件</li>
-              <li data-i18n="trust.authorization">Authorization｜被授權做什麼</li>
-              <li data-i18n="trust.tool">Tool / Action｜能呼叫什麼工具</li>
-              <li data-i18n="trust.policy">Policy Gate｜高風險動作如何被擋</li>
-              <li data-i18n="trust.audit">Audit Log｜如何追溯行動</li>
-              <li data-i18n="trust.expiry">Expiry / Revocation｜何時失效撤銷</li>
-              <li data-i18n="trust.governance.short">Governance Gap 台灣落地治理缺口</li>
-            </ul>
+            <div class="trust-group trust-group-core">
+              <h3 data-i18n="trust.core.title">核心必備 6 項</h3>
+              <ul class="trust-list">
+                <li data-i18n="trust.principal">Principal｜代表誰</li>
+                <li data-i18n="trust.authorization">Authorization｜被授權做什麼</li>
+                <li data-i18n="trust.tool">Tool / Action｜能呼叫什麼工具</li>
+                <li data-i18n="trust.policy">Policy Gate｜高風險動作如何被擋</li>
+                <li data-i18n="trust.audit">Audit Log｜如何追溯行動</li>
+                <li data-i18n="trust.expiry">Expiry / Revocation｜何時失效撤銷</li>
+              </ul>
+            </div>
+            <div class="trust-group trust-group-extra">
+              <h3 data-i18n="trust.extra.title">另需說明</h3>
+              <ul class="trust-list trust-list-secondary">
+                <li data-i18n="trust.goal.short">Goal / Task｜任務與完成條件</li>
+                <li data-i18n="trust.governance.short">Governance Gap Memo｜台灣落地治理缺口</li>
+              </ul>
+            </div>
           </aside>
         </div>
       </section>
@@ -212,8 +220,8 @@
           </div>
           <div class="stat-grid reveal" role="group" aria-label="活動規模">
             <div><strong>20</strong><span data-i18n="stat.teams">入選隊伍</span></div>
-            <div><strong>3-5</strong><span data-i18n="stat.members">每隊人數</span></div>
-            <div><strong>60-100</strong><span data-i18n="stat.participants">預計參賽者</span></div>
+            <div><strong>3–5</strong><span data-i18n="stat.members">每隊人數</span></div>
+            <div><strong>60–100</strong><span data-i18n="stat.participants">預計參賽者</span></div>
             <div><strong>4</strong><span data-i18n="stat.tracks">落地賽道</span></div>
             <div><strong>2</strong><span data-i18n="stat.workshops">賽前工作坊</span></div>
           </div>
@@ -315,48 +323,59 @@
             <span>security</span>
             <span>accountability</span>
           </div>
-          <div class="minimum-grid" id="minimum">
-            <article class="minimum-card reveal">
-              <span><svg><use href="#icon-network"></use></svg></span>
-              <h3>Principal</h3>
-              <p data-i18n="foundation.principal">代表誰？Agent 代表哪一個人、團隊、法人或公部門單位。</p>
+          <div class="foundation-groups" id="minimum">
+            <article class="foundation-group reveal">
+              <h3 data-i18n="foundation.core.title">核心必備</h3>
+              <div class="minimum-grid minimum-grid-compact">
+                <article class="minimum-card">
+                  <span><svg><use href="#icon-network"></use></svg></span>
+                  <h3>Principal</h3>
+                  <p data-i18n="foundation.principal">代表誰？Agent 代表哪一個人、團隊、法人或公部門單位。</p>
+                </article>
+                <article class="minimum-card">
+                  <span><svg><use href="#icon-shield"></use></svg></span>
+                  <h3>Authorization</h3>
+                  <p data-i18n="foundation.authorization">被授權做什麼？誰授權、允許做什麼、禁止做什麼。</p>
+                </article>
+                <article class="minimum-card">
+                  <span><svg><use href="#icon-code"></use></svg></span>
+                  <h3>Tool / Action</h3>
+                  <p data-i18n="foundation.tool">能呼叫什麼工具？每個工具需要哪些權限與邊界。</p>
+                </article>
+                <article class="minimum-card">
+                  <span><svg><use href="#icon-lock"></use></svg></span>
+                  <h3>Policy Gate</h3>
+                  <p data-i18n="foundation.policy">高風險動作如何被擋？付款、送件、簽署或讀取敏感資料需明確把關。</p>
+                </article>
+                <article class="minimum-card">
+                  <span><svg><use href="#icon-log"></use></svg></span>
+                  <h3>Audit Log</h3>
+                  <p data-i18n="foundation.audit">如何追溯行動？記錄 Agent 的行動、決策與授權依據。</p>
+                </article>
+                <article class="minimum-card">
+                  <span><svg><use href="#icon-clock"></use></svg></span>
+                  <h3>Expiry / Revocation</h3>
+                  <p data-i18n="foundation.expiry">何時失效或撤銷？授權過期或撤銷後，Agent 必須停止執行。</p>
+                </article>
+              </div>
             </article>
-            <article class="minimum-card reveal">
-              <span><svg><use href="#icon-card"></use></svg></span>
-              <h3>Goal / Task</h3>
-              <p data-i18n="foundation.goal">Agent 的具體任務與完成條件是什麼？是否不是一般問答 chatbot？</p>
-            </article>
-            <article class="minimum-card reveal">
-              <span><svg><use href="#icon-shield"></use></svg></span>
-              <h3>Authorization</h3>
-              <p data-i18n="foundation.authorization">被授權做什麼？誰授權、允許做什麼、禁止做什麼。</p>
-            </article>
-            <article class="minimum-card reveal">
-              <span><svg><use href="#icon-code"></use></svg></span>
-              <h3>Tool / Action</h3>
-              <p data-i18n="foundation.tool">能呼叫什麼工具？每個工具需要哪些權限與邊界。</p>
-            </article>
-            <article class="minimum-card reveal">
-              <span><svg><use href="#icon-lock"></use></svg></span>
-              <h3>Policy Gate</h3>
-              <p data-i18n="foundation.policy">高風險動作如何被擋？付款、送件、簽署或讀取敏感資料需明確把關。</p>
-            </article>
-            <article class="minimum-card reveal">
-              <span><svg><use href="#icon-log"></use></svg></span>
-              <h3>Audit Log</h3>
-              <p data-i18n="foundation.audit">如何追溯行動？記錄 Agent 的行動、決策與授權依據。</p>
-            </article>
-            <article class="minimum-card reveal">
-              <span><svg><use href="#icon-clock"></use></svg></span>
-              <h3>Expiry / Revocation</h3>
-              <p data-i18n="foundation.expiry">何時失效或撤銷？授權過期或撤銷後，Agent 必須停止執行。</p>
-            </article>
-            <article class="minimum-card reveal">
-              <span><svg><use href="#icon-card"></use></svg></span>
-              <h3>Governance Gap</h3>
-              <p data-i18n="foundation.governance">以一頁 memo 說明台灣落地所需的法規、標準、責任或資料治理缺口。</p>
+            <article class="foundation-group foundation-group-secondary reveal">
+              <h3 data-i18n="foundation.extra.title">補充交付</h3>
+              <div class="minimum-grid minimum-grid-secondary">
+                <article class="minimum-card minimum-card-secondary">
+                  <span><svg><use href="#icon-card"></use></svg></span>
+                  <h3>Goal / Task</h3>
+                  <p data-i18n="foundation.goal">Agent 的具體任務與完成條件是什麼？是否不是一般問答 chatbot？</p>
+                </article>
+                <article class="minimum-card minimum-card-secondary">
+                  <span><svg><use href="#icon-card"></use></svg></span>
+                  <h3>Governance Gap Memo</h3>
+                  <p data-i18n="foundation.governance">以一頁 memo 說明台灣落地所需的法規、標準、責任或資料治理缺口。</p>
+                </article>
+              </div>
             </article>
           </div>
+          <p class="foundation-explain reveal" data-i18n="foundation.group.note">核心必備 6 項是評審會檢查的最低信任規格；Goal / Task 與 Governance Gap Memo 則用來說明任務範圍與台灣落地治理缺口。</p>
           <p class="callout reveal" data-i18n="foundation.note">單純 chatbot 包裝不足以拿高分。作品應展示 Agent 在明確信任限制下完成真實任務，且能被驗證、限制、追溯。</p>
         </div>
       </section>
@@ -381,13 +400,13 @@
             <article class="info-card reveal">
               <h3 data-i18n="rules.team">隊伍與出席</h3>
               <ul class="check-list">
-                <li data-i18n="rules.t1">每隊 3-5 人，每位參賽者限加入一隊。</li>
+                <li data-i18n="rules.t1">每隊 3–5 人，每位參賽者限加入一隊。</li>
               </ul>
             </article>
             <article class="info-card reveal">
               <h3 data-i18n="rules.delivery">出席與交付</h3>
               <ul class="check-list">
-                <li data-i18n="rules.d1">入選隊伍應參與必要說明、兩場工作坊、技術彩排及活動主要流程；實際最低出席要求以正式簡章為準。</li>
+                <li data-i18n="rules.d1">兩場賽前工作坊限入選隊伍參與，不開放旁聽。工作坊不是強制全體成員參加，但強烈建議每隊至少派代表參與，以完成工具理解、賽道痛點討論與 POC 收斂。</li>
                 <li data-i18n="rules.d2">Demo Day 至少需有隊伍成員進行中文簡報。</li>
                 <li data-i18n="rules.d3">須完成原型、Demo、簡報、README 與治理／信任設計說明；確切交件格式以正式簡章為準。</li>
               </ul>
@@ -432,15 +451,27 @@
           <div class="section-heading reveal">
             <p class="section-kicker">08 | Prize</p>
             <h2 data-i18n="prize.title">獎項</h2>
-            <p data-i18n="prize.body">現金獎金池 USD 12,000，持續加碼中。</p>
+            <p data-i18n="prize.body">主現金獎金池 USD 12,000 起，並可能隨贊助挹注增加。實際特別獎、硬體獎、開發資源與發放方式，以正式公告為準。</p>
           </div>
-          <div class="prize-grid prize-grid-conservative">
+          <div class="prize-grid prize-grid-public">
             <article class="prize-card prize-main reveal">
-              <span class="award-label">Cash Prize Pool</span>
-              <h3>USD 12,000</h3>
-              <p data-i18n="prize.body">現金獎金池 USD 12,000，持續加碼中。</p>
+              <span class="award-label" data-i18n="prize.grand.teams">1 隊</span>
+              <h3 data-i18n="prize.grand.title">冠軍</h3>
+              <p class="prize-amount" data-i18n="prize.grand.amount">USD 5,000</p>
+            </article>
+            <article class="prize-card reveal">
+              <span class="award-label" data-i18n="prize.excellence.teams">2 隊</span>
+              <h3 data-i18n="prize.excellence.title">亞軍</h3>
+              <p class="prize-amount" data-i18n="prize.excellence.amount">每隊 USD 2,000</p>
+            </article>
+            <article class="prize-card reveal">
+              <span class="award-label" data-i18n="prize.merit.teams">3 隊</span>
+              <h3 data-i18n="prize.merit.title">季軍</h3>
+              <p class="prize-amount" data-i18n="prize.merit.amount">每隊 USD 1,000</p>
             </article>
           </div>
+          <p class="prize-total reveal" data-i18n="prize.total">主現金獎合計 USD 12,000</p>
+          <p class="muted center reveal" data-i18n="prize.note">主辦方得依贊助情況增加獎項、特別獎或開發資源；實際發放方式、稅務與外幣結匯，以正式公告與相關法令為準。</p>
         </div>
       </section>
 
@@ -526,7 +557,7 @@
               <h3>A. 報名與隊伍</h3>
               <details>
                 <summary>每隊幾人？</summary>
-                <p>每隊 3-5 人，由 Team Lead 代表完整隊伍提交報名。</p>
+                <p>每隊 3–5 人，由 Team Lead 代表完整隊伍提交報名。</p>
               </details>
               <details>
                 <summary>是否接受個人報名或主辦方媒合？</summary>
@@ -571,27 +602,23 @@
                 <summary>可以使用真實醫療、金融或政府資料嗎？</summary>
                 <p>不可以。敏感資料應使用匿名、合成或測試資料。</p>
               </details>
-              <details>
-                <summary>哪些高風險動作需 human approval？</summary>
-                <p>付款、送件、簽署、讀取敏感資料或造成法律／業務效果的動作，應設計 human approval 或阻擋機制。</p>
-              </details>
             </section>
             <section class="faq-group">
               <h3>C. 工作坊與獎項</h3>
               <details>
                 <summary>兩場工作坊是否必須參加？</summary>
-                <p>入選隊伍應參與必要說明、兩場工作坊與技術彩排；實際要求以正式簡章為準。</p>
-              </details>
-              <details>
-                <summary>獎金如何安排？</summary>
-                <p>現金獎金池 USD 12,000，持續加碼中。</p>
+                <p>兩場工作坊不是強制全體成員參加，也不作為報名資格的硬性門檻；但入選隊伍強烈建議至少派 1–2 位代表參與。工作坊會協助隊伍理解可信 AI Agent 工具選型、四大賽道痛點、POC 收斂與 Hackathon 行前準備。實際出席登記與行前提醒，將於入選後通知。</p>
               </details>
             </section>
             <section class="faq-group">
               <h3>D. 法務、場務與聯絡</h3>
               <details>
-                <summary>智慧財產權、影像授權與獎金稅務如何處理？</summary>
-                <p>正式簡章另行公告，本頁不自行創造或擴張法律條款。</p>
+                <summary>作品權利歸誰？</summary>
+                <p>參賽作品的智慧財產權原則上歸屬參賽隊伍。隊伍須確保使用的程式碼、模型、資料、素材與第三方服務具合法授權；若使用既有程式碼、開源套件或外部素材，應於交件時揭露。詳細條款以正式活動簡章與同意文件為準。</p>
+              </details>
+              <details>
+                <summary>活動會攝影或錄影嗎？</summary>
+                <p>活動現場可能進行攝影、錄影、直播或成果紀錄，並用於活動紀錄、成果發表與非商業性宣傳。如有特殊影像需求，請於活動前主動告知主辦方。</p>
               </details>
               <details>
                 <summary>活動地點與日期？</summary>
