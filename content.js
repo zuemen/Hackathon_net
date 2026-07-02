@@ -368,58 +368,62 @@ window.TRANSLATIONS = {
 window.FAQ_GROUPS = {
   "zh-Hant": [
     ["A. 報名與隊伍", [
-      ["每隊幾人？", "每隊 3–5 人，由 Team Lead 代表完整隊伍提交報名。"],
-      ["是否接受個人報名或主辦方媒合？", "目前只接受完整隊伍報名，不提供個人報名或主辦方組隊媒合。"],
-      ["每位參賽者可以加入多隊嗎？", "不可以，每位參賽者限加入一隊。"],
-      ["可以跨賽道嗎？", "不可以。每隊只能選擇一個賽道，同一作品不得跨賽道投件或同時參與多個賽道評審。"],
-      ["報名何時開放？", "報名已於 2026 年 7 月 8 日正式開放，報名截止時間為 2026 年 8 月 5 日。請由本頁報名按鈕前往表單填寫。"]
+      ["這場活動是免費的嗎？", "完全免費。入選隊伍可獲得 Builder Kit（API credits／開發資源），活動期間提供餐食。"],
+      ["誰可以參加？", "對 AI、軟體開發、設計、產品或相關領域有興趣的學生、社會人士與業界人士皆可報名。"],
+      ["每隊幾人？", "每隊 3–5 人，且每位參賽者僅能參加一隊。"],
+      ["可以個人報名嗎？", "本屆僅收完整隊伍報名，請先自行組隊（3–5 人）再報名。"],
+      ["怎麼報名？", "於報名期間填寫線上報名表：7/8 開放、8/5 截止。"]
     ]],
-    ["B. 初選與作品", [
-      ["初選如何評分？是否有候補機制？", "初選依題目相關性 50%、可行性 30%、團隊能力 20% 評分；候補機制以正式簡章為準。"],
-      ["什麼才算可信 AI Agent？一般 chatbot 可以嗎？", "作品需展示 Agent 代表誰、被授權做什麼、能呼叫什麼工具、如何被 policy gate 限制、如何追溯與撤銷；單純 chatbot wrapper 不足以拿高分。"],
-      ["可以使用哪些模型、程式語言與 Agent framework？", "技術棧自由，可使用任一模型、程式語言、Agent framework、雲端或本地端環境。"],
-      ["是否一定要使用 VC、DID、KERI、vLEI 或政府數位憑證皮夾？", "不強制。這些都是可選技術或加分方向，不是所有隊伍的硬性技術棧。"],
-      ["可以使用既有程式碼與開源套件嗎？", "可以，但需揭露並遵守其授權條款。"],
-      ["可以使用真實醫療、金融或政府資料嗎？", "不可以。敏感資料應使用匿名、合成或測試資料。"]
+    ["B. 時程與賽道", [
+      ["重要時程有哪些？", "7/8 開放報名、7/20 線上說明會、8/5 截止、8/7 公告入選、8/15 ＆ 8/22 賽前工作坊、8/29–8/30 黑客松、8/31 Demo Day。"],
+      ["要選賽道嗎？", "報名時選擇一個主賽道：供應鏈與貿易金融、電商與第三方支付、醫療保險、政府服務。"],
+      ["技術或框架有限制嗎？", "技術自由，但作品須能展示「可信 AI Agent 最低規格」六項，且僅能使用合法授權之模型、資料與工具。"],
+      ["「可信 AI Agent 最低規格」是什麼？", "代表誰（Principal）、被授權做什麼（Authorization）、可用的工具與動作（Tool/Action）、政策關卡（Policy Gate）、稽核軌跡（Audit Log）、失效與撤銷（Expiry/Revocation）。"],
+      ["需要自備設備嗎？", "請自備筆電與開發所需裝置；現場提供電力、網路與基本設備。"]
     ]],
-    ["C. 工作坊與獎項", [
-      ["兩場工作坊是否必須參加？", "兩場工作坊不是強制全體成員參加，也不作為報名資格的硬性門檻；但入選隊伍強烈建議至少派 1–2 位代表參與。工作坊會協助隊伍理解可信 AI Agent 工具選型、四大賽道痛點、POC 收斂與 Hackathon 行前準備。實際出席登記與行前提醒，將於入選後通知。"]
+    ["C. 入選、交付與評分", [
+      ["入選後要做什麼準備？", "入選隊伍需出席 8/15、8/22 兩場賽前工作坊，並準備 8/29–8/31 全程參與。"],
+      ["一定要參加工作坊嗎？", "是，兩場工作坊（8/15、8/22）僅限入選隊伍、不開放旁聽，兩天皆提供餐食。"],
+      ["要交什麼？", "程式碼儲存庫（GitHub）、簡報、Demo 連結或影片、一頁治理／信任設計說明、README。"],
+      ["交件截止什麼時候？", "8/30（日）23:59 前完成交件，缺件可能影響評分或資格。"],
+      ["怎麼評分？", "初選：題目相關性 50%、可行性 30%、團隊能力 20%；決選：信任架構 40%、技術執行 35%、場景適配 25%。"]
     ]],
     ["D. 法務、場務與聯絡", [
-      ["作品權利歸誰？", "參賽作品的智慧財產權原則上歸屬參賽隊伍。隊伍須確保使用的程式碼、模型、資料、素材與第三方服務具合法授權；若使用既有程式碼、開源套件或外部素材，應於交件時揭露。詳細條款以正式活動簡章與同意文件為準。"],
-      ["活動會攝影或錄影嗎？", "活動現場可能進行攝影、錄影、直播或成果紀錄，並用於活動紀錄、成果發表與非商業性宣傳。如有特殊影像需求，請於活動前主動告知主辦方。"],
-      ["活動地點與日期？", "2026/08/29–8/30 為 Hackathon，2026/08/31 為 Demo Day；地點為 N24 台北方舟。"],
-      ["需要自行攜帶哪些設備？", "請自備開發所需筆電與周邊；其他現場設備需求以行前通知為準。"],
-      ["夜間活動、餐飲、網路與休息安排何時公告？", "以正式簡章與入選後行前通知為準。"],
-      ["有其他問題如何聯絡？", "請聯絡臺灣區塊鏈愛好者協會｜contact@chain.tw。"]
+      ["獎項有哪些？", "現金獎金池 USD 12,000+（將隨贊助加碼）：冠軍 1 隊 USD 5,000、亞軍 2 隊各 USD 2,000、季軍 3 隊各 USD 1,000；另有四大賽道獎，入選 20 隊皆獲 Builder Kit。"],
+      ["提供過夜嗎？", "8/29→8/30 提供過夜，自由參加，可選擇不過夜或當日往返；過夜需於報名時表明，並採名額與場地安全管理。"],
+      ["未成年可以參加嗎？", "未滿 18 歲須經法定代理人同意；如需過夜，須另提供家長同意書並指定緊急聯絡人。"],
+      ["智慧財產權與個資怎麼處理？", "作品智財原則上歸該隊；主辦與合作夥伴得為紀錄、成果發表與宣傳使用作品名稱、簡介與展示內容。個資僅用於本活動之聯絡、審查、保險與行政，並依個資法令辦理；活動將攝錄影並可能用於宣傳。"],
+      ["有問題找誰？", "聯絡窗口：hackathon2026@chain.tw。"]
     ]]
   ],
   en: [
     ["A. Registration and Teams", [
-      ["How many members per team?", "Each team has 3–5 members, and the Team Lead submits registration on behalf of the complete team."],
-      ["Do you accept individual registration or organizer matching?", "At this stage, complete teams only. Individual registration and organizer-led team matching are not provided."],
-      ["Can one participant join multiple teams?", "No. Each participant may join only one team."],
-      ["Can we work across tracks?", "No. Each team may choose only one track. The same project may not be submitted across tracks or judged under multiple tracks."],
-      ["When do applications open?", "Applications opened on July 8, 2026 and close on August 5, 2026. Please use the application button on this page to submit your team application."]
+      ["Is the event free?", "It's completely free. Finalist teams receive a Builder Kit (API credits / development resources), and meals are provided during the event."],
+      ["Who can join?", "Students, professionals, and industry practitioners interested in AI, software development, design, product, or related fields."],
+      ["How many members per team?", "3–5 members per team, and each participant may join only one team."],
+      ["Can I register as an individual?", "This edition accepts complete teams only; please form your team (3–5 members) before registering."],
+      ["How do I register?", "Complete the online registration form during the window: opens 7/8, closes 8/5."]
     ]],
-    ["B. Screening and Projects", [
-      ["How does preliminary screening work? Is there a waitlist?", "Preliminary screening uses relevance 50%, feasibility 30% and team capability 20%. Waitlist details are subject to the official rules."],
-      ["What counts as a trustworthy AI Agent? Is a chatbot enough?", "Projects must show who the Agent represents, what it is authorized to do, which tools it can call, how policy gates restrict actions, and how actions can be audited and authorization revoked. A simple chatbot wrapper is not enough for a high score."],
-      ["What models, languages and Agent frameworks are allowed?", "Technology stack is open. Teams may use any model, programming language, Agent framework, cloud or local runtime."],
-      ["Are VC, DID, KERI, vLEI or government digital wallets mandatory?", "No. These are optional technologies or bonus directions, not mandatory for every team."],
-      ["Can teams use existing code or open-source packages?", "Yes, but teams must disclose usage and comply with the relevant licenses."],
-      ["Can teams use real medical, financial or government data?", "No. Sensitive data should be replaced with anonymized, synthetic or test data."]
+    ["B. Dates and Tracks", [
+      ["What are the key dates?", "7/8 registration opens, 7/20 online info session, 8/5 deadline, 8/7 finalists announced, 8/15 & 8/22 workshops, 8/29–8/30 hackathon, 8/31 Demo Day."],
+      ["Do we pick a track?", "Choose one main track at registration: Supply Chain & Trade Finance, E-commerce & Third-Party Payments, Health & Insurance, or Government Services."],
+      ["Any technology restrictions?", "Technology is open, but your project must demonstrate the six minimum trustworthy-agent requirements, using only legally licensed models, data, and tools."],
+      ["What are the minimum trustworthy-agent requirements?", "Principal, Authorization, Tool/Action, Policy Gate, Audit Log, and Expiry/Revocation."],
+      ["Do I bring my own equipment?", "Please bring your own laptop and development devices; power, network, and basic facilities are provided on-site."]
     ]],
-    ["C. Workshops and Prize", [
-      ["Are the two pre-event workshops mandatory?", "The two workshops are not mandatory for every team member and are not a hard requirement for application eligibility. However, selected teams are strongly encouraged to send 1–2 representatives. The workshops will help teams understand trustworthy AI Agent tool selection, track-specific pain points, POC scoping, and Hackathon preparation. Attendance details will be shared after finalist announcement."]
+    ["C. Selection, Submission and Judging", [
+      ["What happens after being selected?", "Finalist teams must attend both workshops (8/15, 8/22) and take part in the full event on 8/29–8/31."],
+      ["Are the workshops mandatory?", "Yes. Both workshops (8/15, 8/22) are for finalist teams only (no auditing), with meals provided on both days."],
+      ["What do we submit?", "A GitHub repository, a slide deck, a demo link or video, a one-page governance/trust design note, and a README."],
+      ["When is the submission deadline?", "By 23:59 on Sunday 8/30; missing items may affect scoring or eligibility."],
+      ["How is judging done?", "Preliminary: relevance 50%, feasibility 30%, team capability 20%. Final: trust architecture 40%, technical execution 35%, scenario fit 25%."]
     ]],
     ["D. Legal, Logistics and Contact", [
-      ["Who owns the project IP?", "The intellectual property of each project generally belongs to the participating team. Teams must ensure that all code, models, data, assets, and third-party services are legally authorized. Any existing code, open-source packages, or external materials should be disclosed upon submission. Detailed terms will follow the official rulebook and consent documents."],
-      ["Will the event be photographed or recorded?", "The event may include photography, video recording, livestreaming, or documentation for event records, outcome sharing, and non-commercial promotion. If you have specific concerns about being photographed or recorded, please contact the organizer before the event."],
-      ["When and where is the event?", "Hackathon is 2026/08/29–8/30, Demo Day is 2026/08/31, and the venue is N24 Taipei Ark."],
-      ["What equipment should participants bring?", "Bring your development laptop and required peripherals. Other on-site requirements will be announced before the event."],
-      ["When will overnight, meal, network and rest arrangements be announced?", "They will be announced in the official rules and selected-team briefing."],
-      ["Who can I contact for other questions?", "Contact Taiwan Association for Blockchain Ecosystem Innovation | contact@chain.tw."]
+      ["What are the prizes?", "Cash prize pool of USD 12,000+ (growing with sponsorship): 1 Grand Prize of USD 5,000, 2 runners-up at USD 2,000 each, 3 third-place at USD 1,000 each; plus four Best Track Awards, and a Builder Kit for all 20 finalist teams."],
+      ["Is overnight stay available?", "Overnight (8/29→8/30) is available and optional—you may choose not to stay. Indicate it at registration; capacity and venue safety are managed."],
+      ["Can minors participate?", "Participants under 18 need guardian consent; overnight stay additionally requires a guardian consent form and an emergency contact."],
+      ["How are IP and personal data handled?", "Project IP generally belongs to the team; organizers and partners may use the project name, summary, and demo content for documentation and promotion. Personal data is used only for event contact, review, insurance, and administration under data-protection law; the event is filmed and may be used for promotion."],
+      ["Who do I contact?", "Contact: hackathon2026@chain.tw."]
     ]]
   ]
 };
