@@ -171,7 +171,7 @@
       link.rel = "noopener noreferrer";
     });
     contactLinks.forEach((link) => {
-      const email = config.contactEmail || "contact@chain.tw";
+      const email = config.contactEmail || "hackathon2026@chain.tw";
       link.href = `mailto:${email}`;
       link.textContent = email;
     });

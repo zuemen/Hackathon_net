@@ -38,7 +38,7 @@ window.SITE_CONFIG = {
   showWorkshopTopics: false,
 
   contactName: "臺灣區塊鏈愛好者協會",
-  contactEmail: "contact@chain.tw",
+  contactEmail: "hackathon2026@chain.tw",
   canonicalUrl: "https://hackathon-net.vercel.app/",
   newsletterUrl: "https://chaintw.substack.com/"
 };
