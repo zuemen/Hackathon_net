@@ -20,7 +20,7 @@ window.SITE_CONFIG = {
   registrationOverride: null,
   registrationOpenAt: "2026-07-08T00:00:00+08:00",
   registrationCloseAt: "2026-08-05T23:59:59+08:00",
-  registrationUrl: "https://forms.gle/CbJgpMaTh3GzgzUL8",
+  registrationUrl: "https://forms.gle/kafd8Xfh9LAoW6q59",
 
   infoSessionDate: "2026-07-20",
   finalistAnnouncementDate: "2026-08-07",

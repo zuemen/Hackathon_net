@@ -35,7 +35,7 @@ python -m http.server 8080
 - 賽道：4 個，每隊只能選擇一個賽道。
 - 工作坊：兩場，日期為 2026/08/15、2026/08/22。
 - 報名已於 7/8 正式開放，8/5 截止。
-- 報名網址已填入 `site-config.js`：`https://forms.gle/CbJgpMaTh3GzgzUL8`。
+- 報名網址已填入 `site-config.js`：`https://forms.gle/kafd8Xfh9LAoW6q59`。
 - 公開主現金獎金池為 USD 12,000 起，冠軍 USD 5,000、亞軍 2 隊各 USD 2,000、季軍 3 隊各 USD 1,000；其他特別獎與開發資源以正式公告為準。
 - 未確認夥伴、資源、硬體、VC 活動流程與工作坊細節均不公開。
 
