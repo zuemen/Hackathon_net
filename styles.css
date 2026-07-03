@@ -2385,11 +2385,11 @@ summary:focus-visible {
 }
 /* Hero KV should remain readable; the KV already contains the event title/date. */
 .hero {
-  min-height: clamp(520px, 56.25vw, 760px);
+  min-height: calc(56.25vw + 74px);
   padding: 0;
   background:
     linear-gradient(180deg, rgba(7,21,40,0.04), rgba(7,21,40,0.22)),
-    url("./assets/hero-kv.jpg") center 74px / cover no-repeat,
+    url("./assets/hero-kv.jpg") center 74px / 100% auto no-repeat,
     linear-gradient(135deg, var(--bg-deep), var(--bg));
 }
 
@@ -2435,10 +2435,10 @@ summary:focus-visible {
 
 @media (max-width: 820px) {
   .hero {
-    min-height: clamp(420px, 95vw, 620px);
+    min-height: calc(56.25vw + 64px);
     background:
       linear-gradient(180deg, rgba(7,21,40,0.04), rgba(7,21,40,0.26)),
-      url("./assets/hero-kv.jpg") center 64px / cover no-repeat,
+      url("./assets/hero-kv.jpg") center 64px / 100% auto no-repeat,
       linear-gradient(135deg, var(--bg-deep), var(--bg));
   }
 }
