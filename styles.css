@@ -2139,6 +2139,12 @@ summary:focus-visible {
 .hero-grid {
   position: relative;
   z-index: 1;
+  grid-template-columns: minmax(0, 720px);
+  justify-content: start;
+}
+
+.hero-copy {
+  max-width: 720px;
 }
 
 .hero h1 {
