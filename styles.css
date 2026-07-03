@@ -2367,6 +2367,16 @@ summary:focus-visible {
 }
 .timeline-step:nth-child(3) time,
 .timeline-step:last-child time{color:var(--navy-900); background:var(--gold-400); border-color:var(--gold-400);}
+.timeline-status{margin:2px 0 16px; color:var(--gold-400); font-weight:800; font-size:.98rem;}
+.timeline-step.is-past{opacity:.48;}
+.timeline-step.is-past:nth-child(3),
+.timeline-step.is-past:last-child{opacity:1;}
+.timeline-step.is-past:not(:nth-child(3)):not(:last-child)::before{background:var(--card-border)!important; box-shadow:none!important;}
+.timeline-step.is-next::before{
+  box-shadow:0 0 0 4px rgba(57,194,224,.22),0 0 16px rgba(57,194,224,.6);
+  animation:tlPulse 1.8s ease-in-out infinite;
+}
+@keyframes tlPulse{0%,100%{transform:translateY(-50%) scale(1);}50%{transform:translateY(-50%) scale(1.28);}}
 @media (max-width:600px){
   .timeline{max-width:none;}
   .timeline-step{padding:13px 14px 13px 48px; gap:10px;}

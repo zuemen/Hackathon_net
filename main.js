@@ -35,6 +35,37 @@
     return testNow ? new Date(testNow) : new Date();
   }
 
+  function updateTimelineStatus(now = getNow()) {
+    const ol = document.querySelector(".timeline");
+    if (!ol) return;
+    const steps = [...ol.querySelectorAll(".timeline-step")];
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    let next = null;
+    steps.forEach((step) => {
+      const date = new Date(`${step.dataset.date}T00:00:00`);
+      step.classList.toggle("is-past", date < today);
+      if (!next && date >= today) next = step;
+    });
+    steps.forEach((step) => step.classList.remove("is-next"));
+    if (next) next.classList.add("is-next");
+    const status = document.getElementById("timelineStatus");
+    if (!status) return;
+    const en = currentLocale === "en";
+    const weekday = ["日", "一", "二", "三", "四", "五", "六"][now.getDay()];
+    const todayText = en
+      ? `Today ${now.getMonth() + 1}/${now.getDate()}`
+      : `今天 ${now.getMonth() + 1}/${now.getDate()}（${weekday}）`;
+    if (next) {
+      const name = next.querySelector("span")?.textContent.trim() || "";
+      const date = next.querySelector("time")?.textContent.trim() || "";
+      status.textContent = en
+        ? `${todayText} · Next: ${name} (${date})`
+        : `${todayText}・下一個：${name}（${date}）`;
+    } else {
+      status.textContent = en ? `${todayText} · Event concluded` : `${todayText}・活動已結束`;
+    }
+  }
+
   function getRegistrationState(now = getNow()) {
     const override = config.registrationOverride || config.registrationStatusOverride;
     if (override === "open" || override === "closed" || override === "scheduled") return override;
@@ -194,6 +225,7 @@
 
     renderFaq(currentLocale);
     updateRegistrationLinks();
+    updateTimelineStatus();
     langButtons.forEach((button) => {
       const active = button.dataset.langButton === currentLocale;
       button.classList.toggle("is-active", active);

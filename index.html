@@ -293,7 +293,7 @@
           <div class="section-heading reveal">
             <p class="section-kicker">05 | Trust Foundation</p>
             <h2 data-i18n="foundation.title">共同主軸「信任地基」</h2>
-            <p data-i18n="foundation.body">所有題目都需處理 identity · authorization · verification · privacy · security · accountability。</p>
+            <p data-i18n="foundation.body">作品不必做到產品級，只要能在作品或說明中讓評審看懂 AI Agent 如何處理三件事：它代表誰、被允許做什麼；高風險動作是否受控；行為是否可追溯、授權是否可撤銷。技術選型自由。</p>
           </div>
           <div class="pill-row reveal" role="group" aria-label="信任地基">
             <span>identity</span>
@@ -305,7 +305,7 @@
           </div>
           <div class="foundation-groups" id="minimum">
             <article class="foundation-group reveal">
-              <h3 data-i18n="foundation.core.title">核心必備</h3>
+              <h3 data-i18n="foundation.core.title">建議展示的信任要點</h3>
               <div class="minimum-grid minimum-grid-compact">
                 <article class="minimum-card">
                   <span><svg><use href="#icon-network"></use></svg></span>
@@ -350,13 +350,13 @@
                 <article class="minimum-card minimum-card-secondary">
                   <span><svg><use href="#icon-card"></use></svg></span>
                   <h3>治理／信任設計說明</h3>
-                  <p data-i18n="foundation.governance">以一頁治理／信任設計說明（Governance Gap Memo），說明最低規格六項如何落實。</p>
+                  <p data-i18n="foundation.governance">以一頁治理／信任設計說明（Governance Gap Memo），說明作品如何回應這些信任要點。</p>
                 </article>
               </div>
             </article>
           </div>
-          <p class="foundation-explain reveal" data-i18n="foundation.group.note">核心必備 6 項是評審會檢查的最低信任規格；治理／信任設計說明（Governance Gap Memo）為正式交件項目，Goal / Task 可作為加分說明但非必要交件。</p>
-          <p class="callout reveal" data-i18n="foundation.note">單純 chatbot 包裝不足以拿高分。作品應展示 Agent 在明確信任限制下完成真實任務，且能被驗證、限制、追溯。</p>
+          <p class="foundation-explain reveal" data-i18n="foundation.group.note">這 6 個要點是幫助你把「可信」講清楚的參考面向，非硬性規格；治理／信任設計說明（Governance Gap Memo）為正式交件項目，Goal / Task 為加分說明、非必要交件。</p>
+          <p class="callout reveal" data-i18n="foundation.note">重點不在技術多完整，而在能否展示或說明 Agent 如何在明確的信任限制下行動——它代表誰、被授權做什麼、能否被追溯與撤銷。單純的 chatbot 並非本活動要的方向。</p>
         </div>
       </section>
 
@@ -423,9 +423,10 @@
             </article>
             <article class="score-card reveal">
               <h3 data-i18n="judging.finalTitle">決選（Demo Day）</h3>
-              <div class="score-row"><span data-i18n="judging.trust">信任架構</span><strong>40%</strong></div>
-              <div class="score-row"><span data-i18n="judging.execution">技術執行</span><strong>35%</strong></div>
-              <div class="score-row"><span data-i18n="judging.fit">場景適配</span><strong>25%</strong></div>
+              <div class="score-row"><span data-i18n="judging.fit">產業應用場景契合度</span><strong>35%</strong></div>
+              <div class="score-row"><span data-i18n="judging.trust">可信技術導入 AI Agent 的可行性</span><strong>25%</strong></div>
+              <div class="score-row"><span data-i18n="judging.execution">簡報與 Demo 呈現</span><strong>25%</strong></div>
+              <div class="score-row"><span data-i18n="judging.insight">問題洞察與創意巧思</span><strong>15%</strong></div>
             </article>
           </div>
         </div>
@@ -489,17 +490,18 @@
             <p class="section-kicker">10 | Roadmap</p>
             <h2 data-i18n="roadmap.title">時間軸</h2>
             <p data-i18n="roadmap.body">已確認公開時程；各項時間以主辦方最新公告為準。</p>
+            <p class="timeline-status" id="timelineStatus" aria-live="polite"></p>
           </div>
           <ol class="timeline reveal" aria-label="活動流程圖">
-            <li class="timeline-step timeline-entry"><time data-i18n="date.registration">7/8（三）</time><span data-i18n="timeline.registration">正式開放報名</span></li>
-            <li class="timeline-step timeline-entry"><time data-i18n="date.info">7/20（一）</time><span data-i18n="timeline.info">線上說明會</span></li>
-            <li class="timeline-step timeline-entry"><time data-i18n="date.deadline">8/5（三）</time><span data-i18n="timeline.deadline">截止報名</span></li>
-            <li class="timeline-step timeline-prep"><time data-i18n="date.finalists">8/7（五）</time><span data-i18n="timeline.finalists">公告初選名單</span></li>
-            <li class="timeline-step timeline-prep"><time data-i18n="date.workshop1">8/15（六）</time><span data-i18n="timeline.workshop1">Workshop #1（線上，限入選）</span></li>
-            <li class="timeline-step timeline-prep"><time data-i18n="date.workshop2">8/22（六）</time><span data-i18n="timeline.workshop2">Workshop #2（線下，限入選）</span></li>
-            <li class="timeline-step timeline-event"><time data-i18n="date.hackathon1">8/29（六）</time><span data-i18n="timeline.hackathon1">Hackathon Day 1</span></li>
-            <li class="timeline-step timeline-event"><time data-i18n="date.hackathon2">8/30（日）</time><span data-i18n="timeline.hackathon2">Hackathon Day 2</span></li>
-            <li class="timeline-step timeline-event"><time data-i18n="date.demo">8/31（一）</time><span data-i18n="timeline.demo">Demo Day</span></li>
+            <li class="timeline-step timeline-entry" data-date="2026-07-08"><time data-i18n="date.registration">7/8（三）</time><span data-i18n="timeline.registration">正式開放報名</span></li>
+            <li class="timeline-step timeline-entry" data-date="2026-07-20"><time data-i18n="date.info">7/20（一）</time><span data-i18n="timeline.info">線上說明會</span></li>
+            <li class="timeline-step timeline-entry" data-date="2026-08-05"><time data-i18n="date.deadline">8/5（三）</time><span data-i18n="timeline.deadline">截止報名</span></li>
+            <li class="timeline-step timeline-prep" data-date="2026-08-07"><time data-i18n="date.finalists">8/7（五）</time><span data-i18n="timeline.finalists">公告初選名單</span></li>
+            <li class="timeline-step timeline-prep" data-date="2026-08-15"><time data-i18n="date.workshop1">8/15（六）</time><span data-i18n="timeline.workshop1">Workshop #1（線上，限入選）</span></li>
+            <li class="timeline-step timeline-prep" data-date="2026-08-22"><time data-i18n="date.workshop2">8/22（六）</time><span data-i18n="timeline.workshop2">Workshop #2（線下，限入選）</span></li>
+            <li class="timeline-step timeline-event" data-date="2026-08-29"><time data-i18n="date.hackathon1">8/29（六）</time><span data-i18n="timeline.hackathon1">Hackathon Day 1</span></li>
+            <li class="timeline-step timeline-event" data-date="2026-08-30"><time data-i18n="date.hackathon2">8/30（日）</time><span data-i18n="timeline.hackathon2">Hackathon Day 2</span></li>
+            <li class="timeline-step timeline-event" data-date="2026-08-31"><time data-i18n="date.demo">8/31（一）</time><span data-i18n="timeline.demo">Demo Day</span></li>
           </ol>
         </div>
       </section>
@@ -626,7 +628,7 @@
               <h3>D. 評分、獎項與法務</h3>
               <details>
                 <summary>怎麼評分？</summary>
-                <p>初選（書面）：題目相關性 50%、可行性 30%、團隊能力 20%。<br>決選（Demo Day）：信任架構 40%、技術執行 35%、場景適配 25%。</p>
+                <p>初選（書面）：題目相關性 50%、可行性 30%、團隊能力 20%。<br>決選（Demo Day）：產業應用場景契合度 35%、可信技術導入 AI Agent 的可行性 25%、簡報與 Demo 呈現 25%、問題洞察與創意巧思 15%。</p>
               </details>
               <details>
                 <summary>獎項有哪些？</summary>
