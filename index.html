@@ -470,16 +470,19 @@
             <h2 data-i18n="roadmap.title">時間軸</h2>
             <p data-i18n="roadmap.body">已確認公開時程；各項時間以主辦方最新公告為準。</p>
           </div>
-          <ol class="timeline reveal">
-            <li><time data-i18n="date.registration">7/8（三）</time><span data-i18n="timeline.registration">正式開放報名</span></li>
-            <li><time data-i18n="date.info">7/20（一）</time><span data-i18n="timeline.info">線上說明會（線上）</span></li>
-            <li><time data-i18n="date.deadline">8/5（三）</time><span data-i18n="timeline.deadline">截止報名</span></li>
-            <li><time data-i18n="date.finalists">8/7（五）</time><span data-i18n="timeline.finalists">公告初選名單</span></li>
-            <li><time data-i18n="date.workshop1">8/15（六）</time><span data-i18n="timeline.workshop1">Workshop #1（線上，限入選）</span></li>
-            <li><time data-i18n="date.workshop2">8/22（六）</time><span data-i18n="timeline.workshop2">Workshop #2（線下，限入選）</span></li>
-            <li><time data-i18n="date.hackathon1">8/29（六）</time><span data-i18n="timeline.hackathon1">Hackathon Day 1（過夜）</span></li>
-            <li><time data-i18n="date.hackathon2">8/30（日）</time><span data-i18n="timeline.hackathon2">Hackathon Day 2</span></li>
-            <li><time data-i18n="date.demo">8/31（一）</time><span data-i18n="timeline.demo">Demo Day</span></li>
+          <ol class="timeline reveal" aria-label="活動流程圖">
+            <li class="timeline-stage timeline-stage-entry" aria-hidden="true"><span data-i18n="timeline.stage.entry">報名</span></li>
+            <li class="timeline-stage timeline-stage-prep" aria-hidden="true"><span data-i18n="timeline.stage.prep">準備</span></li>
+            <li class="timeline-stage timeline-stage-event" aria-hidden="true"><span data-i18n="timeline.stage.event">現場</span></li>
+            <li class="timeline-step timeline-entry"><time data-i18n="date.registration">7/8（三）</time><span data-i18n="timeline.registration">正式開放報名</span></li>
+            <li class="timeline-step timeline-entry"><time data-i18n="date.info">7/20（一）</time><span data-i18n="timeline.info">線上說明會（線上）</span></li>
+            <li class="timeline-step timeline-entry"><time data-i18n="date.deadline">8/5（三）</time><span data-i18n="timeline.deadline">截止報名</span></li>
+            <li class="timeline-step timeline-prep"><time data-i18n="date.finalists">8/7（五）</time><span data-i18n="timeline.finalists">公告初選名單</span></li>
+            <li class="timeline-step timeline-prep"><time data-i18n="date.workshop1">8/15（六）</time><span data-i18n="timeline.workshop1">Workshop #1（線上，限入選）</span></li>
+            <li class="timeline-step timeline-prep"><time data-i18n="date.workshop2">8/22（六）</time><span data-i18n="timeline.workshop2">Workshop #2（線下，限入選）</span></li>
+            <li class="timeline-step timeline-event"><time data-i18n="date.hackathon1">8/29（六）</time><span data-i18n="timeline.hackathon1">Hackathon Day 1（過夜）</span></li>
+            <li class="timeline-step timeline-event"><time data-i18n="date.hackathon2">8/30（日）</time><span data-i18n="timeline.hackathon2">Hackathon Day 2</span></li>
+            <li class="timeline-step timeline-event"><time data-i18n="date.demo">8/31（一）</time><span data-i18n="timeline.demo">Demo Day</span></li>
           </ol>
         </div>
       </section>
