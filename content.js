@@ -376,7 +376,7 @@ window.TRANSLATIONS = {
 window.FAQ_GROUPS = {
   "zh-Hant": [
     ["A. 報名與資格", [
-      ["這場活動是免費的嗎？", "完全免費。工作坊與活動期間提供餐食。"],
+      ["這場活動是免費的嗎？", "完全免費。線下工作坊與活動期間提供餐食。"],
       ["誰可以參加？", "年滿 18 歲，對 AI、軟體開發、設計、產品、資安、數位身份或相關領域有興趣之學生、社會人士與業界人士。"],
       ["有年齡限制嗎？", "有，本活動限年滿 18 歲（報名時全體成員均須年滿 18 歲）。"],
       ["每隊幾人？", "每隊 3–5 人，且每位參賽者僅能加入一隊。"],
@@ -412,7 +412,7 @@ window.FAQ_GROUPS = {
   ],
   en: [
     ["A. Registration and Eligibility", [
-      ["Is the event free?", "Yes. The event is completely free. Meals are provided during workshops and the event."],
+      ["Is the event free?", "Yes. The event is completely free. Meals are provided during the in-person workshop and the event."],
       ["Who can join?", "Students, professionals, and industry practitioners aged 18 or older who are interested in AI, software development, design, product, cybersecurity, digital identity, or related fields."],
       ["Is there an age requirement?", "Yes. This event is limited to participants aged 18 or older; all team members must be 18 or older at registration."],
       ["How many members per team?", "Each team must have 3–5 members, and each participant may join only one team."],
