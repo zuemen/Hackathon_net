@@ -402,7 +402,7 @@ window.FAQ_GROUPS = {
     ]],
     ["D. 評分、獎項與法務", [
       ["怎麼評分？", "初選（書面）：題目相關性 50%、可行性 30%、團隊能力 20%。<br>決選（Demo Day）：信任架構 40%、技術執行 35%、場景適配 25%。"],
-      ["獎項有哪些？", "現金獎金池 USD 12,000＋（將隨贊助加碼）：冠軍 1 隊 USD 5,000、亞軍 2 隊各 USD 2,000、季軍 3 隊各 USD 1,000。特別獎、硬體獎與開發資源以正式公告為準。"],
+      ["獎項有哪些？", "現金獎金池 USD 12,000＋（將隨贊助加碼）：冠軍 1 隊 USD 5,000、亞軍 2 隊各 USD 2,000、季軍 3 隊各 USD 1,000。"],
       ["領獎有條件嗎？", "有。得獎隊伍須完成必要交件、於 Demo Day 完成展示，且最終名單之全體成員出席 Demo Day，方可領獎；未能全體到場者，主辦得保留、調整或取消該隊獎項。"],
       ["智慧財產權歸誰？", "作品智財原則上歸該隊。主辦與合作單位得為活動紀錄、成果發表與非商業宣傳，使用隊伍名稱、作品名稱、公開簡介、簡報與展示內容、現場照片及影片。"],
       ["個人資料怎麼處理？", "僅用於本活動之報名、審查、聯絡、活動營運、現場管理、證書／憑證發放、成果紀錄與必要行政用途，並依個人資料保護相關法令辦理；活動現場將攝錄影，並可能用於活動紀錄與宣傳。"],
@@ -438,7 +438,7 @@ window.FAQ_GROUPS = {
     ]],
     ["D. Judging, Prizes, and Legal", [
       ["How is judging done?", "Preliminary review (written): topic relevance 50%, feasibility 30%, team capability 20%.<br>Final (Demo Day): trust architecture 40%, technical execution 35%, scenario fit 25%."],
-      ["What are the prizes?", "Cash prize pool of USD 12,000+ (may increase with sponsorship): 1 Champion team USD 5,000, 2 Runner-up teams USD 2,000 each, and 3 Third-place teams USD 1,000 each. Special awards, hardware prizes, and development resources are subject to official announcement."],
+      ["What are the prizes?", "Cash prize pool of USD 12,000+ (may increase with sponsorship): 1 Champion team USD 5,000, 2 Runner-up teams USD 2,000 each, and 3 Third-place teams USD 1,000 each."],
       ["Are there conditions for receiving prizes?", "Yes. Winning teams must complete required submissions, complete their Demo Day presentation, and have all final-roster members attend Demo Day to receive prizes. If not all members attend, the organizer may reserve, adjust, or cancel the team’s prize."],
       ["Who owns the intellectual property?", "Project IP generally belongs to the team. The organizer and partners may use team names, project names, public summaries, slides, demo content, on-site photos, and videos for event documentation, outcome publication, and non-commercial promotion."],
       ["How is personal data handled?", "Personal data is used only for registration, review, contact, event operations, on-site management, certificates / credential issuance, outcome records, and necessary administration, in accordance with applicable personal data protection laws. The event will be photographed and recorded and may be used for event records and promotion."],
