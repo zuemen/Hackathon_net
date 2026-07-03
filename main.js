@@ -73,7 +73,7 @@
       if (state === "open" && config.registrationUrl) {
         link.href = config.registrationUrl;
         link.target = "_blank";
-        link.rel = "noopener noreferrer";
+        link.rel = "noopener";
         link.removeAttribute("aria-disabled");
       } else {
         link.href = "#contact";
