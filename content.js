@@ -395,7 +395,7 @@ window.FAQ_GROUPS = {
       ["重要時程有哪些？", "7/8 開放報名、7/20 線上說明會、8/5 截止、8/7 公告入選、8/15 工作坊 #1（線上）、8/22 工作坊 #2（線下）、8/29–8/30 Hackathon、8/31 Demo Day。"],
       ["Team Leader 一定要出席嗎？", "是。Team Leader 須出席線上說明會、兩場賽前工作坊、Hackathon 與 Demo Day。其中線上說明會（7/20）辦於報名截止前，若無法即時參加，可於活動網站觀看官方錄影補足；工作坊、Hackathon 與 Demo Day 則須實際出席。"],
       ["其他隊員一定要參加工作坊嗎？", "不強制，但強烈建議每隊派代表參與，以完成工具理解、痛點討論與 POC 收斂。"],
-      ["有提供過夜嗎？", "本活動不安排過夜。8/29、8/30 請自行安排住宿與往返。"],
+      ["有提供過夜嗎？", "8/29→8/30 提供過夜，自由參加，可選擇不過夜或當日往返；過夜名額、分區與相關安排將於錄取確認後另行通知，並採場地安全管理。"],
       ["要交什麼？", "程式碼儲存庫（GitHub）、簡報、Demo 連結或影片、一頁治理／信任設計說明、README。"],
       ["交件截止什麼時候？", "8/30（日）23:59 前完成交件，缺件、逾期或無法展示可能影響評分、完賽或獲獎資格。"],
       ["Demo Day 怎麼進行？", "每隊約 5 分鐘中文成果簡報，並保留評審提問時間（實際秒數以現場公告為準）。Team Leader 須到場，簡報得由 TL 或其指定隊員擔任。"]
@@ -431,7 +431,7 @@ window.FAQ_GROUPS = {
       ["What are the key dates?", "7/8 registration opens, 7/20 online info session, 8/5 deadline, 8/7 finalists announced, 8/15 Workshop #1 (online), 8/22 Workshop #2 (in-person), 8/29–8/30 Hackathon, 8/31 Demo Day."],
       ["Does the Team Leader have to attend?", "Yes. The Team Leader must attend the online info session, both pre-event workshops, the Hackathon, and Demo Day. The online info session (7/20) takes place before the registration deadline; if the Team Leader cannot attend live, they may watch the official recording on the event site. Workshops, the Hackathon, and Demo Day require actual attendance."],
       ["Do other team members have to attend the workshops?", "Not mandatory, but each team is strongly encouraged to send representatives to complete tool onboarding, pain-point discussion, and POC scoping."],
-      ["Is overnight stay provided?", "No. Overnight stay is not arranged. Please arrange your own accommodation and transportation for 8/29 and 8/30."],
+      ["Is overnight stay provided?", "Overnight stay from 8/29 to 8/30 is available and optional; teams may choose not to stay or commute. Capacity, zoning, and related arrangements will be announced after finalist confirmation, with venue safety management in place."],
       ["What do we submit?", "A code repository (GitHub), slide deck, demo link or video, one-page governance / trust design note, and README."],
       ["When is the submission deadline?", "Submit by 23:59 on Sunday 8/30. Missing, late, or non-demonstrable submissions may affect scoring, completion status, or prize eligibility."],
       ["How does Demo Day work?", "Each team gives an approximately 5-minute presentation in Chinese, with time reserved for judges’ Q&A. Exact timing is subject to on-site announcement. The Team Leader must be present; the presentation may be delivered by the TL or a designated team member."]
