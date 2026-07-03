@@ -940,62 +940,6 @@ input {
   font-weight: 800;
 }
 
-.timeline {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.timeline::before {
-  display: none;
-}
-
-.timeline li {
-  position: relative;
-  min-height: 128px;
-  display: grid;
-  align-content: space-between;
-  gap: 18px;
-  padding: 22px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  background: var(--text);
-  text-align: left;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-.timeline li::before {
-  display: none;
-}
-
-.timeline li::after {
-  display: none;
-}
-
-.timeline time {
-  display: inline-flex;
-  width: fit-content;
-  padding: 7px 11px;
-  border-radius: 999px;
-  color: var(--primary);
-  background: rgba(22, 143, 163, 0.1);
-  font-weight: 800;
-  line-height: 1;
-}
-
-.timeline span {
-  position: relative;
-  z-index: 1;
-  color: var(--ink-soft);
-  font-weight: 700;
-  line-height: 1.45;
-}
-
 .partner-groups {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1300,10 +1244,6 @@ body.is-en .hero-lede {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .timeline {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .partner-groups {
     grid-template-columns: 1fr;
   }
@@ -1387,26 +1327,6 @@ body.is-en .hero-lede {
 
   .partner-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .timeline {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding-top: 0;
-    padding-left: 0;
-  }
-
-  .timeline::before {
-    display: none;
-  }
-
-  .timeline li {
-    padding: 18px;
-    text-align: left;
-  }
-
-  .timeline li::before {
-    display: none;
   }
 
   .input-row,
@@ -1725,15 +1645,6 @@ body {
   border-color: var(--line);
   border-top-color: var(--award-accent);
   background: var(--text);
-}
-
-.timeline li::before {
-  background: var(--brand-teal);
-  box-shadow: 0 0 0 1px var(--brand-teal);
-}
-
-.timeline li::after {
-  background: rgba(22, 143, 163, 0.1);
 }
 
 .partner-box {
@@ -2199,7 +2110,6 @@ summary:focus-visible {
 .foundation-group,
 .minimum-card,
 .stat-grid div,
-.timeline li,
 .subscribe-form,
 .partner-box {
   color: var(--text);
@@ -2411,44 +2321,58 @@ summary:focus-visible {
   }
 }
 
-/* Roadmap flowchart */
+/* Roadmap vertical spine */
 .timeline{
-  counter-reset:timeline-step; display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:16px 18px; padding:0; border:0; background:none;
+  counter-reset:timeline-step; position:relative;
+  display:flex; flex-direction:column; gap:4px;
+  max-width:720px; margin:10px 0 0; padding:6px 0; border:0; background:none;
+}
+.timeline::before{
+  content:""; position:absolute; left:19px; top:22px; bottom:22px;
+  width:2px; border-radius:2px;
+  background:linear-gradient(180deg,var(--cyan-400) 0%,var(--cyan-300) 45%,var(--gold-400) 100%);
+  opacity:.6;
 }
 .timeline-step{
-  counter-increment:timeline-step; position:relative; min-height:120px;
-  display:flex; flex-direction:column; gap:14px; padding:20px 20px 18px 22px;
-  border:1px solid var(--card-border); border-left:3px solid var(--card-border);
-  border-radius:12px;
-  background:linear-gradient(180deg,rgba(79,195,247,.06),rgba(15,37,64,.66)),rgba(15,37,64,.7);
+  counter-increment:timeline-step; list-style:none; position:relative;
+  display:flex; align-items:center; flex-wrap:wrap; gap:14px;
+  min-height:auto; margin:0; padding:15px 18px 15px 52px;
+  border:1px solid transparent; border-radius:12px; background:none; box-shadow:none;
+  transition:background .18s ease,border-color .18s ease;
+}
+.timeline-step:hover{
+  background:linear-gradient(180deg,rgba(79,195,247,.06),rgba(15,37,64,.5));
+  border-color:var(--card-border);
 }
 .timeline-step::before{
-  content:counter(timeline-step,decimal-leading-zero);
-  position:absolute; top:14px; right:14px; width:26px; height:26px;
-  display:grid; place-items:center; border-radius:999px;
-  font-size:.72rem; font-weight:900; color:var(--cyan-300);
-  background:rgba(57,194,224,.12); border:1px solid rgba(57,194,224,.3);
+  content:""; position:absolute; left:13px; top:50%; transform:translateY(-50%);
+  width:14px; height:14px; border-radius:999px;
+  background:var(--cyan-400); border:3px solid var(--navy-900);
+  box-shadow:0 0 0 2px rgba(57,194,224,.35); z-index:1;
 }
 .timeline-step::after{display:none;}
+.timeline-prep::before {background:var(--cyan-300); box-shadow:0 0 0 2px rgba(111,224,242,.35);}
+.timeline-event::before{background:var(--gold-400); box-shadow:0 0 0 2px rgba(255,209,92,.4);}
 .timeline-step time{
-  display:inline-flex; align-items:center; width:fit-content; min-height:32px;
-  padding:6px 12px; border-radius:999px; border:1px solid rgba(255,209,92,.34);
-  color:var(--gold-400); background:rgba(255,209,92,.08); font-weight:900; line-height:1;
+  flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center;
+  min-width:104px; min-height:34px; padding:6px 14px; border-radius:999px;
+  border:1px solid rgba(255,209,92,.32); color:var(--gold-400); background:rgba(255,209,92,.08);
+  font-weight:900; line-height:1;
 }
-.timeline-step span{color:var(--text); font-size:1.02rem; font-weight:800; line-height:1.42;}
-.timeline-entry{border-left-color:var(--cyan-400);}
-.timeline-prep {border-left-color:var(--cyan-300);}
-.timeline-event{border-left-color:var(--gold-400);}
-.timeline-step:nth-child(3),
-.timeline-step:last-child{
-  border-color:rgba(255,209,92,.55); border-left-color:var(--gold-400);
-  box-shadow:0 0 26px rgba(255,209,92,.14);
+.timeline-step span{flex:1 1 200px; color:var(--text); font-size:1.05rem; font-weight:800; line-height:1.4;}
+.timeline-step:nth-child(3)::before,
+.timeline-step:last-child::before{
+  width:18px; height:18px; left:11px; background:var(--gold-400);
+  box-shadow:0 0 0 3px rgba(255,209,92,.25),0 0 16px rgba(255,209,92,.45);
 }
 .timeline-step:nth-child(3) time,
 .timeline-step:last-child time{color:var(--navy-900); background:var(--gold-400); border-color:var(--gold-400);}
-@media (max-width:900px){ .timeline{grid-template-columns:1fr; gap:12px;} .timeline-step{min-height:auto;} }
+@media (max-width:600px){
+  .timeline{max-width:none;}
+  .timeline-step{padding:13px 14px 13px 48px; gap:10px;}
+  .timeline-step time{min-width:0;}
+  .timeline-step span{flex-basis:140px;}
+}
 /* Hero KV should remain readable; the KV already contains the event title/date. */
 .hero {
   min-height: clamp(520px, 56.25vw, 760px);
