@@ -226,6 +226,17 @@
     renderFaq(currentLocale);
     updateRegistrationLinks();
     updateTimelineStatus();
+    const rulesEN = currentLocale === "en";
+    const rulesHref = rulesEN
+      ? "assets/official/Trustworthy-AI-Hackathon-2026-Rules-EN.pdf"
+      : "assets/official/Trustworthy-AI-Hackathon-2026-Rules.pdf";
+    const rulesName = rulesEN
+      ? "Trustworthy-AI-Hackathon-2026-Rules-EN.pdf"
+      : "可信AI黑客松2026_比賽辦法.pdf";
+    document.querySelectorAll("[data-download-rules]").forEach((a) => {
+      a.setAttribute("href", rulesHref);
+      a.setAttribute("download", rulesName);
+    });
     langButtons.forEach((button) => {
       const active = button.dataset.langButton === currentLocale;
       button.classList.toggle("is-active", active);
