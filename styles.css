@@ -2390,7 +2390,7 @@ summary:focus-visible {
 }
 /* Hero KV should remain readable; the KV already contains the event title/date. */
 .hero {
-  min-height: calc(56.25vw + 74px);
+  min-height: calc(56.25vw + 154px);
   padding: 0;
   background:
     linear-gradient(180deg, rgba(7,21,40,0.04), rgba(7,21,40,0.22)),
@@ -2524,15 +2524,25 @@ summary:focus-visible {
 }
 
 #hero .hero-cta {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  left: 50%;
-  bottom: clamp(20px, 4vw, 52px);
-  transform: translateX(-50%);
+  left: auto;
+  bottom: auto;
+  transform: none;
   display: flex;
   justify-content: center;
   gap: 12px;
   width: min(92vw, 520px);
+  margin: calc(56.25vw + 88px) auto 0;
+}
+
+#hero .hero-grid,
+#hero .hero-copy {
+  min-height: 0;
+}
+
+#hero .hero-copy {
+  padding-bottom: 34px;
 }
 
 #hero .hero-cta .button {
@@ -2880,9 +2890,10 @@ summary:focus-visible {
   }
 
   #hero .hero-cta {
-    bottom: 16px;
+    bottom: auto;
     width: calc(100vw - 28px);
     gap: 8px;
+    margin-top: calc(56.25vw + 78px);
   }
 
   #hero .hero-cta .button {
