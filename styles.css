@@ -1142,9 +1142,7 @@ input {
 }
 
 .footer-logo-row img:first-child {
-  padding: 6px;
-  border-radius: 12px;
-  background: var(--text);
+  border-radius: 0;
 }
 
 .footer-subscribe h2,
@@ -2292,7 +2290,7 @@ summary:focus-visible {
 }
 
 .footer-logo-row img:first-child {
-  background: var(--text);
+  background: transparent;
 }
 
 .footer-links a,
@@ -2583,26 +2581,29 @@ summary:focus-visible {
   font-weight: 800;
 }
 
-@media (min-width: 761px) {
+@media (min-width: 768px) {
   .timeline {
     counter-reset: timeline-step;
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(10, minmax(92px, 1fr));
+    display: flex;
+    align-items: flex-start;
     gap: 0;
     max-width: none;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
     margin: 26px 0 0;
-    padding: 24px 0 16px;
+    padding: 18px 0 22px;
     border: 0;
     background: none;
+    scrollbar-width: thin;
   }
 
   .timeline::before {
     content: "";
     position: absolute;
-    left: 4%;
-    right: 4%;
-    top: 76px;
+    left: 52px;
+    right: 52px;
+    top: 72px;
     bottom: auto;
     width: auto;
     height: 2px;
@@ -2615,13 +2616,14 @@ summary:focus-visible {
     counter-increment: timeline-step;
     list-style: none;
     position: relative;
-    display: grid;
-    justify-items: center;
-    align-content: start;
-    gap: 12px;
-    min-height: 142px;
+    flex: 1 0 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 58px;
+    min-height: 132px;
     margin: 0;
-    padding: 0 8px;
+    padding: 0 8px 10px;
     border: 1px solid transparent;
     border-radius: 12px;
     background: none;
@@ -2640,7 +2642,7 @@ summary:focus-visible {
     content: "";
     position: absolute;
     left: 50%;
-    top: 70px;
+    top: 48px;
     transform: translateX(-50%);
     width: 14px;
     height: 14px;
@@ -2666,6 +2668,7 @@ summary:focus-visible {
   }
 
   .timeline-step time {
+    order: 1;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2682,6 +2685,7 @@ summary:focus-visible {
   }
 
   .timeline-step span {
+    order: 2;
     max-width: 128px;
     color: var(--text);
     font-size: 0.88rem;
@@ -2693,7 +2697,7 @@ summary:focus-visible {
   .timeline-step:last-child::before {
     width: 18px;
     height: 18px;
-    top: 68px;
+    top: 46px;
     background: var(--gold-400);
     box-shadow: 0 0 0 3px rgba(255, 209, 92, 0.25), 0 0 16px rgba(255, 209, 92, 0.45);
   }
@@ -2727,7 +2731,7 @@ summary:focus-visible {
   .timeline-step.is-next::before {
     width: 20px;
     height: 20px;
-    top: 67px;
+    top: 45px;
     background: var(--cyan-400);
     box-shadow: 0 0 0 5px rgba(57, 194, 224, 0.3), 0 0 22px rgba(57, 194, 224, 0.85);
     animation: none;
@@ -2857,7 +2861,7 @@ summary:focus-visible {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .header-actions .button-small,
   .language-toggle {
     height: 38px;

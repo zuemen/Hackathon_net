@@ -39,7 +39,7 @@ window.SITE_CONFIG = {
 
   contactName: "Trustworthy AI Hackathon Team",
   contactEmail: "hackathon2026@chain.tw",
-  canonicalUrl: "https://hackathon-net.vercel.app/",
+  canonicalUrl: "https://hackathon.chain.tw/",
   newsletterUrl: "https://chaintw.substack.com/"
 };
 
