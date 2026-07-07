@@ -3623,7 +3623,7 @@ summary:focus-visible {
   .timeline-step {
     flex: 1 1 96px;
     min-width: 0;
-    gap: 10px;
+    gap: 34px;
     min-height: 0;
     padding: 0 8px 10px;
   }
@@ -3638,7 +3638,7 @@ summary:focus-visible {
 
   .timeline-step span {
     flex: 0 0 auto;
-    max-width: 132px;
+    max-width: 118px;
     font-size: 0.82rem;
     line-height: 1.32;
   }
@@ -3685,11 +3685,10 @@ summary:focus-visible {
 }
 
 .hero {
-  --kv-h: min(56.25vw, calc(100vh - 236px));
-  min-height: 0;
+  min-height: calc(56.25vw + 154px);
   padding: 0 0 26px;
   background:
-    url("./assets/hero-kv.webp") center 74px / auto var(--kv-h) no-repeat,
+    url("./assets/hero-kv.webp") center 74px / 100% auto no-repeat,
     linear-gradient(135deg, var(--bg-deep), var(--bg));
 }
 
@@ -3706,7 +3705,7 @@ summary:focus-visible {
 }
 
 .hero .hero-tagline {
-  margin: calc(var(--kv-h) + 74px + 22px) auto 0;
+  margin: calc(56.25vw + 96px) auto 0;
   text-shadow: none;
 }
 
@@ -3720,4 +3719,26 @@ summary:focus-visible {
   gap: 12px;
   width: min(92vw, 520px);
   margin: 18px auto 0;
+}
+
+#tracks .track-accordion {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+#tracks .track-accordion .track-card {
+  grid-column: auto !important;
+  width: auto;
+}
+
+#tracks .track-accordion summary {
+  min-height: 124px;
+  align-content: center;
+}
+
+#tracks .track-accordion .track-card:not([open]) dl {
+  display: none;
+}
+
+#tracks .track-accordion .track-card[open] dl {
+  display: grid;
 }
