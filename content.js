@@ -150,7 +150,7 @@ window.TRANSLATIONS = {
     "rules.delivery": "出席與交付",
     "rules.d0": "Team Leader（團隊代表）須全程參與所有指定流程。",
     "rules.d1": "兩場賽前工作坊限入選隊伍參與，不開放旁聽。Team Leader 須全程出席兩場工作坊；其他隊員不強制，但強烈建議參與。",
-    "rules.d2": "Demo Day 由 Team Leader 或指定隊員以中文簡報；得獎隊伍須最終名單之全體成員出席 Demo Day，方可領獎。",
+    "rules.d2": "Demo Day 由 Team Leader 或指定隊員簡報；得獎隊伍須最終名單之全體成員出席 Demo Day，方可領獎。",
     "rules.d3": "須完成程式碼儲存庫連結、Demo Day 簡報檔、Demo 連結或展示影片、一頁治理／信任設計說明（Governance Gap Memo）、README。",
     "rules.safety": "安全與資料",
     "rules.s1": "僅使用具合法授權的模型、資料、工具及第三方服務。",
@@ -366,7 +366,7 @@ window.TRANSLATIONS = {
     "rules.delivery": "Attendance and deliverables",
     "rules.d0": "The Team Leader must participate throughout all required program steps.",
     "rules.d1": "The two pre-event workshops are for selected teams only and are not open to auditing. The Team Leader must attend both workshops throughout; other members are not required, but are strongly encouraged to join.",
-    "rules.d2": "On Demo Day, the Team Leader or a designated member presents in Chinese. Winning teams must have every member on the final roster attend Demo Day to receive prizes.",
+    "rules.d2": "On Demo Day, the Team Leader or a designated member presents. Winning teams must have every member on the final roster attend Demo Day to receive prizes.",
     "rules.d3": "Teams must submit a code repository link, Demo Day slide deck, demo link or showcase video, one-page governance / trust design note (Governance Gap Memo), and README.",
     "rules.safety": "Safety and data",
     "rules.s1": "Use only legally authorized models, data, tools and third-party services.",
@@ -458,7 +458,7 @@ window.FAQ_GROUPS = {
       ["有提供過夜嗎？", "8/29-8/30 提供過夜，自由參加，可選擇不過夜或當日往返；過夜名額、分區與相關安排將於錄取確認後另行通知。"],
       ["要交什麼？", "程式碼儲存庫（GitHub）、簡報、Demo 連結或影片、一頁治理／信任設計說明、README。"],
       ["交件截止什麼時候？", "8/30（日）23:59 前完成交件，缺件、逾期或無法展示可能影響評分、完賽或獲獎資格。"],
-      ["Demo Day 怎麼進行？", "每隊約 5 分鐘中文成果簡報，並保留評審提問時間（實際秒數以現場公告為準）。Team Leader 須到場，簡報得由 TL 或其指定隊員擔任。"]
+      ["Demo Day 怎麼進行？", "每隊約 5 分鐘成果簡報，並保留評審提問時間（實際秒數以現場公告為準）。Team Leader 須到場，簡報得由 TL 或其指定隊員擔任。"]
     ]],
     ["D. 評分、獎項與法務", [
       ["怎麼評分？", "初選（書面）：題目相關性 50%、可行性 30%、團隊能力 20%。<br>決選（Demo Day）：產業應用場景契合度 35%、可信技術導入 AI Agent 的可行性 25%、簡報與 Demo 呈現 25%、問題洞察與創意巧思 15%。"],
@@ -494,7 +494,7 @@ window.FAQ_GROUPS = {
       ["Is overnight stay available?", "Overnight stay from 8/29 to 8/30 is optional. You may choose not to stay or commute. Capacity, zoning, and related arrangements will be announced after finalist confirmation."],
       ["What do we submit?", "A GitHub repository, a slide deck, a demo link or video, a one-page governance / trust design note, and a README."],
       ["When is the submission deadline?", "By 23:59 on Sunday 8/30. Missing, late, or non-demoable submissions may affect scoring, completion, or prize eligibility."],
-      ["How does Demo Day work?", "Each team gives an approximately 5-minute presentation in Chinese, with time reserved for judges' Q&A. Exact timing is subject to on-site announcement. The Team Leader must be present; the presentation may be delivered by the TL or a designated team member."]
+      ["How does Demo Day work?", "Each team gives an approximately 5-minute presentation, with time reserved for judges' Q&A. Exact timing is subject to on-site announcement. The Team Leader must be present; the presentation may be delivered by the TL or a designated team member."]
     ]],
     ["D. Judging, Prizes, and Legal", [
       ["How is judging done?", "Preliminary review (written): topic relevance 50%, feasibility 30%, team capability 20%.<br>Final (Demo Day): industry scenario fit 35%, feasibility of a trustworthy AI Agent 25%, presentation & demo 25%, insight & creativity 15%."],

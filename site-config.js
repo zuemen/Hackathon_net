@@ -7,7 +7,7 @@ window.SITE_CONFIG = {
   eventStart: "2026-08-29",
   eventEnd: "2026-08-31",
   venue: "N24 台北方舟",
-  venueMapUrl: null,
+  venueMapUrl: "https://www.google.com/maps/search/?api=1&query=N24%20%E5%8F%B0%E5%8C%97%E6%96%B9%E8%88%9F",
 
   selectedTeams: 20,
   teamMin: 3,
