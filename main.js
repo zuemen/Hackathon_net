@@ -229,7 +229,7 @@
     });
   }
 
-  function setLanguage(locale, persist = false) {
+  function setLanguage(locale, persist = false, initial = false) {
     currentLocale = locale === "en" ? "en" : "zh-Hant";
     document.documentElement.lang = currentLocale;
     document.body.classList.toggle("is-en", currentLocale === "en");
@@ -244,7 +244,9 @@
       }
     });
 
-    renderFaq(currentLocale);
+    // FAQ zh-Hant is pre-rendered statically in index.html for SEO; only
+    // (re)render via JS when switching language or when the initial locale is en.
+    if (!(initial && currentLocale === defaultLocale)) renderFaq(currentLocale);
     updateRegistrationLinks();
     updateTimelineStatus();
     updateRuleDownloads();
@@ -285,7 +287,7 @@
   renderJsonLd();
   applyFeatureFlags();
   setHeaderState();
-  setLanguage(currentLocale, false);
+  setLanguage(currentLocale, false, true);
   window.addEventListener("scroll", setHeaderState, { passive: true });
 
   if (navToggle && navPanel) {
@@ -319,7 +321,7 @@
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.1 }
     );
     revealItems.forEach((item) => observer.observe(item));
   } else {
@@ -410,6 +412,19 @@
     nums.forEach((el) => observer.observe(el));
   }
 
+  function initVenueMap() {
+    const link = document.querySelector("[data-venue-map]");
+    if (!link) return;
+    const url = config.venueMapUrl;
+    if (url) {
+      link.href = url;
+      link.hidden = false;
+    } else {
+      link.removeAttribute("href");
+      link.hidden = true;
+    }
+  }
+
   function initTrackAccordion() {
     document.querySelectorAll(".track-accordion details").forEach((details) => {
       const summary = details.querySelector("summary");
@@ -423,5 +438,6 @@
   initCountdown();
   initCounters();
   initTrackAccordion();
+  initVenueMap();
   scrollToInitialHash();
 })();

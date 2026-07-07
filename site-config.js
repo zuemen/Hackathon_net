@@ -7,6 +7,7 @@ window.SITE_CONFIG = {
   eventStart: "2026-08-29",
   eventEnd: "2026-08-31",
   venue: "N24 台北方舟",
+  venueMapUrl: null,
 
   selectedTeams: 20,
   teamMin: 3,
