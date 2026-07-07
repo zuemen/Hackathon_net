@@ -410,7 +410,18 @@
     nums.forEach((el) => observer.observe(el));
   }
 
+  function initTrackAccordion() {
+    document.querySelectorAll(".track-accordion details").forEach((details) => {
+      const summary = details.querySelector("summary");
+      if (!summary) return;
+      const sync = () => summary.setAttribute("aria-expanded", String(details.open));
+      sync();
+      details.addEventListener("toggle", sync);
+    });
+  }
+
   initCountdown();
   initCounters();
+  initTrackAccordion();
   scrollToInitialHash();
 })();
