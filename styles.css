@@ -2586,6 +2586,7 @@ summary:focus-visible {
     counter-reset: timeline-step;
     position: relative;
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
     gap: 0;
     max-width: none;
