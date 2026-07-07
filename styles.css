@@ -3946,29 +3946,38 @@ summary:focus-visible {
    ============================================================ */
 .track-card summary {
   display: grid;
-  grid-template-columns: auto auto 1fr auto;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+  height: 167px;
+  min-height: 167px;
 }
 .track-index {
-  font-size: 1.5rem;
+  width: 44px;
+  font-size: 1.3rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.28);
   line-height: 1;
+  text-align: center;
 }
 .track-head {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   gap: 3px;
   min-width: 0;
+  height: 107px;
+  min-height: 107px;
 }
 .track-name {
-  font-size: 1.12rem;
+  min-height: 1.45em;
+  font-size: 1.02rem;
   font-weight: 800;
   color: var(--text);
-  line-height: 1.3;
+  line-height: 1.35;
 }
 .track-summary {
+  min-height: 2.9em;
   font-size: 0.86rem;
   font-weight: 500;
   color: var(--text-muted, #A9C0D6);
@@ -4009,18 +4018,16 @@ summary:focus-visible {
   }
 }
 
-/* Hero fold guarantee, re-asserted (upstream commit removed the viewport cap;
-   CTA sinks below the fold on <=920px-tall desktops with full-width KV). */
+/* Hero KV: keep the full visual at its original wide ratio. */
 @media (min-width: 900px) {
   .hero {
-    --kv-h: min(56.25vw, calc(100vh - 236px));
-    min-height: 0;
+    min-height: calc(56.25vw + 154px);
     padding-bottom: 26px;
     background:
-      url("./assets/hero-kv.webp") center 74px / auto var(--kv-h) no-repeat,
+      url("./assets/hero-kv.webp") center 74px / 100% auto no-repeat,
       linear-gradient(135deg, var(--bg-deep), var(--bg)) !important;
   }
   .hero .hero-tagline {
-    margin-top: calc(var(--kv-h) + 96px);
+    margin-top: calc(56.25vw + 96px);
   }
 }
