@@ -41,13 +41,16 @@
     const steps = [...ol.querySelectorAll(".timeline-step")];
     const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     let next = null;
+
     steps.forEach((step) => {
       const date = new Date(`${step.dataset.date}T00:00:00`);
       step.classList.toggle("is-past", date < today);
       if (!next && date >= today) next = step;
     });
+
     steps.forEach((step) => step.classList.remove("is-next"));
     if (next) next.classList.add("is-next");
+
     const status = document.getElementById("timelineStatus");
     if (!status) return;
     const en = currentLocale === "en";
@@ -55,6 +58,7 @@
     const todayText = en
       ? `Today ${now.getMonth() + 1}/${now.getDate()}`
       : `今天 ${now.getMonth() + 1}/${now.getDate()}（${weekday}）`;
+
     if (next) {
       const name = next.querySelector("span")?.textContent.trim() || "";
       const date = next.querySelector("time")?.textContent.trim() || "";
@@ -69,12 +73,12 @@
   function getRegistrationState(now = getNow()) {
     const override = config.registrationOverride || config.registrationStatusOverride;
     if (override === "open" || override === "closed" || override === "scheduled") return override;
+
     const status = config.registrationStatus;
     const openAt = new Date(config.registrationOpenAt);
     const closeAt = new Date(config.registrationCloseAt);
     if (status === "closed" || status === "disabled") return "closed";
     if (status === "open") return now <= closeAt ? "open" : "closed";
-
     if (now < openAt) return "scheduled";
     if (now <= closeAt) return "open";
     return "closed";
@@ -83,7 +87,7 @@
   function getRegistrationLabel(locale = currentLocale, state = getRegistrationState()) {
     const labels = {
       "zh-Hant": {
-        scheduled: "即將開放報名",
+        scheduled: "報名即將開放",
         open: "立即報名",
         closed: "報名已截止"
       },
@@ -107,7 +111,7 @@
         link.rel = "noopener";
         link.removeAttribute("aria-disabled");
       } else {
-        link.href = "#contact";
+        link.href = "#rules";
         link.removeAttribute("target");
         link.removeAttribute("rel");
         link.setAttribute("aria-disabled", "true");
@@ -208,6 +212,21 @@
     });
   }
 
+  function updateRuleDownloads() {
+    const rulesEN = currentLocale === "en";
+    const rulesHref = rulesEN
+      ? "assets/official/Trustworthy-AI-Hackathon-2026-Rules-EN.pdf"
+      : "assets/official/Trustworthy-AI-Hackathon-2026-Rules.pdf";
+    const rulesName = rulesEN
+      ? "Trustworthy-AI-Hackathon-2026-Rules-EN.pdf"
+      : "可信AI黑客松2026_比賽辦法.pdf";
+
+    document.querySelectorAll("[data-download-rules]").forEach((link) => {
+      link.setAttribute("href", rulesHref);
+      link.setAttribute("download", rulesName);
+    });
+  }
+
   function setLanguage(locale, persist = false) {
     currentLocale = locale === "en" ? "en" : "zh-Hant";
     document.documentElement.lang = currentLocale;
@@ -226,17 +245,8 @@
     renderFaq(currentLocale);
     updateRegistrationLinks();
     updateTimelineStatus();
-    const rulesEN = currentLocale === "en";
-    const rulesHref = rulesEN
-      ? "assets/official/Trustworthy-AI-Hackathon-2026-Rules-EN.pdf"
-      : "assets/official/Trustworthy-AI-Hackathon-2026-Rules.pdf";
-    const rulesName = rulesEN
-      ? "Trustworthy-AI-Hackathon-2026-Rules-EN.pdf"
-      : "可信AI黑客松2026_比賽辦法.pdf";
-    document.querySelectorAll("[data-download-rules]").forEach((a) => {
-      a.setAttribute("href", rulesHref);
-      a.setAttribute("download", rulesName);
-    });
+    updateRuleDownloads();
+
     langButtons.forEach((button) => {
       const active = button.dataset.langButton === currentLocale;
       button.classList.toggle("is-active", active);

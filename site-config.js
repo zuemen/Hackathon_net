@@ -37,7 +37,7 @@ window.SITE_CONFIG = {
   showCredentialExperience: false,
   showWorkshopTopics: false,
 
-  contactName: "臺灣區塊鏈愛好者協會",
+  contactName: "Trustworthy AI Hackathon Team",
   contactEmail: "hackathon2026@chain.tw",
   canonicalUrl: "https://hackathon-net.vercel.app/",
   newsletterUrl: "https://chaintw.substack.com/"
