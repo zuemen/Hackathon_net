@@ -17,6 +17,7 @@ window.SITE_CONFIG = {
   trackCount: 4,
   workshopCount: 2,
 
+  showCountdown: false,
   registrationStatus: "open",
   registrationOverride: null,
   registrationOpenAt: "2026-07-08T00:00:00+08:00",

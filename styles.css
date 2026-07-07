@@ -2025,7 +2025,7 @@ summary:focus-visible {
   color: var(--text);
   background:
     linear-gradient(90deg, rgba(7,21,40,0.72), rgba(7,21,40,0.35)),
-    url("./assets/hero-kv.jpg") center / cover no-repeat,
+    url("./assets/hero-kv.webp") center / cover no-repeat,
     radial-gradient(circle at 70% 42%, rgba(79,195,247,0.26), transparent 32%),
     linear-gradient(135deg, var(--bg-deep), var(--bg));
 }
@@ -2308,7 +2308,7 @@ summary:focus-visible {
   .hero {
     background:
       linear-gradient(180deg, rgba(7,21,40,0.82), rgba(7,21,40,0.42)),
-      url("./assets/hero-kv.jpg") center center / cover no-repeat,
+      url("./assets/hero-kv.webp") center center / cover no-repeat,
       linear-gradient(135deg, var(--bg-deep), var(--bg));
   }
 }
@@ -2396,7 +2396,7 @@ summary:focus-visible {
   padding: 0;
   background:
     linear-gradient(180deg, rgba(7,21,40,0) 44%, rgba(7,21,40,0.55) 72%, rgba(7,21,40,0.86) 100%),
-    url("./assets/hero-kv.jpg") center top / cover no-repeat,
+    url("./assets/hero-kv.webp") center top / cover no-repeat,
     linear-gradient(135deg, var(--bg-deep), var(--bg));
 }
 
@@ -2449,7 +2449,7 @@ summary:focus-visible {
     min-height: calc(56.25vw + 64px);
     background:
       linear-gradient(180deg, rgba(7,21,40,0.04), rgba(7,21,40,0.26)),
-      url("./assets/hero-kv.jpg") center 64px / 100% auto no-repeat,
+      url("./assets/hero-kv.webp") center 64px / 100% auto no-repeat,
       linear-gradient(135deg, var(--bg-deep), var(--bg));
   }
 }
@@ -3609,4 +3609,115 @@ summary:focus-visible {
 #judging {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+/* ============================================================
+   Verified scan-fix batch: WebP hero, compact timeline,
+   tap targets, FAQ budget, clean KV hero.
+   ============================================================ */
+.countdown-unit {
+  font-size: 0.78rem;
+}
+
+@media (min-width: 768px) {
+  .timeline-step {
+    flex: 1 1 96px;
+    min-width: 0;
+    gap: 10px;
+    min-height: 0;
+    padding: 0 8px 10px;
+  }
+
+  .timeline-step time {
+    min-width: 0;
+    min-height: 30px;
+    padding: 5px 9px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
+
+  .timeline-step span {
+    flex: 0 0 auto;
+    max-width: 132px;
+    font-size: 0.82rem;
+    line-height: 1.32;
+  }
+
+  .timeline::before {
+    top: 46px;
+  }
+
+  .timeline-step::before {
+    top: 38px;
+  }
+
+  .timeline-step[data-date="2026-08-05"]::before,
+  .timeline-step[data-date="2026-08-31"]::before {
+    top: 36px;
+  }
+
+  .timeline-step.is-next::before {
+    top: 37px;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-links a,
+  .footer-contact a,
+  .contact-inline a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-block: 4px;
+  }
+}
+
+#faq details summary {
+  padding-block: 8px;
+}
+
+#faq details p {
+  margin: 5px 0 9px;
+}
+
+#faq .faq-group h3 {
+  margin-bottom: 6px;
+}
+
+.hero {
+  --kv-h: min(56.25vw, calc(100vh - 236px));
+  min-height: 0;
+  padding: 0 0 26px;
+  background:
+    url("./assets/hero-kv.webp") center 74px / auto var(--kv-h) no-repeat,
+    linear-gradient(135deg, var(--bg-deep), var(--bg));
+}
+
+.hero::before,
+.hero .network-bg {
+  display: none;
+}
+
+.hero-copy,
+#hero .hero-copy {
+  display: block;
+  min-height: 0;
+  padding-bottom: 0;
+}
+
+.hero .hero-tagline {
+  margin: calc(var(--kv-h) + 74px + 22px) auto 0;
+  text-shadow: none;
+}
+
+.hero .countdown {
+  display: none;
+}
+
+#hero .hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  width: min(92vw, 520px);
+  margin: 18px auto 0;
 }

@@ -330,6 +330,10 @@
 
   function initCountdown() {
     const el = document.querySelector("[data-countdown]");
+    if (!config.showCountdown) {
+      if (el) el.hidden = true;
+      return;
+    }
     if (!el) return;
     const labelEl = el.querySelector("[data-countdown-label]");
     const daysEl = el.querySelector("[data-countdown-days]");
