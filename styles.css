@@ -3743,45 +3743,62 @@ summary:focus-visible {
   display: grid;
 }
 
-/* Roadmap final: desktop uses a readable 5x2 flowchart, mobile keeps the vertical spine. */
+/* Roadmap final: desktop uses one horizontal axis, mobile keeps the vertical spine. */
 @media (min-width: 1024px) {
   .timeline {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    gap: 0;
     max-width: 1180px;
     overflow: visible;
-    padding: 0;
-    margin-top: 28px;
+    padding: 0 0 14px;
+    margin-top: 34px;
+    border: 0;
+    background: none;
   }
 
   .timeline::before {
-    display: none;
+    content: "";
+    position: absolute;
+    left: 5.2%;
+    right: 5.2%;
+    top: 55px;
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--cyan-400) 0%, var(--cyan-300) 48%, var(--gold-400) 100%);
+    box-shadow: 0 0 18px rgba(57, 194, 224, 0.25);
+    opacity: 0.72;
   }
 
   .timeline-step {
     position: relative;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: start;
-    gap: 8px 10px;
-    min-height: 118px;
-    padding: 16px;
-    border: 1px solid var(--card-border);
-    border-radius: 14px;
-    background: linear-gradient(180deg, rgba(57, 194, 224, 0.08), rgba(15, 37, 64, 0.72));
-    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-height: 138px;
+    margin: 0;
+    padding: 0 4px;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    text-align: center;
     opacity: 1;
   }
 
   .timeline-step::before {
     content: counter(timeline-step, decimal-leading-zero);
-    position: static;
+    position: relative;
+    top: auto;
+    left: auto;
     transform: none;
-    grid-row: 1 / span 2;
-    width: 34px;
-    height: 34px;
+    order: 2;
+    z-index: 1;
+    width: 32px;
+    height: 32px;
     display: grid;
     place-items: center;
     border-radius: 999px;
@@ -3795,43 +3812,31 @@ summary:focus-visible {
   }
 
   .timeline-step::after {
-    content: "";
-    position: absolute;
-    right: -13px;
-    top: 50%;
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid rgba(111, 224, 242, 0.55);
-    border-right: 2px solid rgba(111, 224, 242, 0.55);
-    transform: translateY(-50%) rotate(45deg);
-    display: block;
-  }
-
-  .timeline-step:nth-child(5)::after,
-  .timeline-step:last-child::after {
     display: none;
   }
 
   .timeline-step time {
-    grid-column: 2;
-    order: initial;
-    justify-self: start;
+    order: 1;
+    flex: 0 0 auto;
     min-height: 28px;
-    padding: 5px 10px;
-    font-size: 0.82rem;
+    padding: 5px 8px;
+    font-size: 0.76rem;
     color: var(--gold-400);
     background: rgba(255, 209, 92, 0.08);
     border-color: rgba(255, 209, 92, 0.34);
   }
 
   .timeline-step span {
-    grid-column: 2;
-    order: initial;
-    max-width: none;
+    order: 3;
+    flex: 0 0 auto;
+    width: min(100%, 108px);
+    max-width: 108px;
     color: var(--text);
-    font-size: 0.98rem;
-    line-height: 1.38;
+    font-size: 0.84rem;
+    line-height: 1.32;
     font-weight: 850;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .timeline-step.is-past {
@@ -3845,15 +3850,16 @@ summary:focus-visible {
 
   .timeline-step[data-date="2026-08-05"],
   .timeline-step[data-date="2026-08-31"] {
-    border-color: rgba(255, 209, 92, 0.62);
-    background: radial-gradient(circle at 18% 0%, rgba(255, 209, 92, 0.18), transparent 58%), rgba(15, 37, 64, 0.82);
+    filter: drop-shadow(0 0 14px rgba(255, 209, 92, 0.18));
   }
 
   .timeline-step[data-date="2026-08-05"]::before,
   .timeline-step[data-date="2026-08-31"]::before {
-    position: static;
-    width: 34px;
-    height: 34px;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 36px;
+    height: 36px;
     background: var(--gold-400);
     box-shadow: 0 0 0 3px rgba(255, 209, 92, 0.2), 0 0 18px rgba(255, 209, 92, 0.45);
   }
@@ -3866,18 +3872,25 @@ summary:focus-visible {
   }
 
   .timeline-step.is-next {
-    border-color: var(--cyan-400);
-    background: linear-gradient(180deg, rgba(57, 194, 224, 0.18), rgba(15, 37, 64, 0.74));
-    box-shadow: 0 0 0 1px rgba(57, 194, 224, 0.55), 0 0 28px rgba(57, 194, 224, 0.26);
+    border: 0;
+    background: none;
+    box-shadow: none;
   }
 
   .timeline-step.is-next::before {
-    position: static;
-    width: 34px;
-    height: 34px;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 38px;
+    height: 38px;
     background: var(--cyan-400);
     box-shadow: 0 0 0 5px rgba(57, 194, 224, 0.26), 0 0 22px rgba(57, 194, 224, 0.74);
     animation: tlPulseCard 1.6s ease-in-out infinite;
+  }
+
+  .timeline-step.is-next span {
+    color: var(--cyan-300);
+    text-shadow: 0 0 16px rgba(57, 194, 224, 0.32);
   }
 }
 
