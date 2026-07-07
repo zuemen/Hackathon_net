@@ -2735,7 +2735,17 @@ summary:focus-visible {
     top: 45px;
     background: var(--cyan-400);
     box-shadow: 0 0 0 5px rgba(57, 194, 224, 0.3), 0 0 22px rgba(57, 194, 224, 0.85);
-    animation: none;
+    animation: tlPulseHorizontal 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes tlPulseHorizontal {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.28);
   }
 }
 
