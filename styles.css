@@ -4031,3 +4031,69 @@ summary:focus-visible {
     margin-top: calc(56.25vw + 96px);
   }
 }
+
+/* ===== FIX: tracks collapsed-card layout override ===== */
+#tracks .track-accordion .track-card summary {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  grid-template-areas:
+    "idx icon . chev"
+    "head head head head";
+  align-items: center;
+  column-gap: 12px;
+  row-gap: 12px;
+  padding: 18px;
+  text-align: left;
+}
+#tracks .track-accordion .track-index {
+  grid-area: idx;
+  position: static;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.28);
+}
+#tracks .track-accordion .track-icon {
+  grid-area: icon;
+  position: static;
+  margin: 0;
+}
+#tracks .track-accordion .track-chevron {
+  grid-area: chev;
+  position: static;
+  justify-self: end;
+  align-self: center;
+  margin: 0;
+}
+#tracks .track-accordion .track-head {
+  grid-area: head;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  text-align: left;
+}
+#tracks .track-accordion .track-name {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.3;
+  min-height: 0;
+}
+#tracks .track-accordion .track-summary {
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--text-muted, #A9C0D6);
+  line-height: 1.45;
+  min-height: calc(2 * 1.45em);
+}
+/* English labels are longer; reserve lines so all four cards stay equal height. */
+html[lang="en"] #tracks .track-accordion .track-name {
+  font-size: 0.98rem;
+  min-height: calc(2 * 1.3em);
+}
+html[lang="en"] #tracks .track-accordion .track-summary {
+  min-height: calc(3 * 1.45em);
+}
+/* ===== FIX END ===== */
