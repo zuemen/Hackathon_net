@@ -19,6 +19,8 @@
   const registerLinks = document.querySelectorAll("[data-registration-link]");
   const newsletterLinks = document.querySelectorAll("[data-newsletter-link]");
   const contactLinks = document.querySelectorAll("[data-contact-link]");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let renderCountdown = null;
 
   function t(key, locale = currentLocale) {
     return translations[locale]?.[key] || translations[defaultLocale]?.[key] || key;
@@ -246,6 +248,7 @@
     updateRegistrationLinks();
     updateTimelineStatus();
     updateRuleDownloads();
+    if (renderCountdown) renderCountdown();
 
     langButtons.forEach((button) => {
       const active = button.dataset.langButton === currentLocale;
@@ -323,5 +326,91 @@
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
 
+  function initCountdown() {
+    const el = document.querySelector("[data-countdown]");
+    if (!el) return;
+    const labelEl = el.querySelector("[data-countdown-label]");
+    const daysEl = el.querySelector("[data-countdown-days]");
+    const hoursEl = el.querySelector("[data-countdown-hours]");
+    const minutesEl = el.querySelector("[data-countdown-minutes]");
+    const secondsEl = el.querySelector("[data-countdown-seconds]");
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+    const openAt = new Date(config.registrationOpenAt);
+    const closeAt = new Date(config.registrationCloseAt);
+    const demoAt = new Date(config.demoDayAt || "2026-08-31T09:00:00+08:00");
+    // Preserve any mock time (?now= / __TEST_NOW) while still ticking in real time.
+    const offset = getNow().getTime() - Date.now();
+    const pad = (n) => String(n).padStart(2, "0");
+
+    function phase(now) {
+      if (now < openAt) return { key: "countdown.beforeOpen", target: openAt };
+      if (now <= closeAt) return { key: "countdown.beforeClose", target: closeAt };
+      return { key: "countdown.demoDay", target: demoAt };
+    }
+
+    function tick() {
+      const now = new Date(Date.now() + offset);
+      const { key, target } = phase(now);
+      let diff = Math.max(0, target.getTime() - now.getTime());
+      const d = Math.floor(diff / 86400000); diff -= d * 86400000;
+      const h = Math.floor(diff / 3600000); diff -= h * 3600000;
+      const m = Math.floor(diff / 60000); diff -= m * 60000;
+      const s = Math.floor(diff / 1000);
+      daysEl.textContent = pad(d);
+      hoursEl.textContent = pad(h);
+      minutesEl.textContent = pad(m);
+      secondsEl.textContent = pad(s);
+      if (labelEl) labelEl.textContent = t(key);
+    }
+
+    renderCountdown = tick;
+    el.hidden = false;
+    tick();
+    window.setInterval(tick, 1000);
+  }
+
+  function initCounters() {
+    const nums = document.querySelectorAll("[data-count-to]");
+    if (!nums.length) return;
+    const formatNum = (el, value) => {
+      const prefix = el.dataset.countPrefix || "";
+      const suffix = el.dataset.countSuffix || "";
+      el.textContent = prefix + Math.round(value).toLocaleString("en-US") + suffix;
+    };
+    // Reduced motion / no observer: keep the final values already in the markup.
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) return;
+
+    const animate = (el) => {
+      const target = Number(el.dataset.countTo) || 0;
+      const duration = 1200;
+      const start = performance.now();
+      const step = (ts) => {
+        const p = Math.min(1, Math.max(0, (ts - start) / duration));
+        const eased = 1 - Math.pow(1 - p, 3);
+        formatNum(el, target * eased);
+        if (p < 1) requestAnimationFrame(step);
+        else formatNum(el, target);
+      };
+      formatNum(el, 0);
+      requestAnimationFrame(step);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animate(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    nums.forEach((el) => observer.observe(el));
+  }
+
+  initCountdown();
+  initCounters();
   scrollToInitialHash();
 })();

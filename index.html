@@ -114,11 +114,21 @@
             <p class="eyebrow">Trustworthy AI Hackathon</p>
             <h1 data-i18n="hero.title">可信 AI 黑客松</h1>
             <p class="hero-subtitle">Building the trust layer for the AI-Agent economy</p>
+            <p class="hero-tagline" data-i18n="hero.tagline">20 隊。3 天。1 個 Demo Day。</p>
             <p class="hero-lede" data-i18n="hero.body">當 AI Agent 開始代表人或組織行動，身份、授權、行動邊界與可追溯性必須被清楚設計。</p>
             <div class="hero-meta" role="group" aria-label="活動資訊">
               <span data-i18n="hero.date">08.29-08.30 Hackathon｜08.31 Demo Day</span>
               <span data-i18n="hero.venue">N24 台北方舟</span>
               <span data-i18n="hero.format">兩日黑客松＋第三日 Demo Day</span>
+            </div>
+            <div class="countdown" data-countdown hidden aria-live="polite">
+              <p class="countdown-label" data-countdown-label></p>
+              <div class="countdown-grid">
+                <div class="countdown-cell"><span class="countdown-num" data-countdown-days>00</span><span class="countdown-unit" data-i18n="countdown.days">天</span></div>
+                <div class="countdown-cell"><span class="countdown-num" data-countdown-hours>00</span><span class="countdown-unit" data-i18n="countdown.hours">時</span></div>
+                <div class="countdown-cell"><span class="countdown-num" data-countdown-minutes>00</span><span class="countdown-unit" data-i18n="countdown.minutes">分</span></div>
+                <div class="countdown-cell"><span class="countdown-num" data-countdown-seconds>00</span><span class="countdown-unit" data-i18n="countdown.seconds">秒</span></div>
+              </div>
             </div>
             <div class="hero-cta">
               <a class="button button-primary" href="https://forms.gle/kafd8Xfh9LAoW6q59" target="_blank" rel="noopener" data-registration-link>立即報名</a>
@@ -128,10 +138,39 @@
         </div>
       </section>
 
+      <section class="statband-section" aria-label="活動數字">
+        <div class="container">
+          <div class="statband" role="group">
+            <a class="statband-item" href="#prizes">
+              <span class="statband-num" data-count-to="12000" data-count-prefix="USD " data-count-suffix="+">USD 12,000+</span>
+              <span class="statband-label" data-i18n="statband.prize">總獎金・將隨贊助加碼</span>
+            </a>
+            <a class="statband-item" href="#rules">
+              <span class="statband-num" data-count-to="20">20</span>
+              <span class="statband-label" data-i18n="statband.teams">最多錄取隊伍</span>
+            </a>
+            <a class="statband-item" href="#info">
+              <span class="statband-num" data-count-to="3">3</span>
+              <span class="statband-label" data-i18n="statband.days">天：兩日實作＋Demo Day</span>
+            </a>
+            <a class="statband-item" href="#info">
+              <span class="statband-num" data-count-to="100">100</span>
+              <span class="statband-label" data-i18n="statband.participants">預計參賽者</span>
+            </a>
+          </div>
+          <div class="role-marquee" role="group" aria-label="參與角色">
+            <div class="role-marquee-track">
+              <span class="role-marquee-group" data-i18n="marquee.roles">AI 工程師・資安研究員・區塊鏈開發者・產品經理・設計師・學生團隊・新創團隊・領域專家</span>
+              <span class="role-marquee-group" aria-hidden="true" data-i18n="marquee.roles">AI 工程師・資安研究員・區塊鏈開發者・產品經理・設計師・學生團隊・新創團隊・領域專家</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="why">
         <div class="container compact-section">
           <div class="section-heading reveal">
-            <p class="section-kicker">01 | Why Now</p>
+            <p class="section-kicker">01 / Why Now</p>
             <h2 data-i18n="why.title">為什麼是現在</h2>
             <p data-i18n="why.subtitle">AI Agent 的信任問題，不能只靠更好的回答來解決。</p>
           </div>
@@ -146,10 +185,52 @@
         </div>
       </section>
 
-      <section class="section section-soft" id="prizes">
+      <section class="section section-soft" id="benefits">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-kicker">02 | Prize</p>
+            <p class="section-kicker">02 / Why Join</p>
+            <h2 data-i18n="benefits.title">為什麼參加</h2>
+            <p data-i18n="benefits.subtitle">免費參加。全力以赴。</p>
+          </div>
+          <div class="benefit-grid">
+            <article class="benefit-card reveal">
+              <span class="benefit-icon"><svg><use href="#icon-card"></use></svg></span>
+              <h3 data-i18n="benefit.demo.title">Demo Day 舞台</h3>
+              <p data-i18n="benefit.demo.body">向產業評審與與會者展示成果。</p>
+            </article>
+            <article class="benefit-card reveal">
+              <span class="benefit-icon"><svg><use href="#icon-shield"></use></svg></span>
+              <h3 data-i18n="benefit.mentor.title">Mentor Office Hours</h3>
+              <p data-i18n="benefit.mentor.body">現場導師支援與開發指導。</p>
+            </article>
+            <article class="benefit-card reveal">
+              <span class="benefit-icon"><svg><use href="#icon-code"></use></svg></span>
+              <h3 data-i18n="benefit.poc.title">POC 對接</h3>
+              <p data-i18n="benefit.poc.body">作品與場景問題接軌後續合作討論。</p>
+            </article>
+            <article class="benefit-card reveal">
+              <span class="benefit-icon"><svg><use href="#icon-log"></use></svg></span>
+              <h3 data-i18n="benefit.proof.title">完賽證明</h3>
+              <p data-i18n="benefit.proof.body">完成交付與展示即獲完賽證明。</p>
+            </article>
+            <article class="benefit-card reveal">
+              <span class="benefit-icon"><svg><use href="#icon-building"></use></svg></span>
+              <h3 data-i18n="benefit.meals.title">餐食與過夜</h3>
+              <p data-i18n="benefit.meals.body">活動期間供餐，8/29 可選過夜。</p>
+            </article>
+            <article class="benefit-card reveal">
+              <span class="benefit-icon"><svg><use href="#icon-network"></use></svg></span>
+              <h3 data-i18n="benefit.team.title">跨域隊友</h3>
+              <p data-i18n="benefit.team.body">AI、資安、區塊鏈、產品人才同場。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="prizes">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">03 / Prize</p>
             <h2 data-i18n="prize.title">獎項</h2>
             <p class="prize-total" data-i18n="prize.total">總獎金 USD 12,000+</p>
             <p class="prize-total-note" data-i18n="prize.total.note">將隨贊助加碼</p>
@@ -176,10 +257,10 @@
         </div>
       </section>
 
-      <section class="section" id="roadmap">
+      <section class="section section-soft" id="roadmap">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-kicker">03 | Roadmap</p>
+            <p class="section-kicker">04 / Roadmap</p>
             <h2 data-i18n="roadmap.title">時間軸</h2>
             <p data-i18n="roadmap.body">各項時間以主辦方最新公告為準。</p>
             <p class="timeline-status" id="timelineStatus" aria-live="polite"></p>
@@ -199,11 +280,12 @@
         </div>
       </section>
 
-      <section class="section section-soft" id="info">
+      <section class="section" id="info">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-kicker">04 | Event Info</p>
+            <p class="section-kicker">05 / Event Info</p>
             <h2 data-i18n="info.title">活動資訊</h2>
+            <p data-i18n="info.subtitle">兩日實作。第三天上台。</p>
           </div>
           <div class="feature-grid info-feature-grid">
             <article class="feature-card reveal">
@@ -257,39 +339,60 @@
         </div>
       </section>
 
-      <section class="section" id="tracks">
+      <section class="section section-soft" id="tracks">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-kicker">05 | Tracks</p>
+            <p class="section-kicker">06 / Tracks</p>
             <h2 data-i18n="tracks.title">主題參考方向</h2>
-            <p data-i18n="tracks.body">題目開放自由發想；以下四個方向僅供參考與啟發，團隊也可提出其他領域題目。</p>
+            <p data-i18n="tracks.body">四個方向。或走你自己的。</p>
           </div>
           <!-- TODO: 內容精簡幅度待與 Jim 確認 -->
-          <div class="track-grid">
-            <article class="track-card reveal">
-              <div class="card-title-row"><div class="track-icon"><svg><use href="#icon-network"></use></svg></div><h3 data-i18n="track.supply.title">供應鏈與貿易金融</h3></div>
+          <div class="track-grid track-accordion">
+            <!-- 摘要待 Jim 確認 -->
+            <details class="track-card reveal">
+              <summary>
+                <span class="track-index">01</span>
+                <span class="track-icon"><svg><use href="#icon-network"></use></svg></span>
+                <span class="track-head"><span class="track-name" data-i18n="track.supply.title">供應鏈與貿易金融</span><span class="track-summary" data-i18n="track.supply.summary">讓採購 Agent 可驗證、可授權、不可越權付款。</span></span>
+                <span class="track-chevron" aria-hidden="true"></span>
+              </summary>
               <dl><dt data-i18n="track.pain">場景痛點</dt><dd data-i18n="track.supply.pain">供應商資格、訂單融資、ESG／碳資料可信度。</dd><dt data-i18n="track.trust">核心可信問題</dt><dd data-i18n="track.supply.trust">Agent 代表買方或法人到什麼程度？能否讀取資格並草擬訂單，但不能自行付款？</dd><dt data-i18n="track.example">示例 POC</dt><dd data-i18n="track.supply.example">供應商資格 VC、訂單到融資證明、ESG 選擇性揭露、採購 Agent 授權。</dd></dl>
-            </article>
-            <article class="track-card reveal">
-              <div class="card-title-row"><div class="track-icon"><svg><use href="#icon-cart"></use></svg></div><h3 data-i18n="track.ecommerce.title">電商與第三方支付</h3></div>
+            </details>
+            <details class="track-card reveal">
+              <summary>
+                <span class="track-index">02</span>
+                <span class="track-icon"><svg><use href="#icon-cart"></use></svg></span>
+                <span class="track-head"><span class="track-name" data-i18n="track.ecommerce.title">電商與第三方支付</span><span class="track-summary" data-i18n="track.ecommerce.summary">代購與支付之間，放一道人類確認。</span></span>
+                <span class="track-chevron" aria-hidden="true"></span>
+              </summary>
               <dl><dt data-i18n="track.pain">場景痛點</dt><dd data-i18n="track.ecommerce.pain">高頻委託購買、付款授權、防詐與資格驗證。</dd><dt data-i18n="track.trust">核心可信問題</dt><dd data-i18n="track.ecommerce.trust">Agent 是否只能比價與建立付款意圖？何時必須由使用者確認？</dd><dt data-i18n="track.example">示例 POC</dt><dd data-i18n="track.ecommerce.example">Agent 購買授權、商家信任驗證、年齡／資格選擇性揭露、付款前 human approval。</dd></dl>
-            </article>
-            <article class="track-card reveal">
-              <div class="card-title-row"><div class="track-icon"><svg><use href="#icon-health"></use></svg></div><h3 data-i18n="track.health.title">醫療保險</h3></div>
+            </details>
+            <details class="track-card reveal">
+              <summary>
+                <span class="track-index">03</span>
+                <span class="track-icon"><svg><use href="#icon-health"></use></svg></span>
+                <span class="track-head"><span class="track-name" data-i18n="track.health.title">醫療保險</span><span class="track-summary" data-i18n="track.health.summary">敏感資料誰能讀？同意如何被證明？</span></span>
+                <span class="track-chevron" aria-hidden="true"></span>
+              </summary>
               <dl><dt data-i18n="track.pain">場景痛點</dt><dd data-i18n="track.health.pain">高度敏感個資、理賠、同意與核保稽核。</dd><dt data-i18n="track.trust">核心可信問題</dt><dd data-i18n="track.health.trust">Agent 可讀取哪些醫療資料？是否有有效 consent？送件前如何確認？</dd><dt data-i18n="track.example">示例 POC</dt><dd data-i18n="track.health.example">可信理賠資料交換、consent VC、隱私保護聯合分析、AI 核保 action log。</dd></dl>
-            </article>
-            <article class="track-card reveal">
-              <div class="card-title-row"><div class="track-icon"><svg><use href="#icon-building"></use></svg></div><h3 data-i18n="track.gov.title">政府服務</h3></div>
+            </details>
+            <details class="track-card reveal">
+              <summary>
+                <span class="track-index">04</span>
+                <span class="track-icon"><svg><use href="#icon-building"></use></svg></span>
+                <span class="track-head"><span class="track-name" data-i18n="track.gov.title">政府服務</span><span class="track-summary" data-i18n="track.gov.summary">代辦到哪一步，由授權說了算。</span></span>
+                <span class="track-chevron" aria-hidden="true"></span>
+              </summary>
               <dl><dt data-i18n="track.pain">場景痛點</dt><dd data-i18n="track.gov.pain">公部門憑證、跨機關流程、委託送件與國際互認。</dd><dt data-i18n="track.trust">核心可信問題</dt><dd data-i18n="track.gov.trust">Agent 可以代填、代查或代送到何種程度？哪些動作需本人確認？</dd><dt data-i18n="track.example">示例 POC</dt><dd data-i18n="track.gov.example">公部門憑證升級 VC、Agent 代辦申請、資格驗證、跨境互認概念。</dd></dl>
-            </article>
+            </details>
           </div>
         </div>
       </section>
 
-      <section class="section section-soft" id="rules">
+      <section class="section" id="rules">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-kicker">06 | Eligibility</p>
+            <p class="section-kicker">07 / Eligibility</p>
             <h2 data-i18n="rules.title">參賽資格</h2>
             <p class="contact-inline"><span data-i18n="rules.contact.line">報名由 Team Leader 代表全隊提交｜聯絡：</span><a href="mailto:hackathon2026@chain.tw" data-contact-link>hackathon2026@chain.tw</a></p>
             <div class="cta-row">
@@ -307,10 +410,10 @@
         </div>
       </section>
 
-      <section class="section" id="judging">
+      <section class="section section-soft" id="judging">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-kicker">07 | Judging</p>
+            <p class="section-kicker">08 / Judging</p>
             <h2 data-i18n="judging.title">評分重點</h2>
             <p data-i18n="judging.body">候補機制以正式簡章為準。</p>
           </div>
@@ -335,12 +438,12 @@
         </div>
       </section>
 
-      <section class="section section-soft" id="pre-events">
+      <section class="section" id="pre-events">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-kicker">08 | Pre-event Activities</p>
+            <p class="section-kicker">09 / Pre-event Activities</p>
             <h2 data-i18n="pre.events.title">賽前活動</h2>
-            <p data-i18n="workshops.body">工作坊限入選隊伍；各項時間以主辦方最新公告為準。</p>
+            <p data-i18n="pre.events.subtitle">開賽前，三個接觸點。</p>
           </div>
           <div class="workshop-grid workshop-grid-conservative">
             <article class="workshop-card reveal"><svg class="card-icon"><use href="#icon-card"></use></svg><span data-i18n="preevent.info.meta">7/20（一）</span><h3 data-i18n="preevent.info.title">線上說明會</h3><p data-i18n="preevent.info.body">活動介紹與 QA，開放所有有意報名者參加；無法即時參加者可於本站觀看官方錄影。</p></article>
@@ -350,26 +453,65 @@
         </div>
       </section>
 
-      <section class="section" id="partners">
+      <section class="section section-soft" id="partners">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-kicker">09 | Partners</p>
+            <p class="section-kicker">10 / Partners</p>
             <h2 data-i18n="partners.title">合作夥伴</h2>
-            <p data-i18n="partners.body">目前不顯示任何未正式確認的夥伴名稱或 Logo。</p>
+            <p data-i18n="partners.body">名單確認中。</p>
           </div>
-          <div class="partner-groups">
-            <article class="partner-group reveal"><h3 data-i18n="partners.tech">技術與生態系夥伴</h3><p data-i18n="partners.pending">洽談中；正式確認後公告。</p></article>
-            <article class="partner-group reveal"><h3 data-i18n="partners.community">社群與人才夥伴</h3><p data-i18n="partners.pending">洽談中；正式確認後公告。</p></article>
-            <article class="partner-group reveal"><h3 data-i18n="partners.domain">場景與領域夥伴</h3><p data-i18n="partners.pending">洽談中；正式確認後公告。</p></article>
+          <div class="partner-groups partner-groups-soon">
+            <article class="partner-group reveal">
+              <h3 data-i18n="partners.tech">技術與生態系夥伴</h3>
+              <p class="partner-soon" data-i18n="partners.soon">Coming Soon</p>
+              <p class="partner-pending" data-i18n="partners.pending">洽談中；正式確認後公告。</p>
+              <!-- partner logos 待正式確認後填入 -->
+              <div class="partner-logos" aria-hidden="true"></div>
+            </article>
+            <article class="partner-group reveal">
+              <h3 data-i18n="partners.community">社群與人才夥伴</h3>
+              <p class="partner-soon" data-i18n="partners.soon">Coming Soon</p>
+              <p class="partner-pending" data-i18n="partners.pending">洽談中；正式確認後公告。</p>
+              <!-- partner logos 待正式確認後填入 -->
+              <div class="partner-logos" aria-hidden="true"></div>
+            </article>
+            <article class="partner-group reveal">
+              <h3 data-i18n="partners.domain">場景與領域夥伴</h3>
+              <p class="partner-soon" data-i18n="partners.soon">Coming Soon</p>
+              <p class="partner-pending" data-i18n="partners.pending">洽談中；正式確認後公告。</p>
+              <!-- partner logos 待正式確認後填入 -->
+              <div class="partner-logos" aria-hidden="true"></div>
+            </article>
           </div>
           <p class="muted center reveal" data-i18n="partners.note">合作夥伴、贊助、講者與評審以正式公告為準。</p>
+        </div>
+      </section>
+
+      <section class="section" id="venue">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">11 / Venue &amp; Access</p>
+            <h2 data-i18n="venue.title">場地與交通</h2>
+            <p data-i18n="venue.subtitle">N24 台北方舟。三天都在這。</p>
+          </div>
+          <div class="venue-card reveal">
+            <div class="venue-name-row">
+              <span class="venue-icon"><svg><use href="#icon-building"></use></svg></span>
+              <h3 class="venue-name" data-i18n="venue.name">N24 台北方舟</h3>
+            </div>
+            <!-- {{地址待補}} -->
+            <!-- {{捷運／公車路線待補}} -->
+            <p class="venue-pending muted" data-i18n="venue.pending">詳細地址與交通資訊將另行公告。</p>
+            <!-- {{Google Map 連結待補}} -->
+            <span class="button button-secondary is-pending" aria-disabled="true" data-venue-map data-i18n="venue.map">Google Map</span>
+          </div>
         </div>
       </section>
 
       <section class="section section-soft" id="faq">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-kicker">10 | FAQ</p>
+            <p class="section-kicker">12 / FAQ</p>
             <h2 data-i18n="faq.title">常見問答</h2>
             <p data-i18n="faq.body">報名前請確認資格、交付與活動規則。</p>
           </div>
