@@ -3742,3 +3742,151 @@ summary:focus-visible {
 #tracks .track-accordion .track-card[open] dl {
   display: grid;
 }
+
+/* Roadmap final: desktop uses a readable 5x2 flowchart, mobile keeps the vertical spine. */
+@media (min-width: 1024px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 1180px;
+    overflow: visible;
+    padding: 0;
+    margin-top: 28px;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 8px 10px;
+    min-height: 118px;
+    padding: 16px;
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(57, 194, 224, 0.08), rgba(15, 37, 64, 0.72));
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+    text-align: left;
+    opacity: 1;
+  }
+
+  .timeline-step::before {
+    content: counter(timeline-step, decimal-leading-zero);
+    position: static;
+    transform: none;
+    grid-row: 1 / span 2;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    color: var(--navy-900);
+    background: var(--cyan-300);
+    border: 0;
+    box-shadow: 0 0 0 3px rgba(57, 194, 224, 0.18), 0 0 16px rgba(57, 194, 224, 0.32);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+  }
+
+  .timeline-step::after {
+    content: "";
+    position: absolute;
+    right: -13px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid rgba(111, 224, 242, 0.55);
+    border-right: 2px solid rgba(111, 224, 242, 0.55);
+    transform: translateY(-50%) rotate(45deg);
+    display: block;
+  }
+
+  .timeline-step:nth-child(5)::after,
+  .timeline-step:last-child::after {
+    display: none;
+  }
+
+  .timeline-step time {
+    grid-column: 2;
+    order: initial;
+    justify-self: start;
+    min-height: 28px;
+    padding: 5px 10px;
+    font-size: 0.82rem;
+    color: var(--gold-400);
+    background: rgba(255, 209, 92, 0.08);
+    border-color: rgba(255, 209, 92, 0.34);
+  }
+
+  .timeline-step span {
+    grid-column: 2;
+    order: initial;
+    max-width: none;
+    color: var(--text);
+    font-size: 0.98rem;
+    line-height: 1.38;
+    font-weight: 850;
+  }
+
+  .timeline-step.is-past {
+    opacity: 0.68;
+  }
+
+  .timeline-step.is-past[data-date="2026-08-05"],
+  .timeline-step.is-past[data-date="2026-08-31"] {
+    opacity: 1;
+  }
+
+  .timeline-step[data-date="2026-08-05"],
+  .timeline-step[data-date="2026-08-31"] {
+    border-color: rgba(255, 209, 92, 0.62);
+    background: radial-gradient(circle at 18% 0%, rgba(255, 209, 92, 0.18), transparent 58%), rgba(15, 37, 64, 0.82);
+  }
+
+  .timeline-step[data-date="2026-08-05"]::before,
+  .timeline-step[data-date="2026-08-31"]::before {
+    position: static;
+    width: 34px;
+    height: 34px;
+    background: var(--gold-400);
+    box-shadow: 0 0 0 3px rgba(255, 209, 92, 0.2), 0 0 18px rgba(255, 209, 92, 0.45);
+  }
+
+  .timeline-step[data-date="2026-08-05"] time,
+  .timeline-step[data-date="2026-08-31"] time {
+    color: var(--navy-900);
+    background: var(--gold-400);
+    border-color: var(--gold-400);
+  }
+
+  .timeline-step.is-next {
+    border-color: var(--cyan-400);
+    background: linear-gradient(180deg, rgba(57, 194, 224, 0.18), rgba(15, 37, 64, 0.74));
+    box-shadow: 0 0 0 1px rgba(57, 194, 224, 0.55), 0 0 28px rgba(57, 194, 224, 0.26);
+  }
+
+  .timeline-step.is-next::before {
+    position: static;
+    width: 34px;
+    height: 34px;
+    background: var(--cyan-400);
+    box-shadow: 0 0 0 5px rgba(57, 194, 224, 0.26), 0 0 22px rgba(57, 194, 224, 0.74);
+    animation: tlPulseCard 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes tlPulseCard {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+}
