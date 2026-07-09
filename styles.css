@@ -4664,3 +4664,35 @@ body.js-on .hero .reveal {
   content: none !important;
   display: none !important;
 }
+
+/* ============================================================
+   PERF: remove bulk backdrop-filter (was hitting many cards via
+   grouped selectors and causing scroll jank). Keep blur only on
+   the fixed header; use a solid translucent base for card surfaces.
+   ============================================================ */
+.hero-panel,
+.prose-card,
+.feature-card,
+.track-card,
+.info-card,
+.score-card,
+.prize-card,
+.workshop-card,
+.partner-group,
+.contact-card,
+.value-card,
+.faq-list details,
+.vc-flow span,
+.day-card,
+.foundation-group,
+.minimum-card,
+.stat-grid div,
+.subscribe-form,
+.partner-box,
+.prize-podium .prize-card,
+.countdown-cell,
+.hero-meta span {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background-color: rgba(13, 30, 53, 0.92);
+}
