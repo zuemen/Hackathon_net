@@ -472,9 +472,64 @@
     });
   }
 
+  function initScrollSpy() {
+    if (!navLinks.length || !("IntersectionObserver" in window)) return;
+    const linkById = new Map();
+    navLinks.forEach((link) => {
+      const href = link.getAttribute("href") || "";
+      if (href.startsWith("#") && href.length > 1) linkById.set(href.slice(1), link);
+    });
+    const sections = [...document.querySelectorAll("section[id]")].filter((section) => linkById.has(section.id));
+    if (!sections.length) return;
+
+    const setActive = (id) => {
+      navLinks.forEach((link) => link.classList.toggle("is-active", link === linkById.get(id)));
+    };
+    const syncByScroll = () => {
+      const probeY = window.innerHeight * 0.45;
+      const current = sections
+        .map((section) => {
+          const rect = section.getBoundingClientRect();
+          const containsProbe = rect.top <= probeY && rect.bottom >= probeY;
+          const distance = containsProbe ? 0 : Math.min(Math.abs(rect.top - probeY), Math.abs(rect.bottom - probeY));
+          return { section, distance };
+        })
+        .sort((a, b) => a.distance - b.distance)[0]?.section;
+      if (current) setActive(current.id);
+    };
+
+    const observer = new IntersectionObserver(
+      () => syncByScroll(),
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+    sections.forEach((section) => observer.observe(section));
+    syncByScroll();
+    window.addEventListener("scroll", syncByScroll, { passive: true });
+    window.addEventListener("resize", syncByScroll);
+  }
+
+  function initBackToTop() {
+    const button = document.querySelector("[data-back-top]");
+    if (!button) return;
+    const sync = () => {
+      const show = window.scrollY > window.innerHeight * 2;
+      button.hidden = false;
+      button.classList.toggle("is-visible", show);
+      button.setAttribute("aria-hidden", String(!show));
+    };
+    button.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+    });
+    sync();
+    window.addEventListener("scroll", sync, { passive: true });
+    window.addEventListener("resize", sync);
+  }
+
   initCountdown();
   initCounters();
   initTrackAccordion();
   initVenueMap();
+  initScrollSpy();
+  initBackToTop();
   scrollToInitialHash();
 })();
