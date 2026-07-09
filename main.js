@@ -231,25 +231,23 @@
 
   function updateInfoSessionLinks(now = getNow()) {
     const date = config.infoSessionDate || "2026-07-20";
-    const endAt = new Date(config.infoSessionEndAt || `${date}T23:59:59+08:00`);
-    const isActive = now <= endAt;
-    const infoUrl = config.infoSessionUrl;
+    const endAt = new Date(config.infoSessionEndAt || `${date}T21:00:00+08:00`);
+    const showBanner = now <= endAt;
+    const applyUrl = config.registrationUrl || "#rules";
     const recordingUrl = config.infoSessionRecordingUrl;
-    const showInfo = Boolean(infoUrl && isActive);
-    const showRecording = Boolean(recordingUrl && isActive);
+    const showRecording = Boolean(recordingUrl);
 
-    document.querySelectorAll("[data-info-session-banner], [data-info-session-actions]").forEach((el) => {
-      el.hidden = !(showInfo || showRecording);
+    document.querySelectorAll("[data-info-session-banner]").forEach((el) => {
+      el.hidden = !showBanner;
+    });
+
+    document.querySelectorAll("[data-info-session-actions]").forEach((el) => {
+      el.hidden = false;
     });
 
     document.querySelectorAll("[data-info-session-link]").forEach((link) => {
-      if (showInfo) {
-        link.href = infoUrl;
-        link.hidden = false;
-      } else {
-        link.removeAttribute("href");
-        link.hidden = true;
-      }
+      link.href = applyUrl;
+      link.hidden = false;
     });
 
     document.querySelectorAll("[data-info-session-recording]").forEach((link) => {

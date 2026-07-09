@@ -26,7 +26,6 @@ window.SITE_CONFIG = {
   demoDayAt: "2026-08-31T09:00:00+08:00",
 
   infoSessionDate: "2026-07-20",
-  infoSessionUrl: null,
   infoSessionRecordingUrl: null,
   finalistAnnouncementDate: "2026-08-07",
   workshopDates: ["2026-08-15", "2026-08-22"],
