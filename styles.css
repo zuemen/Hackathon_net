@@ -4640,3 +4640,27 @@ html[lang="en"] #tracks .track-accordion .track-summary {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== POLISH: reduce scroll reveal and unify card decoration language ===== */
+body.js-on .reveal,
+body.js-on .reveal.is-visible,
+.reveal {
+  opacity: 1;
+  transform: none;
+  transition: opacity 180ms ease;
+}
+
+body.js-on .hero .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.track-card::before,
+.track-card::after,
+.minimum-card::before,
+.minimum-card::after,
+#judging .minimum-card::before,
+#judging .minimum-card::after {
+  content: none !important;
+  display: none !important;
+}
