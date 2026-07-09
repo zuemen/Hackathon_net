@@ -527,7 +527,15 @@
             <!-- {{捷運／公車路線待補}} -->
             <p class="venue-pending muted" data-i18n="venue.pending">地址：台北市南港區市民大道七段100號。交通：台鐵／捷運松山站步行約 5 分鐘；捷運後山埤站 4 號出口步行約 8 分鐘。</p>
             <!-- Google Map 連結由 site-config.js 的 venueMapUrl 控制；為 null 時保持 hidden -->
-            <a class="button button-secondary" data-venue-map hidden target="_blank" rel="noopener" data-i18n="venue.map">Google Map</a>
+            <div class="venue-map-panel">
+              <iframe
+                title="N24 台北方舟 Google Map"
+                src="https://maps.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8D%97%E6%B8%AF%E5%8D%80%E5%B8%82%E6%B0%91%E5%A4%A7%E9%81%93%E4%B8%83%E6%AE%B5100%E8%99%9F%20N24%20%E5%8F%B0%E5%8C%97%E6%96%B9%E8%88%9F&z=16&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+              <a class="venue-map-link" data-venue-map hidden target="_blank" rel="noopener" data-i18n="venue.map">在 Google 地圖開啟 ↗</a>
+            </div>
           </div>
         </div>
       </section>
