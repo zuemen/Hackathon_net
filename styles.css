@@ -4581,6 +4581,51 @@ html[lang="en"] #tracks .track-accordion .track-summary {
   letter-spacing: 0.01em;
 }
 
+/* ===== NETWORK FIX: compact pending lineup, no large empty Coming Soon cards ===== */
+#judges {
+  padding-block: clamp(54px, 7vw, 84px);
+}
+
+#judges .section-heading {
+  max-width: 760px;
+  margin-bottom: 22px;
+}
+
+.network-note-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+.network-note {
+  padding: 20px 22px;
+  border: 1px solid rgba(57, 194, 224, 0.24);
+  border-radius: 14px;
+  background: rgba(15, 37, 64, 0.46);
+}
+
+.network-note h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 1.06rem;
+}
+
+.network-note p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.network-note-fine {
+  max-width: 920px;
+  margin: 12px auto 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  text-align: center;
+}
+
 @media (max-width: 760px) {
   #venue .venue-card {
     grid-template-columns: 1fr;
@@ -4589,5 +4634,9 @@ html[lang="en"] #tracks .track-accordion .track-summary {
 
   #venue .venue-map-panel iframe {
     height: 260px;
+  }
+
+  .network-note-grid {
+    grid-template-columns: 1fr;
   }
 }
