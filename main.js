@@ -229,6 +229,40 @@
     });
   }
 
+  function updateInfoSessionLinks(now = getNow()) {
+    const date = config.infoSessionDate || "2026-07-20";
+    const endAt = new Date(config.infoSessionEndAt || `${date}T23:59:59+08:00`);
+    const isActive = now <= endAt;
+    const infoUrl = config.infoSessionUrl;
+    const recordingUrl = config.infoSessionRecordingUrl;
+    const showInfo = Boolean(infoUrl && isActive);
+    const showRecording = Boolean(recordingUrl && isActive);
+
+    document.querySelectorAll("[data-info-session-banner], [data-info-session-actions]").forEach((el) => {
+      el.hidden = !(showInfo || showRecording);
+    });
+
+    document.querySelectorAll("[data-info-session-link]").forEach((link) => {
+      if (showInfo) {
+        link.href = infoUrl;
+        link.hidden = false;
+      } else {
+        link.removeAttribute("href");
+        link.hidden = true;
+      }
+    });
+
+    document.querySelectorAll("[data-info-session-recording]").forEach((link) => {
+      if (showRecording) {
+        link.href = recordingUrl;
+        link.hidden = false;
+      } else {
+        link.removeAttribute("href");
+        link.hidden = true;
+      }
+    });
+  }
+
   function setLanguage(locale, persist = false, initial = false) {
     currentLocale = locale === "en" ? "en" : "zh-Hant";
     document.documentElement.lang = currentLocale;
@@ -250,6 +284,7 @@
     updateRegistrationLinks();
     updateTimelineStatus();
     updateRuleDownloads();
+    updateInfoSessionLinks();
     if (renderCountdown) renderCountdown();
 
     langButtons.forEach((button) => {

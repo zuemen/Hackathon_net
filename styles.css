@@ -4097,3 +4097,35 @@ html[lang="en"] #tracks .track-accordion .track-summary {
   min-height: calc(3 * 1.45em);
 }
 /* ===== FIX END ===== */
+
+.info-session-banner {
+  width: min(92vw, 760px);
+  margin: 18px auto 0;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border: 1px solid rgba(255, 209, 92, 0.42);
+  border-radius: 14px;
+  color: var(--gold-400);
+  background: linear-gradient(180deg, rgba(255, 209, 92, 0.12), rgba(15, 37, 64, 0.72));
+  box-shadow: 0 0 28px rgba(255, 209, 92, 0.12);
+  font-weight: 800;
+}
+
+.info-session-banner[hidden],
+.workshop-actions[hidden],
+[data-info-session-link][hidden],
+[data-info-session-recording][hidden] {
+  display: none !important;
+}
+
+.workshop-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}

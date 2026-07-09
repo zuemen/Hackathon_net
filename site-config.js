@@ -7,7 +7,7 @@ window.SITE_CONFIG = {
   eventStart: "2026-08-29",
   eventEnd: "2026-08-31",
   venue: "N24 台北方舟",
-  venueMapUrl: "https://www.google.com/maps/search/?api=1&query=N24%20%E5%8F%B0%E5%8C%97%E6%96%B9%E8%88%9F",
+  venueMapUrl: "https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8D%97%E6%B8%AF%E5%8D%80%E5%B8%82%E6%B0%91%E5%A4%A7%E9%81%93%E4%B8%83%E6%AE%B5100%E8%99%9F",
 
   selectedTeams: 20,
   teamMin: 3,
@@ -26,6 +26,8 @@ window.SITE_CONFIG = {
   demoDayAt: "2026-08-31T09:00:00+08:00",
 
   infoSessionDate: "2026-07-20",
+  infoSessionUrl: null,
+  infoSessionRecordingUrl: null,
   finalistAnnouncementDate: "2026-08-07",
   workshopDates: ["2026-08-15", "2026-08-22"],
 
