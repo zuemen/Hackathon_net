@@ -4798,3 +4798,126 @@ body.js-on .hero .reveal {
     transition: none;
   }
 }
+
+/* ============================================================
+   UX: finalists, phase-aware CTAs, and mobile apply button
+   ============================================================ */
+.finalist-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.finalist-card {
+  display: grid;
+  gap: 10px;
+  min-height: 112px;
+  padding: 18px;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: rgba(13, 30, 53, 0.92);
+}
+
+.finalist-card strong {
+  color: var(--text);
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+.finalist-track {
+  width: fit-content;
+  padding: 4px 8px;
+  border: 1px solid rgba(57, 194, 224, 0.34);
+  border-radius: 999px;
+  color: var(--cyan-300);
+  background: rgba(57, 194, 224, 0.1);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.finalist-track[data-track="supply"] {
+  color: var(--cyan-300);
+  border-color: rgba(57, 194, 224, 0.34);
+  background: rgba(57, 194, 224, 0.1);
+}
+
+.finalist-track[data-track="ecommerce"] {
+  color: var(--gold-400);
+  border-color: rgba(255, 209, 92, 0.34);
+  background: rgba(255, 209, 92, 0.1);
+}
+
+.finalist-track[data-track="health"] {
+  color: #78e2b6;
+  border-color: rgba(120, 226, 182, 0.34);
+  background: rgba(120, 226, 182, 0.1);
+}
+
+.finalist-track[data-track="gov"] {
+  color: #c8a7ff;
+  border-color: rgba(200, 167, 255, 0.34);
+  background: rgba(200, 167, 255, 0.1);
+}
+
+.button.is-phase-note,
+.mobile-cta.is-phase-note {
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--card-border);
+  cursor: default;
+  pointer-events: none;
+  transform: none;
+}
+
+.mobile-cta {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .finalist-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .mobile-cta {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    z-index: 40;
+    display: flex;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 209, 92, 0.72);
+    border-radius: 999px;
+    color: var(--navy-900);
+    background: var(--gold-400);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32), 0 0 22px rgba(255, 209, 92, 0.22);
+    font-weight: 900;
+    opacity: 0;
+    transform: translateY(80px);
+    pointer-events: none;
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
+
+  .mobile-cta.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .finalist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-cta {
+    transition: none;
+  }
+}

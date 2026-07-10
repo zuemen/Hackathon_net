@@ -18,6 +18,7 @@ window.SITE_CONFIG = {
   workshopCount: 2,
 
   showCountdown: false,
+  phase: "registration",
   registrationStatus: "open",
   registrationOverride: null,
   registrationOpenAt: "2026-07-08T00:00:00+08:00",
@@ -27,6 +28,7 @@ window.SITE_CONFIG = {
 
   infoSessionDate: "2026-07-20",
   infoSessionRecordingUrl: null,
+  finalists: [],
   finalistAnnouncementDate: "2026-08-07",
   workshopDates: ["2026-08-15", "2026-08-22"],
 

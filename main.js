@@ -105,6 +105,9 @@
   function updateRegistrationLinks() {
     const state = getRegistrationState();
     registerLinks.forEach((link) => {
+      link.hidden = false;
+      link.classList.remove("is-phase-note");
+      delete link.dataset.registrationPhase;
       link.textContent = getRegistrationLabel(currentLocale, state);
       link.dataset.registrationState = state;
       if (state === "open" && config.registrationUrl) {
@@ -114,6 +117,81 @@
         link.removeAttribute("aria-disabled");
       } else {
         link.href = "#rules";
+        link.removeAttribute("target");
+        link.removeAttribute("rel");
+        link.setAttribute("aria-disabled", "true");
+      }
+    });
+  }
+
+  function escapeHTML(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function renderFinalists() {
+    const section = document.getElementById("finalists");
+    const grid = document.querySelector("[data-finalist-grid]");
+    if (!section || !grid) return;
+
+    const finalists = Array.isArray(config.finalists) ? config.finalists : [];
+    if (!finalists.length) {
+      section.hidden = true;
+      grid.innerHTML = "";
+      return;
+    }
+
+    section.hidden = false;
+    grid.innerHTML = finalists
+      .map((team) => {
+        const track = team.track || "";
+        const trackLabel = t(`finalists.track.${track}`);
+        return `
+          <div class="finalist-card">
+            <span class="finalist-track" data-track="${escapeHTML(track)}">${escapeHTML(trackLabel)}</span>
+            <strong>${escapeHTML(team.name)}</strong>
+          </div>
+        `;
+      })
+      .join("");
+  }
+
+  function renumberSectionKickers() {
+    let index = 1;
+    document.querySelectorAll("main > section[id]:not([hidden]) .section-kicker").forEach((kicker) => {
+      kicker.textContent = kicker.textContent.replace(/^\d+\s*\//, `${String(index).padStart(2, "0")} /`);
+      index += 1;
+    });
+  }
+
+  function applyPhase() {
+    const phase = config.phase || "registration";
+    if (phase === "registration") return;
+
+    const phaseMap = {
+      screening: { key: "phase.screening", href: null, disabled: true, hideMobile: true },
+      "demo-day": { key: "phase.demoday", href: "#venue", disabled: false, hideMobile: false },
+      post: { key: "phase.post", href: null, disabled: true, hideMobile: true }
+    };
+    const phaseConfig = phaseMap[phase];
+    if (!phaseConfig) return;
+
+    registerLinks.forEach((link) => {
+      link.textContent = t(phaseConfig.key);
+      link.dataset.registrationPhase = phase;
+      link.hidden = phaseConfig.hideMobile && link.hasAttribute("data-mobile-cta");
+      link.classList.toggle("is-phase-note", phaseConfig.disabled);
+      if (phaseConfig.href) {
+        link.href = phaseConfig.href;
+        link.removeAttribute("target");
+        link.removeAttribute("rel");
+        link.removeAttribute("aria-disabled");
+      } else {
+        link.removeAttribute("href");
         link.removeAttribute("target");
         link.removeAttribute("rel");
         link.setAttribute("aria-disabled", "true");
@@ -279,7 +357,10 @@
     // FAQ zh-Hant is pre-rendered statically in index.html for SEO; only
     // (re)render via JS when switching language or when the initial locale is en.
     if (!(initial && currentLocale === defaultLocale)) renderFaq(currentLocale);
+    renderFinalists();
+    renumberSectionKickers();
     updateRegistrationLinks();
+    applyPhase();
     updateTimelineStatus();
     updateRuleDownloads();
     updateInfoSessionLinks();
@@ -525,11 +606,35 @@
     window.addEventListener("resize", sync);
   }
 
+  function initMobileCta() {
+    const cta = document.querySelector("[data-mobile-cta]");
+    const hero = document.getElementById("hero");
+    if (!cta || !hero) return;
+
+    const setVisible = (visible) => {
+      cta.classList.toggle("is-visible", visible && !cta.hidden);
+    };
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        ([entry]) => setVisible(!entry.isIntersecting),
+        { threshold: 0.08 }
+      );
+      observer.observe(hero);
+    } else {
+      const sync = () => setVisible(window.scrollY > hero.offsetHeight * 0.75);
+      sync();
+      window.addEventListener("scroll", sync, { passive: true });
+      window.addEventListener("resize", sync);
+    }
+  }
+
   initCountdown();
   initCounters();
   initTrackAccordion();
   initVenueMap();
   initScrollSpy();
   initBackToTop();
+  initMobileCta();
   scrollToInitialHash();
 })();
