@@ -27,6 +27,7 @@ window.SITE_CONFIG = {
   demoDayAt: "2026-08-31T09:00:00+08:00",
 
   infoSessionDate: "2026-07-20",
+  infoSessionApplyUrl: "https://luma.com/w6sjiy30",
   infoSessionRecordingUrl: null,
   finalists: [],
   finalistAnnouncementDate: "2026-08-07",

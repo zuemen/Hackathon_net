@@ -311,7 +311,7 @@
     const date = config.infoSessionDate || "2026-07-20";
     const endAt = new Date(config.infoSessionEndAt || `${date}T21:00:00+08:00`);
     const showBanner = now <= endAt;
-    const applyUrl = config.registrationUrl || "#rules";
+    const applyUrl = config.infoSessionApplyUrl || config.registrationUrl || "#rules";
     const recordingUrl = config.infoSessionRecordingUrl;
     const showRecording = Boolean(recordingUrl);
 
