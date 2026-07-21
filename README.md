@@ -36,6 +36,7 @@ python -m http.server 8080
 - 工作坊：兩場，2026/08/15 線上、2026/08/22 線下實體。
 - 報名已於 7/8 正式開放，8/5 截止。
 - 報名網址已填入 `site-config.js`：`https://forms.gle/kafd8Xfh9LAoW6q59`。
+- 團隊媒合平台已填入 `site-config.js`：`https://padlet.com/Trustworthy/trustworthy-ai-hackathon-6r3tvsp4rktkz5xy`。
 - 公開主現金獎金池為 USD 12,000 起；獎項結構與發放方式以正式公告為準。
 - 未確認夥伴、資源、硬體、VC 活動流程與工作坊細節均不公開。
 

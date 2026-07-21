@@ -290,6 +290,24 @@
       link.href = `mailto:${email}`;
       link.textContent = email;
     });
+    updateMatchmakingLinks();
+  }
+
+  function updateMatchmakingLinks() {
+    const url = config.matchmakingUrl;
+    document.querySelectorAll("[data-matchmaking-link]").forEach((link) => {
+      if (url) {
+        link.href = url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.removeAttribute("aria-disabled");
+      } else {
+        link.removeAttribute("href");
+        link.removeAttribute("target");
+        link.removeAttribute("rel");
+        link.setAttribute("aria-disabled", "true");
+      }
+    });
   }
 
   function updateRuleDownloads() {
@@ -364,6 +382,7 @@
     updateTimelineStatus();
     updateRuleDownloads();
     updateInfoSessionLinks();
+    updateMatchmakingLinks();
     if (renderCountdown) renderCountdown();
 
     langButtons.forEach((button) => {

@@ -142,6 +142,7 @@ window.TRANSLATIONS = {
     "apply.check1": "已組好 3–5 人隊伍",
     "apply.check2": "由 Team Leader 代表填寫",
     "apply.check3": "題目方向已想好一句話",
+    "matchmaking.cta": "尋找隊友／團隊媒合",
     "back.top": "回到頂部",
     "finalists.title": "入選隊伍",
     "finalists.subtitle": "20 強出列。",
@@ -379,6 +380,7 @@ window.TRANSLATIONS = {
     "apply.check1": "Team of 3–5 ready",
     "apply.check2": "Team Leader submits for the team",
     "apply.check3": "One-line project direction in mind",
+    "matchmaking.cta": "Find Teammates",
     "back.top": "Back to top",
     "finalists.title": "Finalists",
     "finalists.subtitle": "The twenty.",
@@ -482,7 +484,7 @@ window.FAQ_GROUPS = {
       ["誰可以參加？", "年滿 18 歲，對 AI、軟體開發、設計、產品、資安、數位身份或相關領域有興趣之學生、社會人士與業界人士。"],
       ["有年齡限制嗎？", "有，本活動限年滿 18 歲（報名時全體成員均須年滿 18 歲）。"],
       ["每隊幾人？", "每隊 3-5 人，且每位參賽者僅能加入一隊。"],
-      ["可以個人報名嗎？", "本屆僅收完整隊伍報名，請先自行組隊（3-5 人）再報名。"],
+      ["可以個人報名嗎？", "本屆僅收完整隊伍報名。尚未找到隊友，可先前往<a href=\"https://padlet.com/Trustworthy/trustworthy-ai-hackathon-6r3tvsp4rktkz5xy\" target=\"_blank\" rel=\"noopener noreferrer\" data-matchmaking-link>團隊媒合平台</a>尋找夥伴，組成 3-5 人隊伍後再報名。"],
       ["怎麼報名？", "於報名期間填寫線上報名表：7/8 開放、8/5 截止，由 Team Leader（團隊代表）代表全隊提交，每隊僅提交一次。"],
       ["報名要準備什麼？", "團隊背景（建議整理為一份 PDF：成員與角色分工、所屬單位、相關經驗）、想解決的痛點、初步解法構想，以及 GitHub 或作品連結（選填）。"]
     ]],
@@ -518,7 +520,7 @@ window.FAQ_GROUPS = {
       ["Who can join?", "Students, professionals, and industry practitioners aged 18 or older who are interested in AI, software development, design, product, cybersecurity, digital identity, or related fields."],
       ["Is there an age requirement?", "Yes. This event is limited to participants aged 18 or older; all team members must be 18 or older at registration."],
       ["How many members per team?", "Each team must have 3-5 members, and each participant may join only one team."],
-      ["Can I register as an individual?", "This edition accepts complete teams only. Please form your team of 3-5 members before registering."],
+      ["Can I register as an individual?", "This edition accepts complete teams only. If you are still looking for teammates, visit the <a href=\"https://padlet.com/Trustworthy/trustworthy-ai-hackathon-6r3tvsp4rktkz5xy\" target=\"_blank\" rel=\"noopener noreferrer\" data-matchmaking-link>team matchmaking board</a>, then register after forming a team of 3-5 members."],
       ["How do I register?", "Complete the online registration form during the window: opens 7/8, closes 8/5. The Team Leader submits on behalf of the team, once per team."],
       ["What should we prepare for registration?", "Team background (suggested as one PDF: members, roles, organizations and relevant experience), the pain point you want to solve, initial solution idea, and optional GitHub or portfolio links."]
     ]],
