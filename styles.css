@@ -3999,11 +3999,6 @@ summary:focus-visible {
   }
 }
 
-/* Judges & Mentors coming-soon: single centered group */
-.judges-soon {
-  grid-template-columns: minmax(0, 560px);
-  justify-content: center;
-}
 /* Track accordion responsive columns (was stuck at 4-up on all widths) */
 /* NB: an upstream `#tracks .track-accordion` (ID specificity) hardcodes 4-up
    and defeats every class-level breakpoint — match its specificity here. */
@@ -4618,12 +4613,8 @@ html[lang="en"] #tracks .track-accordion .track-summary {
   line-height: 1.65;
 }
 
-.network-note-fine {
-  max-width: 920px;
-  margin: 12px auto 0;
-  color: var(--text-muted);
-  font-size: 0.92rem;
-  text-align: center;
+.network-note-people {
+  grid-column: 1 / -1;
 }
 
 @media (max-width: 760px) {
@@ -4638,6 +4629,10 @@ html[lang="en"] #tracks .track-accordion .track-summary {
 
   .network-note-grid {
     grid-template-columns: 1fr;
+  }
+
+  .network-note-people {
+    grid-column: auto;
   }
 }
 
