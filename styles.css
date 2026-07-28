@@ -6997,202 +6997,9 @@ main > .section::before {
       linear-gradient(135deg, var(--bg-deep), var(--bg));
   }
 
-  #hero .hero-intro {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    width: min(calc(100vw - 40px), var(--max));
-    grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.35fr);
-    gap: 10px clamp(26px, 3vw, 44px);
-    align-items: center;
-    margin: calc(50vw + 94px) auto 0;
-    padding: clamp(22px, 2.5vw, 30px);
-    overflow: hidden;
-    border: 1px solid rgba(111, 224, 242, 0.28);
-    border-radius: 24px;
-    text-align: left;
-    background:
-      radial-gradient(circle at 0 0, rgba(57, 194, 224, 0.14), transparent 54%),
-      linear-gradient(135deg, rgba(13, 41, 69, 0.97), rgba(7, 24, 44, 0.98));
-    box-shadow:
-      0 22px 58px rgba(1, 10, 21, 0.32),
-      inset 0 1px 0 rgba(255, 255, 255, 0.07);
-  }
-
-  #hero .hero-intro::before {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    pointer-events: none;
-    content: "";
-    opacity: 0.32;
-    background-image:
-      linear-gradient(rgba(111, 224, 242, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(111, 224, 242, 0.08) 1px, transparent 1px);
-    background-size: 38px 38px;
-    -webkit-mask-image: radial-gradient(circle at 50% 20%, #000, transparent 78%);
-    mask-image: radial-gradient(circle at 50% 20%, #000, transparent 78%);
-  }
-
-  #hero .eyebrow,
-  #hero h1,
-  #hero .hero-subtitle,
-  #hero .hero-lede,
-  #hero .hero-meta {
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-    border: 0;
-  }
-
-  #hero .eyebrow {
-    grid-column: 1;
-    grid-row: 1;
-    margin: 0 0 10px;
-    color: var(--cyan-300);
-    font-size: 0.78rem;
-    font-weight: 900;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-  }
-
-  #hero h1 {
-    grid-column: 1;
-    grid-row: 2;
-    margin: 0;
-    color: var(--text);
-    font-size: clamp(2.2rem, 3.3vw, 3.3rem);
-    line-height: 1.08;
-    letter-spacing: -0.04em;
-    text-wrap: balance;
-    text-shadow: 0 0 34px rgba(111, 224, 242, 0.2);
-  }
-
-  html[lang="en"] #hero h1 {
-    max-width: 16ch;
-    font-size: clamp(2.05rem, 3vw, 3rem);
-  }
-
-  #hero .hero-subtitle {
-    grid-column: 1;
-    grid-row: 3;
-    margin: 13px 0 0;
-    color: rgba(238, 245, 250, 0.96);
-    font-size: clamp(0.96rem, 1.25vw, 1.08rem);
-    font-weight: 780;
-    line-height: 1.45;
-  }
-
-  #hero .hero-lede {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    max-width: 68ch;
-    align-self: end;
-    margin: 0;
-    color: var(--text-muted);
-    font-size: 0.96rem;
-    line-height: 1.7;
-  }
-
-  #hero .hero-meta {
-    grid-column: 2;
-    grid-row: 3;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 10px 0 0;
-  }
-
-  #hero .hero-meta span {
-    width: auto;
-    padding: 7px 11px;
-    border: 1px solid rgba(111, 224, 242, 0.25);
-    border-radius: 999px;
-    color: rgba(238, 245, 250, 0.92);
-    background: rgba(7, 25, 46, 0.62);
-    font-size: 0.8rem;
-    font-weight: 750;
-    line-height: 1.35;
-  }
-
-  #hero .hero-deadline {
-    grid-column: 2;
-    grid-row: 4;
-    position: static;
-    display: inline-flex;
-    width: auto;
-    max-width: 100%;
-    align-items: baseline;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 4px 9px;
-    justify-self: start;
-    margin: 6px 0 0;
-    padding: 10px 14px;
-    border-radius: 14px;
-    text-align: left;
-  }
-
-  #hero .hero-deadline time {
-    font-size: 0.98rem;
-  }
-
   #hero .hero-registration {
-    margin-top: 22px;
+    margin-top: calc(50vw + 94px);
   }
-}
-
-.hero-deadline {
-  position: absolute;
-  z-index: 4;
-  top: 112px;
-  left: calc((100vw - min(calc(100vw - 40px), var(--max))) / -2 + 24px);
-  display: grid;
-  width: 228px;
-  gap: 3px;
-  padding: 15px 17px;
-  border: 1px solid rgba(255, 209, 92, 0.58);
-  border-radius: 17px;
-  color: var(--text);
-  background:
-    radial-gradient(circle at 0 0, rgba(255, 209, 92, 0.17), transparent 58%),
-    rgba(7, 25, 46, 0.94);
-  box-shadow:
-    0 20px 48px rgba(1, 10, 21, 0.36),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-}
-
-.hero-deadline > span {
-  color: var(--gold-400);
-  font-size: 0.76rem;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-}
-
-.hero-deadline time {
-  font-family: var(--font-display);
-  font-size: 1.08rem;
-  font-weight: 800;
-  line-height: 1.35;
-}
-
-.hero-deadline small {
-  color: var(--text-muted);
-  font-size: 0.72rem;
-  font-weight: 700;
-}
-
-.hero-deadline[data-state="closed"] {
-  border-color: rgba(169, 192, 214, 0.3);
-}
-
-.hero-deadline[data-state="closed"] > span {
-  color: var(--text-muted);
 }
 
 main > .section {
@@ -7222,6 +7029,9 @@ main > .section {
     min-height: 0;
     padding: 0 0 22px;
     overflow: hidden;
+    background:
+      url("./assets/og-trustworthy-ai-hackathon.jpg") center 74px / 100% auto no-repeat,
+      linear-gradient(135deg, var(--bg-deep), var(--bg));
   }
 
   #hero.hero::after {
@@ -7253,99 +7063,12 @@ main > .section {
   #hero .hero-copy {
     position: relative;
     z-index: 1;
-    padding: 108px 0 20px;
-  }
-
-  #hero .eyebrow,
-  #hero h1,
-  #hero .hero-subtitle,
-  #hero .hero-lede,
-  #hero .hero-meta {
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-    border: 0;
-  }
-
-  #hero .eyebrow {
-    margin: 0 0 10px;
-    color: var(--cyan-300);
-    font-size: 0.76rem;
-    font-weight: 850;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  #hero h1 {
-    max-width: 8em;
-    margin: 0;
-    color: var(--text);
-    font-size: clamp(2.5rem, 12vw, 3.2rem);
-    line-height: 1.04;
-    letter-spacing: -0.035em;
-    text-wrap: balance;
-  }
-
-  #hero .hero-subtitle {
-    max-width: 30ch;
-    margin: 11px 0 0;
-    color: rgba(238, 245, 250, 0.94);
-    font-size: clamp(1rem, 4.6vw, 1.16rem);
-    font-weight: 750;
-    line-height: 1.4;
-  }
-
-  #hero .hero-lede {
-    max-width: 36ch;
-    margin: 14px 0 0;
-    color: var(--text-muted);
-    font-size: 0.92rem;
-    line-height: 1.65;
-  }
-
-  #hero .hero-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    margin: 17px 0 0;
-  }
-
-  #hero .hero-meta span {
-    width: auto;
-    padding: 6px 9px;
-    border: 1px solid rgba(111, 224, 242, 0.24);
-    border-radius: 999px;
-    color: rgba(238, 245, 250, 0.9);
-    background: rgba(7, 25, 46, 0.58);
-    font-size: 0.76rem;
-    font-weight: 700;
-    line-height: 1.35;
-  }
-
-  .hero-deadline {
-    position: static;
-    display: flex;
-    width: fit-content;
-    max-width: 100%;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 4px 8px;
-    margin-top: 13px;
-    padding: 9px 12px;
-    border-radius: 13px;
-  }
-
-  .hero-deadline time {
-    font-size: 0.94rem;
+    padding: calc(52.5vw + 94px) 0 20px;
   }
 
   #hero .hero-registration {
     width: 100%;
-    margin: 22px 0 0;
+    margin: 0;
   }
 
   #hero .hero-cta {
