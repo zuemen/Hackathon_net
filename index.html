@@ -90,7 +90,7 @@
 
         <div class="nav-panel" id="site-nav" data-nav-panel>
           <nav class="site-nav" aria-label="主選單">
-            <a href="#tracks" data-i18n="nav.tracks">主題參考</a>
+            <a href="#tracks" data-i18n="nav.tracks">產業命題</a>
             <a href="#info" data-i18n="nav.format">流程</a>
             <a href="#prizes" data-i18n="nav.prizes">獎項</a>
             <a href="#rules" data-i18n="nav.rules">規則</a>
@@ -355,7 +355,7 @@
             <div><strong data-i18n="stat.teams.count">最多 20</strong><span data-i18n="stat.teams">錄取隊伍</span></div>
             <div><strong>3-5</strong><span data-i18n="stat.members">每隊人數</span></div>
             <div><strong>60-100</strong><span data-i18n="stat.participants">預計參賽者</span></div>
-            <div><strong>4</strong><span data-i18n="stat.tracks">參考方向</span></div>
+            <div><strong>6</strong><span data-i18n="stat.tracks">產業命題</span></div>
             <div><strong>2</strong><span data-i18n="stat.workshops">賽前工作坊</span></div>
           </div>
           <div class="day-grid">
@@ -363,7 +363,7 @@
               <svg class="card-icon"><use href="#icon-network"></use></svg>
               <span>Day 1 | 8/29</span>
               <h3 data-i18n="day1.title">開幕與隊伍確認</h3>
-              <p data-i18n="day1.body">報到、活動規則說明、隊伍與主題方向確認。</p>
+              <p data-i18n="day1.body">報到、活動規則說明、隊伍與命題開發方向確認。</p>
             </article>
             <article class="day-card">
               <svg class="card-icon"><use href="#icon-code"></use></svg>
@@ -384,50 +384,43 @@
       <section class="section section-soft" id="tracks">
         <div class="reveal container">
           <div class="section-heading">
-            <p class="section-kicker">06 / Tracks</p>
-            <h2 data-i18n="tracks.title">主題參考方向</h2>
-            <p data-i18n="tracks.body">四個方向。或走你自己的。</p>
+            <p class="section-kicker">06 / Challenge Topics</p>
+            <h2 data-i18n="tracks.title">產業命題預告</h2>
+            <p data-i18n="tracks.body">六題真實場景。完整命題於入選後工作坊公布。</p>
           </div>
-          <!-- TODO: 內容精簡幅度待與 Jim 確認 -->
-          <div class="track-grid track-accordion">
-            <!-- 摘要待 Jim 確認 -->
-            <details class="track-card">
-              <summary>
-                <span class="track-index">01</span>
-                <span class="track-icon"><svg><use href="#icon-network"></use></svg></span>
-                <span class="track-head"><span class="track-name" data-i18n="track.supply.title">供應鏈與貿易金融</span><span class="track-summary" data-i18n="track.supply.summary">讓採購 Agent 可驗證、可授權、不可越權付款。</span></span>
-                <span class="track-chevron" aria-hidden="true"></span>
-              </summary>
-              <dl><dt data-i18n="track.pain">場景痛點</dt><dd data-i18n="track.supply.pain">供應商資格、訂單融資、ESG／碳資料可信度。</dd><dt data-i18n="track.trust">核心可信問題</dt><dd data-i18n="track.supply.trust">Agent 代表買方或法人到什麼程度？能否讀取資格並草擬訂單，但不能自行付款？</dd><dt data-i18n="track.example">示例 POC</dt><dd data-i18n="track.supply.example">供應商資格 VC、訂單到融資證明、ESG 選擇性揭露、採購 Agent 授權。</dd></dl>
-            </details>
-            <details class="track-card">
-              <summary>
-                <span class="track-index">02</span>
-                <span class="track-icon"><svg><use href="#icon-cart"></use></svg></span>
-                <span class="track-head"><span class="track-name" data-i18n="track.ecommerce.title">電商與第三方支付</span><span class="track-summary" data-i18n="track.ecommerce.summary">代購與支付之間，放一道人類確認。</span></span>
-                <span class="track-chevron" aria-hidden="true"></span>
-              </summary>
-              <dl><dt data-i18n="track.pain">場景痛點</dt><dd data-i18n="track.ecommerce.pain">高頻委託購買、付款授權、防詐與資格驗證。</dd><dt data-i18n="track.trust">核心可信問題</dt><dd data-i18n="track.ecommerce.trust">Agent 是否只能比價與建立付款意圖？何時必須由使用者確認？</dd><dt data-i18n="track.example">示例 POC</dt><dd data-i18n="track.ecommerce.example">Agent 購買授權、商家信任驗證、年齡／資格選擇性揭露、付款前 human approval。</dd></dl>
-            </details>
-            <details class="track-card">
-              <summary>
-                <span class="track-index">03</span>
-                <span class="track-icon"><svg><use href="#icon-health"></use></svg></span>
-                <span class="track-head"><span class="track-name" data-i18n="track.health.title">醫療保險</span><span class="track-summary" data-i18n="track.health.summary">敏感資料誰能讀？同意如何被證明？</span></span>
-                <span class="track-chevron" aria-hidden="true"></span>
-              </summary>
-              <dl><dt data-i18n="track.pain">場景痛點</dt><dd data-i18n="track.health.pain">高度敏感個資、理賠、同意與核保稽核。</dd><dt data-i18n="track.trust">核心可信問題</dt><dd data-i18n="track.health.trust">Agent 可讀取哪些醫療資料？是否有有效 consent？送件前如何確認？</dd><dt data-i18n="track.example">示例 POC</dt><dd data-i18n="track.health.example">可信理賠資料交換、consent VC、隱私保護聯合分析、AI 核保 action log。</dd></dl>
-            </details>
-            <details class="track-card">
-              <summary>
-                <span class="track-index">04</span>
-                <span class="track-icon"><svg><use href="#icon-building"></use></svg></span>
-                <span class="track-head"><span class="track-name" data-i18n="track.gov.title">政府服務</span><span class="track-summary" data-i18n="track.gov.summary">代辦到哪一步，由授權說了算。</span></span>
-                <span class="track-chevron" aria-hidden="true"></span>
-              </summary>
-              <dl><dt data-i18n="track.pain">場景痛點</dt><dd data-i18n="track.gov.pain">公部門憑證、跨機關流程、委託送件與國際互認。</dd><dt data-i18n="track.trust">核心可信問題</dt><dd data-i18n="track.gov.trust">Agent 可以代填、代查或代送到何種程度？哪些動作需本人確認？</dd><dt data-i18n="track.example">示例 POC</dt><dd data-i18n="track.gov.example">公部門憑證升級 VC、Agent 代辦申請、資格驗證、跨境互認概念。</dd></dl>
-            </details>
+          <div class="track-grid track-accordion challenge-grid">
+            <article class="track-card challenge-card">
+              <span class="track-index">01</span>
+              <h3 class="track-name" data-i18n="challenge.01.title">製造貿易｜碳足跡與 DPP</h3>
+              <p class="track-summary" data-i18n="challenge.01.question">碳足跡資料散落各系統與供應商手上，如何跨組織查驗又不外洩製程機密？</p>
+            </article>
+            <article class="track-card challenge-card">
+              <span class="track-index">02</span>
+              <h3 class="track-name" data-i18n="challenge.02.title">電支金融｜開戶之後</h3>
+              <p class="track-summary" data-i18n="challenge.02.question">KYC 已經很扎實，但盜用與人頭帳戶發生在開戶之後，如何看見持續風險又不看光交易明細？</p>
+            </article>
+            <article class="track-card challenge-card">
+              <span class="track-index">03</span>
+              <h3 class="track-name" data-i18n="challenge.03.title">醫療保險｜理賠合作</h3>
+              <p class="track-summary" data-i18n="challenge.03.question">理賠需要醫院的資料，兩個產業的個資邏輯不同調，如何只交換最小必要資訊？</p>
+            </article>
+            <article class="track-card challenge-card">
+              <span class="track-index">04</span>
+              <h3 class="track-name" data-i18n="challenge.04.title">政府服務｜跨機關代辦</h3>
+              <p class="track-summary" data-i18n="challenge.04.question">機關各有憑證與系統，Agent 代辦跨機關申請時，「代查」與「代送件」的授權邊界怎麼劃？</p>
+            </article>
+            <article class="track-card challenge-card">
+              <span class="track-index">05</span>
+              <h3 class="track-name" data-i18n="challenge.05.title">普惠金融｜移工與新住民</h3>
+              <p class="track-summary" data-i18n="challenge.05.question">近 87 萬移工面臨開戶難、又易被冒名，一套「被信任、不被冒用」的數位身分如何可能？</p>
+            </article>
+            <article class="track-card challenge-card">
+              <span class="track-index">06</span>
+              <h3 class="track-name" data-i18n="challenge.06.title">供應鏈合規｜國際稽核</h3>
+              <p class="track-summary" data-i18n="challenge.06.question">國際品牌的供應鏈人權與永續稽核仍靠紙本與人工，合規證明能否持續可驗證？</p>
+            </article>
           </div>
+          <p class="tracks-preview-note" data-i18n="tracks.note">報名前先想：你的場景，信任缺口在哪？完整命題（背景、核心可信問題、方向提示）將於入選後工作坊公布，屆時亦說明命題選擇方式。</p>
         </div>
       </section>
 
@@ -440,7 +433,7 @@
             <ul class="apply-checklist" data-i18n-list="apply.checklist">
               <li data-i18n="apply.check1">個人、未滿員隊伍或完整 3–5 人隊伍皆可報名</li>
               <li data-i18n="apply.check2">隊伍由 Team Leader 提交；個人由本人提交</li>
-              <li data-i18n="apply.check3">題目方向已想好一句話</li>
+              <li data-i18n="apply.check3">自訂痛點與解法構想已想好一句話</li>
             </ul>
             <div class="cta-row">
               <a class="button button-primary" href="https://forms.gle/kafd8Xfh9LAoW6q59" target="_blank" rel="noopener" data-registration-link>立即報名</a>
@@ -562,7 +555,7 @@
           <div class="workshop-grid workshop-grid-conservative">
             <article class="workshop-card"><svg class="card-icon"><use href="#icon-card"></use></svg><span data-i18n="preevent.info.meta">7/20（一）</span><h3 data-i18n="preevent.info.title">線上說明會</h3><p data-i18n="preevent.info.body">開放所有人參加：於 Luma 報名後，會議連結將寄送至你的信箱。活動介紹與 QA；官方錄影將於會後上架本站，開放所有人觀看。</p><div class="workshop-actions" data-info-session-actions><a class="button button-small button-primary" data-info-session-link target="_blank" rel="noopener" data-i18n="infoSession.register">前往 Luma 報名說明會</a><a class="button button-small button-secondary" data-info-session-recording target="_blank" rel="noopener" data-i18n="infoSession.watch" hidden>觀看錄影</a></div></article>
             <article class="workshop-card"><svg class="card-icon"><use href="#icon-shield"></use></svg><span data-i18n="workshops.card1.meta">8/15（六）</span><h3 data-i18n="workshops.card1.title">Workshop #1（線上）</h3><p data-i18n="workshops.card1.body">可信 AI Agent 與數位憑證工具導覽；尚未完成組隊者可在本場開始認識隊友與媒合。限入選者參加。</p></article>
-            <article class="workshop-card"><svg class="card-icon"><use href="#icon-network"></use></svg><span data-i18n="workshops.card2.meta">8/22（六）</span><h3 data-i18n="workshops.card2.title">Workshop #2（線下）</h3><p data-i18n="workshops.card2.body">產業痛點說明與 POC 題目收斂；尚未完成組隊者可在本場持續媒合並確認最終隊伍。限入選者參加。</p></article>
+            <article class="workshop-card"><svg class="card-icon"><use href="#icon-network"></use></svg><span data-i18n="workshops.card2.meta">8/22（六）</span><h3 data-i18n="workshops.card2.title">Workshop #2（線下）</h3><p data-i18n="workshops.card2.body">六題完整命題公布、產業痛點說明與 POC 題目收斂；尚未完成組隊者可在本場持續媒合並確認最終隊伍。限入選者參加。</p></article>
           </div>
         </div>
       </section>
@@ -613,11 +606,11 @@
             <details><summary>可以個人報名嗎？</summary><p>可以。個人、未滿員隊伍與完整 3–5 人隊伍都能報名；個人報名者由本人填寫報名表並作為聯絡窗口。若入選，須在活動前完成 3–5 人隊伍。</p></details>
             <details><summary>個人報名後，如何完成組隊？</summary><p>報名後可先在<a href="https://padlet.com/Trustworthy/trustworthy-ai-hackathon-6r3tvsp4rktkz5xy" target="_blank" rel="noopener noreferrer" data-matchmaking-link>團隊媒合平台</a>介紹專長與尋找夥伴。若入選，兩場賽前工作坊都會提供媒合協助；建議個人與未滿員隊伍參與，以便認識隊友、討論分工，並確認最終 3–5 人名單。</p></details>
             <details><summary>怎麼報名？</summary><p>於報名期間填寫線上報名表：7/8 開放、8/5 截止，由 Team Leader（團隊代表）代表提交，每隊僅提交一次；個人報名者以本人為聯絡窗口。</p></details>
-            <details><summary>報名要準備什麼？</summary><p>團隊背景（建議整理為一份 PDF：成員與角色分工、所屬單位、相關經驗）、想解決的痛點、初步解法構想，以及 GitHub 或作品連結（選填）。個人報名者，團隊背景可改填個人背景與專長。</p></details>
+            <details><summary>報名要準備什麼？</summary><p>團隊背景（建議整理為一份 PDF：成員與角色分工、所屬單位、相關經驗）、想解決的痛點、初步解法構想，以及 GitHub 或作品連結（選填）。個人報名者，團隊背景可改填個人背景與專長。報名所提痛點用於書審評估；入選後將依公布之命題進行開發。</p></details>
           </section>
           <section class="faq-group">
             <h3>B. 主題與技術</h3>
-            <details><summary>有指定題目或賽道嗎？</summary><p>沒有硬性賽道。題目開放自由發想；供應鏈與貿易金融、電商與第三方支付、醫療保險、政府服務只是參考方向，也歡迎其他領域。</p></details>
+            <details><summary>有指定題目或賽道嗎？</summary><p>正式題目由主辦方與產業夥伴共同命題，共六大真實場景（見主題區預告）；完整命題於入選後的工作坊公布，並說明命題選擇方式。報名時請提出你們自訂的痛點與解法構想，作為書面初審的評估依據。</p></details>
             <details><summary>技術或框架有限制嗎？</summary><p>技術自由，但作品須能展示可信 AI Agent 的身份、授權、行動邊界、稽核與撤銷思考，且僅能使用合法授權之模型、資料與工具。</p></details>
             <details><summary>可信 AI Agent 建議展示什麼？</summary><p>代表誰（Principal）、被授權做什麼（Authorization）、可呼叫的工具與動作（Tool / Action）、政策關卡（Policy Gate）、稽核軌跡（Audit Log）、失效與撤銷（Expiry / Revocation）。</p></details>
             <details><summary>一定要用區塊鏈或數位憑證（VC）嗎？</summary><p>不強制。只要能清楚展示身份、授權、驗證、稽核與撤銷即可；區塊鏈／VC 是選項而非必需。</p></details>

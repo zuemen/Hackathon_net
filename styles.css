@@ -5394,3 +5394,91 @@ body.js-on .hero .reveal {
     transform: none;
   }
 }
+
+/* ============================================================
+   CHALLENGE TOPICS: six public previews, without full briefs.
+   ============================================================ */
+#tracks .track-accordion.challenge-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+#tracks .challenge-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto 1fr;
+  align-content: start;
+  gap: 14px;
+  min-width: 0;
+  min-height: 260px;
+  padding: 26px;
+  border-color: rgba(57, 194, 224, 0.28);
+  background:
+    linear-gradient(145deg, rgba(57, 194, 224, 0.08), transparent 46%),
+    rgba(13, 30, 53, 0.92);
+  box-shadow: inset 0 3px 0 rgba(111, 224, 242, 0.3);
+}
+
+#tracks .challenge-card .track-index {
+  grid-area: auto;
+  justify-self: start;
+  width: auto;
+  margin: 0;
+  color: var(--cyan-300);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-align: left;
+}
+
+#tracks .challenge-card .track-name {
+  min-height: 0;
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.12rem, 1.8vw, 1.35rem);
+  line-height: 1.4;
+}
+
+#tracks .challenge-card .track-summary {
+  display: block;
+  min-height: 0;
+  margin: 0;
+  overflow: visible;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  -webkit-line-clamp: unset;
+}
+
+.tracks-preview-note {
+  margin: 22px 0 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 209, 92, 0.3);
+  border-left: 4px solid var(--gold-400);
+  border-radius: 12px;
+  color: var(--text-muted);
+  background: rgba(255, 209, 92, 0.07);
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+  #tracks .track-accordion.challenge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  #tracks .track-accordion.challenge-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #tracks .challenge-card {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .tracks-preview-note {
+    padding: 16px;
+  }
+}
