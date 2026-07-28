@@ -32,7 +32,6 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--bg);
-  font-family: "Inter", "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 17px;
   line-height: 1.75;
@@ -5480,5 +5479,111 @@ body.js-on .hero .reveal {
 
   .tracks-preview-note {
     padding: 16px;
+  }
+}
+
+/* ============================================================
+   FRONT-END AUDIT: interaction, readability, and mobile delivery
+   ============================================================ */
+a,
+button,
+summary {
+  touch-action: manipulation;
+}
+
+.brand,
+.site-nav a,
+.nav-toggle,
+.button-small,
+.header-prize-pill {
+  min-height: 44px;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-toggle {
+  width: 44px;
+  height: 44px;
+}
+
+.header-actions .button-small {
+  height: 44px;
+  min-height: 44px;
+}
+
+.language-toggle {
+  height: 48px;
+  min-height: 48px;
+  padding: 1px;
+}
+
+.language-toggle button {
+  height: 44px;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.hero-registration-flow p,
+#judging .minimum-card p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 820px) {
+  #hero.hero {
+    background:
+      url("./assets/og-trustworthy-ai-hackathon.jpg") center 74px / 100% auto no-repeat,
+      linear-gradient(135deg, var(--bg-deep), var(--bg));
+  }
+
+  .nav-panel {
+    max-height: calc(100dvh - 92px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-nav a {
+    padding-block: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-footer {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+  }
+}
+
+@supports (content-visibility: auto) {
+  main > .section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 840px;
+  }
+
+  main > #faq {
+    contain-intrinsic-size: auto 1700px;
+  }
+
+  @media (max-width: 700px) {
+    main > .section {
+      contain-intrinsic-size: auto 1140px;
+    }
+
+    main > #faq {
+      contain-intrinsic-size: auto 1750px;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    main > .section {
+      contain-intrinsic-size: auto 660px;
+    }
+
+    main > #faq {
+      contain-intrinsic-size: auto 1100px;
+    }
   }
 }

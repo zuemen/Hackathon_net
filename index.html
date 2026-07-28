@@ -10,19 +10,25 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_TW">
     <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:image" content="https://hackathon.chain.tw/assets/og-kv.jpg">
+    <meta property="og:image" content="https://hackathon.chain.tw/assets/og-trustworthy-ai-hackathon.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Trustworthy AI Hackathon｜可信 AI 黑客松">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Trustworthy AI Hackathon｜可信 AI 黑客松">
     <meta name="twitter:description" content="2026/08/29-08/31 於 N24 台北方舟。開放個人、未滿員與完整隊伍報名，賽前工作坊提供組隊媒合。">
-    <meta name="twitter:image" content="https://hackathon.chain.tw/assets/og-kv.jpg">
+    <meta name="twitter:image" content="https://hackathon.chain.tw/assets/og-trustworthy-ai-hackathon.jpg">
+    <meta name="twitter:image:alt" content="Trustworthy AI Hackathon｜可信 AI 黑客松">
     <link rel="canonical" href="https://hackathon.chain.tw/">
     <link rel="icon" href="./assets/official/favicon.png">
     <link rel="apple-touch-icon" href="./assets/official/favicon.png">
     <meta name="theme-color" content="#0C1A2B">
-    <link rel="preload" as="image" href="./assets/hero-kv.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="./assets/og-trustworthy-ai-hackathon.jpg" type="image/jpeg" media="(max-width: 820px)" fetchpriority="high">
+    <link rel="preload" as="image" href="./assets/hero-kv.webp" type="image/webp" media="(min-width: 821px)" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap"></noscript>
     <link rel="stylesheet" href="./styles.css">
     <script type="application/ld+json" id="event-jsonld">
       {
@@ -89,7 +95,7 @@
         </button>
 
         <div class="nav-panel" id="site-nav" data-nav-panel>
-          <nav class="site-nav" aria-label="主選單">
+          <nav class="site-nav" aria-label="主選單" data-i18n="aria.nav" data-i18n-attr="aria-label">
             <a href="#tracks" data-i18n="nav.tracks">產業命題</a>
             <a href="#info" data-i18n="nav.format">流程</a>
             <a href="#prizes" data-i18n="nav.prizes">獎項</a>
@@ -98,7 +104,7 @@
           </nav>
 
           <div class="header-actions">
-            <div class="language-toggle" role="group" aria-label="語言切換">
+            <div class="language-toggle" role="group" aria-label="語言切換" data-i18n="aria.language" data-i18n-attr="aria-label">
               <button type="button" class="is-active" data-lang-button="zh-Hant" aria-pressed="true">中</button>
               <button type="button" data-lang-button="en" aria-pressed="false">EN</button>
             </div>
@@ -130,7 +136,7 @@
                 <p data-i18n="solo.body">個人、未滿員隊伍或完整 3–5 人隊伍皆可送出報名。尚未完成組隊者若入選，可在兩場賽前工作坊由主辦協助媒合，最終以 3–5 人隊伍參賽。</p>
                 <a class="button button-primary hero-registration-apply" href="https://forms.gle/kafd8Xfh9LAoW6q59" target="_blank" rel="noopener" data-registration-link>立即報名</a>
               </div>
-              <ol class="hero-registration-flow" aria-label="Registration and team matching process">
+              <ol class="hero-registration-flow" aria-label="報名與組隊媒合流程" data-i18n="aria.registrationFlow" data-i18n-attr="aria-label">
                 <li>
                   <span class="hero-registration-step">01</span>
                   <div>
@@ -155,7 +161,7 @@
               </ol>
             </div>
             <p class="hero-lede" data-i18n="hero.body">當 AI Agent 開始代表人或組織行動，身份、授權、行動邊界與可追溯性必須被清楚設計。</p>
-            <div class="hero-meta" role="group" aria-label="活動資訊">
+            <div class="hero-meta" role="group" aria-label="活動資訊" data-i18n="aria.eventInfo" data-i18n-attr="aria-label">
               <span data-i18n="hero.date">08.29-08.30 Hackathon｜08.31 Demo Day</span>
               <span data-i18n="hero.venue">N24 台北方舟</span>
             </div>
@@ -174,14 +180,14 @@
             </div>
             <div class="info-session-banner" data-info-session-banner hidden>
               <span data-i18n="infoSession.banner">線上說明會｜7/20（一）舉行・開放報名｜於 Luma 報名後寄送會議連結</span>
-              <a class="button button-small button-primary" data-info-session-link target="_blank" rel="noopener" data-i18n="announce.cta">前往 Luma 報名 →</a>
-              <a class="button button-small button-secondary" data-info-session-recording target="_blank" rel="noopener" data-i18n="infoSession.watch" hidden>觀看錄影</a>
+              <a class="button button-small button-primary" href="https://luma.com/w6sjiy30" data-info-session-link target="_blank" rel="noopener" data-i18n="announce.cta">前往 Luma 報名 →</a>
+              <a class="button button-small button-secondary" href="#pre-events" data-info-session-recording target="_blank" rel="noopener" data-i18n="infoSession.watch" hidden>觀看錄影</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="statband-section" aria-label="活動數字">
+      <section class="statband-section" aria-label="活動數字" data-i18n="aria.eventNumbers" data-i18n-attr="aria-label">
         <div class="container">
           <div class="statband" role="group">
             <a class="statband-item" href="#prizes">
@@ -201,7 +207,7 @@
               <span class="statband-label" data-i18n="statband.participants">預計參賽者</span>
             </a>
           </div>
-          <div class="role-marquee" role="group" aria-label="參與角色">
+          <div class="role-marquee" role="group" aria-label="參與角色" data-i18n="aria.roles" data-i18n-attr="aria-label">
             <div class="role-marquee-track">
               <span class="role-marquee-group" data-i18n="marquee.roles">AI 工程師・資安研究員・區塊鏈開發者・產品經理・設計師・學生團隊・新創團隊・領域專家</span>
               <span class="role-marquee-group" aria-hidden="true" data-i18n="marquee.roles">AI 工程師・資安研究員・區塊鏈開發者・產品經理・設計師・學生團隊・新創團隊・領域專家</span>
@@ -307,17 +313,17 @@
             <p data-i18n="roadmap.body">各項時間以主辦方最新公告為準。</p>
             <p class="timeline-status" id="timelineStatus" aria-live="polite"></p>
           </div>
-          <ol class="timeline" aria-label="活動流程圖">
-            <li class="timeline-step timeline-entry" data-date="2026-07-08"><time data-i18n="date.registration">7/8（三）</time><span data-i18n="timeline.registration">開放報名</span></li>
-            <li class="timeline-step timeline-entry" data-date="2026-07-20"><time data-i18n="date.info">7/20（一）</time><span data-i18n="timeline.info">線上說明會</span></li>
-            <li class="timeline-step timeline-entry" data-date="2026-08-05"><time data-i18n="date.deadline">8/5（三）</time><span data-i18n="timeline.deadline">報名截止</span></li>
-            <li class="timeline-step timeline-prep" data-date="2026-08-07"><time data-i18n="date.finalists">8/7（五）</time><span data-i18n="timeline.finalists">公告初選名單</span></li>
-            <li class="timeline-step timeline-prep" data-date="2026-08-09"><time data-i18n="date.confirm">8/9（日）</time><span data-i18n="timeline.confirm">入選者回覆期限</span></li>
-            <li class="timeline-step timeline-prep" data-date="2026-08-15"><time data-i18n="date.workshop1">8/15（六）</time><span data-i18n="timeline.workshop1">Workshop #1（線上，限入選）</span></li>
-            <li class="timeline-step timeline-prep" data-date="2026-08-22"><time data-i18n="date.workshop2">8/22（六）</time><span data-i18n="timeline.workshop2">Workshop #2（線下，限入選）</span></li>
-            <li class="timeline-step timeline-event" data-date="2026-08-29"><time data-i18n="date.hackathon1">8/29（六）</time><span data-i18n="timeline.hackathon1">Hackathon Day 1</span></li>
-            <li class="timeline-step timeline-event" data-date="2026-08-30"><time data-i18n="date.hackathon2">8/30（日）</time><span data-i18n="timeline.hackathon2">Hackathon Day 2</span></li>
-            <li class="timeline-step timeline-event" data-date="2026-08-31"><time data-i18n="date.demo">8/31（一）</time><span data-i18n="timeline.demo">Demo Day</span></li>
+          <ol class="timeline" aria-label="活動流程圖" data-i18n="aria.timeline" data-i18n-attr="aria-label">
+            <li class="timeline-step timeline-entry" data-date="2026-07-08"><time datetime="2026-07-08" data-i18n="date.registration">7/8（三）</time><span data-i18n="timeline.registration">開放報名</span></li>
+            <li class="timeline-step timeline-entry" data-date="2026-07-20"><time datetime="2026-07-20" data-i18n="date.info">7/20（一）</time><span data-i18n="timeline.info">線上說明會</span></li>
+            <li class="timeline-step timeline-entry" data-date="2026-08-05"><time datetime="2026-08-05" data-i18n="date.deadline">8/5（三）</time><span data-i18n="timeline.deadline">報名截止</span></li>
+            <li class="timeline-step timeline-prep" data-date="2026-08-07"><time datetime="2026-08-07" data-i18n="date.finalists">8/7（五）</time><span data-i18n="timeline.finalists">公告初選名單</span></li>
+            <li class="timeline-step timeline-prep" data-date="2026-08-09"><time datetime="2026-08-09" data-i18n="date.confirm">8/9（日）</time><span data-i18n="timeline.confirm">入選者回覆期限</span></li>
+            <li class="timeline-step timeline-prep" data-date="2026-08-15"><time datetime="2026-08-15" data-i18n="date.workshop1">8/15（六）</time><span data-i18n="timeline.workshop1">Workshop #1（線上，限入選）</span></li>
+            <li class="timeline-step timeline-prep" data-date="2026-08-22"><time datetime="2026-08-22" data-i18n="date.workshop2">8/22（六）</time><span data-i18n="timeline.workshop2">Workshop #2（線下，限入選）</span></li>
+            <li class="timeline-step timeline-event" data-date="2026-08-29"><time datetime="2026-08-29" data-i18n="date.hackathon1">8/29（六）</time><span data-i18n="timeline.hackathon1">Hackathon Day 1</span></li>
+            <li class="timeline-step timeline-event" data-date="2026-08-30"><time datetime="2026-08-30" data-i18n="date.hackathon2">8/30（日）</time><span data-i18n="timeline.hackathon2">Hackathon Day 2</span></li>
+            <li class="timeline-step timeline-event" data-date="2026-08-31"><time datetime="2026-08-31" data-i18n="date.demo">8/31（一）</time><span data-i18n="timeline.demo">Demo Day</span></li>
           </ol>
         </div>
       </section>
@@ -351,7 +357,7 @@
               <p data-i18n="position.poc.body">把場景痛點、Agent 原型與後續合作可能性接起來。</p>
             </article>
           </div>
-          <div class="stat-grid" role="group" aria-label="活動規模" hidden>
+          <div class="stat-grid" role="group" aria-label="活動規模" data-i18n="aria.eventScale" data-i18n-attr="aria-label" hidden>
             <div><strong data-i18n="stat.teams.count">最多 20</strong><span data-i18n="stat.teams">錄取隊伍</span></div>
             <div><strong>3-5</strong><span data-i18n="stat.members">每隊人數</span></div>
             <div><strong>60-100</strong><span data-i18n="stat.participants">預計參賽者</span></div>
@@ -553,7 +559,7 @@
             <p data-i18n="pre.events.subtitle">從活動說明、組隊媒合，到題目收斂。</p>
           </div>
           <div class="workshop-grid workshop-grid-conservative">
-            <article class="workshop-card"><svg class="card-icon"><use href="#icon-card"></use></svg><span data-i18n="preevent.info.meta">7/20（一）</span><h3 data-i18n="preevent.info.title">線上說明會</h3><p data-i18n="preevent.info.body">開放所有人參加：於 Luma 報名後，會議連結將寄送至你的信箱。活動介紹與 QA；官方錄影將於會後上架本站，開放所有人觀看。</p><div class="workshop-actions" data-info-session-actions><a class="button button-small button-primary" data-info-session-link target="_blank" rel="noopener" data-i18n="infoSession.register">前往 Luma 報名說明會</a><a class="button button-small button-secondary" data-info-session-recording target="_blank" rel="noopener" data-i18n="infoSession.watch" hidden>觀看錄影</a></div></article>
+            <article class="workshop-card"><svg class="card-icon"><use href="#icon-card"></use></svg><span data-i18n="preevent.info.meta">7/20（一）</span><h3 data-i18n="preevent.info.title">線上說明會</h3><p data-i18n="preevent.info.body">開放所有人參加：於 Luma 報名後，會議連結將寄送至你的信箱。活動介紹與 QA；官方錄影將於會後上架本站，開放所有人觀看。</p><div class="workshop-actions" data-info-session-actions hidden><a class="button button-small button-primary" href="https://luma.com/w6sjiy30" data-info-session-link target="_blank" rel="noopener" data-i18n="infoSession.register">前往 Luma 報名說明會</a><a class="button button-small button-secondary" href="#pre-events" data-info-session-recording target="_blank" rel="noopener" data-i18n="infoSession.watch" hidden>觀看錄影</a></div></article>
             <article class="workshop-card"><svg class="card-icon"><use href="#icon-shield"></use></svg><span data-i18n="workshops.card1.meta">8/15（六）</span><h3 data-i18n="workshops.card1.title">Workshop #1（線上）</h3><p data-i18n="workshops.card1.body">可信 AI Agent 與數位憑證工具導覽；尚未完成組隊者可在本場開始認識隊友與媒合。限入選者參加。</p></article>
             <article class="workshop-card"><svg class="card-icon"><use href="#icon-network"></use></svg><span data-i18n="workshops.card2.meta">8/22（六）</span><h3 data-i18n="workshops.card2.title">Workshop #2（線下）</h3><p data-i18n="workshops.card2.body">六題完整命題公布、產業痛點說明與 POC 題目收斂；尚未完成組隊者可在本場持續媒合並確認最終隊伍。限入選者參加。</p></article>
           </div>
@@ -578,12 +584,14 @@
             <!-- Google Map 連結由 site-config.js 的 venueMapUrl 控制；為 null 時保持 hidden -->
             <div class="venue-map-panel">
               <iframe
-                title="N24 台北方舟 Google Map"
+                title="N24 台北方舟 Google 地圖"
+                data-i18n="aria.mapTitle"
+                data-i18n-attr="title"
                 src="https://maps.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8D%97%E6%B8%AF%E5%8D%80%E5%B8%82%E6%B0%91%E5%A4%A7%E9%81%93%E4%B8%83%E6%AE%B5100%E8%99%9F%20N24%20%E5%8F%B0%E5%8C%97%E6%96%B9%E8%88%9F&z=16&output=embed"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 allowfullscreen></iframe>
-              <a class="venue-map-link" data-venue-map hidden target="_blank" rel="noopener" data-i18n="venue.map">在 Google 地圖開啟 ↗</a>
+              <a class="venue-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8D%97%E6%B8%AF%E5%8D%80%E5%B8%82%E6%B0%91%E5%A4%A7%E9%81%93%E4%B8%83%E6%AE%B5100%E8%99%9F" data-venue-map hidden target="_blank" rel="noopener" data-i18n="venue.map">在 Google 地圖開啟 ↗</a>
             </div>
           </div>
         </div>
@@ -644,7 +652,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo-row" role="group" aria-label="主辦與場地">
+          <div class="footer-logo-row" role="group" aria-label="主辦與場地" data-i18n="aria.organizerVenue" data-i18n-attr="aria-label">
             <img src="./assets/official/tabei-logo.png" alt="TABEI" width="1439" height="289" loading="lazy" decoding="async">
             <img src="./assets/official/n24-logo-white.png" alt="N24 台北方舟" width="400" height="234" loading="lazy" decoding="async">
           </div>

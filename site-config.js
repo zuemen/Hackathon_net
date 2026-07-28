@@ -14,7 +14,7 @@ window.SITE_CONFIG = {
   teamMax: 5,
   participantMin: 60,
   participantMax: 100,
-  trackCount: 4,
+  trackCount: 6,
   workshopCount: 2,
 
   showCountdown: false,
