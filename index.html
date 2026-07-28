@@ -8,6 +8,7 @@
     <meta property="og:title" content="Trustworthy AI Hackathon｜可信 AI 黑客松">
     <meta property="og:description" content="2026/08/29-08/31 於 N24 台北方舟。開放個人、未滿員與完整隊伍報名，賽前工作坊提供組隊媒合。">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hackathon.chain.tw/">
     <meta property="og:locale" content="zh_TW">
     <meta property="og:locale:alternate" content="en_US">
     <meta property="og:image" content="https://hackathon.chain.tw/assets/og-trustworthy-ai-hackathon.jpg">
@@ -20,10 +21,12 @@
     <meta name="twitter:image" content="https://hackathon.chain.tw/assets/og-trustworthy-ai-hackathon.jpg">
     <meta name="twitter:image:alt" content="Trustworthy AI Hackathon｜可信 AI 黑客松">
     <link rel="canonical" href="https://hackathon.chain.tw/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://hackathon.chain.tw/">
+    <link rel="alternate" hreflang="en" href="https://hackathon.chain.tw/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://hackathon.chain.tw/">
     <link rel="icon" href="./assets/official/favicon.png">
     <link rel="apple-touch-icon" href="./assets/official/favicon.png">
     <meta name="theme-color" content="#0C1A2B">
-    <link rel="preload" as="image" href="./assets/og-trustworthy-ai-hackathon.jpg" type="image/jpeg" media="(max-width: 820px)" fetchpriority="high">
     <link rel="preload" as="image" href="./assets/hero-kv.webp" type="image/webp" media="(min-width: 821px)" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -124,27 +127,27 @@
 
     <main id="main">
       <section class="hero" id="hero">
-        <picture class="hero-kv-media" aria-hidden="true">
-          <source media="(max-width: 820px)" srcset="./assets/og-trustworthy-ai-hackathon.jpg" type="image/jpeg">
-          <source srcset="./assets/hero-kv.webp" type="image/webp">
-          <img src="./assets/hero-kv.jpg" alt="" width="8000" height="4001" loading="eager" decoding="async" fetchpriority="high">
-        </picture>
         <div class="network-bg" aria-hidden="true"></div>
         <div class="container hero-grid">
           <div class="hero-copy reveal">
             <p class="eyebrow">Trustworthy AI Hackathon</p>
             <h1 data-i18n="hero.title">可信 AI 黑客松</h1>
             <p class="hero-subtitle">Building the trust layer for the AI-Agent economy</p>
-            <a class="hero-solo-peek" href="#solo-registration">
-              <span data-i18n="solo.peek.eyebrow">單人報名開放</span>
-              <strong data-i18n="solo.peek.title">不需先湊滿隊伍</strong>
-              <small data-i18n="solo.peek.link">查看報名與媒合流程 ↓</small>
-            </a>
+            <p class="hero-lede" data-i18n="hero.body">當 AI Agent 開始代表人或組織行動，身份、授權、行動邊界與可追溯性必須被清楚設計。</p>
+            <div class="hero-meta" role="group" aria-label="活動資訊" data-i18n="aria.eventInfo" data-i18n-attr="aria-label">
+              <span data-i18n="hero.date">08.29-08.30 Hackathon｜08.31 Demo Day</span>
+              <span data-i18n="hero.venue">N24 台北方舟</span>
+            </div>
+            <div class="hero-deadline" data-registration-deadline-wrap role="note">
+              <span data-registration-deadline-label>報名截止</span>
+              <time data-registration-deadline datetime="2026-08-05T23:59:59+08:00">8/5（三）23:59</time>
+              <small data-i18n="registration.deadline.timezone">台灣時間</small>
+            </div>
             <div class="hero-registration" id="solo-registration">
               <div class="hero-registration-copy">
                 <span class="hero-registration-badge" data-i18n="solo.badge">個人／未滿員隊伍皆可</span>
                 <h2 data-i18n="solo.title">個人、未滿員隊伍，都可以先報名</h2>
-                <p data-i18n="solo.body">個人、未滿員隊伍或完整 3–5 人隊伍皆可送出報名。尚未完成組隊者若入選，可在兩場賽前工作坊由主辦協助媒合，最終以 3–5 人隊伍參賽。</p>
+                <p data-i18n="solo.body">個人、未滿員或完整 3–5 人隊伍皆可先報名；入選後可在兩場賽前工作坊媒合，最終組成 3–5 人隊伍。</p>
                 <a class="button button-primary hero-registration-apply" href="https://forms.gle/kafd8Xfh9LAoW6q59" target="_blank" rel="noopener" data-registration-link>立即報名</a>
               </div>
               <ol class="hero-registration-flow" aria-label="報名與組隊媒合流程" data-i18n="aria.registrationFlow" data-i18n-attr="aria-label">
@@ -152,14 +155,14 @@
                   <span class="hero-registration-step">01</span>
                   <div>
                     <strong data-i18n="solo.step1.title">先送出報名</strong>
-                    <p data-i18n="solo.step1.body">個人由本人提交；隊伍由 Team Leader 代表提交。</p>
+                    <p data-i18n="solo.step1.body">個人自行提交；隊伍由 Team Leader 代表提交。</p>
                   </div>
                 </li>
                 <li>
                   <span class="hero-registration-step">02</span>
                   <div>
                     <strong data-i18n="solo.step2.title">認識與媒合隊友</strong>
-                    <p data-i18n="solo.step2.body">可先使用團隊媒合平台；入選後，兩場賽前工作坊皆提供媒合協助。</p>
+                    <p data-i18n="solo.step2.body">可先使用媒合平台；入選後兩場工作坊皆可媒合。</p>
                   </div>
                 </li>
                 <li>
@@ -170,11 +173,6 @@
                   </div>
                 </li>
               </ol>
-            </div>
-            <p class="hero-lede" data-i18n="hero.body">當 AI Agent 開始代表人或組織行動，身份、授權、行動邊界與可追溯性必須被清楚設計。</p>
-            <div class="hero-meta" role="group" aria-label="活動資訊" data-i18n="aria.eventInfo" data-i18n-attr="aria-label">
-              <span data-i18n="hero.date">08.29-08.30 Hackathon｜08.31 Demo Day</span>
-              <span data-i18n="hero.venue">N24 台北方舟</span>
             </div>
             <div class="countdown" data-countdown hidden aria-live="polite">
               <p class="countdown-label" data-countdown-label></p>
@@ -192,7 +190,6 @@
             <div class="info-session-banner" data-info-session-banner hidden>
               <span data-i18n="infoSession.banner">線上說明會｜7/20（一）舉行・開放報名｜於 Luma 報名後寄送會議連結</span>
               <a class="button button-small button-primary" href="https://luma.com/w6sjiy30" data-info-session-link target="_blank" rel="noopener" data-i18n="announce.cta">前往 Luma 報名 →</a>
-              <a class="button button-small button-secondary" href="#pre-events" data-info-session-slides target="_blank" rel="noopener" data-i18n="infoSession.slides" hidden>查看說明會簡報</a>
             </div>
           </div>
         </div>
@@ -245,163 +242,10 @@
         </div>
       </section>
 
-      <section class="section section-soft" id="benefits">
-        <div class="reveal container">
-          <div class="section-heading">
-            <p class="section-kicker">02 / Why Join</p>
-            <h2 data-i18n="benefits.title">為什麼參加</h2>
-            <p data-i18n="benefits.subtitle">免費參加。全力以赴。</p>
-          </div>
-          <div class="benefit-grid">
-            <article class="benefit-card">
-              <span class="benefit-icon"><svg><use href="#icon-card"></use></svg></span>
-              <h3 data-i18n="benefit.demo.title">Demo Day 舞台</h3>
-              <p data-i18n="benefit.demo.body">向產業評審與與會者展示成果。</p>
-            </article>
-            <article class="benefit-card">
-              <span class="benefit-icon"><svg><use href="#icon-shield"></use></svg></span>
-              <h3 data-i18n="benefit.mentor.title">Mentor Office Hours</h3>
-              <p data-i18n="benefit.mentor.body">現場導師支援與開發指導。</p>
-            </article>
-            <article class="benefit-card">
-              <span class="benefit-icon"><svg><use href="#icon-code"></use></svg></span>
-              <h3 data-i18n="benefit.poc.title">POC 對接</h3>
-              <p data-i18n="benefit.poc.body">作品與場景問題接軌後續合作討論。</p>
-            </article>
-            <article class="benefit-card">
-              <span class="benefit-icon"><svg><use href="#icon-log"></use></svg></span>
-              <h3 data-i18n="benefit.proof.title">完賽證明</h3>
-              <p data-i18n="benefit.proof.body">完成交付與展示即獲完賽證明。</p>
-            </article>
-            <article class="benefit-card">
-              <span class="benefit-icon"><svg><use href="#icon-building"></use></svg></span>
-              <h3 data-i18n="benefit.meals.title">餐食與過夜</h3>
-              <p data-i18n="benefit.meals.body">活動期間供餐，8/29 可選過夜。</p>
-            </article>
-            <article class="benefit-card">
-              <span class="benefit-icon"><svg><use href="#icon-network"></use></svg></span>
-              <h3 data-i18n="benefit.team.title">跨域隊友</h3>
-              <p data-i18n="benefit.team.body">尚未組隊者可在賽前工作坊認識 AI、資安、區塊鏈與產品等跨域夥伴。</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="prizes">
-        <div class="reveal container">
-          <div class="section-heading">
-            <p class="section-kicker">03 / Prize</p>
-            <h2 data-i18n="prize.title">獎項</h2>
-            <p class="prize-total" data-i18n="prize.total">總獎金 USD 12,000+</p>
-            <p class="prize-total-note" data-i18n="prize.total.note">將隨贊助加碼</p>
-            <p data-i18n="prize.body">主辦得增設特別獎，獎項內容以正式公告為準。</p>
-          </div>
-          <div class="prize-grid prize-grid-public prize-podium">
-            <article class="prize-card prize-main">
-              <h3 data-i18n="prize.grand.title">冠軍</h3>
-              <p class="prize-amount" data-i18n="prize.grand.amount">USD 5,000</p>
-              <p data-i18n="prize.grand.count">1 隊</p>
-            </article>
-            <article class="prize-card prize-runner">
-              <h3 data-i18n="prize.runner.title">亞軍</h3>
-              <p class="prize-amount" data-i18n="prize.runner.amount">USD 2,000</p>
-              <p data-i18n="prize.runner.count">2 隊・每隊</p>
-            </article>
-            <article class="prize-card prize-third">
-              <h3 data-i18n="prize.third.title">季軍</h3>
-              <p class="prize-amount" data-i18n="prize.third.amount">USD 1,000</p>
-              <p data-i18n="prize.third.count">3 隊・每隊</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-soft" id="roadmap">
-        <div class="reveal container">
-          <div class="section-heading">
-            <p class="section-kicker">04 / Roadmap</p>
-            <h2 data-i18n="roadmap.title">時間軸</h2>
-            <p data-i18n="roadmap.body">各項時間以主辦方最新公告為準。</p>
-            <p class="timeline-status" id="timelineStatus" aria-live="polite"></p>
-          </div>
-          <ol class="timeline" aria-label="活動流程圖" data-i18n="aria.timeline" data-i18n-attr="aria-label">
-            <li class="timeline-step timeline-entry" data-date="2026-07-08"><time datetime="2026-07-08" data-i18n="date.registration">7/8（三）</time><span data-i18n="timeline.registration">開放報名</span></li>
-            <li class="timeline-step timeline-entry" data-date="2026-07-20"><time datetime="2026-07-20" data-i18n="date.info">7/20（一）</time><span data-i18n="timeline.info">線上說明會</span></li>
-            <li class="timeline-step timeline-entry" data-date="2026-08-05"><time datetime="2026-08-05" data-i18n="date.deadline">8/5（三）</time><span data-i18n="timeline.deadline">報名截止</span></li>
-            <li class="timeline-step timeline-prep" data-date="2026-08-07"><time datetime="2026-08-07" data-i18n="date.finalists">8/7（五）</time><span data-i18n="timeline.finalists">公告初選名單</span></li>
-            <li class="timeline-step timeline-prep" data-date="2026-08-09"><time datetime="2026-08-09" data-i18n="date.confirm">8/9（日）</time><span data-i18n="timeline.confirm">入選者回覆期限</span></li>
-            <li class="timeline-step timeline-prep" data-date="2026-08-15"><time datetime="2026-08-15" data-i18n="date.workshop1">8/15（六）</time><span data-i18n="timeline.workshop1">Workshop #1（線上，限入選）</span></li>
-            <li class="timeline-step timeline-prep" data-date="2026-08-22"><time datetime="2026-08-22" data-i18n="date.workshop2">8/22（六）</time><span data-i18n="timeline.workshop2">Workshop #2（線下，限入選）</span></li>
-            <li class="timeline-step timeline-event" data-date="2026-08-29"><time datetime="2026-08-29" data-i18n="date.hackathon1">8/29（六）</time><span data-i18n="timeline.hackathon1">Hackathon Day 1</span></li>
-            <li class="timeline-step timeline-event" data-date="2026-08-30"><time datetime="2026-08-30" data-i18n="date.hackathon2">8/30（日）</time><span data-i18n="timeline.hackathon2">Hackathon Day 2</span></li>
-            <li class="timeline-step timeline-event" data-date="2026-08-31"><time datetime="2026-08-31" data-i18n="date.demo">8/31（一）</time><span data-i18n="timeline.demo">Demo Day</span></li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section" id="info">
-        <div class="reveal container">
-          <div class="section-heading">
-            <p class="section-kicker">05 / Event Info</p>
-            <h2 data-i18n="info.title">活動資訊</h2>
-            <p data-i18n="info.subtitle">兩日實作。第三天上台。</p>
-          </div>
-          <div class="feature-grid info-feature-grid">
-            <article class="feature-card">
-              <span class="feature-icon"><svg><use href="#icon-code"></use></svg></span>
-              <h3 data-i18n="position.build.title">兩日實作</h3>
-              <p data-i18n="position.build.body">入選者完成組隊後，現場完成可信 AI Agent 原型與 Demo Day 展示。</p>
-            </article>
-            <article class="feature-card">
-              <span class="feature-icon"><svg><use href="#icon-network"></use></svg></span>
-              <h3 data-i18n="position.teams.title">個人或隊伍皆可報名</h3>
-              <p data-i18n="position.teams.body">可先以個人或未滿員隊伍報名；入選後透過賽前工作坊媒合，最終以 3–5 人隊伍完成作品。</p>
-            </article>
-            <article class="feature-card">
-              <span class="feature-icon"><svg><use href="#icon-log"></use></svg></span>
-              <h3 data-i18n="position.memo.title">治理／信任設計說明</h3>
-              <p data-i18n="position.memo.body">以一頁 Governance Gap Memo 說明作品的信任設計。</p>
-            </article>
-            <article class="feature-card">
-              <span class="feature-icon"><svg><use href="#icon-card"></use></svg></span>
-              <h3 data-i18n="position.poc.title">週末實作到 POC</h3>
-              <p data-i18n="position.poc.body">把場景痛點、Agent 原型與後續合作可能性接起來。</p>
-            </article>
-          </div>
-          <div class="stat-grid" role="group" aria-label="活動規模" data-i18n="aria.eventScale" data-i18n-attr="aria-label" hidden>
-            <div><strong data-i18n="stat.teams.count">最多 20</strong><span data-i18n="stat.teams">錄取隊伍</span></div>
-            <div><strong>3-5</strong><span data-i18n="stat.members">每隊人數</span></div>
-            <div><strong>60-100</strong><span data-i18n="stat.participants">預計參賽者</span></div>
-            <div><strong>6</strong><span data-i18n="stat.tracks">產業命題</span></div>
-            <div><strong>2</strong><span data-i18n="stat.workshops">賽前工作坊</span></div>
-          </div>
-          <div class="day-grid">
-            <article class="day-card">
-              <svg class="card-icon"><use href="#icon-network"></use></svg>
-              <span>Day 1 | 8/29</span>
-              <h3 data-i18n="day1.title">開幕與隊伍確認</h3>
-              <p data-i18n="day1.body">報到、活動規則說明、隊伍與命題開發方向確認。</p>
-            </article>
-            <article class="day-card">
-              <svg class="card-icon"><use href="#icon-code"></use></svg>
-              <span>Day 2 | 8/30</span>
-              <h3 data-i18n="day2.title">實作與交件</h3>
-              <p data-i18n="day2.body">Build sprint、mentor office hours、收尾與正式交件。</p>
-            </article>
-            <article class="day-card">
-              <svg class="card-icon"><use href="#icon-card"></use></svg>
-              <span>Demo Day | 8/31</span>
-              <h3 data-i18n="day3.title">成果簡報與頒獎</h3>
-              <p data-i18n="day3.body">成果簡報、評審、頒獎與完賽證明。</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section class="section section-soft" id="tracks">
         <div class="reveal container">
           <div class="section-heading">
-            <p class="section-kicker">06 / Challenge Topics</p>
+            <p class="section-kicker">02 / Challenge Topics</p>
             <h2 data-i18n="tracks.title">產業命題預告</h2>
             <p data-i18n="tracks.body">六題真實場景。完整命題於入選後工作坊公布。</p>
           </div>
@@ -456,6 +300,154 @@
             </article>
           </div>
           <p class="tracks-preview-note" data-i18n="tracks.note">報名前先想：你的場景，信任缺口在哪？完整命題（背景、核心可信問題、方向提示）將於入選後工作坊公布，屆時亦說明命題選擇方式。</p>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="benefits">
+        <div class="reveal container">
+          <div class="section-heading">
+            <p class="section-kicker">03 / Why Join</p>
+            <h2 data-i18n="benefits.title">為什麼參加</h2>
+            <p data-i18n="benefits.subtitle">免費參加。全力以赴。</p>
+          </div>
+          <div class="benefit-grid">
+            <article class="benefit-card">
+              <span class="benefit-icon"><svg><use href="#icon-card"></use></svg></span>
+              <h3 data-i18n="benefit.demo.title">Demo Day 舞台</h3>
+              <p data-i18n="benefit.demo.body">向產業評審與與會者展示成果。</p>
+            </article>
+            <article class="benefit-card">
+              <span class="benefit-icon"><svg><use href="#icon-shield"></use></svg></span>
+              <h3 data-i18n="benefit.mentor.title">Mentor Office Hours</h3>
+              <p data-i18n="benefit.mentor.body">現場導師支援與開發指導。</p>
+            </article>
+            <article class="benefit-card">
+              <span class="benefit-icon"><svg><use href="#icon-code"></use></svg></span>
+              <h3 data-i18n="benefit.poc.title">POC 對接</h3>
+              <p data-i18n="benefit.poc.body">作品與場景問題接軌後續合作討論。</p>
+            </article>
+            <article class="benefit-card">
+              <span class="benefit-icon"><svg><use href="#icon-log"></use></svg></span>
+              <h3 data-i18n="benefit.proof.title">完賽證明</h3>
+              <p data-i18n="benefit.proof.body">完成交付與展示即獲完賽證明。</p>
+            </article>
+            <article class="benefit-card">
+              <span class="benefit-icon"><svg><use href="#icon-building"></use></svg></span>
+              <h3 data-i18n="benefit.meals.title">餐食與過夜</h3>
+              <p data-i18n="benefit.meals.body">活動期間供餐，8/29 可選過夜。</p>
+            </article>
+            <article class="benefit-card">
+              <span class="benefit-icon"><svg><use href="#icon-network"></use></svg></span>
+              <h3 data-i18n="benefit.team.title">跨域隊友</h3>
+              <p data-i18n="benefit.team.body">尚未組隊者可在賽前工作坊認識 AI、資安、區塊鏈與產品等跨域夥伴。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="prizes">
+        <div class="reveal container">
+          <div class="section-heading">
+            <p class="section-kicker">04 / Prize</p>
+            <h2 data-i18n="prize.title">獎項</h2>
+            <p class="prize-total" data-i18n="prize.total">總獎金 USD 12,000+</p>
+            <p class="prize-total-note" data-i18n="prize.total.note">將隨贊助加碼</p>
+            <p data-i18n="prize.body">主辦得增設特別獎，獎項內容以正式公告為準。</p>
+          </div>
+          <div class="prize-grid prize-grid-public prize-podium">
+            <article class="prize-card prize-main">
+              <h3 data-i18n="prize.grand.title">冠軍</h3>
+              <p class="prize-amount" data-i18n="prize.grand.amount">USD 5,000</p>
+              <p data-i18n="prize.grand.count">1 隊</p>
+            </article>
+            <article class="prize-card prize-runner">
+              <h3 data-i18n="prize.runner.title">亞軍</h3>
+              <p class="prize-amount" data-i18n="prize.runner.amount">USD 2,000</p>
+              <p data-i18n="prize.runner.count">2 隊・每隊</p>
+            </article>
+            <article class="prize-card prize-third">
+              <h3 data-i18n="prize.third.title">季軍</h3>
+              <p class="prize-amount" data-i18n="prize.third.amount">USD 1,000</p>
+              <p data-i18n="prize.third.count">3 隊・每隊</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="roadmap">
+        <div class="reveal container">
+          <div class="section-heading">
+            <p class="section-kicker">05 / Roadmap</p>
+            <h2 data-i18n="roadmap.title">時間軸</h2>
+            <p data-i18n="roadmap.body">各項時間以主辦方最新公告為準。</p>
+            <p class="timeline-status" id="timelineStatus" aria-live="polite"></p>
+          </div>
+          <ol class="timeline" aria-label="活動流程圖" data-i18n="aria.timeline" data-i18n-attr="aria-label">
+            <li class="timeline-step timeline-entry" data-date="2026-07-08"><time datetime="2026-07-08" data-i18n="date.registration">7/8（三）</time><span data-i18n="timeline.registration">開放報名</span></li>
+            <li class="timeline-step timeline-entry" data-date="2026-07-20"><time datetime="2026-07-20" data-i18n="date.info">7/20（一）</time><span data-i18n="timeline.info">線上說明會</span></li>
+            <li class="timeline-step timeline-entry" data-date="2026-08-05"><time datetime="2026-08-05" data-i18n="date.deadline">8/5（三）</time><span data-i18n="timeline.deadline">報名截止</span></li>
+            <li class="timeline-step timeline-prep" data-date="2026-08-07"><time datetime="2026-08-07" data-i18n="date.finalists">8/7（五）</time><span data-i18n="timeline.finalists">公告初選名單</span></li>
+            <li class="timeline-step timeline-prep" data-date="2026-08-09"><time datetime="2026-08-09" data-i18n="date.confirm">8/9（日）</time><span data-i18n="timeline.confirm">入選者回覆期限</span></li>
+            <li class="timeline-step timeline-prep" data-date="2026-08-15"><time datetime="2026-08-15" data-i18n="date.workshop1">8/15（六）</time><span data-i18n="timeline.workshop1">Workshop #1（線上，限入選）</span></li>
+            <li class="timeline-step timeline-prep" data-date="2026-08-22"><time datetime="2026-08-22" data-i18n="date.workshop2">8/22（六）</time><span data-i18n="timeline.workshop2">Workshop #2（線下，限入選）</span></li>
+            <li class="timeline-step timeline-event" data-date="2026-08-29"><time datetime="2026-08-29" data-i18n="date.hackathon1">8/29（六）</time><span data-i18n="timeline.hackathon1">Hackathon Day 1</span></li>
+            <li class="timeline-step timeline-event" data-date="2026-08-30"><time datetime="2026-08-30" data-i18n="date.hackathon2">8/30（日）</time><span data-i18n="timeline.hackathon2">Hackathon Day 2</span></li>
+            <li class="timeline-step timeline-event" data-date="2026-08-31"><time datetime="2026-08-31" data-i18n="date.demo">8/31（一）</time><span data-i18n="timeline.demo">Demo Day</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="info">
+        <div class="reveal container">
+          <div class="section-heading">
+            <p class="section-kicker">06 / Event Info</p>
+            <h2 data-i18n="info.title">活動資訊</h2>
+            <p data-i18n="info.subtitle">兩日實作。第三天上台。</p>
+          </div>
+          <div class="feature-grid info-feature-grid">
+            <article class="feature-card">
+              <span class="feature-icon"><svg><use href="#icon-code"></use></svg></span>
+              <h3 data-i18n="position.build.title">兩日實作</h3>
+              <p data-i18n="position.build.body">入選者完成組隊後，現場完成可信 AI Agent 原型與 Demo Day 展示。</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon"><svg><use href="#icon-log"></use></svg></span>
+              <h3 data-i18n="position.memo.title">治理／信任設計說明</h3>
+              <p data-i18n="position.memo.body">以一頁 Governance Gap Memo 說明作品的信任設計。</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon"><svg><use href="#icon-card"></use></svg></span>
+              <h3 data-i18n="position.poc.title">週末實作到 POC</h3>
+              <p data-i18n="position.poc.body">把場景痛點、Agent 原型與後續合作可能性接起來。</p>
+            </article>
+          </div>
+          <div class="stat-grid" role="group" aria-label="活動規模" data-i18n="aria.eventScale" data-i18n-attr="aria-label" hidden>
+            <div><strong data-i18n="stat.teams.count">最多 20</strong><span data-i18n="stat.teams">錄取隊伍</span></div>
+            <div><strong>3-5</strong><span data-i18n="stat.members">每隊人數</span></div>
+            <div><strong>60-100</strong><span data-i18n="stat.participants">預計參賽者</span></div>
+            <div><strong>6</strong><span data-i18n="stat.tracks">產業命題</span></div>
+            <div><strong>2</strong><span data-i18n="stat.workshops">賽前工作坊</span></div>
+          </div>
+          <div class="day-grid">
+            <article class="day-card">
+              <svg class="card-icon"><use href="#icon-network"></use></svg>
+              <span>Day 1 | 8/29</span>
+              <h3 data-i18n="day1.title">開幕與隊伍確認</h3>
+              <p data-i18n="day1.body">報到、活動規則說明、隊伍與命題開發方向確認。</p>
+            </article>
+            <article class="day-card">
+              <svg class="card-icon"><use href="#icon-code"></use></svg>
+              <span>Day 2 | 8/30</span>
+              <h3 data-i18n="day2.title">實作與交件</h3>
+              <p data-i18n="day2.body">Build sprint、mentor office hours、收尾與正式交件。</p>
+            </article>
+            <article class="day-card">
+              <svg class="card-icon"><use href="#icon-card"></use></svg>
+              <span>Demo Day | 8/31</span>
+              <h3 data-i18n="day3.title">成果簡報與頒獎</h3>
+              <p data-i18n="day3.body">成果簡報、評審、頒獎與完賽證明。</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -600,10 +592,9 @@
                 <h3 data-i18n="preevent.info.title">線上說明會</h3>
                 <span class="info-session-badge" data-info-session-badge data-i18n="preevent.info.badge.past" hidden>已結束</span>
               </div>
-              <p data-info-session-body data-i18n="preevent.info.body.past">已於 7/20（一）舉行。當天說明活動內容並進行現場 Q&amp;A；活動錄影不對外公開，簡報資料將於近日公開。</p>
+              <p data-info-session-body data-i18n="preevent.info.body.past">已於 7/20（一）舉行。當天說明活動內容並進行現場 Q&amp;A；活動錄影不對外公開。</p>
               <div class="workshop-actions" data-info-session-actions hidden>
                 <a class="button button-small button-primary" href="https://luma.com/w6sjiy30" data-info-session-link target="_blank" rel="noopener" data-i18n="infoSession.register">前往 Luma 報名說明會</a>
-                <a class="button button-small button-secondary" href="#pre-events" data-info-session-slides target="_blank" rel="noopener" data-i18n="infoSession.slides" hidden>查看說明會簡報</a>
               </div>
             </article>
             <article class="workshop-card"><svg class="card-icon"><use href="#icon-shield"></use></svg><span data-i18n="workshops.card1.meta">8/15（六）</span><h3 data-i18n="workshops.card1.title">Workshop #1（線上）</h3><p data-i18n="workshops.card1.body">可信 AI Agent 與數位憑證工具導覽；尚未完成組隊者可在本場開始認識隊友與媒合。限入選者參加。</p></article>
@@ -673,7 +664,7 @@
           <section class="faq-group">
             <h3>C. 時程、出席與交件</h3>
             <details><summary>重要時程有哪些？</summary><p>7/8 開放報名、7/20 線上說明會、8/5 截止、8/7 公告入選、8/9 入選者回覆期限、8/15 工作坊 #1（線上）、8/22 工作坊 #2（線下）、8/29-8/30 Hackathon、8/31 Demo Day。</p></details>
-            <details><summary>Team Leader 一定要出席嗎？</summary><p>是。Team Leader 須全程出席兩場賽前工作坊、Hackathon 與 Demo Day。線上說明會已於 7/20 舉行，活動錄影不對外公開；簡報資料將於近日公開。</p></details>
+            <details><summary>Team Leader 一定要出席嗎？</summary><p>是。Team Leader 須全程出席兩場賽前工作坊、Hackathon 與 Demo Day。線上說明會已於 7/20 舉行，活動錄影不對外公開。</p></details>
             <details><summary>其他隊員一定要參加工作坊嗎？</summary><p>已完成組隊者除 Team Leader 須全程出席外，其他隊員不強制，但強烈建議參與。個人或未滿員隊伍若需要媒合，請參與賽前工作坊，以便認識隊友並確認最終隊伍。</p></details>
             <details><summary>有提供過夜嗎？</summary><p>8/29-8/30 提供過夜，自由參加，可選擇不過夜或當日往返；過夜名額、分區與相關安排將於錄取確認後另行通知。</p></details>
             <details><summary>要交什麼？</summary><p>程式碼儲存庫（GitHub）、簡報、Demo 連結或影片、一頁治理／信任設計說明、README。</p></details>

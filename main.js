@@ -11,7 +11,13 @@
   } catch {
     // Storage can be unavailable in strict privacy modes; the site still works.
   }
-  let currentLocale = storedLocale || defaultLocale;
+  const requestedLocale = new URLSearchParams(window.location.search).get("lang");
+  const urlLocale = requestedLocale === "en"
+    ? "en"
+    : requestedLocale === "zh" || requestedLocale === "zh-Hant"
+      ? "zh-Hant"
+      : null;
+  let currentLocale = urlLocale || (storedLocale === "en" ? "en" : defaultLocale);
 
   document.body.classList.add("js-on");
 
@@ -32,6 +38,16 @@
 
   function t(key, locale = currentLocale) {
     return translations[locale]?.[key] || translations[defaultLocale]?.[key] || key;
+  }
+
+  function syncLanguageUrl(locale) {
+    const url = new URL(window.location.href);
+    if (locale === "en") {
+      url.searchParams.set("lang", "en");
+    } else {
+      url.searchParams.delete("lang");
+    }
+    window.history.replaceState(window.history.state, "", `${url.pathname}${url.search}${url.hash}`);
   }
 
   function rafThrottle(callback) {
@@ -156,6 +172,50 @@
         link.classList.add("is-phase-note");
         if (link.hasAttribute("data-mobile-cta")) link.hidden = true;
       }
+    });
+  }
+
+  function formatRegistrationDeadline(date, locale = currentLocale) {
+    const options = {
+      timeZone: "Asia/Taipei",
+      month: locale === "en" ? "short" : "numeric",
+      day: "numeric",
+      weekday: "short",
+      hour: "2-digit",
+      minute: "2-digit",
+      hourCycle: "h23"
+    };
+    const parts = Object.fromEntries(
+      new Intl.DateTimeFormat(locale === "en" ? "en-US" : "zh-TW", options)
+        .formatToParts(date)
+        .filter((part) => part.type !== "literal")
+        .map((part) => [part.type, part.value])
+    );
+    if (locale === "en") {
+      return `${parts.month} ${parts.day} (${parts.weekday}) · ${parts.hour}:${parts.minute}`;
+    }
+    return `${parts.month}/${parts.day}（${parts.weekday.replace(/^週/, "")}）${parts.hour}:${parts.minute}`;
+  }
+
+  function updateRegistrationDeadline(now = getNow()) {
+    const closeAt = new Date(config.registrationCloseAt);
+    const isValid = !Number.isNaN(closeAt.getTime());
+    const state = isValid ? getRegistrationState(now) : "closed";
+    const labelKey = state === "closed"
+      ? "registration.deadline.closed"
+      : "registration.deadline.open";
+
+    document.querySelectorAll("[data-registration-deadline-wrap]").forEach((wrap) => {
+      wrap.hidden = !isValid;
+      wrap.dataset.state = state;
+    });
+    document.querySelectorAll("[data-registration-deadline-label]").forEach((label) => {
+      label.textContent = t(labelKey);
+    });
+    document.querySelectorAll("[data-registration-deadline]").forEach((time) => {
+      if (!isValid) return;
+      time.dateTime = config.registrationCloseAt;
+      time.textContent = formatRegistrationDeadline(closeAt);
     });
   }
 
@@ -308,13 +368,19 @@
     const ogDescription = document.querySelector('meta[property="og:description"]');
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
     const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    const ogUrl = document.querySelector('meta[property="og:url"]');
     const canonical = document.querySelector('link[rel="canonical"]');
+    const canonicalUrl = new URL(config.canonicalUrl || window.location.origin);
+    if (currentLocale === "en") canonicalUrl.searchParams.set("lang", "en");
     if (description) description.setAttribute("content", t("meta.description"));
     if (ogTitle) ogTitle.setAttribute("content", t("og.title"));
     if (ogDescription) ogDescription.setAttribute("content", t("meta.description"));
     if (twitterTitle) twitterTitle.setAttribute("content", t("og.title"));
     if (twitterDescription) twitterDescription.setAttribute("content", t("meta.description"));
-    if (canonical && config.canonicalUrl) canonical.href = config.canonicalUrl;
+    if (ogLocale) ogLocale.setAttribute("content", currentLocale === "en" ? "en_US" : "zh_TW");
+    if (ogUrl) ogUrl.setAttribute("content", canonicalUrl.href);
+    if (canonical) canonical.href = canonicalUrl.href;
   }
 
   function renderJsonLd() {
@@ -416,8 +482,6 @@
     const isArchived = now > endAt;
     const showBanner = !isArchived;
     const applyUrl = config.infoSessionApplyUrl || config.registrationUrl || "#rules";
-    const slidesUrl = config.infoSessionSlidesUrl;
-    const showSlides = Boolean(slidesUrl);
     const showRegistration = showBanner && Boolean(applyUrl);
     const bodyKey = isArchived ? "preevent.info.body.past" : "preevent.info.body";
 
@@ -440,27 +504,18 @@
     });
 
     document.querySelectorAll("[data-info-session-actions]").forEach((el) => {
-      el.hidden = !showRegistration && !showSlides;
+      el.hidden = !showRegistration;
     });
 
     document.querySelectorAll("[data-info-session-link]").forEach((link) => {
       link.href = applyUrl;
       link.hidden = !showRegistration;
     });
-
-    document.querySelectorAll("[data-info-session-slides]").forEach((link) => {
-      if (showSlides) {
-        link.href = slidesUrl;
-        link.hidden = false;
-      } else {
-        link.href = "#pre-events";
-        link.hidden = true;
-      }
-    });
   }
 
-  function setLanguage(locale, persist = false, initial = false) {
+  function setLanguage(locale, persist = false, initial = false, updateUrl = true) {
     currentLocale = locale === "en" ? "en" : "zh-Hant";
+    if (updateUrl) syncLanguageUrl(currentLocale);
     document.documentElement.lang = currentLocale;
     document.body.classList.toggle("is-en", currentLocale === "en");
     updateMetadata();
@@ -481,6 +536,7 @@
     renderJudges();
     renumberSectionKickers();
     updateRegistrationLinks();
+    updateRegistrationDeadline();
     applyPhase();
     updateTimelineStatus();
     updateRuleDownloads();
@@ -575,7 +631,17 @@
 
   navLinks.forEach((link) => link.addEventListener("click", () => closeMenu(false)));
   langButtons.forEach((button) => {
-    button.addEventListener("click", () => setLanguage(button.dataset.langButton, true));
+    button.addEventListener("click", () => {
+      setLanguage(button.dataset.langButton, true);
+      if (window.innerWidth <= 820 && document.body.classList.contains("nav-open")) {
+        closeMenu(true);
+      }
+    });
+  });
+
+  window.addEventListener("popstate", () => {
+    const lang = new URLSearchParams(window.location.search).get("lang");
+    setLanguage(lang === "en" ? "en" : defaultLocale, false, false, false);
   });
 
   document.addEventListener("keydown", (event) => {
