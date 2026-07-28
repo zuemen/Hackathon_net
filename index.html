@@ -124,6 +124,11 @@
 
     <main id="main">
       <section class="hero" id="hero">
+        <picture class="hero-kv-media" aria-hidden="true">
+          <source media="(max-width: 820px)" srcset="./assets/og-trustworthy-ai-hackathon.jpg" type="image/jpeg">
+          <source srcset="./assets/hero-kv.webp" type="image/webp">
+          <img src="./assets/hero-kv.jpg" alt="" width="8000" height="4001" loading="eager" decoding="async" fetchpriority="high">
+        </picture>
         <div class="network-bg" aria-hidden="true"></div>
         <div class="container hero-grid">
           <div class="hero-copy reveal">
@@ -209,7 +214,7 @@
               <span class="statband-label" data-i18n="statband.days">天：兩日實作＋Demo Day</span>
             </a>
             <a class="statband-item" href="#info">
-              <span class="statband-num">100</span>
+              <span class="statband-num">60-100</span>
               <span class="statband-label" data-i18n="statband.participants">預計參賽者</span>
             </a>
           </div>
@@ -470,6 +475,7 @@
               <a class="button button-secondary" href="https://padlet.com/Trustworthy/trustworthy-ai-hackathon-6r3tvsp4rktkz5xy" target="_blank" rel="noopener noreferrer" data-matchmaking-link data-i18n="matchmaking.cta">尋找隊友／團隊媒合</a>
               <a class="button button-secondary" data-download-rules href="assets/official/Trustworthy-AI-Hackathon-2026-Rules.pdf" download="可信AI黑客松2026_比賽辦法.pdf" data-i18n="rules.download">比賽辦法 PDF</a>
             </div>
+            <p class="rulebook-update-note" role="note" data-i18n="rules.updateNote">簡章更新版本準備中，題目相關規定以本站「產業命題預告」與 FAQ 說明為準。</p>
             <p data-i18n="rules.body">個人或隊伍皆可先報名；最終以 3–5 人隊伍參賽，細節以正式簡章為準。</p>
           </div>
           <div class="rule-stack">
@@ -535,9 +541,10 @@
                   <span class="network-note-number" aria-hidden="true">LINEUP</span>
                   <h3 data-i18n="judges.group">評審與導師</h3>
                   <p data-i18n="judges.pending">將邀請產業、學界與社群代表參與評審與指導；名單以正式公告為準。</p>
+                  <div class="judge-list" data-judges-list hidden></div>
                 </div>
               </div>
-              <span class="network-note-status"><span aria-hidden="true"></span><span data-i18n="judges.toBeAnnounced">待公開</span></span>
+              <span class="network-note-status" data-judges-status><span aria-hidden="true"></span><span data-i18n="judges.toBeAnnounced">待公開</span></span>
             </article>
             <article class="network-note">
               <div class="network-note-top">
@@ -553,7 +560,10 @@
                 <span class="network-note-number" aria-hidden="true">02</span>
               </div>
               <h3 data-i18n="judges.organizer">主辦單位</h3>
-              <p class="network-note-status"><span aria-hidden="true"></span><span data-i18n="judges.toBeAnnounced">待公開</span></p>
+              <div class="network-organizer">
+                <img src="./assets/official/tabei-logo.png" alt="TABEI" width="1439" height="289" loading="lazy" decoding="async">
+                <p data-i18n="judges.organizer.name">臺灣區塊鏈愛好者協會（TABEI）</p>
+              </div>
             </article>
             <article class="network-note">
               <div class="network-note-top">
@@ -583,7 +593,19 @@
             <p data-i18n="pre.events.subtitle">從活動說明、組隊媒合，到題目收斂。</p>
           </div>
           <div class="workshop-grid workshop-grid-conservative">
-            <article class="workshop-card"><svg class="card-icon"><use href="#icon-card"></use></svg><span data-i18n="preevent.info.meta">7/20（一）</span><h3 data-i18n="preevent.info.title">線上說明會</h3><p data-i18n="preevent.info.body">開放所有人參加。於 Luma 完成報名後，會議連結將寄送至你的信箱；當天將說明活動內容並進行現場 Q&amp;A。會後不公開活動錄影；簡報資料將於會後公開，供所有人查閱。</p><div class="workshop-actions" data-info-session-actions hidden><a class="button button-small button-primary" href="https://luma.com/w6sjiy30" data-info-session-link target="_blank" rel="noopener" data-i18n="infoSession.register">前往 Luma 報名說明會</a><a class="button button-small button-secondary" href="#pre-events" data-info-session-slides target="_blank" rel="noopener" data-i18n="infoSession.slides" hidden>查看說明會簡報</a></div></article>
+            <article class="workshop-card" data-info-session-card>
+              <svg class="card-icon"><use href="#icon-card"></use></svg>
+              <span data-i18n="preevent.info.meta">7/20（一）</span>
+              <div class="workshop-title-row">
+                <h3 data-i18n="preevent.info.title">線上說明會</h3>
+                <span class="info-session-badge" data-info-session-badge data-i18n="preevent.info.badge.past" hidden>已結束</span>
+              </div>
+              <p data-info-session-body data-i18n="preevent.info.body.past">已於 7/20（一）舉行。當天說明活動內容並進行現場 Q&amp;A；活動錄影不對外公開，簡報資料將於近日公開。</p>
+              <div class="workshop-actions" data-info-session-actions hidden>
+                <a class="button button-small button-primary" href="https://luma.com/w6sjiy30" data-info-session-link target="_blank" rel="noopener" data-i18n="infoSession.register">前往 Luma 報名說明會</a>
+                <a class="button button-small button-secondary" href="#pre-events" data-info-session-slides target="_blank" rel="noopener" data-i18n="infoSession.slides" hidden>查看說明會簡報</a>
+              </div>
+            </article>
             <article class="workshop-card"><svg class="card-icon"><use href="#icon-shield"></use></svg><span data-i18n="workshops.card1.meta">8/15（六）</span><h3 data-i18n="workshops.card1.title">Workshop #1（線上）</h3><p data-i18n="workshops.card1.body">可信 AI Agent 與數位憑證工具導覽；尚未完成組隊者可在本場開始認識隊友與媒合。限入選者參加。</p></article>
             <article class="workshop-card"><svg class="card-icon"><use href="#icon-network"></use></svg><span data-i18n="workshops.card2.meta">8/22（六）</span><h3 data-i18n="workshops.card2.title">Workshop #2（線下）</h3><p data-i18n="workshops.card2.body">六題完整命題公布、產業痛點說明與 POC 題目收斂；尚未完成組隊者可在本場持續媒合並確認最終隊伍。限入選者參加。</p></article>
           </div>
@@ -651,7 +673,7 @@
           <section class="faq-group">
             <h3>C. 時程、出席與交件</h3>
             <details><summary>重要時程有哪些？</summary><p>7/8 開放報名、7/20 線上說明會、8/5 截止、8/7 公告入選、8/9 入選者回覆期限、8/15 工作坊 #1（線上）、8/22 工作坊 #2（線下）、8/29-8/30 Hackathon、8/31 Demo Day。</p></details>
-            <details><summary>Team Leader 一定要出席嗎？</summary><p>是。Team Leader 須全程出席兩場賽前工作坊、Hackathon 與 Demo Day。線上說明會開放所有人參加，於 Luma 報名後會收到會議連結；無法參加者可於會後查閱公開簡報，活動錄影不對外公開。</p></details>
+            <details><summary>Team Leader 一定要出席嗎？</summary><p>是。Team Leader 須全程出席兩場賽前工作坊、Hackathon 與 Demo Day。線上說明會已於 7/20 舉行，活動錄影不對外公開；簡報資料將於近日公開。</p></details>
             <details><summary>其他隊員一定要參加工作坊嗎？</summary><p>已完成組隊者除 Team Leader 須全程出席外，其他隊員不強制，但強烈建議參與。個人或未滿員隊伍若需要媒合，請參與賽前工作坊，以便認識隊友並確認最終隊伍。</p></details>
             <details><summary>有提供過夜嗎？</summary><p>8/29-8/30 提供過夜，自由參加，可選擇不過夜或當日往返；過夜名額、分區與相關安排將於錄取確認後另行通知。</p></details>
             <details><summary>要交什麼？</summary><p>程式碼儲存庫（GitHub）、簡報、Demo 連結或影片、一頁治理／信任設計說明、README。</p></details>

@@ -2,6 +2,7 @@
   const config = window.SITE_CONFIG || {};
   const translations = window.TRANSLATIONS || {};
   const faqGroups = window.FAQ_GROUPS || {};
+  const judges = Array.isArray(window.JUDGES) ? window.JUDGES : [];
   const socials = window.SOCIAL_LINKS || {};
   const defaultLocale = config.defaultLocale || "zh-Hant";
   let storedLocale = null;
@@ -194,6 +195,48 @@
       .join("");
   }
 
+  function localizedValue(value) {
+    if (typeof value === "string") return value;
+    if (!value || typeof value !== "object") return "";
+    return value[currentLocale] || value[defaultLocale] || value.en || "";
+  }
+
+  function renderJudges() {
+    const list = document.querySelector("[data-judges-list]");
+    const status = document.querySelector("[data-judges-status]");
+    if (!list) return;
+
+    const confirmed = judges
+      .map((person) => ({
+        name: localizedValue(person.name),
+        role: localizedValue(person.role),
+        organization: localizedValue(person.organization),
+        image: person.image || "",
+        alt: localizedValue(person.alt)
+      }))
+      .filter((person) => person.name);
+
+    list.hidden = !confirmed.length;
+    if (status) status.hidden = Boolean(confirmed.length);
+    list.innerHTML = confirmed
+      .map((person) => {
+        const details = [person.role, person.organization].filter(Boolean).join(" · ");
+        const image = person.image
+          ? `<img src="${escapeHTML(person.image)}" alt="${escapeHTML(person.alt || person.name)}" width="52" height="52" loading="lazy" decoding="async">`
+          : "";
+        return `
+          <article class="judge-card">
+            ${image}
+            <div>
+              <strong>${escapeHTML(person.name)}</strong>
+              ${details ? `<span>${escapeHTML(details)}</span>` : ""}
+            </div>
+          </article>
+        `;
+      })
+      .join("");
+  }
+
   function renumberSectionKickers() {
     let index = 1;
     document.querySelectorAll("main > section[id]:not([hidden]) .section-kicker").forEach((kicker) => {
@@ -370,11 +413,27 @@
   function updateInfoSessionLinks(now = getNow()) {
     const date = config.infoSessionDate || "2026-07-20";
     const endAt = new Date(config.infoSessionEndAt || `${date}T21:00:00+08:00`);
-    const showBanner = now <= endAt;
+    const isArchived = now > endAt;
+    const showBanner = !isArchived;
     const applyUrl = config.infoSessionApplyUrl || config.registrationUrl || "#rules";
     const slidesUrl = config.infoSessionSlidesUrl;
     const showSlides = Boolean(slidesUrl);
     const showRegistration = showBanner && Boolean(applyUrl);
+    const bodyKey = isArchived ? "preevent.info.body.past" : "preevent.info.body";
+
+    document.querySelectorAll("[data-info-session-card]").forEach((card) => {
+      card.dataset.state = isArchived ? "archive" : "upcoming";
+    });
+
+    document.querySelectorAll("[data-info-session-body]").forEach((body) => {
+      body.dataset.i18n = bodyKey;
+      body.textContent = t(bodyKey);
+    });
+
+    document.querySelectorAll("[data-info-session-badge]").forEach((badge) => {
+      badge.hidden = !isArchived;
+      badge.textContent = t("preevent.info.badge.past");
+    });
 
     document.querySelectorAll("[data-info-session-banner]").forEach((el) => {
       el.hidden = !showBanner;
@@ -419,6 +478,7 @@
     // (re)render via JS when switching language or when the initial locale is en.
     if (!(initial && currentLocale === defaultLocale)) renderFaq(currentLocale);
     renderFinalists();
+    renderJudges();
     renumberSectionKickers();
     updateRegistrationLinks();
     applyPhase();

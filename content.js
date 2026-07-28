@@ -211,6 +211,8 @@ window.TRANSLATIONS = {
     "preevent.info.meta": "7/20（一）",
     "preevent.info.title": "線上說明會",
     "preevent.info.body": "開放所有人參加。於 Luma 完成報名後，會議連結將寄送至你的信箱；當天將說明活動內容並進行現場 Q&A。會後不公開活動錄影；簡報資料將於會後公開，供所有人查閱。",
+    "preevent.info.body.past": "已於 7/20（一）舉行。當天說明活動內容並進行現場 Q&A；活動錄影不對外公開，簡報資料將於近日公開。",
+    "preevent.info.badge.past": "已結束",
     "infoSession.banner": "線上說明會｜7/20（一）舉行・開放報名｜於 Luma 報名後寄送會議連結",
     "infoSession.register": "前往 Luma 報名說明會",
     "announce.cta": "前往 Luma 報名 →",
@@ -232,6 +234,8 @@ window.TRANSLATIONS = {
     "judges.partners": "合作夥伴",
     "judges.sponsors": "贊助夥伴",
     "judges.toBeAnnounced": "待公開",
+    "judges.organizer.name": "臺灣區塊鏈愛好者協會（TABEI）",
+    "rules.updateNote": "簡章更新版本準備中，題目相關規定以本站「產業命題預告」與 FAQ 說明為準。",
     "faq.title": "常見問答",
     "faq.body": "單人報名、組隊媒合、出席與交件，一次說清楚。",
     "venue.title": "場地與交通",
@@ -458,6 +462,8 @@ window.TRANSLATIONS = {
     "preevent.info.meta": "Jul 20 (Mon)",
     "preevent.info.title": "Online info session",
     "preevent.info.body": "Open to everyone. RSVP on Luma and the meeting link will be emailed to you. The session will include an event overview and live Q&A. The recording will not be made public; presentation slides will be made available afterwards for everyone to view.",
+    "preevent.info.body.past": "Held on July 20 (Mon). The session covered the event overview and live Q&A. The recording is not publicly released; presentation slides will be published soon.",
+    "preevent.info.badge.past": "Concluded",
     "infoSession.banner": "Online info session | Jul 20 (Mon) · Open to all — RSVP on Luma to get the link",
     "infoSession.register": "RSVP on Luma",
     "announce.cta": "RSVP on Luma →",
@@ -479,6 +485,8 @@ window.TRANSLATIONS = {
     "judges.partners": "Partners",
     "judges.sponsors": "Sponsoring Partners",
     "judges.toBeAnnounced": "To be announced",
+    "judges.organizer.name": "Taiwan Association for Blockchain Ecosystem Innovation (TABEI)",
+    "rules.updateNote": "An updated rulebook is in preparation. For topic-related rules, the Challenge Topics Preview and FAQ on this site take precedence.",
     "faq.title": "FAQ",
     "faq.body": "Solo registration, team matching, attendance and deliverables — explained in one place.",
     "venue.title": "Venue & Access",
@@ -494,6 +502,17 @@ window.TRANSLATIONS = {
     "footer.org.en": "Taiwan Association for Blockchain Ecosystem Innovation (TABEI)"
   }
 };
+
+// Add confirmed judges and mentors here as they are announced.
+// Each field may provide localized values; image is an optional asset path.
+window.JUDGES = [
+  // {
+  //   name: { "zh-Hant": "", en: "" },
+  //   role: { "zh-Hant": "", en: "" },
+  //   organization: { "zh-Hant": "", en: "" },
+  //   image: ""
+  // }
+];
 
 window.FAQ_GROUPS = {
   "zh-Hant": [
@@ -516,7 +535,7 @@ window.FAQ_GROUPS = {
     ]],
     ["C. 時程、出席與交件", [
       ["重要時程有哪些？", "7/8 開放報名、7/20 線上說明會、8/5 截止、8/7 公告入選、8/9 入選者回覆期限、8/15 工作坊 #1（線上）、8/22 工作坊 #2（線下）、8/29-8/30 Hackathon、8/31 Demo Day。"],
-      ["Team Leader 一定要出席嗎？", "是。Team Leader 須全程出席兩場賽前工作坊、Hackathon 與 Demo Day。線上說明會開放所有人參加，於 Luma 報名後會收到會議連結；無法參加者可於會後查閱公開簡報，活動錄影不對外公開。"],
+      ["Team Leader 一定要出席嗎？", "是。Team Leader 須全程出席兩場賽前工作坊、Hackathon 與 Demo Day。線上說明會已於 7/20 舉行，活動錄影不對外公開；簡報資料將於近日公開。"],
       ["其他隊員一定要參加工作坊嗎？", "已完成組隊者除 Team Leader 須全程出席外，其他隊員不強制，但強烈建議參與。個人或未滿員隊伍若需要媒合，請參與賽前工作坊，以便認識隊友並確認最終隊伍。"],
       ["有提供過夜嗎？", "8/29-8/30 提供過夜，自由參加，可選擇不過夜或當日往返；過夜名額、分區與相關安排將於錄取確認後另行通知。"],
       ["要交什麼？", "程式碼儲存庫（GitHub）、簡報、Demo 連結或影片、一頁治理／信任設計說明、README。"],
@@ -553,7 +572,7 @@ window.FAQ_GROUPS = {
     ]],
     ["C. Schedule, Attendance, and Deliverables", [
       ["What are the key dates?", "7/8 applications open, 7/20 online info session, 8/5 deadline, 8/7 finalists announced, 8/9 finalist confirmation deadline, 8/15 Workshop #1 (online), 8/22 Workshop #2 (in-person), 8/29-8/30 Hackathon, 8/31 Demo Day."],
-      ["Does the Team Leader have to attend?", "Yes. The Team Leader must attend both pre-event workshops, the Hackathon, and Demo Day. The online info session is open to everyone — RSVP on Luma to receive the meeting link. If you cannot join live, the presentation slides will be made available afterwards; the session recording will not be made public."],
+      ["Does the Team Leader have to attend?", "Yes. The Team Leader must attend both pre-event workshops, the Hackathon, and Demo Day. The online info session was held on July 20. The recording is not publicly released; presentation slides will be published soon."],
       ["Do all other members have to attend the workshops?", "For complete teams, only the Team Leader is required to attend throughout, though other members are strongly encouraged to join. Solo applicants and incomplete teams that need matching should attend the pre-event workshops to meet teammates and confirm their final team."],
       ["Is overnight stay available?", "Overnight stay from 8/29 to 8/30 is optional. You may choose not to stay or commute. Capacity, zoning, and related arrangements will be announced after finalist confirmation."],
       ["What do we submit?", "A GitHub repository, a slide deck, a demo link or video, a one-page governance / trust design note, and a README."],
