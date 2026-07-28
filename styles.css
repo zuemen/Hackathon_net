@@ -5587,3 +5587,1154 @@ summary {
     }
   }
 }
+
+/* ============================================================
+   VISUAL REFRESH 2026
+   Editorial sci-tech rhythm for a long-form event landing page.
+   Keeps the official KV and content model intact.
+   ============================================================ */
+:root {
+  --surface-1: rgba(12, 31, 55, 0.92);
+  --surface-2: rgba(17, 43, 72, 0.78);
+  --surface-3: rgba(21, 54, 86, 0.66);
+  --line-soft: rgba(111, 224, 242, 0.16);
+  --line-strong: rgba(111, 224, 242, 0.34);
+  --shadow-card: 0 22px 60px rgba(2, 12, 25, 0.2);
+  --shadow-lift: 0 26px 68px rgba(2, 12, 25, 0.3);
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 2%, rgba(57, 194, 224, 0.14), transparent 24rem),
+    radial-gradient(circle at 92% 18%, rgba(255, 209, 92, 0.07), transparent 28rem),
+    linear-gradient(180deg, #071528 0%, var(--navy-900) 44%, #071425 100%);
+}
+
+.site-header,
+.site-header.is-solid,
+.site-header.is-open {
+  border-bottom-color: rgba(111, 224, 242, 0.16);
+  background: rgba(6, 20, 38, 0.88);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  backdrop-filter: blur(18px) saturate(1.2);
+}
+
+.site-header.is-solid,
+.site-header.is-open {
+  box-shadow: 0 12px 42px rgba(2, 12, 25, 0.28);
+}
+
+.site-nav {
+  gap: clamp(18px, 2vw, 28px);
+}
+
+.site-nav a {
+  font-weight: 750;
+  letter-spacing: 0.01em;
+}
+
+.button {
+  border-radius: 12px;
+  transition:
+    transform 200ms var(--ease-out),
+    border-color 200ms ease,
+    background-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.button-primary {
+  box-shadow:
+    0 10px 30px rgba(255, 209, 92, 0.17),
+    0 0 22px rgba(255, 209, 92, 0.18);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 36px rgba(255, 209, 92, 0.22),
+    0 0 30px rgba(255, 209, 92, 0.3);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(2, 12, 25, 0.22);
+}
+
+main > .section {
+  position: relative;
+  isolation: isolate;
+  padding-block: clamp(74px, 7vw, 100px);
+  overflow: hidden;
+  scroll-margin-top: 104px;
+}
+
+#benefits,
+#roadmap,
+#tracks,
+#judging,
+#pre-events,
+#venue {
+  border-block: 1px solid rgba(111, 224, 242, 0.08);
+  background:
+    radial-gradient(circle at 8% 18%, rgba(57, 194, 224, 0.075), transparent 28rem),
+    linear-gradient(135deg, rgba(13, 33, 58, 0.74), rgba(7, 22, 41, 0.36));
+}
+
+#roadmap,
+#judging,
+#venue {
+  background:
+    radial-gradient(circle at 90% 12%, rgba(255, 209, 92, 0.045), transparent 26rem),
+    linear-gradient(225deg, rgba(13, 33, 58, 0.72), rgba(7, 22, 41, 0.34));
+}
+
+main > .section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.2;
+  background-image:
+    linear-gradient(rgba(111, 224, 242, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(111, 224, 242, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
+}
+
+.section-heading {
+  margin-bottom: clamp(34px, 4.5vw, 56px);
+}
+
+.section-kicker {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-top: 10px;
+  border-top: 2px solid currentColor;
+  font-size: 0.76rem;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.section-heading h2 {
+  margin-bottom: 14px;
+  font-size: clamp(2.4rem, 4vw, 3.35rem);
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.section-heading > p:not(.section-kicker) {
+  max-width: 70ch;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 1.35vw, 1.1rem);
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+@media (min-width: 900px) {
+  main > .section .section-heading:not(.narrow) {
+    display: grid;
+    max-width: none;
+    grid-template-columns: minmax(150px, 0.22fr) minmax(0, 1fr);
+    column-gap: clamp(32px, 5vw, 72px);
+    align-items: start;
+    text-align: left;
+  }
+
+  main > .section .section-heading:not(.narrow) > .section-kicker {
+    grid-column: 1;
+    grid-row: 1 / span 8;
+    margin: 7px 0 0;
+  }
+
+  main > .section .section-heading:not(.narrow) > :not(.section-kicker) {
+    grid-column: 2;
+  }
+
+  #judges .section-heading {
+    display: block;
+    max-width: 800px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  #judges .section-heading > .section-kicker {
+    margin-inline: auto;
+  }
+}
+
+/* Hero: preserve the official artwork, but make the registration
+   journey feel connected to it instead of a separate generic card. */
+#hero.hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--navy-900);
+}
+
+#hero.hero::after {
+  position: absolute;
+  z-index: 0;
+  inset: auto 0 0;
+  height: 320px;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(180deg, transparent, rgba(7, 20, 38, 0.7) 42%, #071426 100%);
+}
+
+.hero-solo-peek {
+  top: 112px;
+  width: 218px;
+  padding: 17px 19px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 0 0, rgba(255, 209, 92, 0.18), transparent 54%),
+    rgba(7, 25, 46, 0.94);
+  box-shadow:
+    0 20px 48px rgba(1, 10, 21, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition:
+    transform 220ms var(--ease-out),
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.hero-solo-peek:hover,
+.hero-solo-peek:focus-visible {
+  transform: translateY(-4px);
+  box-shadow:
+    0 26px 56px rgba(1, 10, 21, 0.46),
+    0 0 28px rgba(255, 209, 92, 0.12);
+}
+
+#hero .hero-registration {
+  isolation: isolate;
+  gap: clamp(26px, 3.4vw, 48px);
+  padding: clamp(28px, 3.2vw, 40px);
+  border-color: rgba(111, 224, 242, 0.34);
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 4% 0%, rgba(57, 194, 224, 0.2), transparent 38%),
+    radial-gradient(circle at 100% 100%, rgba(255, 209, 92, 0.07), transparent 30%),
+    linear-gradient(135deg, rgba(16, 48, 78, 0.98), rgba(7, 23, 43, 0.99));
+  box-shadow:
+    0 30px 84px rgba(1, 10, 21, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+#hero .hero-registration::before {
+  width: 5px;
+  background: linear-gradient(180deg, var(--gold-400), var(--cyan-300) 72%, transparent);
+}
+
+#hero .hero-registration::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(111, 224, 242, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(111, 224, 242, 0.08) 1px, transparent 1px);
+  background-size: 34px 34px;
+  -webkit-mask-image: linear-gradient(90deg, transparent 18%, #000);
+  mask-image: linear-gradient(90deg, transparent 18%, #000);
+}
+
+.hero-registration-badge {
+  padding: 7px 12px;
+  border-color: rgba(255, 209, 92, 0.56);
+  background: rgba(255, 209, 92, 0.11);
+  box-shadow: 0 0 24px rgba(255, 209, 92, 0.09);
+}
+
+#hero .hero-registration h2 {
+  max-width: 15ch;
+  font-size: clamp(1.65rem, 2.7vw, 2.4rem);
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+#hero .hero-registration-copy > p {
+  max-width: 50ch;
+  font-size: 0.98rem;
+}
+
+.hero-registration-flow {
+  position: relative;
+  gap: 14px;
+}
+
+.hero-registration-flow li {
+  position: relative;
+  min-height: 156px;
+  padding: 19px;
+  border-color: rgba(111, 224, 242, 0.2);
+  border-radius: 17px;
+  background:
+    linear-gradient(145deg, rgba(21, 58, 91, 0.72), rgba(7, 25, 46, 0.82));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 14px 30px rgba(1, 10, 21, 0.13);
+  transition:
+    transform 220ms var(--ease-out),
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.hero-registration-flow li:hover {
+  border-color: rgba(111, 224, 242, 0.38);
+  transform: translateY(-3px);
+}
+
+.hero-registration-flow li:not(:last-child)::after {
+  position: absolute;
+  top: 31px;
+  right: -15px;
+  width: 14px;
+  border-top: 1px solid rgba(111, 224, 242, 0.3);
+  content: "";
+}
+
+.hero-registration-step {
+  width: 34px;
+  height: 34px;
+  border-color: rgba(111, 224, 242, 0.48);
+  box-shadow: 0 0 18px rgba(57, 194, 224, 0.12);
+}
+
+.hero-registration-flow li:first-child .hero-registration-step {
+  color: var(--navy-900);
+  border-color: var(--gold-400);
+  background: var(--gold-400);
+  box-shadow: 0 0 22px rgba(255, 209, 92, 0.24);
+}
+
+.hero-registration-flow strong {
+  font-size: 1rem;
+}
+
+@media (min-width: 821px) {
+  #hero .hero-registration {
+    margin-top: calc(56.25vw - 20px);
+  }
+}
+
+/* Activity numbers: a compact proof strip after the application path. */
+.statband-section {
+  position: relative;
+  z-index: 3;
+  padding: 22px 0 30px;
+}
+
+.statband {
+  border: 1px solid rgba(111, 224, 242, 0.18);
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(18, 47, 76, 0.8), rgba(7, 24, 44, 0.88));
+  box-shadow:
+    var(--shadow-card),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+.statband-item {
+  border-radius: 16px;
+  transition:
+    transform 220ms var(--ease-out),
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.statband-item:hover,
+.statband-item:focus-visible {
+  transform: translateY(-3px);
+}
+
+.role-marquee {
+  margin-top: 18px;
+  opacity: 0.88;
+}
+
+/* 01 — Why now: editorial split instead of a loose paragraph. */
+#why {
+  background:
+    radial-gradient(circle at 82% 48%, rgba(57, 194, 224, 0.08), transparent 28rem),
+    transparent;
+}
+
+#why .compact-section {
+  position: relative;
+}
+
+#why .why-brief {
+  margin: 0;
+  padding: clamp(24px, 3vw, 34px);
+  border: 1px solid rgba(111, 224, 242, 0.2);
+  border-left: 4px solid var(--cyan-300);
+  border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(57, 194, 224, 0.13), transparent 46%),
+    var(--surface-1);
+  box-shadow: var(--shadow-card);
+  font-size: clamp(1.04rem, 1.5vw, 1.2rem);
+  line-height: 1.85;
+  text-wrap: pretty;
+}
+
+#why .question-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+#why .question-grid span {
+  display: flex;
+  min-height: 62px;
+  align-items: center;
+  padding: 14px 17px;
+  border: 1px solid rgba(111, 224, 242, 0.17);
+  border-radius: 14px;
+  background: rgba(17, 44, 73, 0.68);
+  box-shadow: inset 3px 0 0 rgba(111, 224, 242, 0.42);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+#why .question-grid span:last-child {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 900px) {
+  #why .compact-section {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+    column-gap: clamp(36px, 6vw, 84px);
+    row-gap: 14px;
+    align-items: start;
+  }
+
+  #why .section-heading {
+    display: block;
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+
+  #why .section-heading > .section-kicker {
+    margin-bottom: 18px;
+  }
+
+  #why .section-heading h2 {
+    max-width: 7ch;
+    font-size: clamp(3rem, 5.4vw, 4.7rem);
+  }
+
+  #why .why-brief,
+  #why .question-grid {
+    grid-column: 2;
+  }
+
+  #why .why-brief {
+    grid-row: 1;
+  }
+
+  #why .question-grid {
+    grid-row: 2;
+  }
+}
+
+/* 02 — Why join: asymmetric bento hierarchy. */
+#benefits .benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+}
+
+#benefits .benefit-card {
+  grid-column: span 3;
+  min-height: 176px;
+  padding: clamp(22px, 2.4vw, 30px);
+  overflow: hidden;
+  border-color: rgba(111, 224, 242, 0.2);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(57, 194, 224, 0.1), transparent 44%),
+    linear-gradient(145deg, rgba(19, 50, 81, 0.84), rgba(8, 26, 47, 0.92));
+  box-shadow:
+    var(--shadow-card),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+#benefits .benefit-card:nth-child(1),
+#benefits .benefit-card:nth-child(6) {
+  grid-column: span 6;
+  min-height: 194px;
+}
+
+#benefits .benefit-card:nth-child(1) {
+  background:
+    radial-gradient(circle at 94% 14%, rgba(255, 209, 92, 0.13), transparent 40%),
+    radial-gradient(circle at 0 100%, rgba(57, 194, 224, 0.15), transparent 42%),
+    linear-gradient(135deg, rgba(23, 61, 94, 0.96), rgba(8, 27, 49, 0.94));
+}
+
+#benefits .benefit-card:nth-child(6) {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(57, 194, 224, 0.2), transparent 45%),
+    linear-gradient(135deg, rgba(17, 48, 78, 0.96), rgba(8, 27, 49, 0.94));
+}
+
+#benefits .benefit-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(111, 224, 242, 0.24);
+  border-radius: 15px;
+  background: rgba(57, 194, 224, 0.11);
+  box-shadow: 0 12px 26px rgba(2, 12, 25, 0.16);
+}
+
+#benefits .benefit-card:nth-child(1) .benefit-icon {
+  color: var(--gold-400);
+  border-color: rgba(255, 209, 92, 0.32);
+  background: rgba(255, 209, 92, 0.1);
+}
+
+#benefits .benefit-card h3 {
+  margin-bottom: 9px;
+  font-size: clamp(1.08rem, 1.7vw, 1.28rem);
+}
+
+#benefits .benefit-card:nth-child(1) h3,
+#benefits .benefit-card:nth-child(6) h3 {
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+}
+
+#benefits .benefit-card:hover {
+  border-color: rgba(111, 224, 242, 0.4);
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-5px);
+}
+
+/* 03 — Prize: preserve the podium, increase depth and celebration. */
+#prizes {
+  background:
+    radial-gradient(ellipse at 50% 32%, rgba(255, 209, 92, 0.11), transparent 42rem),
+    linear-gradient(180deg, rgba(11, 29, 51, 0.22), rgba(6, 19, 36, 0.45));
+}
+
+#prizes .prize-podium .prize-card {
+  border-radius: 22px;
+  box-shadow:
+    0 28px 72px rgba(1, 10, 21, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055);
+  transition:
+    transform 240ms var(--ease-out),
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+#prizes .prize-main:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 34px 84px rgba(1, 10, 21, 0.38),
+    0 0 64px rgba(255, 209, 92, 0.2);
+}
+
+#prizes .prize-runner:hover,
+#prizes .prize-third:hover {
+  transform: translateY(4px);
+}
+
+/* 04 — Roadmap: make the whole journey one deliberate surface. */
+#roadmap .timeline {
+  padding: 30px 24px 34px;
+  border: 1px solid rgba(111, 224, 242, 0.18);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(57, 194, 224, 0.11), transparent 55%),
+    rgba(7, 24, 44, 0.72);
+  box-shadow:
+    var(--shadow-card),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+#roadmap .timeline-status {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(111, 224, 242, 0.22);
+  border-radius: 999px;
+  background: rgba(57, 194, 224, 0.07);
+}
+
+/* Shared elevated card language for information-heavy sections. */
+.feature-card,
+.day-card,
+.info-card,
+.score-card,
+.minimum-card,
+.workshop-card,
+.venue-card,
+.faq-group {
+  border-radius: var(--radius-lg);
+}
+
+.feature-card,
+.day-card,
+.info-card,
+.score-card,
+.minimum-card,
+.workshop-card {
+  border-color: rgba(111, 224, 242, 0.19);
+  background:
+    linear-gradient(145deg, rgba(18, 47, 77, 0.82), rgba(8, 26, 47, 0.92));
+  box-shadow:
+    0 18px 48px rgba(1, 10, 21, 0.17),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* 06 — Challenge previews: make six topics quickly distinguishable. */
+#tracks .challenge-card {
+  --topic-rgb: 111, 224, 242;
+  min-height: 286px;
+  gap: 16px;
+  padding: 28px;
+  border-color: rgba(var(--topic-rgb), 0.28);
+  border-radius: 21px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(var(--topic-rgb), 0.15), transparent 44%),
+    linear-gradient(145deg, rgba(18, 48, 79, 0.94), rgba(7, 24, 45, 0.98));
+  box-shadow:
+    inset 0 4px 0 rgba(var(--topic-rgb), 0.48),
+    0 22px 56px rgba(1, 10, 21, 0.2);
+  transition:
+    transform 240ms var(--ease-out),
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+#tracks .challenge-card:nth-child(2),
+#tracks .challenge-card:nth-child(5) {
+  --topic-rgb: 52, 211, 153;
+}
+
+#tracks .challenge-card:nth-child(3),
+#tracks .challenge-card:nth-child(6) {
+  --topic-rgb: 255, 209, 92;
+}
+
+#tracks .challenge-card:hover {
+  border-color: rgba(var(--topic-rgb), 0.5);
+  box-shadow:
+    inset 0 4px 0 rgba(var(--topic-rgb), 0.72),
+    0 30px 72px rgba(1, 10, 21, 0.32);
+  transform: translateY(-6px);
+}
+
+#tracks .challenge-card .track-index {
+  display: inline-flex;
+  width: fit-content;
+  min-width: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border: 1px solid rgba(var(--topic-rgb), 0.3);
+  border-radius: 999px;
+  color: rgb(var(--topic-rgb));
+  background: rgba(var(--topic-rgb), 0.08);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+}
+
+#tracks .challenge-card .track-name {
+  max-width: none;
+  font-size: clamp(1.18rem, 1.75vw, 1.42rem);
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+#tracks .challenge-card .track-summary {
+  font-size: 0.96rem;
+  line-height: 1.78;
+  text-wrap: pretty;
+}
+
+.tracks-preview-note {
+  margin-top: 24px;
+  padding: 20px 22px;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255, 209, 92, 0.09), transparent 38%),
+    rgba(255, 209, 92, 0.055);
+}
+
+/* 07 — Eligibility: turn the top area into the conversion dock. */
+#rules .section-heading {
+  padding: clamp(26px, 3.2vw, 40px);
+  border: 1px solid rgba(111, 224, 242, 0.24);
+  border-left: 5px solid var(--gold-400);
+  border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+  background:
+    radial-gradient(circle at 92% 10%, rgba(255, 209, 92, 0.09), transparent 34%),
+    radial-gradient(circle at 0 100%, rgba(57, 194, 224, 0.13), transparent 38%),
+    linear-gradient(135deg, rgba(18, 51, 82, 0.94), rgba(7, 24, 44, 0.96));
+  box-shadow: var(--shadow-card);
+}
+
+#rules .section-heading .contact-inline a {
+  color: var(--cyan-300);
+  text-decoration: underline;
+  text-decoration-color: rgba(111, 224, 242, 0.42);
+  text-underline-offset: 4px;
+}
+
+#rules .apply-checklist {
+  gap: 10px 20px;
+  margin-block: 16px 18px;
+}
+
+#rules .apply-checklist li {
+  padding: 7px 11px;
+  border: 1px solid rgba(111, 224, 242, 0.15);
+  border-radius: 999px;
+  background: rgba(57, 194, 224, 0.055);
+}
+
+#rules .cta-row {
+  gap: 12px;
+  margin-block: 2px 18px;
+}
+
+#rules .rule-stack {
+  gap: 18px;
+}
+
+#rules .info-card {
+  padding: clamp(24px, 2.8vw, 32px);
+  border-radius: 20px;
+}
+
+#rules .info-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#rules .info-card h3::before {
+  width: 26px;
+  border-top: 2px solid var(--cyan-300);
+  content: "";
+}
+
+/* 09 — Judging: clearly separate preliminary and final emphasis. */
+#judging .score-card {
+  padding: clamp(24px, 2.7vw, 32px);
+  border-radius: 21px;
+}
+
+#judging .score-card:first-child {
+  box-shadow:
+    inset 0 3px 0 rgba(111, 224, 242, 0.42),
+    0 22px 56px rgba(1, 10, 21, 0.2);
+}
+
+#judging .score-card:nth-child(2) {
+  border-color: rgba(255, 209, 92, 0.25);
+  box-shadow:
+    inset 0 3px 0 rgba(255, 209, 92, 0.5),
+    0 22px 56px rgba(1, 10, 21, 0.2);
+}
+
+#judging .trust-summary {
+  margin-top: 30px;
+  padding: 24px 28px;
+  border: 1px solid rgba(111, 224, 242, 0.16);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(57, 194, 224, 0.1), transparent 42%),
+    rgba(8, 27, 48, 0.66);
+}
+
+#judging .trust-summary h3 {
+  margin-bottom: 8px;
+}
+
+/* 11 — Pre-event activities: a connected three-stage journey. */
+#pre-events .workshop-grid {
+  position: relative;
+  gap: 18px;
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+#pre-events .workshop-grid::before {
+  position: absolute;
+  z-index: -1;
+  top: 48px;
+  left: 10%;
+  right: 10%;
+  border-top: 1px dashed rgba(111, 224, 242, 0.32);
+  content: "";
+}
+
+#pre-events .workshop-card {
+  min-height: 340px;
+  padding: 27px;
+  border-radius: 21px;
+}
+
+#pre-events .workshop-card:nth-child(2) {
+  border-color: rgba(111, 224, 242, 0.34);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(57, 194, 224, 0.16), transparent 44%),
+    linear-gradient(145deg, rgba(18, 50, 82, 0.94), rgba(7, 25, 46, 0.96));
+}
+
+#pre-events .workshop-card:nth-child(3) {
+  border-color: rgba(255, 209, 92, 0.32);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255, 209, 92, 0.12), transparent 44%),
+    linear-gradient(145deg, rgba(18, 50, 82, 0.94), rgba(7, 25, 46, 0.96));
+}
+
+#pre-events .workshop-card .card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 22px;
+  padding: 12px;
+  border: 1px solid rgba(111, 224, 242, 0.25);
+  border-radius: 15px;
+  background: rgba(57, 194, 224, 0.1);
+}
+
+#pre-events .workshop-card > span {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 22px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+}
+
+#pre-events .workshop-card h3 {
+  font-size: clamp(1.18rem, 1.8vw, 1.45rem);
+}
+
+/* Venue: retain the real map, increase its physical presence. */
+#venue .venue-card {
+  border-color: rgba(111, 224, 242, 0.22);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 0 0, rgba(57, 194, 224, 0.13), transparent 36%),
+    linear-gradient(145deg, rgba(17, 47, 77, 0.88), rgba(7, 25, 46, 0.94));
+  box-shadow: var(--shadow-card);
+}
+
+#venue .venue-map-panel {
+  border-radius: 18px;
+  box-shadow: 0 24px 58px rgba(1, 10, 21, 0.28);
+}
+
+/* 13 — FAQ: each category becomes a scannable module. */
+#faq .faq-list {
+  gap: 20px;
+  align-items: start;
+}
+
+#faq .faq-group {
+  padding: 20px;
+  border: 1px solid rgba(111, 224, 242, 0.15);
+  background:
+    linear-gradient(145deg, rgba(15, 42, 70, 0.66), rgba(7, 24, 44, 0.76));
+  box-shadow: var(--shadow-card);
+}
+
+#faq .faq-group h3 {
+  margin: 0 0 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(111, 224, 242, 0.14);
+  color: var(--text);
+  font-size: 1.08rem;
+}
+
+#faq .faq-list details {
+  margin-top: 8px;
+  overflow: hidden;
+  border-color: rgba(111, 224, 242, 0.15);
+  border-radius: 12px;
+  background: rgba(7, 24, 44, 0.62);
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease;
+}
+
+#faq .faq-list details:first-of-type {
+  margin-top: 0;
+}
+
+#faq .faq-list details[open] {
+  border-color: rgba(111, 224, 242, 0.38);
+  background: rgba(18, 49, 80, 0.78);
+}
+
+#faq .faq-list summary {
+  position: relative;
+  padding: 14px 48px 14px 16px;
+  list-style: none;
+  cursor: pointer;
+  line-height: 1.45;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+#faq .faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+#faq .faq-list summary::after {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 1px solid rgba(111, 224, 242, 0.22);
+  border-radius: 50%;
+  color: var(--cyan-300);
+  background: rgba(57, 194, 224, 0.07);
+  content: "+";
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  transform: translateY(-50%);
+  transition: transform 200ms var(--ease-out), color 200ms ease, border-color 200ms ease;
+}
+
+#faq .faq-list details[open] summary::after {
+  color: var(--gold-400);
+  border-color: rgba(255, 209, 92, 0.38);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+#faq .faq-list details[open] summary {
+  color: var(--cyan-300);
+  background: rgba(57, 194, 224, 0.055);
+}
+
+#faq .faq-list details > p {
+  padding: 0 16px 17px;
+  margin: 0;
+  line-height: 1.75;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(111, 224, 242, 0.16);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(57, 194, 224, 0.11), transparent 28rem),
+    #061326;
+}
+
+@media (max-width: 1100px) {
+  #benefits .benefit-card,
+  #benefits .benefit-card:nth-child(1),
+  #benefits .benefit-card:nth-child(6) {
+    grid-column: span 6;
+  }
+
+  #pre-events .workshop-card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 899px) {
+  main > .section {
+    padding-block: clamp(58px, 9vw, 76px);
+  }
+
+  .section-heading h2 {
+    font-size: clamp(2.25rem, 8vw, 3.1rem);
+  }
+
+  #why .question-grid {
+    margin-top: 14px;
+  }
+
+  #roadmap .timeline {
+    padding: 26px 20px 30px;
+  }
+
+  #rules .section-heading {
+    display: block;
+  }
+
+  #pre-events .workshop-grid::before {
+    content: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header,
+  .site-header.is-solid,
+  .site-header.is-open {
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+  }
+
+  #hero .hero-registration {
+    margin-top: calc(56.25vw + 64px);
+    padding: 22px 18px;
+    border-radius: 22px;
+  }
+
+  #hero .hero-registration h2 {
+    max-width: none;
+  }
+
+  .hero-registration-flow {
+    gap: 12px;
+  }
+
+  .hero-registration-flow::before {
+    position: absolute;
+    top: 28px;
+    bottom: 28px;
+    left: 31px;
+    border-left: 1px solid rgba(111, 224, 242, 0.22);
+    content: "";
+  }
+
+  .hero-registration-flow li {
+    min-height: 0;
+    padding: 15px;
+  }
+
+  .hero-registration-flow li:not(:last-child)::after {
+    content: none;
+  }
+
+  #why .question-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #why .question-grid span:last-child {
+    grid-column: auto;
+  }
+
+  #benefits .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #benefits .benefit-card,
+  #benefits .benefit-card:nth-child(1),
+  #benefits .benefit-card:nth-child(6) {
+    grid-column: auto;
+    min-height: 0;
+    padding: 18px;
+  }
+
+  #benefits .benefit-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 14px;
+  }
+
+  #benefits .benefit-card h3,
+  #benefits .benefit-card:nth-child(1) h3,
+  #benefits .benefit-card:nth-child(6) h3 {
+    margin-bottom: 6px;
+    font-size: 1.08rem;
+  }
+
+  #tracks .challenge-card {
+    min-height: 0;
+    padding: 23px 21px;
+  }
+
+  #rules .section-heading {
+    padding: 24px 19px;
+    border-left-width: 4px;
+    border-radius: 0 20px 20px 0;
+  }
+
+  #rules .apply-checklist li {
+    align-items: flex-start;
+    border-radius: 13px;
+  }
+
+  #rules .cta-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #rules .cta-row .button {
+    width: 100%;
+  }
+
+  #pre-events .workshop-grid {
+    gap: 14px;
+  }
+
+  #pre-events .workshop-card {
+    padding: 23px 21px;
+  }
+
+  #faq .faq-list {
+    gap: 14px;
+  }
+
+  #faq .faq-group {
+    padding: 15px;
+    border-radius: 16px;
+  }
+
+  #faq .faq-list summary {
+    min-height: 52px;
+    padding: 14px 44px 14px 14px;
+  }
+
+  #faq .faq-list details > p {
+    padding: 0 14px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .hero-solo-peek,
+  .hero-registration-flow li,
+  .statband-item,
+  #benefits .benefit-card,
+  #prizes .prize-podium .prize-card,
+  #tracks .challenge-card,
+  #faq .faq-list details,
+  #faq .faq-list summary,
+  #faq .faq-list summary::after {
+    transition: none;
+  }
+
+  .hero-registration-flow li:hover,
+  .statband-item:hover,
+  .statband-item:focus-visible,
+  #benefits .benefit-card:hover,
+  #prizes .prize-main:hover,
+  #prizes .prize-runner:hover,
+  #prizes .prize-third:hover,
+  #tracks .challenge-card:hover {
+    transform: none;
+  }
+}
