@@ -4835,6 +4835,188 @@ html[lang="en"] #tracks .track-accordion .track-summary {
   }
 }
 
+/* ============================================================
+   EXPERIENCE POLISH — compact mobile journey, topic icon system,
+   and restrained brand motion
+   ============================================================ */
+
+/* Six challenge-specific SVGs share one consistent visual frame. */
+#tracks .challenge-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.challenge-card-meta {
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.challenge-icon-frame {
+  position: relative;
+  display: grid;
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(var(--topic-rgb), 0.38);
+  border-radius: 16px;
+  color: rgb(var(--topic-rgb));
+  background:
+    linear-gradient(145deg, rgba(var(--topic-rgb), 0.16), rgba(var(--topic-rgb), 0.045));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 10px 24px rgba(var(--topic-rgb), 0.09);
+}
+
+.challenge-icon-frame::after {
+  position: absolute;
+  width: 24px;
+  height: 1px;
+  right: -7px;
+  bottom: 8px;
+  content: "";
+  opacity: 0.42;
+  background: rgb(var(--topic-rgb));
+  transform: rotate(-45deg);
+}
+
+.challenge-icon {
+  width: 30px;
+  height: 30px;
+  overflow: visible;
+  filter: drop-shadow(0 0 10px rgba(var(--topic-rgb), 0.22));
+  transition: transform 240ms var(--ease-out);
+}
+
+#tracks .challenge-card:hover .challenge-icon {
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Motion is triggered only after content is visible; no-JS stays fully readable. */
+@keyframes brand-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@keyframes brand-signal {
+  from {
+    opacity: 0.35;
+    background-position: 0 -180px;
+  }
+  to {
+    opacity: 1;
+    background-position: 0 0;
+  }
+}
+
+@keyframes brand-icon-arrive {
+  from {
+    opacity: 0;
+    transform: scale(0.88) rotate(-4deg);
+  }
+}
+
+#hero .reveal.is-visible .hero-registration {
+  animation: brand-rise 480ms var(--ease-out) backwards;
+}
+
+#hero .reveal.is-visible .hero-registration::before {
+  background-size: 100% 220%;
+  animation: brand-signal 900ms var(--ease-out) 120ms backwards;
+}
+
+#hero .reveal.is-visible .hero-registration-flow li {
+  animation: brand-rise 360ms var(--ease-out) backwards;
+}
+
+#hero .reveal.is-visible .hero-registration-flow li:nth-child(1) {
+  animation-delay: 140ms;
+}
+
+#hero .reveal.is-visible .hero-registration-flow li:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+#hero .reveal.is-visible .hero-registration-flow li:nth-child(3) {
+  animation-delay: 260ms;
+}
+
+#tracks .reveal.is-visible .challenge-card {
+  animation: brand-rise 420ms var(--ease-out) backwards;
+}
+
+#tracks .reveal.is-visible .challenge-card:nth-child(2) {
+  animation-delay: 45ms;
+}
+
+#tracks .reveal.is-visible .challenge-card:nth-child(3) {
+  animation-delay: 90ms;
+}
+
+#tracks .reveal.is-visible .challenge-card:nth-child(4) {
+  animation-delay: 135ms;
+}
+
+#tracks .reveal.is-visible .challenge-card:nth-child(5) {
+  animation-delay: 180ms;
+}
+
+#tracks .reveal.is-visible .challenge-card:nth-child(6) {
+  animation-delay: 225ms;
+}
+
+#tracks .reveal.is-visible .challenge-icon-frame {
+  animation: brand-icon-arrive 360ms var(--ease-out) backwards;
+}
+
+#tracks .reveal.is-visible .challenge-card:nth-child(1) .challenge-icon-frame {
+  animation-delay: 130ms;
+}
+
+#tracks .reveal.is-visible .challenge-card:nth-child(2) .challenge-icon-frame {
+  animation-delay: 175ms;
+}
+
+#tracks .reveal.is-visible .challenge-card:nth-child(3) .challenge-icon-frame {
+  animation-delay: 220ms;
+}
+
+#tracks .reveal.is-visible .challenge-card:nth-child(4) .challenge-icon-frame {
+  animation-delay: 265ms;
+}
+
+#tracks .reveal.is-visible .challenge-card:nth-child(5) .challenge-icon-frame {
+  animation-delay: 310ms;
+}
+
+#tracks .reveal.is-visible .challenge-card:nth-child(6) .challenge-icon-frame {
+  animation-delay: 355ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #hero .reveal.is-visible .hero-registration,
+  #hero .reveal.is-visible .hero-registration::before,
+  #hero .reveal.is-visible .hero-registration-flow li,
+  #tracks .reveal.is-visible .challenge-card,
+  #tracks .reveal.is-visible .challenge-icon-frame {
+    animation: none;
+  }
+
+  .challenge-icon {
+    transition: none;
+  }
+
+  #tracks .challenge-card:hover .challenge-icon {
+    transform: none;
+  }
+}
+
 /* ===== POLISH: reduce scroll reveal and unify card decoration language ===== */
 body.js-on .reveal,
 body.js-on .reveal.is-visible,
@@ -6736,5 +6918,96 @@ main > .section::before {
   #prizes .prize-third:hover,
   #tracks .challenge-card:hover {
     transform: none;
+  }
+}
+
+/* Keep the compact application rail as the final mobile cascade layer. */
+@media (max-width: 700px) {
+  #hero .hero-registration {
+    margin-top: calc(56.25vw + 48px);
+    gap: 14px;
+    padding: 18px 16px 16px;
+  }
+
+  .hero-registration-badge {
+    margin-bottom: 9px;
+    padding: 6px 10px;
+    font-size: 0.74rem;
+  }
+
+  #hero .hero-registration h2 {
+    margin-bottom: 7px;
+    font-size: clamp(1.62rem, 7.7vw, 1.95rem);
+    line-height: 1.16;
+  }
+
+  #hero .hero-registration-copy > p {
+    font-size: 0.91rem;
+    line-height: 1.58;
+  }
+
+  .hero-registration-apply {
+    min-height: 48px;
+    margin-top: 14px;
+  }
+
+  .hero-registration-flow {
+    gap: 0;
+    padding-top: 3px;
+  }
+
+  .hero-registration-flow::before {
+    top: 21px;
+    bottom: 21px;
+    left: 16px;
+  }
+
+  .hero-registration-flow li {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 11px;
+    min-height: 0;
+    padding: 10px 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .hero-registration-flow li:hover {
+    border-color: transparent;
+    transform: none;
+  }
+
+  .hero-registration-step {
+    z-index: 1;
+    width: 32px;
+    height: 32px;
+    background: #0b2845;
+  }
+
+  .hero-registration-flow strong {
+    margin: 1px 0 4px;
+    font-size: 0.94rem;
+  }
+
+  .hero-registration-flow p {
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  .challenge-card-meta {
+    min-height: 46px;
+  }
+
+  .challenge-icon-frame {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+    border-radius: 14px;
+  }
+
+  .challenge-icon {
+    width: 26px;
+    height: 26px;
   }
 }
