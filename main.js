@@ -372,8 +372,8 @@
     const endAt = new Date(config.infoSessionEndAt || `${date}T21:00:00+08:00`);
     const showBanner = now <= endAt;
     const applyUrl = config.infoSessionApplyUrl || config.registrationUrl || "#rules";
-    const recordingUrl = config.infoSessionRecordingUrl;
-    const showRecording = Boolean(recordingUrl);
+    const slidesUrl = config.infoSessionSlidesUrl;
+    const showSlides = Boolean(slidesUrl);
     const showRegistration = showBanner && Boolean(applyUrl);
 
     document.querySelectorAll("[data-info-session-banner]").forEach((el) => {
@@ -381,7 +381,7 @@
     });
 
     document.querySelectorAll("[data-info-session-actions]").forEach((el) => {
-      el.hidden = !showRegistration && !showRecording;
+      el.hidden = !showRegistration && !showSlides;
     });
 
     document.querySelectorAll("[data-info-session-link]").forEach((link) => {
@@ -389,9 +389,9 @@
       link.hidden = !showRegistration;
     });
 
-    document.querySelectorAll("[data-info-session-recording]").forEach((link) => {
-      if (showRecording) {
-        link.href = recordingUrl;
+    document.querySelectorAll("[data-info-session-slides]").forEach((link) => {
+      if (showSlides) {
+        link.href = slidesUrl;
         link.hidden = false;
       } else {
         link.href = "#pre-events";

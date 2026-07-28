@@ -4112,7 +4112,7 @@ html[lang="en"] #tracks .track-accordion .track-summary {
 .info-session-banner[hidden],
 .workshop-actions[hidden],
 [data-info-session-link][hidden],
-[data-info-session-recording][hidden] {
+[data-info-session-slides][hidden] {
   display: none !important;
 }
 

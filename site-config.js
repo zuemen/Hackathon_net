@@ -29,7 +29,7 @@ window.SITE_CONFIG = {
 
   infoSessionDate: "2026-07-20",
   infoSessionApplyUrl: "https://luma.com/w6sjiy30",
-  infoSessionRecordingUrl: null,
+  infoSessionSlidesUrl: null,
   finalists: [],
   finalistAnnouncementDate: "2026-08-07",
   workshopDates: ["2026-08-15", "2026-08-22"],
