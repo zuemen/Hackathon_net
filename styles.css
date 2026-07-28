@@ -2387,9 +2387,8 @@ summary:focus-visible {
   .timeline-step time{min-width:0;}
   .timeline-step span{flex-basis:140px;}
 }
-/* Hero KV should remain readable; the KV already contains the event title/date.
-   Desktop: KV covers the hero, capped to the viewport so the countdown + CTA
-   overlay the lower KV within the first screen (bottom scrim keeps them legible). */
+/* Keep the official KV as a decorative backdrop; localized event text is
+   rendered as live HTML so both languages remain readable and selectable. */
 .hero {
   min-height: min(calc(56.25vw + 40px), 92vh);
   padding: 0;
@@ -5738,37 +5737,6 @@ summary {
   }
 }
 
-@supports (content-visibility: auto) {
-  main > .section {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 840px;
-  }
-
-  main > #faq {
-    contain-intrinsic-size: auto 1700px;
-  }
-
-  @media (max-width: 700px) {
-    main > .section {
-      contain-intrinsic-size: auto 1140px;
-    }
-
-    main > #faq {
-      contain-intrinsic-size: auto 1750px;
-    }
-  }
-
-  @media (min-width: 1100px) {
-    main > .section {
-      contain-intrinsic-size: auto 660px;
-    }
-
-    main > #faq {
-      contain-intrinsic-size: auto 1100px;
-    }
-  }
-}
-
 /* ============================================================
    VISUAL REFRESH 2026
    Editorial sci-tech rhythm for a long-form event landing page.
@@ -7012,7 +6980,7 @@ main > .section::before {
 }
 
 /* ============================================================
-   CONTENT & CONVERSION POLISH — localized mobile hero,
+   CONTENT & CONVERSION POLISH — localized responsive hero,
    registration deadline, archived session and confirmed organizer
    ============================================================ */
 
@@ -7025,8 +6993,145 @@ main > .section::before {
 @media (min-width: 821px) {
   #hero.hero {
     background:
+      linear-gradient(180deg, rgba(7, 20, 38, 0.34) 74px, rgba(7, 20, 38, 0.08) 58%, #071426 100%),
       url("./assets/hero-kv.webp") center 74px / 100% auto no-repeat,
       linear-gradient(135deg, var(--bg-deep), var(--bg));
+  }
+
+  #hero .hero-intro {
+    position: absolute;
+    z-index: 4;
+    top: clamp(108px, 8vw, 132px);
+    left: 50%;
+    width: min(980px, calc(100vw - 64px));
+    padding: clamp(24px, 2.8vw, 38px);
+    overflow: hidden;
+    border: 1px solid rgba(111, 224, 242, 0.28);
+    border-radius: 28px;
+    text-align: center;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(57, 194, 224, 0.16), transparent 62%),
+      rgba(7, 25, 46, 0.94);
+    box-shadow:
+      0 28px 74px rgba(1, 10, 21, 0.42),
+      inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    transform: translateX(-50%);
+    -webkit-backdrop-filter: blur(14px) saturate(1.15);
+    backdrop-filter: blur(14px) saturate(1.15);
+  }
+
+  #hero .hero-intro::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    opacity: 0.32;
+    background-image:
+      linear-gradient(rgba(111, 224, 242, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(111, 224, 242, 0.08) 1px, transparent 1px);
+    background-size: 38px 38px;
+    -webkit-mask-image: radial-gradient(circle at 50% 20%, #000, transparent 78%);
+    mask-image: radial-gradient(circle at 50% 20%, #000, transparent 78%);
+  }
+
+  #hero .eyebrow,
+  #hero h1,
+  #hero .hero-subtitle,
+  #hero .hero-lede,
+  #hero .hero-meta {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    border: 0;
+  }
+
+  #hero .eyebrow {
+    margin: 0 0 10px;
+    color: var(--cyan-300);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  #hero h1 {
+    margin: 0;
+    color: var(--text);
+    font-size: clamp(3.25rem, 5.6vw, 5.7rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+    text-shadow: 0 0 34px rgba(111, 224, 242, 0.2);
+  }
+
+  html[lang="en"] #hero h1 {
+    max-width: 18ch;
+    margin-inline: auto;
+    font-size: clamp(3rem, 5vw, 4.9rem);
+  }
+
+  #hero .hero-subtitle {
+    margin: 13px 0 0;
+    color: rgba(238, 245, 250, 0.96);
+    font-size: clamp(1.02rem, 1.5vw, 1.24rem);
+    font-weight: 780;
+    line-height: 1.45;
+  }
+
+  #hero .hero-lede {
+    max-width: 68ch;
+    margin: 14px auto 0;
+    color: var(--text-muted);
+    font-size: 0.96rem;
+    line-height: 1.7;
+  }
+
+  #hero .hero-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 17px 0 0;
+  }
+
+  #hero .hero-meta span {
+    width: auto;
+    padding: 7px 11px;
+    border: 1px solid rgba(111, 224, 242, 0.25);
+    border-radius: 999px;
+    color: rgba(238, 245, 250, 0.92);
+    background: rgba(7, 25, 46, 0.62);
+    font-size: 0.8rem;
+    font-weight: 750;
+    line-height: 1.35;
+  }
+
+  #hero .hero-deadline {
+    position: static;
+    display: inline-flex;
+    width: auto;
+    max-width: 100%;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px 9px;
+    margin: 16px auto 0;
+    padding: 10px 14px;
+    border-radius: 14px;
+    text-align: left;
+  }
+
+  #hero .hero-deadline time {
+    font-size: 0.98rem;
+  }
+
+  #hero .hero-registration {
+    margin-top: clamp(550px, calc(56.25vw + 28px), 940px);
   }
 }
 
