@@ -7206,3 +7206,69 @@ main > .section {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   CHALLENGE REVEAL — dated previews with fail-open HTML content.
+   ============================================================ */
+#tracks .challenge-card {
+  grid-template-rows: auto minmax(3.7em, auto) 1fr auto;
+  min-height: 348px;
+}
+
+html[lang="en"] #tracks .challenge-card {
+  min-height: 444px;
+}
+
+#tracks .challenge-card-meta {
+  justify-content: flex-start;
+}
+
+#tracks .challenge-card-meta .challenge-icon-frame {
+  margin-left: auto;
+}
+
+.challenge-bonus-badge {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 5px 9px;
+  border: 1px solid rgba(245, 210, 110, 0.56);
+  border-radius: 999px;
+  color: #f5d26e;
+  background: rgba(245, 210, 110, 0.12);
+  box-shadow: 0 0 20px rgba(245, 210, 110, 0.08);
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.06em;
+}
+
+.challenge-bonus-note {
+  margin: 0;
+  padding-top: 13px;
+  border-top: 1px solid rgba(245, 210, 110, 0.24);
+  color: rgba(245, 210, 110, 0.9);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+#tracks .challenge-card.is-locked {
+  opacity: 0.55;
+  border-style: dashed;
+  box-shadow:
+    inset 0 0 0 1px rgba(var(--topic-rgb), 0.08),
+    0 14px 34px rgba(1, 10, 21, 0.14);
+}
+
+#tracks .challenge-card.is-locked:hover {
+  border-color: rgba(var(--topic-rgb), 0.28);
+  box-shadow:
+    inset 0 0 0 1px rgba(var(--topic-rgb), 0.08),
+    0 14px 34px rgba(1, 10, 21, 0.14);
+  transform: none;
+}
+
+#tracks .challenge-card.is-locked .challenge-icon {
+  transform: none;
+}

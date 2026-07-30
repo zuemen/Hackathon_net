@@ -35,6 +35,7 @@
   let renderCountdown = null;
   let headerSolidState = null;
   let syncBackToTop = null;
+  let challengeRevealTimer = null;
 
   function t(key, locale = currentLocale) {
     return translations[locale]?.[key] || translations[defaultLocale]?.[key] || key;
@@ -80,7 +81,7 @@
 
   function getNow() {
     const params = new URLSearchParams(window.location.search);
-    const testNow = params.get("now") || window.__TEST_NOW;
+    const testNow = params.get("testNow") || params.get("now") || window.__TEST_NOW;
     return testNow ? new Date(testNow) : new Date();
   }
 
@@ -476,6 +477,92 @@
     });
   }
 
+  function challengeRevealAt(dateString) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(dateString || "")) return null;
+    const revealAt = new Date(`${dateString}T00:00:00+08:00`);
+    return Number.isNaN(revealAt.getTime()) ? null : revealAt;
+  }
+
+  function formatChallengeRevealDate(dateString, locale = currentLocale) {
+    const revealAt = challengeRevealAt(dateString);
+    if (!revealAt) return dateString || "";
+    return new Intl.DateTimeFormat(locale === "en" ? "en-US" : "zh-TW", {
+      timeZone: "Asia/Taipei",
+      month: locale === "en" ? "short" : "numeric",
+      day: "numeric"
+    }).format(revealAt);
+  }
+
+  function hasMockNow() {
+    const params = new URLSearchParams(window.location.search);
+    return Boolean(params.get("testNow") || params.get("now") || window.__TEST_NOW);
+  }
+
+  function updateChallengeReveal(now = getNow()) {
+    const cards = [...document.querySelectorAll("[data-challenge-id]")];
+    const revealDates = config.challengeRevealDates || {};
+    const nowTime = now instanceof Date ? now.getTime() : NaN;
+    const revealTimes = [];
+    let scheduledCards = 0;
+    let revealedCards = 0;
+
+    cards.forEach((card) => {
+      const id = card.dataset.challengeId;
+      const dateString = revealDates[id];
+      const revealAt = challengeRevealAt(dateString);
+      const title = card.querySelector("[data-challenge-title]");
+      const question = card.querySelector("[data-challenge-question]");
+      const locked = Boolean(revealAt && !Number.isNaN(nowTime) && nowTime < revealAt.getTime());
+
+      if (revealAt) {
+        scheduledCards += 1;
+        revealTimes.push(revealAt);
+        if (!locked) revealedCards += 1;
+      }
+
+      card.classList.toggle("is-locked", locked);
+      card.dataset.revealState = locked ? "locked" : "revealed";
+      if (dateString) card.dataset.revealDate = dateString;
+
+      const titleKey = locked ? "challenge.locked.title" : `challenge.${id}.title`;
+      if (title) {
+        title.dataset.i18n = titleKey;
+        title.textContent = t(titleKey);
+      }
+
+      const questionKey = locked ? "challenge.locked.date" : `challenge.${id}.question`;
+      if (question) {
+        question.dataset.i18n = questionKey;
+        question.textContent = locked
+          ? t(questionKey).replace("{date}", formatChallengeRevealDate(dateString))
+          : t(questionKey);
+      }
+    });
+
+    const allRevealed = cards.length > 0
+      && scheduledCards === cards.length
+      && revealedCards === scheduledCards;
+    const tracksBodyKey = allRevealed ? "tracks.body.complete" : "tracks.body";
+    document.querySelectorAll("[data-tracks-body]").forEach((body) => {
+      body.dataset.i18n = tracksBodyKey;
+      body.textContent = t(tracksBodyKey);
+    });
+
+    if (challengeRevealTimer) {
+      window.clearTimeout(challengeRevealTimer);
+      challengeRevealTimer = null;
+    }
+    if (!hasMockNow() && !Number.isNaN(nowTime)) {
+      const nextReveal = revealTimes
+        .filter((date) => date.getTime() > nowTime)
+        .sort((a, b) => a - b)[0];
+      if (nextReveal) {
+        const delay = Math.min(nextReveal.getTime() - nowTime + 100, 2147483647);
+        challengeRevealTimer = window.setTimeout(() => updateChallengeReveal(getNow()), delay);
+      }
+    }
+  }
+
   function updateInfoSessionLinks(now = getNow()) {
     const date = config.infoSessionDate || "2026-07-20";
     const endAt = new Date(config.infoSessionEndAt || `${date}T21:00:00+08:00`);
@@ -528,6 +615,7 @@
         item.textContent = value;
       }
     });
+    updateChallengeReveal();
 
     // FAQ zh-Hant is pre-rendered statically in index.html for SEO; only
     // (re)render via JS when switching language or when the initial locale is en.

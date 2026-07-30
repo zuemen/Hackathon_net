@@ -15,6 +15,14 @@ window.SITE_CONFIG = {
   participantMin: 60,
   participantMax: 100,
   trackCount: 6,
+  challengeRevealDates: {
+    "01": "2026-07-31",
+    "02": "2026-08-01",
+    "03": "2026-08-02",
+    "04": "2026-08-03",
+    "05": "2026-08-04",
+    "06": "2026-08-05"
+  },
   workshopCount: 2,
 
   showCountdown: false,
