@@ -7211,12 +7211,12 @@ main > .section {
    CHALLENGE REVEAL — dated previews with fail-open HTML content.
    ============================================================ */
 #tracks .challenge-card {
-  grid-template-rows: auto minmax(3.7em, auto) 1fr auto;
-  min-height: 348px;
+  grid-template-rows: auto auto minmax(4.2em, auto) 1fr auto;
+  min-height: 430px;
 }
 
 html[lang="en"] #tracks .challenge-card {
-  min-height: 444px;
+  min-height: 500px;
 }
 
 #tracks .challenge-card-meta {
@@ -7225,6 +7225,20 @@ html[lang="en"] #tracks .challenge-card {
 
 #tracks .challenge-card-meta .challenge-icon-frame {
   margin-left: auto;
+}
+
+.challenge-track-label {
+  width: fit-content;
+  margin: 0;
+  padding: 6px 10px;
+  border: 1px solid rgba(var(--topic-rgb), 0.28);
+  border-radius: 999px;
+  color: rgb(var(--topic-rgb));
+  background: rgba(var(--topic-rgb), 0.07);
+  font-size: 0.75rem;
+  font-weight: 850;
+  line-height: 1.35;
+  letter-spacing: 0.025em;
 }
 
 .challenge-bonus-badge {
@@ -7254,11 +7268,31 @@ html[lang="en"] #tracks .challenge-card {
 }
 
 #tracks .challenge-card.is-locked {
-  opacity: 0.55;
+  grid-template-rows: auto auto minmax(0, 1fr) minmax(0, 1fr) auto;
+  opacity: 1;
   border-style: dashed;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(var(--topic-rgb), 0.09), transparent 44%),
+    linear-gradient(145deg, rgba(18, 48, 79, 0.9), rgba(7, 24, 45, 0.97));
   box-shadow:
     inset 0 0 0 1px rgba(var(--topic-rgb), 0.08),
     0 14px 34px rgba(1, 10, 21, 0.14);
+}
+
+#tracks .challenge-card.is-locked .track-name,
+#tracks .challenge-card.is-locked .track-summary {
+  color: rgba(219, 231, 243, 0.72);
+}
+
+#tracks .challenge-card.is-locked .track-name {
+  align-self: end;
+  padding-bottom: 7px;
+  font-size: clamp(1.08rem, 1.65vw, 1.3rem);
+}
+
+#tracks .challenge-card.is-locked .track-summary {
+  align-self: start;
+  padding-top: 7px;
 }
 
 #tracks .challenge-card.is-locked:hover {
@@ -7271,4 +7305,14 @@ html[lang="en"] #tracks .challenge-card {
 
 #tracks .challenge-card.is-locked .challenge-icon {
   transform: none;
+}
+
+@media (max-width: 700px) {
+  #tracks .challenge-card {
+    min-height: 400px;
+  }
+
+  html[lang="en"] #tracks .challenge-card {
+    min-height: 520px;
+  }
 }
