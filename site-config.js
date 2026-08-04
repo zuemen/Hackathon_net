@@ -23,15 +23,16 @@ window.SITE_CONFIG = {
     "05": "2026-08-04",
     "06": "2026-08-05"
   },
+  challengeRevealScheduleEnabled: false,
   workshopCount: 2,
 
-  showCountdown: false,
-  phase: "registration",
-  registrationStatus: "open",
-  registrationOverride: null,
+  showCountdown: true,
+  phase: "screening",
+  registrationStatus: "closed",
+  registrationOverride: "closed",
   registrationOpenAt: "2026-07-08T00:00:00+08:00",
   registrationCloseAt: "2026-08-05T23:59:59+08:00",
-  registrationUrl: "https://forms.gle/kafd8Xfh9LAoW6q59",
+  registrationUrl: null,
   matchmakingUrl: "https://padlet.com/Trustworthy/trustworthy-ai-hackathon-6r3tvsp4rktkz5xy",
   demoDayAt: "2026-08-31T09:00:00+08:00",
 
@@ -41,7 +42,7 @@ window.SITE_CONFIG = {
   finalistAnnouncementDate: "2026-08-07",
   workshopDates: ["2026-08-15", "2026-08-22"],
 
-  prizePoolUsd: 12000,
+  prizePoolUsd: 14000,
   prizePoolMayIncrease: true,
 
   showPrizeBreakdown: false,

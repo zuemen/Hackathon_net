@@ -413,7 +413,7 @@
       },
       offers: {
         "@type": "Offer",
-        url: config.registrationUrl,
+        url: config.registrationUrl || config.canonicalUrl || window.location.href,
         availabilityStarts: config.registrationOpenAt,
         validThrough: config.registrationCloseAt,
         price: "0",
@@ -500,6 +500,35 @@
 
   function updateChallengeReveal(now = getNow()) {
     const cards = [...document.querySelectorAll("[data-challenge-id]")];
+    if (config.challengeRevealScheduleEnabled === false) {
+      cards.forEach((card) => {
+        const id = card.dataset.challengeId;
+        const title = card.querySelector("[data-challenge-title]");
+        const question = card.querySelector("[data-challenge-question]");
+        const titleKey = `challenge.${id}.title`;
+        const questionKey = `challenge.${id}.question`;
+        card.classList.remove("is-locked");
+        card.dataset.revealState = "revealed";
+        delete card.dataset.revealDate;
+        if (title) {
+          title.dataset.i18n = titleKey;
+          title.textContent = t(titleKey);
+        }
+        if (question) {
+          question.dataset.i18n = questionKey;
+          question.textContent = t(questionKey);
+        }
+      });
+      document.querySelectorAll("[data-tracks-body]").forEach((body) => {
+        body.dataset.i18n = "tracks.body.complete";
+        body.textContent = t("tracks.body.complete");
+      });
+      if (challengeRevealTimer) {
+        window.clearTimeout(challengeRevealTimer);
+        challengeRevealTimer = null;
+      }
+      return;
+    }
     const revealDates = config.challengeRevealDates || {};
     const nowTime = now instanceof Date ? now.getTime() : NaN;
     const revealTimes = [];
@@ -790,45 +819,52 @@
       return;
     }
     if (!el) return;
+    const activeEl = el.querySelector("[data-countdown-active]");
+    const closedEl = el.querySelector("[data-countdown-closed]");
     const labelEl = el.querySelector("[data-countdown-label]");
     const daysEl = el.querySelector("[data-countdown-days]");
     const hoursEl = el.querySelector("[data-countdown-hours]");
     const minutesEl = el.querySelector("[data-countdown-minutes]");
     const secondsEl = el.querySelector("[data-countdown-seconds]");
-    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+    if (!activeEl || !closedEl || !daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
-    const openAt = new Date(config.registrationOpenAt);
     const closeAt = new Date(config.registrationCloseAt);
-    const demoAt = new Date(config.demoDayAt || "2026-08-31T09:00:00+08:00");
     // Preserve any mock time (?now= / __TEST_NOW) while still ticking in real time.
     const offset = getNow().getTime() - Date.now();
     const pad = (n) => String(n).padStart(2, "0");
 
-    function phase(now) {
-      if (now < openAt) return { key: "countdown.beforeOpen", target: openAt };
-      if (now <= closeAt) return { key: "countdown.beforeClose", target: closeAt };
-      return { key: "countdown.demoDay", target: demoAt };
-    }
-
     function tick() {
       const now = new Date(Date.now() + offset);
-      const { key, target } = phase(now);
-      let diff = Math.max(0, target.getTime() - now.getTime());
-      const d = Math.floor(diff / 86400000); diff -= d * 86400000;
-      const h = Math.floor(diff / 3600000); diff -= h * 3600000;
-      const m = Math.floor(diff / 60000); diff -= m * 60000;
-      const s = Math.floor(diff / 1000);
+      if (Number.isNaN(closeAt.getTime()) || now >= closeAt) {
+        activeEl.hidden = true;
+        closedEl.hidden = false;
+        el.dataset.countdownState = "closed";
+        return true;
+      }
+
+      activeEl.hidden = false;
+      closedEl.hidden = true;
+      el.dataset.countdownState = "active";
+      let remainingSeconds = Math.ceil((closeAt.getTime() - now.getTime()) / 1000);
+      const d = Math.floor(remainingSeconds / 86400); remainingSeconds -= d * 86400;
+      const h = Math.floor(remainingSeconds / 3600); remainingSeconds -= h * 3600;
+      const m = Math.floor(remainingSeconds / 60); remainingSeconds -= m * 60;
+      const s = remainingSeconds;
       daysEl.textContent = pad(d);
       hoursEl.textContent = pad(h);
       minutesEl.textContent = pad(m);
       secondsEl.textContent = pad(s);
-      if (labelEl) labelEl.textContent = t(key);
+      if (labelEl) labelEl.textContent = t("countdown.beforeClose");
+      return false;
     }
 
     renderCountdown = tick;
     el.hidden = false;
-    tick();
-    window.setInterval(tick, 1000);
+    if (!tick()) {
+      const intervalId = window.setInterval(() => {
+        if (tick()) window.clearInterval(intervalId);
+      }, 1000);
+    }
   }
 
   function initCounters() {
@@ -949,6 +985,7 @@
     const cta = document.querySelector("[data-mobile-cta]");
     const hero = document.getElementById("hero");
     if (!cta || !hero) return;
+    const interactive = cta.matches("a[href], button");
     let requestedVisible = false;
 
     const setVisible = (visible) => {
@@ -956,7 +993,8 @@
       const show = requestedVisible && window.innerWidth <= 700 && !cta.hidden;
       cta.classList.toggle("is-visible", show);
       cta.setAttribute("aria-hidden", String(!show));
-      cta.tabIndex = show ? 0 : -1;
+      if (interactive) cta.tabIndex = show ? 0 : -1;
+      else cta.removeAttribute("tabindex");
     };
 
     setVisible(false);

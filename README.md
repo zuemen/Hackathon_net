@@ -7,7 +7,7 @@
 - `index.html`：單頁長捲動活動頁，含 SEO / OG / Twitter meta 與 Event JSON-LD fallback。
 - `styles.css`：自包含樣式，沿用 TABEI / chain.tw 深藍綠、青綠與白色品牌視覺。
 - `main.js`：sticky header、手機導覽、語言切換、CTA 狀態、Event JSON-LD、FAQ 渲染與 progressive enhancement。
-- `site-config.js`：活動日期、人數、報名狀態、報名網址、feature flags、聯絡信箱、社群與 newsletter 等易變資訊。
+- `site-config.js`：活動日期、人數、報名狀態、feature flags、聯絡信箱、社群與 newsletter 等易變資訊。
 - `content.js`：中英文翻譯與完整 FAQ 內容。
 - `assets/official/`：chain.tw 既有 TABEI / N24 品牌 logo。
 - `assets/og-trustworthy-ai-hackathon.jpg`：1200×630 社群預覽圖。
@@ -29,15 +29,14 @@ python -m http.server 8080
 - 最多錄取：20 隊。
 - 每隊：3–5 人。
 - 預計參賽者：60-100 人。
-- 報名：開放個人或隊伍報名，由 Team Leader 代表提交；個人報名者以本人為聯絡窗口。
+- 報名：已於 2026/08/05 23:59（GMT+8）截止。
 - 尚未組隊或未滿員者可先行報名，於賽前工作坊媒合組隊；最終每隊 3–5 人。
 - 每位參賽者限加入一隊。
 - 產業命題：主辦方與產業夥伴共同命題共 6 題；網站僅預告題名與核心問題，完整命題於入選後工作坊公布。
-- 工作坊：兩場，2026/08/15 線上、2026/08/22 線下實體。
-- 報名已於 7/8 正式開放，8/5 截止。
-- 報名網址已填入 `site-config.js`：`https://forms.gle/kafd8Xfh9LAoW6q59`。
+- 工作坊：2026/08/15 14:00–16:00 線上、2026/08/22 10:00–17:00 線下實體。
+- 截止版的 `registrationUrl` 為 `null`，所有報名入口均改為非連結的截止訊息。
 - 團隊媒合平台已填入 `site-config.js`：`https://padlet.com/Trustworthy/trustworthy-ai-hackathon-6r3tvsp4rktkz5xy`。
-- 公開主現金獎金池為 USD 12,000 起；獎項結構與發放方式以正式公告為準。
+- 公開總現金獎金池為 USD 14,000 起；冠軍 USD 5,000、亞軍 2 隊各 USD 2,000、季軍 3 隊各 USD 1,000、特別獎 USD 2,000，並將隨贊助加碼。特別獎隊數與分配方式尚未公告。
 - 未確認夥伴、資源、硬體、VC 活動流程與工作坊細節均不公開；六題命題的完整背景與方向提示亦不提前公開。
 
 ## 待辦
@@ -46,16 +45,16 @@ python -m http.server 8080
   - 題目與賽道章節：由「自由發想／參考方向」改為「六題產業命題制」。
   - 報名階段：參賽者提出自訂痛點與解法構想，僅作為書面初審依據。
   - 入選階段：完整命題於入選後工作坊公布，入選者依正式命題進行開發。
+- [ ] 比賽辦法 PDF（中／英）獎項章節仍是舊版總額，需由主辦方更新為 USD 14,000 起並納入特別獎。
 
 ## CTA 狀態
 
-`main.js` 會依 `site-config.js` 的台灣時區時間判斷報名 CTA：
+`main.js` 會依 `site-config.js` 的台灣時區時間控制 Hero 倒數與截止訊息：
 
-- 2026/07/08 前：中文 `即將開放報名`，英文 `Applications Opening Soon`。
-- 2026/07/08 至 2026/08/05 23:59:59：中文 `立即報名`，英文 `Apply Now`，連到 Google Forms。
-- 2026/08/05 23:59:59 後：中文 `報名已截止`，英文 `Registration Closed`。
+- 2026/08/05 23:59:59 前：Hero 顯示距離報名截止的倒數。
+- 2026/08/05 23:59:59 起：Hero 改顯示中英文對應的報名截止與初選通知訊息，不顯示全零倒數。
 
-目前已在 `site-config.js` 將 `registrationOverride` 設為 `open`，讓報名 CTA 直接連到 Google Forms。臨時需要提前或延後開關時，可設定為 `scheduled`、`open` 或 `closed`。
+截止版已在 `site-config.js` 將 `registrationStatus` 與 `registrationOverride` 設為 `closed`，並將 `challengeRevealScheduleEnabled` 設為 `false`，停用命題卡片的排程鎖定。
 
 ## Feature Flags
 
