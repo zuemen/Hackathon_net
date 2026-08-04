@@ -51,6 +51,11 @@
 **原規定**：《比賽辦法》僅載明兩場工作坊日期，未載明時間。  
 **→ 現行規定**：Workshop #1 為 8/15（六）14:00–16:00 線上舉行；Workshop #2 為 8/22（六）09:40 報到、10:00–17:00 實體舉行。
 
+### 10．活動官網
+
+**原規定**：英文《比賽辦法》聯絡頁列出舊版測試網址。  
+**→ 現行規定**：活動唯一正式官網為 https://hackathon.chain.tw/。
+
 ---
 
 ## Rules Addendum｜August 7, 2026
@@ -103,3 +108,8 @@ This addendum takes precedence over the Competition Rules PDF. Matters not addre
 
 **Previous rule**: The Competition Rules list the workshop dates without times.  
 **→ Current rule**: Workshop #1 is online on Aug 15 from 14:00–16:00. Workshop #2 is in person on Aug 22, with check-in at 09:40 and the workshop from 10:00–17:00.
+
+### 10. Official Event Website
+
+**Previous rule**: The contact page of the English Competition Rules lists an outdated staging URL.  
+**→ Current rule**: The only official event website is https://hackathon.chain.tw/.
