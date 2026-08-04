@@ -80,8 +80,8 @@ window.TRANSLATIONS = {
     "date.info": "7/20（一）",
     "timeline.info": "線上說明會",
     "timeline.now": "現在",
-    "date.deadline": "8/5（三）",
-    "timeline.deadline": "報名截止",
+    "date.deadline": "8/5（三）23:59",
+    "timeline.deadline": "報名截止（GMT+8）",
     "date.finalists": "8/7（五）",
     "timeline.finalists": "公告初選名單",
     "date.confirm": "8/9（日）",
@@ -339,8 +339,8 @@ window.TRANSLATIONS = {
     "date.info": "Jul 20 (Mon)",
     "timeline.info": "Online info session",
     "timeline.now": "Now",
-    "date.deadline": "Aug 5 (Wed)",
-    "timeline.deadline": "Application deadline",
+    "date.deadline": "Aug 5 (Wed) 23:59",
+    "timeline.deadline": "Application deadline (GMT+8)",
     "date.finalists": "Aug 7 (Fri)",
     "timeline.finalists": "Finalists announced",
     "date.confirm": "Aug 9 (Sun)",
@@ -539,7 +539,8 @@ window.FAQ_GROUPS = {
       ["每隊幾人？", "最終每隊 3–5 人，每位參賽者僅能加入一隊；報名時不要求已完成組隊，個人或未滿員隊伍也能先提交。"],
       ["可以個人報名嗎？", "可以。個人、未滿員隊伍與完整 3–5 人隊伍都能報名；個人報名者由本人填寫報名表並作為聯絡窗口。若入選，須在活動前完成 3–5 人隊伍。"],
       ["個人報名後，如何完成組隊？", "報名後可先在<a href=\"https://padlet.com/Trustworthy/trustworthy-ai-hackathon-6r3tvsp4rktkz5xy\" target=\"_blank\" rel=\"noopener noreferrer\" data-matchmaking-link>團隊媒合平台</a>介紹專長與尋找夥伴。若入選，兩場賽前工作坊都會提供媒合協助；建議個人與未滿員隊伍參與，以便認識隊友、討論分工，並確認最終 3–5 人名單。"],
-      ["怎麼報名？", "於報名期間填寫線上報名表：7/8 開放、8/5 截止，由 Team Leader（團隊代表）代表提交，每隊僅提交一次；個人報名者以本人為聯絡窗口。"],
+      ["入選後可以增加原本沒報名的成員嗎？", "可以。最終每隊 3–5 人，每位參賽者限加入一隊；成員異動請於 8/22 前以 Email 通知主辦方（hackathon2026@chain.tw），以利確認最終名單、餐食與完賽證明。賽前工作坊仍限入選者參加。"],
+      ["怎麼報名？", "於報名期間填寫線上報名表：7/8 開放、8/5 23:59 截止（GMT+8），由 Team Leader（團隊代表）代表提交，每隊僅提交一次；個人報名者以本人為聯絡窗口。"],
       ["報名要準備什麼？", "團隊背景（建議整理為一份 PDF：成員與角色分工、所屬單位、相關經驗）、想解決的痛點、初步解法構想，以及 GitHub 或作品連結（選填）。個人報名者，團隊背景可改填個人背景與專長。報名所提痛點用於書審評估；入選後將依公布之命題進行開發。"]
     ]],
     ["B. 主題與技術", [
@@ -550,13 +551,13 @@ window.FAQ_GROUPS = {
       ["需要自備設備嗎？", "請自備筆電及開發所需個人裝置；現場提供網路、電力與活動期間餐食。"]
     ]],
     ["C. 時程、出席與交件", [
-      ["重要時程有哪些？", "7/8 開放報名、7/20 線上說明會、8/5 截止、8/7 公告入選、8/9 入選者回覆期限、8/15 工作坊 #1（線上）、8/22 工作坊 #2（線下）、8/29-8/30 Hackathon、8/31 Demo Day。"],
+      ["重要時程有哪些？", "7/8 開放報名、7/20 線上說明會、8/5 23:59 截止（GMT+8）、8/7 公告入選、8/9 入選者回覆期限、8/15 工作坊 #1（線上）、8/22 工作坊 #2（線下）、8/29-8/30 Hackathon、8/31 Demo Day。"],
       ["Team Leader 一定要出席嗎？", "是。Team Leader 須全程出席兩場賽前工作坊、Hackathon 與 Demo Day。線上說明會已於 7/20 舉行，活動錄影不對外公開。"],
       ["其他隊員一定要參加工作坊嗎？", "已完成組隊者除 Team Leader 須全程出席外，其他隊員不強制，但強烈建議參與。個人或未滿員隊伍若需要媒合，請參與賽前工作坊，以便認識隊友並確認最終隊伍。"],
       ["有提供過夜嗎？", "8/29-8/30 提供過夜，自由參加，可選擇不過夜或當日往返；過夜名額、分區與相關安排將於錄取確認後另行通知。"],
       ["要交什麼？", "程式碼儲存庫（GitHub）、簡報、Demo 連結或影片、一頁治理／信任設計說明、README。"],
       ["交件截止什麼時候？", "8/30（日）23:59 前完成交件，缺件、逾期或無法展示可能影響評分、完賽或獲獎資格。"],
-      ["Demo Day 怎麼進行？", "每隊約 5 分鐘成果簡報，並保留評審提問時間（實際秒數以現場公告為準）。Team Leader 須到場，簡報得由 TL 或其指定隊員擔任。"]
+      ["Demo Day 怎麼進行？", "每隊約 5 分鐘成果簡報，並保留評審提問時間（實際秒數以現場公告為準）。Team Leader 須到場，簡報得由 TL 或其指定隊員擔任。最終名單之全體成員均須出席，得獎隊伍並以此為領獎條件。"]
     ]],
     ["D. 評分、獎項與法務", [
       ["怎麼評分？", "初選（書面）：題目相關性 50%、可行性 30%、團隊能力 20%。<br>決選（Demo Day）：產業應用場景契合度 35%、可信技術導入 AI Agent 的可行性 25%、簡報與 Demo 呈現 25%、問題洞察與創意巧思 15%。"],
@@ -576,7 +577,8 @@ window.FAQ_GROUPS = {
       ["How many members per team?", "Final teams are 3–5 people, and each participant may join only one team. You do not need a complete team when applying; solo applicants and incomplete teams may submit first."],
       ["Can I register as an individual?", "Yes. Solo applicants, incomplete teams, and full teams of 3–5 may register. Solo applicants complete the form themselves and serve as their own contact. If selected, they must join a final team of 3–5 before the event."],
       ["How do solo applicants complete a team?", "After applying, introduce your skills and look for teammates on the <a href=\"https://padlet.com/Trustworthy/trustworthy-ai-hackathon-6r3tvsp4rktkz5xy\" target=\"_blank\" rel=\"noopener noreferrer\" data-matchmaking-link>matching board</a>. If selected, team-matching support is available at both pre-event workshops. Solo applicants and incomplete teams are encouraged to attend so they can meet teammates, discuss roles, and confirm a final roster of 3–5."],
-      ["How do I register?", "Complete the online registration form during the window: opens 7/8, closes 8/5. The Team Leader submits on behalf of the team, once per team; solo registrants are their own contact."],
+      ["Can we add members who did not originally register after selection?", "Yes. Final teams must have 3–5 members, and each participant may join only one team. Please notify the organizer by Email at hackathon2026@chain.tw of any roster changes by Aug 22 so the final roster, meals, and completion certificates can be confirmed. The pre-event workshops remain limited to selected participants."],
+      ["How do I register?", "Complete the online registration form during the window: opens 7/8, closes 8/5 at 23:59 (GMT+8). The Team Leader submits on behalf of the team, once per team; solo registrants are their own contact."],
       ["What should we prepare for registration?", "Team background (suggested as one PDF: members, roles, organizations and relevant experience), the pain point you want to solve, initial solution idea, and optional GitHub or portfolio links. Solo registrants may describe their own background and skills instead of a team background. The pain point submitted at registration is used for written-review evaluation; selected participants will build according to the announced challenge briefs."]
     ]],
     ["B. Themes and Technology", [
@@ -587,13 +589,13 @@ window.FAQ_GROUPS = {
       ["Do I need to bring my own equipment?", "Please bring your own laptop and personal devices needed for development. Network, power, and meals during the event are provided on-site."]
     ]],
     ["C. Schedule, Attendance, and Deliverables", [
-      ["What are the key dates?", "7/8 applications open, 7/20 online info session, 8/5 deadline, 8/7 finalists announced, 8/9 finalist confirmation deadline, 8/15 Workshop #1 (online), 8/22 Workshop #2 (in-person), 8/29-8/30 Hackathon, 8/31 Demo Day."],
+      ["What are the key dates?", "7/8 applications open, 7/20 online info session, 8/5 at 23:59 (GMT+8) application deadline, 8/7 finalists announced, 8/9 finalist confirmation deadline, 8/15 Workshop #1 (online), 8/22 Workshop #2 (in-person), 8/29-8/30 Hackathon, 8/31 Demo Day."],
       ["Does the Team Leader have to attend?", "Yes. The Team Leader must attend both pre-event workshops, the Hackathon, and Demo Day. The online info session was held on July 20. The recording is not publicly released."],
       ["Do all other members have to attend the workshops?", "For complete teams, only the Team Leader is required to attend throughout, though other members are strongly encouraged to join. Solo applicants and incomplete teams that need matching should attend the pre-event workshops to meet teammates and confirm their final team."],
       ["Is overnight stay available?", "Overnight stay from 8/29 to 8/30 is optional. You may choose not to stay or commute. Capacity, zoning, and related arrangements will be announced after finalist confirmation."],
       ["What do we submit?", "A GitHub repository, a slide deck, a demo link or video, a one-page governance / trust design note, and a README."],
       ["When is the submission deadline?", "By 23:59 on Sunday 8/30. Missing, late, or non-demoable submissions may affect scoring, completion, or prize eligibility."],
-      ["How does Demo Day work?", "Each team gives an approximately 5-minute presentation, with time reserved for judges' Q&A. Exact timing is subject to on-site announcement. The Team Leader must be present; the presentation may be delivered by the TL or a designated team member."]
+      ["How does Demo Day work?", "Each team gives an approximately 5-minute presentation, with time reserved for judges' Q&A. Exact timing is subject to on-site announcement. The Team Leader must be present; the presentation may be delivered by the TL or a designated team member. All members on the final roster must attend; for winning teams, this is also a condition for receiving the prize."]
     ]],
     ["D. Judging, Prizes, and Legal", [
       ["How is judging done?", "Preliminary review (written): topic relevance 50%, feasibility 30%, team capability 20%.<br>Final (Demo Day): industry scenario fit 35%, feasibility of a trustworthy AI Agent 25%, presentation & demo 25%, insight & creativity 15%."],
