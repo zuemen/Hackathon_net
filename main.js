@@ -388,11 +388,6 @@
     const node = document.querySelector("#event-jsonld");
     if (!node) return;
     const registrationState = getRegistrationState();
-    const availability = registrationState === "open"
-      ? "https://schema.org/InStock"
-      : registrationState === "scheduled"
-        ? "https://schema.org/PreOrder"
-        : "https://schema.org/SoldOut";
     const jsonLd = {
       "@context": "https://schema.org",
       "@type": "Event",
@@ -410,17 +405,19 @@
         "@type": "Organization",
         name: config.organizerName || "Taiwan Association for Blockchain Ecosystem Innovation (TABEI)",
         url: config.organizerUrl || "https://www.chain.tw/"
-      },
-      offers: {
-        "@type": "Offer",
-        url: config.registrationUrl || config.canonicalUrl || window.location.href,
-        availabilityStarts: config.registrationOpenAt,
-        validThrough: config.registrationCloseAt,
-        price: "0",
-        priceCurrency: "USD",
-        availability
       }
     };
+    if (registrationState === "open" && config.registrationUrl) {
+      jsonLd.offers = {
+        "@type": "Offer",
+        url: config.registrationUrl,
+        validFrom: config.registrationOpenAt,
+        validThrough: config.registrationCloseAt,
+        price: 0,
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock"
+      };
+    }
     node.textContent = JSON.stringify(jsonLd, null, 2);
   }
 
