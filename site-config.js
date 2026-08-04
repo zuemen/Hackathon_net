@@ -41,7 +41,7 @@ window.SITE_CONFIG = {
   finalistAnnouncementDate: "2026-08-07",
   workshopDates: ["2026-08-15", "2026-08-22"],
 
-  prizePoolUsd: 12000,
+  prizePoolUsd: 14000,
   prizePoolMayIncrease: true,
 
   showPrizeBreakdown: false,

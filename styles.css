@@ -7316,3 +7316,35 @@ html[lang="en"] #tracks .challenge-card {
     min-height: 520px;
   }
 }
+
+/* Confirmed special award: same hierarchy as the podium, with a restrained
+   cyan treatment. Recipient count and allocation are intentionally omitted. */
+.prize-podium .prize-special {
+  grid-column: 1 / -1;
+  order: 4;
+  justify-self: center;
+  width: min(100%, 720px);
+  min-height: 188px;
+  border-color: rgba(111, 224, 242, 0.46);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(57, 194, 224, 0.2), transparent 58%),
+    linear-gradient(180deg, rgba(57, 194, 224, 0.08), rgba(15, 37, 64, 0.9));
+  box-shadow:
+    0 24px 64px rgba(1, 10, 21, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055);
+}
+
+.prize-podium .prize-special h3 {
+  color: var(--cyan-300);
+}
+
+.prize-podium .prize-special:hover {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 760px) {
+  .prize-podium .prize-special {
+    grid-column: auto;
+    min-height: 170px;
+  }
+}
