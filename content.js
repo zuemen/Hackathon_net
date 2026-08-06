@@ -79,6 +79,9 @@ window.TRANSLATIONS = {
     "prize.third.amount": "USD 1,000",
     "prize.special.title": "特別獎",
     "prize.special.amount": "USD 2,000",
+    "partners.title": "合作夥伴",
+    "partners.gleif.name": "GLEIF 全球法人識別碼基金會",
+    "partners.gleif.alt": "GLEIF 標誌",
     "roadmap.title": "時間軸",
     "roadmap.body": "從報名到 Demo Day。",
     "date.registration": "7/8（三）",
@@ -244,7 +247,6 @@ window.TRANSLATIONS = {
     "judges.group": "評審與導師",
     "judges.pending": "將邀請產業、學界與社群代表參與評審與指導；名單以正式公告為準。",
     "judges.organizer": "主辦單位",
-    "judges.partners": "合作夥伴",
     "judges.sponsors": "贊助夥伴",
     "judges.toBeAnnounced": "待公開",
     "judges.organizer.name": "臺灣區塊鏈愛好者協會（TABEI）",
@@ -342,6 +344,9 @@ window.TRANSLATIONS = {
     "prize.third.amount": "USD 1,000",
     "prize.special.title": "Special Award",
     "prize.special.amount": "USD 2,000",
+    "partners.title": "Partners",
+    "partners.gleif.name": "GLEIF – Global Legal Entity Identifier Foundation",
+    "partners.gleif.alt": "GLEIF logo",
     "roadmap.title": "Roadmap",
     "roadmap.body": "From sign-up to Demo Day.",
     "date.registration": "Jul 8 (Wed)",
@@ -507,7 +512,6 @@ window.TRANSLATIONS = {
     "judges.group": "Judges & mentors",
     "judges.pending": "Industry, academic and community representatives will be invited for judging and mentorship; names are subject to official announcement.",
     "judges.organizer": "Organizer",
-    "judges.partners": "Partners",
     "judges.sponsors": "Sponsoring Partners",
     "judges.toBeAnnounced": "To be announced",
     "judges.organizer.name": "Taiwan Association for Blockchain Ecosystem Innovation (TABEI)",
@@ -555,7 +559,7 @@ window.FAQ_GROUPS = {
       ["有指定題目或賽道嗎？", "正式題目由主辦方與產業夥伴共同命題，共六大真實場景（見主題區預告）；完整命題於入選後的工作坊公布，並說明命題選擇方式。報名時請提出你們自訂的痛點與解法構想，作為書面初審的評估依據。其中命題 06 為加分題，團隊可於主要命題之外同時挑戰。"],
       ["技術或框架有限制嗎？", "技術自由，但作品須能展示可信 AI Agent 的身份、授權、行動邊界、稽核與撤銷思考，且僅能使用合法授權之模型、資料與工具。"],
       ["可信 AI Agent 建議展示什麼？", "代表誰（Principal）、被授權做什麼（Authorization）、可呼叫的工具與動作（Tool / Action）、政策關卡（Policy Gate）、稽核軌跡（Audit Log）、失效與撤銷（Expiry / Revocation）。"],
-      ["一定要用區塊鏈或數位憑證（VC）嗎？", "不強制。只要能清楚展示身份、授權、驗證、稽核與撤銷即可；區塊鏈／VC 是選項而非必需。"],
+      ["一定要用區塊鏈或數位憑證（VC）嗎？", "不強制。只要能清楚展示身份、授權、驗證、稽核與撤銷即可；區塊鏈／VC 是選項而非必需。GLEIF 的合作夥伴身分不代表參賽隊伍必須採用 LEI 或 vLEI。"],
       ["需要自備設備嗎？", "請自備筆電及開發所需個人裝置；現場提供網路、電力與活動期間餐食。"]
     ]],
     ["C. 時程、出席與交件", [
@@ -593,7 +597,7 @@ window.FAQ_GROUPS = {
       ["Are there assigned topics or tracks?", "The official challenges are co-developed by the organizer and industry partners and cover six real-world scenarios (see the preview in the Challenge Topics section). Full briefs will be revealed at the post-selection workshops, along with the topic-selection process. At registration, submit your own pain point and proposed solution as material for the preliminary written review. Topic 06 is a bonus challenge that teams may take on in addition to their main topic."],
       ["Any technology restrictions?", "Technology is open, but the project should demonstrate thinking around identity, authorization, action boundaries, auditability and revocation for a trustworthy AI Agent, using only legally licensed models, data and tools."],
       ["What should a trustworthy AI Agent show?", "Principal, Authorization, Tool / Action, Policy Gate, Audit Log, and Expiry / Revocation."],
-      ["Do we have to use blockchain or verifiable credentials (VC)?", "No. Blockchain and VC are options, not requirements. The work only needs to clearly show identity, authorization, verification, auditability and revocation."],
+      ["Do we have to use blockchain or verifiable credentials (VC)?", "No. Blockchain and VC are options, not requirements. The work only needs to clearly show identity, authorization, verification, auditability and revocation. GLEIF's role as a partner does not require teams to use the LEI or vLEI."],
       ["Do I need to bring my own equipment?", "Please bring your own laptop and personal devices needed for development. Network, power, and meals during the event are provided on-site."]
     ]],
     ["C. Schedule, Attendance, and Deliverables", [

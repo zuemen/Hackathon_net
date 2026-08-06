@@ -49,7 +49,7 @@ window.SITE_CONFIG = {
   showWinnerCount: false,
   showBuilderKit: false,
   showHardwarePrizes: false,
-  showPartnerNames: false,
+  showPartnerNames: true,
   showCredentialExperience: false,
   showWorkshopTopics: false,
 

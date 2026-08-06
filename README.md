@@ -58,13 +58,13 @@ python -m http.server 8080
 
 ## Feature Flags
 
-`site-config.js` 內保留以下開關，預設皆為 `false`，避免未確認內容被公開：
+`site-config.js` 內保留以下開關；未確認內容維持 `false`，避免提早公開。GLEIF 已確認為合作夥伴，因此 `showPartnerNames` 目前為 `true`：
 
 - `showPrizeBreakdown`
 - `showWinnerCount`
 - `showBuilderKit`
 - `showHardwarePrizes`
-- `showPartnerNames`
+- `showPartnerNames`（目前為 `true`；GLEIF 已確認）
 - `showCredentialExperience`
 - `showWorkshopTopics`
 

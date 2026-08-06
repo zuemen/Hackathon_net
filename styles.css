@@ -7510,3 +7510,85 @@ html[lang="en"] #tracks .challenge-card {
     padding-bottom: calc(164px + env(safe-area-inset-bottom));
   }
 }
+
+/* Confirmed partners: a dedicated dark-surface logo section before challenges. */
+#partners {
+  border-block: 1px solid rgba(111, 224, 242, 0.12);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(57, 194, 224, 0.12), transparent 30rem),
+    linear-gradient(180deg, #07182c, #091e35);
+}
+
+#partners .partners-heading {
+  margin-bottom: clamp(24px, 3vw, 34px);
+}
+
+#partners .partners-heading h2 {
+  margin-bottom: 0;
+}
+
+.partner-showcase {
+  display: grid;
+  width: min(100%, 560px);
+  justify-items: center;
+  margin-inline: auto;
+  padding: clamp(26px, 4vw, 38px);
+  border: 1px solid rgba(111, 224, 242, 0.24);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(57, 194, 224, 0.13), transparent 62%),
+    rgba(8, 27, 48, 0.9);
+  box-shadow:
+    0 24px 64px rgba(1, 10, 21, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.partner-logo-link {
+  display: inline-flex;
+  max-width: 100%;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 12px;
+  transition: opacity 180ms ease, transform 180ms var(--ease-out);
+}
+
+.partner-logo-link:hover,
+.partner-logo-link:focus-visible {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.partner-logo {
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+}
+
+.partner-showcase p {
+  margin: 16px 0 0;
+  color: var(--text);
+  font-size: clamp(0.96rem, 1.4vw, 1.08rem);
+  font-weight: 750;
+  line-height: 1.55;
+}
+
+@media (max-width: 700px) {
+  .partner-showcase {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partner-logo-link {
+    transition: none;
+  }
+
+  .partner-logo-link:hover,
+  .partner-logo-link:focus-visible {
+    transform: none;
+  }
+}
