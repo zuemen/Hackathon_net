@@ -7122,28 +7122,6 @@ main > .section {
   line-height: 1.6;
 }
 
-.network-organizer {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  margin-top: auto;
-}
-
-.network-organizer img {
-  width: min(100%, 220px);
-  height: auto;
-}
-
-.network-organizer p {
-  color: rgba(224, 240, 246, 0.9);
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
 .judge-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -7196,10 +7174,6 @@ main > .section {
 
   #rules .rulebook-update-note {
     font-size: 0.84rem;
-  }
-
-  .network-organizer img {
-    width: min(100%, 190px);
   }
 
   .judge-list {
@@ -7527,9 +7501,18 @@ html[lang="en"] #tracks .challenge-card {
   margin-bottom: 0;
 }
 
-.partner-showcase {
+.partners-grid {
   display: grid;
-  width: min(100%, 560px);
+  width: min(100%, 980px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-inline: auto;
+}
+
+.partner-card {
+  display: grid;
+  width: 100%;
+  min-width: 0;
   justify-items: center;
   margin-inline: auto;
   padding: clamp(26px, 4vw, 38px);
@@ -7542,6 +7525,13 @@ html[lang="en"] #tracks .challenge-card {
     0 24px 64px rgba(1, 10, 21, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
   text-align: center;
+}
+
+.partner-card h3 {
+  margin: 0 0 16px;
+  color: var(--text);
+  font-size: clamp(1.08rem, 2vw, 1.25rem);
+  line-height: 1.35;
 }
 
 .partner-logo-link {
@@ -7567,7 +7557,7 @@ html[lang="en"] #tracks .challenge-card {
   height: auto;
 }
 
-.partner-showcase p {
+.partner-card p {
   margin: 16px 0 0;
   color: var(--text);
   font-size: clamp(0.96rem, 1.4vw, 1.08rem);
@@ -7575,8 +7565,16 @@ html[lang="en"] #tracks .challenge-card {
   line-height: 1.55;
 }
 
+.partner-logo-organizer {
+  width: min(100%, 220px);
+}
+
 @media (max-width: 700px) {
-  .partner-showcase {
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-card {
     padding: 24px 18px;
     border-radius: 18px;
   }
