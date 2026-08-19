@@ -9,7 +9,7 @@ window.SITE_CONFIG = {
   venue: "N24 台北方舟",
   venueMapUrl: "https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8D%97%E6%B8%AF%E5%8D%80%E5%B8%82%E6%B0%91%E5%A4%A7%E9%81%93%E4%B8%83%E6%AE%B5100%E8%99%9F",
 
-  selectedTeams: 20,
+  selectedTeams: 22,
   teamMin: 3,
   teamMax: 5,
   participantMin: 60,
