@@ -92,8 +92,8 @@ window.TRANSLATIONS = {
     "partners.gleif.alt": "GLEIF 標誌",
     "partners.organizer.name": "TABEI",
     "partners.organizer.alt": "TABEI 標誌",
-    "partners.keri.name": "KERI",
-    "partners.keri.alt": "KERI 標誌",
+    "partners.keri.name": "KERI Foundation",
+    "partners.keri.alt": "KERI Foundation 標誌",
     "partners.startupIsland.name": "Startup Island TAIWAN",
     "partners.startupIsland.alt": "Startup Island TAIWAN 標誌",
     "partners.fido.name": "FIDO Alliance",
@@ -383,8 +383,8 @@ window.TRANSLATIONS = {
     "partners.gleif.alt": "GLEIF logo",
     "partners.organizer.name": "TABEI",
     "partners.organizer.alt": "TABEI logo",
-    "partners.keri.name": "KERI",
-    "partners.keri.alt": "KERI logo",
+    "partners.keri.name": "KERI Foundation",
+    "partners.keri.alt": "KERI Foundation logo",
     "partners.startupIsland.name": "Startup Island TAIWAN",
     "partners.startupIsland.alt": "Startup Island TAIWAN logo",
     "partners.fido.name": "FIDO Alliance",
@@ -611,7 +611,7 @@ window.FAQ_GROUPS = {
       ["有指定題目或賽道嗎？", "正式題目由主辦方與產業夥伴共同命題，共六大真實場景（見主題區預告）；完整命題於入選後的工作坊公布，並說明命題選擇方式。報名時請提出你們自訂的痛點與解法構想，作為書面初審的評估依據。其中命題 06 為加分題，團隊可於主要命題之外同時挑戰。"],
       ["技術或框架有限制嗎？", "技術自由，但作品須能展示可信 AI Agent 的身份、授權、行動邊界、稽核與撤銷思考，且僅能使用合法授權之模型、資料與工具。"],
       ["可信 AI Agent 建議展示什麼？", "代表誰（Principal）、被授權做什麼（Authorization）、可呼叫的工具與動作（Tool / Action）、政策關卡（Policy Gate）、稽核軌跡（Audit Log）、失效與撤銷（Expiry / Revocation）。"],
-      ["一定要用區塊鏈或數位憑證（VC）嗎？", "不強制。只要能清楚展示身份、授權、驗證、稽核與撤銷即可；區塊鏈／VC 是選項而非必需。GLEIF、FIDO Alliance 與 KERI 列為支持單位，不代表參賽隊伍必須採用 LEI、vLEI、FIDO 或 KERI 相關規範、技術或服務。"],
+      ["一定要用區塊鏈或數位憑證（VC）嗎？", "不強制。只要能清楚展示身份、授權、驗證、稽核與撤銷即可；區塊鏈／VC 是選項而非必需。GLEIF、FIDO Alliance 與 KERI Foundation 列為支持單位，不代表參賽隊伍必須採用 LEI、vLEI、FIDO 或 KERI 相關規範、技術或服務。"],
       ["需要自備設備嗎？", "請自備筆電及開發所需個人裝置；現場提供網路、電力與活動期間餐食。"]
     ]],
     ["C. 時程、出席與交件", [
@@ -649,7 +649,7 @@ window.FAQ_GROUPS = {
       ["Are there assigned topics or tracks?", "The official challenges are co-developed by the organizer and industry partners and cover six real-world scenarios (see the preview in the Challenge Topics section). Full briefs will be revealed at the post-selection workshops, along with the topic-selection process. At registration, submit your own pain point and proposed solution as material for the preliminary written review. Topic 06 is a bonus challenge that teams may take on in addition to their main topic."],
       ["Any technology restrictions?", "Technology is open, but the project should demonstrate thinking around identity, authorization, action boundaries, auditability and revocation for a trustworthy AI Agent, using only legally licensed models, data and tools."],
       ["What should a trustworthy AI Agent show?", "Principal, Authorization, Tool / Action, Policy Gate, Audit Log, and Expiry / Revocation."],
-      ["Do we have to use blockchain or verifiable credentials (VC)?", "No. Blockchain and VC are options, not requirements. The work only needs to clearly demonstrate identity, authorization, verification, auditability, and revocation. The listing of GLEIF, FIDO Alliance, and KERI as supporting organizations does not require teams to use LEI, vLEI, or FIDO- or KERI-related standards, technologies, or services."],
+      ["Do we have to use blockchain or verifiable credentials (VC)?", "No. Blockchain and VC are options, not requirements. The work only needs to clearly demonstrate identity, authorization, verification, auditability, and revocation. The listing of GLEIF, FIDO Alliance, and KERI Foundation as supporting organizations does not require teams to use LEI, vLEI, or FIDO- or KERI-related standards, technologies, or services."],
       ["Do I need to bring my own equipment?", "Please bring your own laptop and personal devices needed for development. Network, power, and meals during the event are provided on-site."]
     ]],
     ["C. Schedule, Attendance, and Deliverables", [
