@@ -2024,7 +2024,7 @@ summary:focus-visible {
   color: var(--text);
   background:
     linear-gradient(90deg, rgba(7,21,40,0.72), rgba(7,21,40,0.35)),
-    url("./assets/hero-kv.webp") center / cover no-repeat,
+    image-set(url("./assets/images/hero-banner-2026.webp") type("image/webp"), url("./assets/images/hero-banner-2026.jpg") type("image/jpeg")) center / cover no-repeat,
     radial-gradient(circle at 70% 42%, rgba(79,195,247,0.26), transparent 32%),
     linear-gradient(135deg, var(--bg-deep), var(--bg));
 }
@@ -2307,7 +2307,7 @@ summary:focus-visible {
   .hero {
     background:
       linear-gradient(180deg, rgba(7,21,40,0.82), rgba(7,21,40,0.42)),
-      url("./assets/hero-kv.webp") center center / cover no-repeat,
+      image-set(url("./assets/images/hero-banner-2026.webp") type("image/webp"), url("./assets/images/hero-banner-2026.jpg") type("image/jpeg")) center center / cover no-repeat,
       linear-gradient(135deg, var(--bg-deep), var(--bg));
   }
 }
@@ -2394,7 +2394,7 @@ summary:focus-visible {
   padding: 0;
   background:
     linear-gradient(180deg, rgba(7,21,40,0) 44%, rgba(7,21,40,0.55) 72%, rgba(7,21,40,0.86) 100%),
-    url("./assets/hero-kv.webp") center top / cover no-repeat,
+    image-set(url("./assets/images/hero-banner-2026.webp") type("image/webp"), url("./assets/images/hero-banner-2026.jpg") type("image/jpeg")) center top / cover no-repeat,
     linear-gradient(135deg, var(--bg-deep), var(--bg));
 }
 
@@ -2447,7 +2447,7 @@ summary:focus-visible {
     min-height: calc(56.25vw + 64px);
     background:
       linear-gradient(180deg, rgba(7,21,40,0.04), rgba(7,21,40,0.26)),
-      url("./assets/hero-kv.webp") center 64px / 100% auto no-repeat,
+      image-set(url("./assets/images/hero-banner-2026.webp") type("image/webp"), url("./assets/images/hero-banner-2026.jpg") type("image/jpeg")) center 64px / 100% auto no-repeat,
       linear-gradient(135deg, var(--bg-deep), var(--bg));
   }
 }
@@ -3686,7 +3686,7 @@ summary:focus-visible {
   min-height: calc(56.25vw + 154px);
   padding: 0 0 26px;
   background:
-    url("./assets/hero-kv.webp") center 74px / 100% auto no-repeat,
+    image-set(url("./assets/images/hero-banner-2026.webp") type("image/webp"), url("./assets/images/hero-banner-2026.jpg") type("image/jpeg")) center 74px / 100% auto no-repeat,
     linear-gradient(135deg, var(--bg-deep), var(--bg));
 }
 
@@ -4017,7 +4017,7 @@ summary:focus-visible {
     min-height: calc(56.25vw + 154px);
     padding-bottom: 26px;
     background:
-      url("./assets/hero-kv.webp") center 74px / 100% auto no-repeat,
+      image-set(url("./assets/images/hero-banner-2026.webp") type("image/webp"), url("./assets/images/hero-banner-2026.jpg") type("image/jpeg")) center 74px / 100% auto no-repeat,
       linear-gradient(135deg, var(--bg-deep), var(--bg)) !important;
   }
   .hero .hero-tagline {
@@ -5716,7 +5716,7 @@ summary {
 @media (max-width: 820px) {
   #hero.hero {
     background:
-      url("./assets/og-trustworthy-ai-hackathon.jpg") center 74px / 100% auto no-repeat,
+      image-set(url("./assets/images/hero-banner-2026.webp") type("image/webp"), url("./assets/images/hero-banner-2026.jpg") type("image/jpeg")) center 74px / 100% auto no-repeat,
       linear-gradient(135deg, var(--bg-deep), var(--bg));
   }
 
@@ -6994,7 +6994,7 @@ main > .section::before {
 @media (min-width: 821px) {
   #hero.hero {
     background:
-      url("./assets/hero-kv.webp") center 74px / 100% auto no-repeat,
+      image-set(url("./assets/images/hero-banner-2026.webp") type("image/webp"), url("./assets/images/hero-banner-2026.jpg") type("image/jpeg")) center 74px / 100% auto no-repeat,
       linear-gradient(135deg, var(--bg-deep), var(--bg));
   }
 
@@ -7031,7 +7031,7 @@ main > .section {
     padding: 0 0 22px;
     overflow: hidden;
     background:
-      url("./assets/og-trustworthy-ai-hackathon.jpg") center 74px / 100% auto no-repeat,
+      image-set(url("./assets/images/hero-banner-2026.webp") type("image/webp"), url("./assets/images/hero-banner-2026.jpg") type("image/jpeg")) center 74px / 100% auto no-repeat,
       linear-gradient(135deg, var(--bg-deep), var(--bg));
   }
 
