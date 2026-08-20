@@ -630,8 +630,8 @@ window.JUDGES = [
     nameEn: "ChingWen Yang",
     affiliationZh: "嶺東科技大學｜副校長",
     affiliationEn: "Vice President, Ling Tung University",
-    imageJpg: "assets/judges/chingwen-yang.jpg",
-    imageWebp: "assets/judges/chingwen-yang.webp",
+    imageJpg: "assets/judges/chingwen-yang.jpg?v=2",
+    imageWebp: "assets/judges/chingwen-yang.webp?v=2",
     alt: { "zh-Hant": "楊晴雯 照片", en: "Portrait of ChingWen Yang" }
   },
   {
@@ -657,8 +657,8 @@ window.JUDGES = [
     nameEn: "Giga Tseng",
     affiliationZh: "旋宇科技",
     affiliationEn: "Nautilus AI",
-    imageJpg: "assets/judges/giga-tseng.jpg",
-    imageWebp: "assets/judges/giga-tseng.webp",
+    imageJpg: "assets/judges/giga-tseng.jpg?v=2",
+    imageWebp: "assets/judges/giga-tseng.webp?v=2",
     alt: { "zh-Hant": "曾思遠 照片", en: "Portrait of Giga Tseng" }
   },
   {

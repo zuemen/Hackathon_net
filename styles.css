@@ -8379,14 +8379,23 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
 
   #judges .judge-card {
     display: grid;
-    grid-template-columns: 104px minmax(0, 1fr);
+    grid-template-columns: 112px minmax(0, 1fr);
   }
 
   #judges .judge-card picture {
-    width: 104px;
+    display: flex;
+    width: 112px;
     height: 100%;
-    min-height: 150px;
+    min-height: 0;
+    align-items: center;
     aspect-ratio: auto;
+  }
+
+  #judges .judge-card img {
+    width: 112px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
   }
 
   .judge-card-copy {
