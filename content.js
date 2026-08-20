@@ -612,8 +612,8 @@ window.JUDGES = [
     nameEn: "Kai-Ping Hsu",
     affiliationZh: "中國醫藥大學附設醫院｜資訊部主任、資安長",
     affiliationEn: "Director of Information Technology and Chief Information Security Officer, China Medical University Hospital",
-    imageJpg: "assets/judges/kai-ping-hsu.jpg?v=2",
-    imageWebp: "assets/judges/kai-ping-hsu.webp?v=2",
+    imageJpg: "assets/judges/kai-ping-hsu.jpg?v=3",
+    imageWebp: "assets/judges/kai-ping-hsu.webp?v=3",
     alt: { "zh-Hant": "許凱平 照片", en: "Portrait of Kai-Ping Hsu" }
   },
   {
@@ -637,8 +637,8 @@ window.JUDGES = [
   {
     nameZh: "莊豐源",
     nameEn: "Frank Chuang",
-    affiliationZh: "國立政治大學資訊管理學系",
-    affiliationEn: "Department of Management Information Systems, National Chengchi University",
+    affiliationZh: "國立政治大學資訊管理學系｜助理教授",
+    affiliationEn: "Assistant Professor, Department of Management Information Systems, National Chengchi University",
     imageJpg: "assets/judges/frank-chuang.jpg",
     imageWebp: "assets/judges/frank-chuang.webp",
     alt: { "zh-Hant": "莊豐源 照片", en: "Portrait of Frank Chuang" }
@@ -648,8 +648,8 @@ window.JUDGES = [
     nameEn: "Tony Lin",
     affiliationZh: "美家人力資源股份有限公司",
     affiliationEn: "MAY-GOD HUMAN RESOURCES CO., LTD",
-    imageJpg: "assets/judges/tony-lin.jpg",
-    imageWebp: "assets/judges/tony-lin.webp",
+    imageJpg: "assets/judges/tony-lin.jpg?v=2",
+    imageWebp: "assets/judges/tony-lin.webp?v=2",
     alt: { "zh-Hant": "林冠杰 照片", en: "Portrait of Tony Lin" }
   },
   {
