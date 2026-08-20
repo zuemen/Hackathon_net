@@ -7987,13 +7987,12 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
 .partner-logo-organizer {
   width: min(100%, 210px);
   max-height: 58px;
-  filter: brightness(0.42) saturate(1.45) contrast(1.12);
 }
 
 .partner-logo-ndc,
 .partner-logo-aimichia {
-  width: min(100%, 86px);
-  max-height: 86px;
+  width: min(100%, 220px);
+  max-height: 68px;
 }
 
 .partner-logo-keri {
@@ -8057,11 +8056,6 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
   .partner-item:focus-within .partner-logo {
     filter: saturate(1.06) contrast(1.03);
     transform: scale(1.035);
-  }
-
-  .partner-item:hover .partner-logo-organizer,
-  .partner-item:focus-within .partner-logo-organizer {
-    filter: brightness(0.36) saturate(1.5) contrast(1.16);
   }
 
   .partner-item:hover .partner-logo-tile::after,
@@ -8225,5 +8219,28 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
     font-size: 0.92rem;
     line-height: 1.4;
     text-align: left;
+  }
+}
+
+/* The supplied TABEI artwork uses dark lettering. Preserve its original
+   colors while keeping it legible against the dark header and footer. */
+.site-header .brand {
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(111, 224, 242, 0.2);
+}
+
+.footer-logo-row img:first-child {
+  box-sizing: content-box;
+  padding: 8px 12px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+@media (max-width: 820px) {
+  .site-header .brand {
+    padding: 5px 8px;
+    border-radius: 10px;
   }
 }
