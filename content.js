@@ -277,12 +277,12 @@ window.TRANSLATIONS = {
     "workshops.card2.meta": "8/22（六）10:30–11:00 報到，11:00–16:00 活動",
     "workshops.card2.title": "Workshop #2（線下）",
     "workshops.card2.body": "六題完整命題公布、產業痛點說明與 POC 題目收斂；入選者可在本場持續媒合並確認最終隊伍。10:30–11:00 報到，11:00–16:00 活動，限入選隊伍參加。",
-    "judges.title": "評審與導師",
-    "judges.subtitle": "評審與導師名單將依正式確認進度更新。",
-    "judges.group": "評審與導師",
-    "judges.pending": "將邀請產業、學界與社群代表參與評審與指導；名單以正式公告為準。",
+    "judges.title": "Demo Day 評審陣容",
+    "judges.subtitle": "八位來自學界、醫療、顧問、科技與投資領域的評審，將共同檢視作品的產業契合度、可信技術可行性、Demo 呈現與問題洞察。",
+    "judges.group": "評審陣容",
+    "judges.pending": "名單依正式公告順序呈現。",
     "judges.sponsors": "贊助夥伴",
-    "judges.toBeAnnounced": "待公開",
+    "judges.toBeAnnounced": "8 位評審",
     "faq.title": "常見問答",
     "faq.body": "單人報名、組隊媒合、出席與交件，一次說清楚。",
     "venue.title": "場地與交通",
@@ -575,12 +575,12 @@ window.TRANSLATIONS = {
     "workshops.card2.meta": "Aug 22 (Sat) check-in 10:30–11:00; workshop 11:00–16:00",
     "workshops.card2.title": "Workshop #2 (In-person)",
     "workshops.card2.body": "Release of the six full challenge briefs, industry pain-point briefing, and POC topic scoping; selected participants can continue matching and confirm their final team here. Check-in is 10:30–11:00, and the workshop runs 11:00–16:00. Open to selected teams only.",
-    "judges.title": "Judges & Mentors",
-    "judges.subtitle": "Judges and mentors will be announced as confirmations are finalized.",
-    "judges.group": "Judges & mentors",
-    "judges.pending": "Industry, academic and community representatives will be invited for judging and mentorship; names are subject to official announcement.",
+    "judges.title": "Demo Day Judging Panel",
+    "judges.subtitle": "Eight judges from academia, healthcare, advisory, technology, and investment will evaluate industry fit, trustworthy-technology feasibility, demo execution, and problem insight.",
+    "judges.group": "Judging Panel",
+    "judges.pending": "Listed in the official announced order.",
     "judges.sponsors": "Sponsoring Partners",
-    "judges.toBeAnnounced": "To be announced",
+    "judges.toBeAnnounced": "8 Judges",
     "faq.title": "FAQ",
     "faq.body": "Solo registration, team matching, attendance and deliverables — explained in one place.",
     "venue.title": "Venue & Access",
@@ -597,15 +597,79 @@ window.TRANSLATIONS = {
   }
 };
 
-// Add confirmed judges and mentors here as they are announced.
-// Each field may provide localized values; image is an optional asset path.
 window.JUDGES = [
-  // {
-  //   name: { "zh-Hant": "", en: "" },
-  //   role: { "zh-Hant": "", en: "" },
-  //   organization: { "zh-Hant": "", en: "" },
-  //   image: ""
-  // }
+  {
+    nameZh: "莊豐源",
+    nameEn: "Frank Chuang",
+    affiliationZh: "國立政治大學資訊管理學系",
+    affiliationEn: "Department of Management Information Systems, National Chengchi University",
+    imageJpg: "assets/judges/frank-chuang.jpg",
+    imageWebp: "assets/judges/frank-chuang.webp",
+    alt: { "zh-Hant": "莊豐源 照片", en: "Portrait of Frank Chuang" }
+  },
+  {
+    nameZh: "許凱平",
+    nameEn: "Kai-Ping Hsu",
+    affiliationZh: "中國醫藥大學附設醫院",
+    affiliationEn: "China Medical University Hospital",
+    imageJpg: "assets/judges/kai-ping-hsu.jpg",
+    imageWebp: "assets/judges/kai-ping-hsu.webp",
+    alt: { "zh-Hant": "許凱平 照片", en: "Portrait of Kai-Ping Hsu" }
+  },
+  {
+    nameZh: "張智淵",
+    nameEn: "Leo Chang",
+    affiliationZh: "安侯企業管理股份有限公司｜副總經理",
+    affiliationEn: "Director, KPMG Advisory",
+    imageJpg: "assets/judges/leo-chang.jpg",
+    imageWebp: "assets/judges/leo-chang.webp",
+    alt: { "zh-Hant": "張智淵 照片", en: "Portrait of Leo Chang" }
+  },
+  {
+    nameZh: "楊晴雯",
+    nameEn: "ChingWen Yang",
+    affiliationZh: "嶺東科技大學｜副校長",
+    affiliationEn: "Vice President, Ling Tung University",
+    imageJpg: "assets/judges/chingwen-yang.jpg",
+    imageWebp: "assets/judges/chingwen-yang.webp",
+    alt: { "zh-Hant": "楊晴雯 照片", en: "Portrait of ChingWen Yang" }
+  },
+  {
+    nameZh: "陳怡良",
+    nameEn: "Jay Chen",
+    affiliationZh: "偉康科技股份有限公司｜總經理",
+    affiliationEn: "General Manager, WebComm Technology",
+    imageJpg: "assets/judges/jay-chen.jpg",
+    imageWebp: "assets/judges/jay-chen.webp",
+    alt: { "zh-Hant": "陳怡良 照片", en: "Portrait of Jay Chen" }
+  },
+  {
+    nameZh: "林冠杰",
+    nameEn: "Tony Lin",
+    affiliationZh: "美家人力資源股份有限公司",
+    affiliationEn: "MAY-GOD HUMAN RESOURCES CO., LTD",
+    imageJpg: "assets/judges/tony-lin.jpg",
+    imageWebp: "assets/judges/tony-lin.webp",
+    alt: { "zh-Hant": "林冠杰 照片", en: "Portrait of Tony Lin" }
+  },
+  {
+    nameZh: "曾思遠",
+    nameEn: "Giga Tseng",
+    affiliationZh: "旋宇科技",
+    affiliationEn: "Nautilus AI",
+    imageJpg: "assets/judges/giga-tseng.jpg",
+    imageWebp: "assets/judges/giga-tseng.webp",
+    alt: { "zh-Hant": "曾思遠 照片", en: "Portrait of Giga Tseng" }
+  },
+  {
+    nameZh: "莊孟儒",
+    nameEn: "Jeff Chuang",
+    affiliationZh: "AVA Angels｜投資總監",
+    affiliationEn: "Principal, AVA Angels",
+    imageJpg: "assets/judges/jeff-chuang.jpg",
+    imageWebp: "assets/judges/jeff-chuang.webp",
+    alt: { "zh-Hant": "莊孟儒 照片", en: "Portrait of Jeff Chuang" }
+  }
 ];
 
 window.FAQ_GROUPS = {

@@ -8245,3 +8245,156 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
     filter: brightness(0) invert(1);
   }
 }
+
+/* Confirmed Demo Day judging panel. */
+#judges .network-note-grid {
+  max-width: 1180px;
+}
+
+#judges .network-note-people {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.network-lineup-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+#judges .network-note-main {
+  max-width: 800px;
+}
+
+#judges .judge-list {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 16px;
+  margin-top: 0;
+}
+
+#judges .judge-card {
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid rgba(116, 216, 225, 0.2);
+  border-radius: 16px;
+  background: rgba(7, 25, 45, 0.72);
+  box-shadow: 0 16px 36px rgba(1, 10, 21, 0.18);
+}
+
+#judges .judge-card picture {
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: rgba(17, 43, 72, 0.78);
+}
+
+#judges .judge-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.judge-card-copy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#judges .judge-name-zh,
+#judges .judge-name-en,
+#judges .judge-affiliation {
+  margin: 0;
+}
+
+#judges .judge-name-zh {
+  color: var(--text);
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+#judges .judge-name-en {
+  margin-top: 3px;
+  color: var(--cyan-300);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+#judges .judge-affiliation {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+#judges .judge-affiliation-zh {
+  margin-top: 14px;
+}
+
+#judges .judge-affiliation-en {
+  margin-top: 4px;
+}
+
+@media (max-width: 980px) {
+  #judges .judge-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .network-lineup-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #judges .network-note-people > .network-note-status {
+    align-self: flex-start;
+    margin-left: 66px !important;
+  }
+
+  #judges .judge-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  #judges .judge-card {
+    display: grid;
+    grid-template-columns: 104px minmax(0, 1fr);
+  }
+
+  #judges .judge-card picture {
+    width: 104px;
+    height: 100%;
+    min-height: 150px;
+    aspect-ratio: auto;
+  }
+
+  .judge-card-copy {
+    justify-content: center;
+    padding: 14px;
+  }
+
+  #judges .judge-affiliation-zh {
+    margin-top: 10px;
+  }
+}

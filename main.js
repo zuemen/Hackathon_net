@@ -264,33 +264,37 @@
 
   function renderJudges() {
     const list = document.querySelector("[data-judges-list]");
-    const status = document.querySelector("[data-judges-status]");
     if (!list) return;
 
     const confirmed = judges
       .map((person) => ({
-        name: localizedValue(person.name),
-        role: localizedValue(person.role),
-        organization: localizedValue(person.organization),
-        image: person.image || "",
+        nameZh: person.nameZh || "",
+        nameEn: person.nameEn || "",
+        affiliationZh: person.affiliationZh || "",
+        affiliationEn: person.affiliationEn || "",
+        imageJpg: person.imageJpg || "",
+        imageWebp: person.imageWebp || "",
         alt: localizedValue(person.alt)
       }))
-      .filter((person) => person.name);
+      .filter((person) => person.nameZh);
 
     list.hidden = !confirmed.length;
-    if (status) status.hidden = Boolean(confirmed.length);
     list.innerHTML = confirmed
       .map((person) => {
-        const details = [person.role, person.organization].filter(Boolean).join(" · ");
-        const image = person.image
-          ? `<img src="${escapeHTML(person.image)}" alt="${escapeHTML(person.alt || person.name)}" width="52" height="52" loading="lazy" decoding="async">`
+        const image = person.imageJpg
+          ? `<picture>
+              ${person.imageWebp ? `<source srcset="${escapeHTML(person.imageWebp)}" type="image/webp">` : ""}
+              <img src="${escapeHTML(person.imageJpg)}" alt="${escapeHTML(person.alt || person.nameZh)}" width="800" height="800" loading="lazy" decoding="async">
+            </picture>`
           : "";
         return `
           <article class="judge-card">
             ${image}
-            <div>
-              <strong>${escapeHTML(person.name)}</strong>
-              ${details ? `<span>${escapeHTML(details)}</span>` : ""}
+            <div class="judge-card-copy">
+              <h4 class="judge-name-zh" lang="zh-Hant">${escapeHTML(person.nameZh)}</h4>
+              ${person.nameEn ? `<p class="judge-name-en" lang="en">${escapeHTML(person.nameEn)}</p>` : ""}
+              <p class="judge-affiliation judge-affiliation-zh" lang="zh-Hant">${escapeHTML(person.affiliationZh)}</p>
+              <p class="judge-affiliation judge-affiliation-en" lang="en">${escapeHTML(person.affiliationEn)}</p>
             </div>
           </article>
         `;
