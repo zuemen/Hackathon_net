@@ -639,8 +639,8 @@ window.JUDGES = [
     nameEn: "Frank Chuang",
     affiliationZh: "國立政治大學資訊管理學系｜助理教授",
     affiliationEn: "Assistant Professor, Department of Management Information Systems, National Chengchi University",
-    imageJpg: "assets/judges/frank-chuang.jpg?v=2",
-    imageWebp: "assets/judges/frank-chuang.webp?v=2",
+    imageJpg: "assets/judges/frank-chuang.jpg?v=3",
+    imageWebp: "assets/judges/frank-chuang.webp?v=3",
     alt: { "zh-Hant": "莊豐源 照片", en: "Portrait of Frank Chuang" }
   },
   {
