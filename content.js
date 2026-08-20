@@ -599,21 +599,21 @@ window.TRANSLATIONS = {
 
 window.JUDGES = [
   {
-    nameZh: "莊豐源",
-    nameEn: "Frank Chuang",
-    affiliationZh: "國立政治大學資訊管理學系",
-    affiliationEn: "Department of Management Information Systems, National Chengchi University",
-    imageJpg: "assets/judges/frank-chuang.jpg",
-    imageWebp: "assets/judges/frank-chuang.webp",
-    alt: { "zh-Hant": "莊豐源 照片", en: "Portrait of Frank Chuang" }
+    nameZh: "陳怡良",
+    nameEn: "Jay Chen",
+    affiliationZh: "偉康科技股份有限公司｜總經理",
+    affiliationEn: "General Manager, WebComm Technology",
+    imageJpg: "assets/judges/jay-chen.jpg",
+    imageWebp: "assets/judges/jay-chen.webp",
+    alt: { "zh-Hant": "陳怡良 照片", en: "Portrait of Jay Chen" }
   },
   {
     nameZh: "許凱平",
     nameEn: "Kai-Ping Hsu",
-    affiliationZh: "中國醫藥大學附設醫院",
-    affiliationEn: "China Medical University Hospital",
-    imageJpg: "assets/judges/kai-ping-hsu.jpg",
-    imageWebp: "assets/judges/kai-ping-hsu.webp",
+    affiliationZh: "中國醫藥大學附設醫院｜資訊部主任、資安長",
+    affiliationEn: "Director of Information Technology and Chief Information Security Officer, China Medical University Hospital",
+    imageJpg: "assets/judges/kai-ping-hsu.jpg?v=2",
+    imageWebp: "assets/judges/kai-ping-hsu.webp?v=2",
     alt: { "zh-Hant": "許凱平 照片", en: "Portrait of Kai-Ping Hsu" }
   },
   {
@@ -621,8 +621,8 @@ window.JUDGES = [
     nameEn: "Leo Chang",
     affiliationZh: "安侯企業管理股份有限公司｜副總經理",
     affiliationEn: "Director, KPMG Advisory",
-    imageJpg: "assets/judges/leo-chang.jpg",
-    imageWebp: "assets/judges/leo-chang.webp",
+    imageJpg: "assets/judges/leo-chang.jpg?v=2",
+    imageWebp: "assets/judges/leo-chang.webp?v=2",
     alt: { "zh-Hant": "張智淵 照片", en: "Portrait of Leo Chang" }
   },
   {
@@ -635,13 +635,13 @@ window.JUDGES = [
     alt: { "zh-Hant": "楊晴雯 照片", en: "Portrait of ChingWen Yang" }
   },
   {
-    nameZh: "陳怡良",
-    nameEn: "Jay Chen",
-    affiliationZh: "偉康科技股份有限公司｜總經理",
-    affiliationEn: "General Manager, WebComm Technology",
-    imageJpg: "assets/judges/jay-chen.jpg",
-    imageWebp: "assets/judges/jay-chen.webp",
-    alt: { "zh-Hant": "陳怡良 照片", en: "Portrait of Jay Chen" }
+    nameZh: "莊豐源",
+    nameEn: "Frank Chuang",
+    affiliationZh: "國立政治大學資訊管理學系",
+    affiliationEn: "Department of Management Information Systems, National Chengchi University",
+    imageJpg: "assets/judges/frank-chuang.jpg",
+    imageWebp: "assets/judges/frank-chuang.webp",
+    alt: { "zh-Hant": "莊豐源 照片", en: "Portrait of Frank Chuang" }
   },
   {
     nameZh: "林冠杰",
