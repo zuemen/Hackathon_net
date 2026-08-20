@@ -646,8 +646,8 @@ window.JUDGES = [
   {
     nameZh: "林冠杰",
     nameEn: "Tony Lin",
-    affiliationZh: "美家人力資源股份有限公司",
-    affiliationEn: "MAY-GOD HUMAN RESOURCES CO., LTD",
+    affiliationZh: "美家人力資源股份有限公司｜協理",
+    affiliationEn: "Associate Vice President, MAY-GOD HUMAN RESOURCES CO., LTD",
     imageJpg: "assets/judges/tony-lin.jpg?v=2",
     imageWebp: "assets/judges/tony-lin.webp?v=2",
     alt: { "zh-Hant": "林冠杰 照片", en: "Portrait of Tony Lin" }
@@ -655,8 +655,8 @@ window.JUDGES = [
   {
     nameZh: "曾思遠",
     nameEn: "Giga Tseng",
-    affiliationZh: "旋宇科技",
-    affiliationEn: "Nautilus AI",
+    affiliationZh: "旋宇科技｜創辦人",
+    affiliationEn: "Founder, Nautilus AI",
     imageJpg: "assets/judges/giga-tseng.jpg?v=2",
     imageWebp: "assets/judges/giga-tseng.webp?v=2",
     alt: { "zh-Hant": "曾思遠 照片", en: "Portrait of Giga Tseng" }
