@@ -7684,6 +7684,129 @@ html[lang="en"] #tracks .challenge-card {
   --partner-accent: 255, 209, 92;
 }
 
+/* Roadmap hierarchy: time stays in a fixed upper capsule; the axis carries
+   only the date marker and the primary activity label. */
+@media (min-width: 1024px) {
+  #roadmap .timeline {
+    padding: 24px 20px 30px;
+  }
+
+  #roadmap .timeline::before {
+    top: 86px;
+  }
+
+  #roadmap .timeline-step {
+    display: grid;
+    grid-template-rows: 46px 36px auto auto;
+    justify-items: center;
+    align-items: start;
+    gap: 5px;
+    min-height: 174px;
+    padding-inline: 5px;
+  }
+
+  #roadmap .timeline-step::before,
+  #roadmap .timeline-step[data-date="2026-08-05"]::before,
+  #roadmap .timeline-step[data-date="2026-08-31"]::before,
+  #roadmap .timeline-step.is-next::before {
+    position: relative;
+    top: auto;
+    left: auto;
+    order: initial;
+    grid-row: 2;
+    align-self: center;
+    transform: none;
+  }
+
+  #roadmap .timeline-timebox {
+    grid-row: 1;
+    display: flex;
+    width: min(100%, 108px);
+    height: 40px;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    padding: 5px 7px;
+    border: 1px solid rgba(255, 209, 92, 0.34);
+    border-radius: 12px;
+    color: var(--gold-400);
+    background: rgba(255, 209, 92, 0.08);
+    font-size: 0.68rem;
+    font-weight: 850;
+    line-height: 1.25;
+    text-align: center;
+    white-space: pre;
+  }
+
+  #roadmap .timeline-timebox:empty {
+    visibility: hidden;
+  }
+
+  #roadmap .timeline-step[data-date="2026-08-22"] .timeline-timebox {
+    padding-inline: 3px;
+    font-size: 0.58rem;
+    letter-spacing: -0.015em;
+    white-space: pre;
+  }
+
+  #roadmap .timeline-step time,
+  #roadmap .timeline-step[data-date="2026-08-05"] time,
+  #roadmap .timeline-step[data-date="2026-08-31"] time {
+    grid-row: 3;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    color: var(--cyan-300) !important;
+    background: transparent !important;
+    font-size: 0.78rem;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+
+  #roadmap .timeline-step > span:last-child {
+    grid-row: 4;
+    width: min(100%, 112px);
+    max-width: 112px;
+    color: var(--text);
+    font-size: 0.82rem;
+    line-height: 1.28;
+    text-wrap: balance;
+  }
+
+  #roadmap .timeline-step.is-next::before {
+    animation: tlPulseCard 1.6s ease-in-out infinite;
+  }
+}
+
+@media (max-width: 1023px) {
+  #roadmap .timeline-timebox {
+    display: inline-flex;
+    min-height: 30px;
+    align-items: center;
+    padding: 4px 8px;
+    border: 1px solid rgba(255, 209, 92, 0.3);
+    border-radius: 9px;
+    color: var(--gold-400);
+    background: rgba(255, 209, 92, 0.07);
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.3;
+    white-space: pre-line;
+  }
+
+  #roadmap .timeline-timebox:empty {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  #roadmap .timeline-timebox {
+    flex: 1 0 100%;
+    width: 100%;
+  }
+}
+
 .partner-category:nth-child(3) {
   grid-column: 1 / -1;
 }
@@ -8008,5 +8131,99 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
 
   .partner-logo-tile::after {
     display: none;
+  }
+}
+
+/* Roadmap: keep the tablet view readable instead of compressing ten steps
+   onto one horizontal axis. Times remain in their own information row. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #roadmap .timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow: visible;
+    padding: 24px 20px;
+  }
+
+  #roadmap .timeline::before {
+    top: 44px;
+    right: auto;
+    bottom: 44px;
+    left: 39px;
+    width: 2px;
+    height: auto;
+  }
+
+  #roadmap .timeline-step {
+    position: relative;
+    display: grid;
+    grid-template-areas:
+      "timebox timebox"
+      "date activity";
+    grid-template-columns: max-content minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    gap: 8px 14px;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 88px;
+    padding: 14px 18px 14px 58px;
+    text-align: left;
+  }
+
+  #roadmap .timeline-step::before {
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    transform: translateY(-50%);
+  }
+
+  #roadmap .timeline-step:hover::before,
+  #roadmap .timeline-step:focus-within::before {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  #roadmap .timeline-timebox {
+    grid-area: timebox;
+    justify-self: start;
+    width: fit-content;
+    max-width: none;
+    height: auto;
+    min-height: 32px;
+    padding: 6px 12px;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    white-space: pre;
+  }
+
+  #roadmap .timeline-timebox:empty {
+    display: none;
+  }
+
+  #roadmap .timeline-step time {
+    grid-area: date;
+    width: auto;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    color: var(--text);
+    font-size: 0.86rem;
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+
+  #roadmap .timeline-step > span:last-child {
+    grid-area: activity;
+    max-width: none;
+    color: var(--text);
+    font-size: 0.92rem;
+    line-height: 1.4;
+    text-align: left;
   }
 }

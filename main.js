@@ -110,7 +110,7 @@
       : `今天 ${now.getMonth() + 1}/${now.getDate()}（${weekday}）`;
 
     if (next) {
-      const name = next.querySelector("span")?.textContent.trim() || "";
+      const name = next.querySelector(":scope > span:last-child")?.textContent.trim() || "";
       const date = next.querySelector("time")?.textContent.trim() || "";
       status.textContent = en
         ? `${todayText} · Next: ${name} (${date})`
