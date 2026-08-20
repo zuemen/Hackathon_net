@@ -1,0 +1,22 @@
+# 環境變數與憑證（絕不入庫）
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# 相依套件與建置產物
+node_modules/
+dist/
+build/
+
+# 本機工具產生的暫存資料
+.playwright/
+playwright-report/
+test-results/
+chrome-network-*/
+*.log
+
+# 作業系統
+.DS_Store
+Thumbs.db
