@@ -8221,3 +8221,27 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
     text-align: left;
   }
 }
+
+/* Transparent logo treatment: match the dark-header presentation used on
+   chain.tw and keep the organization wall free of white image backplates. */
+.site-header .brand-logo,
+.footer-logo-row img:first-child,
+.partner-logo {
+  filter: brightness(0) invert(1);
+}
+
+.partner-logo-tile {
+  background: transparent;
+  box-shadow: none;
+}
+
+.partner-logo-tile::after {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .partner-item:hover .partner-logo,
+  .partner-item:focus-within .partner-logo {
+    filter: brightness(0) invert(1);
+  }
+}
