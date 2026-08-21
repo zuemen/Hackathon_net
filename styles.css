@@ -8459,24 +8459,27 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
   min-height: 230px;
   align-content: start;
   padding: 28px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(111, 224, 242, 0.22);
   border-radius: var(--radius);
-  background: var(--text);
-  box-shadow: var(--shadow);
+  color: var(--text);
+  background:
+    linear-gradient(145deg, rgba(57, 194, 224, 0.09), transparent 48%),
+    var(--card-bg);
+  box-shadow: 0 16px 34px rgba(1, 10, 21, 0.18);
   transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 }
 
 .landing-board-card:hover,
 .landing-board-card:focus-visible {
   transform: translateY(-3px);
-  border-color: var(--primary);
-  box-shadow: var(--shadow-soft);
+  border-color: rgba(111, 224, 242, 0.62);
+  box-shadow: 0 18px 38px rgba(1, 10, 21, 0.26), 0 0 0 1px rgba(111, 224, 242, 0.1);
 }
 
 .landing-board-number {
   width: fit-content;
   margin-bottom: 22px;
-  color: var(--trust);
+  color: var(--cyan-300);
   font-family: var(--font-display, "Space Grotesk", sans-serif);
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -8484,16 +8487,17 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
 
 .landing-board-card h3 {
   margin-bottom: 10px;
+  color: var(--text);
   font-size: 1.35rem;
 }
 
 .landing-board-card p {
-  color: var(--ink-soft);
+  color: var(--text-muted);
 }
 
 .landing-board-card strong {
   margin-top: auto;
-  color: var(--primary);
+  color: var(--gold-400);
 }
 
 .compat-anchor {
