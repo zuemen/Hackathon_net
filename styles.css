@@ -8311,6 +8311,13 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
   border-radius: 0;
 }
 
+/* Wei-Ting Wu's supplied portrait includes generous white margins. Keep the
+   source asset intact and tighten only its card presentation. */
+#judges .judge-card img[src*="mentor-wei-ting-wu"] {
+  transform: scale(1.18);
+  transform-origin: 50% 47%;
+}
+
 .judge-card-copy {
   display: flex;
   min-width: 0;
