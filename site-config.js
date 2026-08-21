@@ -45,15 +45,13 @@ window.SITE_CONFIG = {
   prizePoolUsd: 14000,
   prizePoolMayIncrease: true,
 
-  showPrizeBreakdown: true,
+  showPrizeBreakdown: false,
   showWinnerCount: false,
   showBuilderKit: false,
   showHardwarePrizes: false,
   showPartnerNames: true,
   showCredentialExperience: false,
   showWorkshopTopics: false,
-  showMentors: true,
-  showWorkshopSpeakers: true,
 
   contactName: "Trustworthy AI Hackathon Team",
   contactEmail: "hackathon2026@chain.tw",

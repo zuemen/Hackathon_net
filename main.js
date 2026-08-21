@@ -3,10 +3,7 @@
   const translations = window.TRANSLATIONS || {};
   const faqGroups = window.FAQ_GROUPS || {};
   const judges = Array.isArray(window.JUDGES) ? window.JUDGES : [];
-  const mentors = Array.isArray(window.MENTORS) ? window.MENTORS : [];
-  const workshopSpeakers = window.WORKSHOP_SPEAKERS || {};
   const socials = window.SOCIAL_LINKS || {};
-  const assetBase = document.documentElement.dataset.assetBase || "";
   const defaultLocale = config.defaultLocale || "zh-Hant";
   let storedLocale = null;
   try {
@@ -265,15 +262,11 @@
     return value[currentLocale] || value[defaultLocale] || value.en || "";
   }
 
-  function resolveAssetPath(path) {
-    return path.startsWith("assets/") ? `${assetBase}${path}` : path;
-  }
-
-  function renderPeople(listSelector, people) {
-    const list = typeof listSelector === "string" ? document.querySelector(listSelector) : listSelector;
+  function renderJudges() {
+    const list = document.querySelector("[data-judges-list]");
     if (!list) return;
 
-    const confirmed = people
+    const confirmed = judges
       .map((person) => ({
         nameZh: person.nameZh || "",
         nameEn: person.nameEn || "",
@@ -281,40 +274,32 @@
         affiliationEn: person.affiliationEn || "",
         imageJpg: person.imageJpg || "",
         imageWebp: person.imageWebp || "",
-        topicZh: person.topicZh || "",
-        topicEn: person.topicEn || "",
         alt: localizedValue(person.alt)
       }))
-      .filter((person) => person.nameZh || person.nameEn);
+      .filter((person) => person.nameZh);
 
     list.hidden = !confirmed.length;
     list.innerHTML = confirmed
       .map((person) => {
         const image = person.imageJpg
           ? `<picture>
-              ${person.imageWebp ? `<source srcset="${escapeHTML(resolveAssetPath(person.imageWebp))}" type="image/webp">` : ""}
-              <img src="${escapeHTML(resolveAssetPath(person.imageJpg))}" alt="${escapeHTML(person.alt || person.nameZh || person.nameEn)}" width="800" height="800" loading="lazy" decoding="async">
+              ${person.imageWebp ? `<source srcset="${escapeHTML(person.imageWebp)}" type="image/webp">` : ""}
+              <img src="${escapeHTML(person.imageJpg)}" alt="${escapeHTML(person.alt || person.nameZh)}" width="800" height="800" loading="lazy" decoding="async">
             </picture>`
           : "";
         return `
           <article class="judge-card">
             ${image}
             <div class="judge-card-copy">
-              ${person.nameZh ? `<h4 class="judge-name-zh" lang="zh-Hant">${escapeHTML(person.nameZh)}</h4>` : ""}
+              <h4 class="judge-name-zh" lang="zh-Hant">${escapeHTML(person.nameZh)}</h4>
               ${person.nameEn ? `<p class="judge-name-en" lang="en">${escapeHTML(person.nameEn)}</p>` : ""}
-              ${person.affiliationZh ? `<p class="judge-affiliation judge-affiliation-zh" lang="zh-Hant">${escapeHTML(person.affiliationZh)}</p>` : ""}
-              ${person.affiliationEn ? `<p class="judge-affiliation judge-affiliation-en" lang="en">${escapeHTML(person.affiliationEn)}</p>` : ""}
-              ${person.topicZh ? `<p class="judge-affiliation judge-affiliation-zh" lang="zh-Hant">${escapeHTML(person.topicZh)}</p>` : ""}
-              ${person.topicEn ? `<p class="judge-affiliation judge-affiliation-en" lang="en">${escapeHTML(person.topicEn)}</p>` : ""}
+              <p class="judge-affiliation judge-affiliation-zh" lang="zh-Hant">${escapeHTML(person.affiliationZh)}</p>
+              <p class="judge-affiliation judge-affiliation-en" lang="en">${escapeHTML(person.affiliationEn)}</p>
             </div>
           </article>
         `;
       })
       .join("");
-
-    list.querySelectorAll("img").forEach((image) => {
-      image.addEventListener("error", () => image.remove(), { once: true });
-    });
   }
 
   function renumberSectionKickers() {
@@ -382,14 +367,7 @@
   }
 
   function updateMetadata() {
-    const metaPrefix = document.documentElement.dataset.metaPrefix || "";
-    const metaKey = (key) => {
-      const prefixedKey = metaPrefix ? `${metaPrefix}.${key}` : key;
-      return translations[currentLocale]?.[prefixedKey] || translations[defaultLocale]?.[prefixedKey]
-        ? prefixedKey
-        : key;
-    };
-    document.title = t(metaKey("meta.title"));
+    document.title = t("meta.title");
     const description = document.querySelector('meta[name="description"]');
     const ogTitle = document.querySelector('meta[property="og:title"]');
     const ogDescription = document.querySelector('meta[property="og:description"]');
@@ -399,14 +377,12 @@
     const ogUrl = document.querySelector('meta[property="og:url"]');
     const canonical = document.querySelector('link[rel="canonical"]');
     const canonicalUrl = new URL(config.canonicalUrl || window.location.origin);
-    const canonicalPath = document.documentElement.dataset.canonicalPath;
-    if (canonicalPath) canonicalUrl.pathname = new URL(canonicalPath, canonicalUrl).pathname;
     if (currentLocale === "en") canonicalUrl.searchParams.set("lang", "en");
-    if (description) description.setAttribute("content", t(metaKey("meta.description")));
-    if (ogTitle) ogTitle.setAttribute("content", t(metaKey("og.title")));
-    if (ogDescription) ogDescription.setAttribute("content", t(metaKey("meta.description")));
-    if (twitterTitle) twitterTitle.setAttribute("content", t(metaKey("og.title")));
-    if (twitterDescription) twitterDescription.setAttribute("content", t(metaKey("meta.description")));
+    if (description) description.setAttribute("content", t("meta.description"));
+    if (ogTitle) ogTitle.setAttribute("content", t("og.title"));
+    if (ogDescription) ogDescription.setAttribute("content", t("meta.description"));
+    if (twitterTitle) twitterTitle.setAttribute("content", t("og.title"));
+    if (twitterDescription) twitterDescription.setAttribute("content", t("meta.description"));
     if (ogLocale) ogLocale.setAttribute("content", currentLocale === "en" ? "en_US" : "zh_TW");
     if (ogUrl) ogUrl.setAttribute("content", canonicalUrl.href);
     if (canonical) canonical.href = canonicalUrl.href;
@@ -456,21 +432,6 @@
     });
   }
 
-  function updateWorkshopSpeakerLinks() {
-    const enabled = Boolean(config.showWorkshopSpeakers);
-    document.querySelectorAll("[data-workshop-speaker-link]").forEach((link) => {
-      if (enabled) {
-        link.href = link.dataset.workshopSpeakerLink;
-        link.removeAttribute("aria-disabled");
-        link.removeAttribute("tabindex");
-      } else {
-        link.removeAttribute("href");
-        link.setAttribute("aria-disabled", "true");
-        link.setAttribute("tabindex", "-1");
-      }
-    });
-  }
-
   function wireLinks() {
     newsletterLinks.forEach((link) => {
       link.href = config.newsletterUrl || socials.newsletter || "https://chaintw.substack.com/";
@@ -505,8 +466,8 @@
   function updateRuleDownloads() {
     const rulesEN = currentLocale === "en";
     const rulesHref = rulesEN
-      ? `${assetBase}assets/official/Trustworthy-AI-Hackathon-2026-Rules-EN.pdf`
-      : `${assetBase}assets/official/Trustworthy-AI-Hackathon-2026-Rules.pdf`;
+      ? "assets/official/Trustworthy-AI-Hackathon-2026-Rules-EN.pdf"
+      : "assets/official/Trustworthy-AI-Hackathon-2026-Rules.pdf";
     const rulesName = rulesEN
       ? "Trustworthy-AI-Hackathon-2026-Rules-EN.pdf"
       : "可信AI黑客松2026_比賽辦法.pdf";
@@ -686,14 +647,11 @@
     });
     updateChallengeReveal();
 
-    // Keep an existing static default-locale FAQ for SEO, but render when a
-    // dedicated FAQ page starts with an empty data container.
-    if (!(initial && currentLocale === defaultLocale && faqRoot?.children.length)) renderFaq(currentLocale);
+    // FAQ zh-Hant is pre-rendered statically in index.html for SEO; only
+    // (re)render via JS when switching language or when the initial locale is en.
+    if (!(initial && currentLocale === defaultLocale)) renderFaq(currentLocale);
     renderFinalists();
-    renderPeople("[data-judges-list]", judges);
-    renderPeople("[data-mentors-list]", mentors);
-    const workshopId = document.documentElement.dataset.workshopId;
-    renderPeople("[data-workshop-speaker-list]", workshopSpeakers[workshopId] || []);
+    renderJudges();
     renumberSectionKickers();
     updateRegistrationLinks();
     updateRegistrationDeadline();
@@ -748,8 +706,7 @@
 
   function scrollToInitialHash() {
     if (!window.location.hash) return;
-    const targetId = decodeURIComponent(window.location.hash.slice(1));
-    const target = document.getElementById(targetId);
+    const target = document.querySelector(window.location.hash);
     if (!target) return;
     const scrollToTarget = () => {
       const root = document.documentElement;
@@ -770,7 +727,6 @@
   wireLinks();
   renderJsonLd();
   applyFeatureFlags();
-  updateWorkshopSpeakerLinks();
   setLanguage(currentLocale, false, true);
   const handleScrollUi = rafThrottle(syncScrollUi);
   window.addEventListener("scroll", handleScrollUi, { passive: true });
