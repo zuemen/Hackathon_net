@@ -4,7 +4,11 @@
 
 ## 檔案
 
-- `index.html`：單頁長捲動活動頁，含 SEO / OG / Twitter meta 與 Event JSON-LD fallback。
+- `index.html`：首頁 Landing Board，集中呈現主視覺、獎金、快速入口、評審、Mentor、重要時程、工作坊與活動單位。
+- `challenges.html`：六大產業命題完整內容與命題錨點（`#01`–`#06`）。
+- `guide.html`：時間軸、活動流程、參賽資格、交件、評分與場地資訊。
+- `faq.html`：中英文完整常見問答。
+- `workshops/`：8/15、8/22 工作坊講者分頁。
 - `styles.css`：自包含樣式，沿用 TABEI / chain.tw 深藍綠、青綠與白色品牌視覺。
 - `main.js`：sticky header、手機導覽、語言切換、CTA 狀態、Event JSON-LD、FAQ 渲染與 progressive enhancement。
 - `site-config.js`：活動日期、人數、報名狀態、feature flags、聯絡信箱、社群與 newsletter 等易變資訊。
@@ -60,13 +64,15 @@ python -m http.server 8080
 
 `site-config.js` 內保留以下開關；未確認內容維持 `false`，避免提早公開。GLEIF 已確認為合作夥伴，因此 `showPartnerNames` 目前為 `true`：
 
-- `showPrizeBreakdown`
+- `showPrizeBreakdown`（目前為 `true`）
 - `showWinnerCount`
 - `showBuilderKit`
 - `showHardwarePrizes`
 - `showPartnerNames`（目前為 `true`；GLEIF 已確認）
 - `showCredentialExperience`
 - `showWorkshopTopics`
+- `showMentors`（目前為 `true`）
+- `showWorkshopSpeakers`（目前為 `true`；控制工作坊講者分頁及首頁卡片連結）
 
 日後若獎項、資源、硬體、夥伴、VC 流程或工作坊主題正式確認，先補齊內容與中英文翻譯，再打開對應 flag。
 

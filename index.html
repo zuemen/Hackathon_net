@@ -55,7 +55,7 @@
       }
     </script>
   </head>
-  <body>
+  <body class="landing-home">
     <svg class="icon-sprite" aria-hidden="true" focusable="false">
       <symbol id="icon-network" viewBox="0 0 24 24"><path d="M6 8a3 3 0 1 1 2.8-4H15a3 3 0 1 1 0 2H8.8A3 3 0 0 1 6 8Zm12 8a3 3 0 0 1-2.8 2H9a3 3 0 1 1 0-2h6.2a3 3 0 1 1 2.8 0ZM7.7 7.3l8.6 8.6M16.3 6.7 7.7 15.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
       <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.7 2.8 8.1 7 10 4.2-1.9 7-5.3 7-10V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m9 12 2 2 4-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -96,11 +96,11 @@
 
         <div class="nav-panel" id="site-nav" data-nav-panel>
           <nav class="site-nav" aria-label="主選單" data-i18n="aria.nav" data-i18n-attr="aria-label">
-            <a href="#tracks" data-i18n="nav.tracks">產業命題</a>
-            <a href="#info" data-i18n="nav.format">流程</a>
             <a href="#prizes" data-i18n="nav.prizes">獎項</a>
-            <a href="#rules" data-i18n="nav.rules">規則</a>
-            <a href="#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="./challenges.html" data-i18n="nav.tracks">產業命題</a>
+            <a href="./guide.html" data-i18n="nav.guide">參賽指南</a>
+            <a href="#judges" data-i18n="nav.network">評審與 Mentor</a>
+            <a href="./faq.html" data-i18n="nav.faq">FAQ</a>
           </nav>
 
           <div class="header-actions">
@@ -154,6 +154,46 @@
         </div>
       </section>
 
+      <section class="section" id="prizes">
+        <div class="reveal container">
+          <div class="section-heading">
+            <p class="section-kicker">Prize Spotlight</p>
+            <h2 data-i18n="prize.title">獎項</h2>
+            <p class="prize-total" data-i18n="prize.total">總獎金 USD 14,000+</p>
+            <p class="prize-total-note" data-i18n="prize.total.note">將隨贊助加碼</p>
+            <p data-i18n="prize.body">特別獎隊數與分配方式以正式公告為準。</p>
+          </div>
+          <div class="prize-grid prize-grid-public prize-podium" data-feature-flag="showPrizeBreakdown">
+            <article class="prize-card prize-main"><h3 data-i18n="prize.grand.title">冠軍</h3><p class="prize-amount" data-i18n="prize.grand.amount">USD 5,000</p><p data-i18n="prize.grand.count">1 隊</p></article>
+            <article class="prize-card prize-runner"><h3 data-i18n="prize.runner.title">亞軍</h3><p class="prize-amount" data-i18n="prize.runner.amount">USD 2,000</p><p data-i18n="prize.runner.count">2 隊・每隊</p></article>
+            <article class="prize-card prize-third"><h3 data-i18n="prize.third.title">季軍</h3><p class="prize-amount" data-i18n="prize.third.amount">USD 1,000</p><p data-i18n="prize.third.count">3 隊・每隊</p></article>
+            <article class="prize-card prize-special"><h3 data-i18n="prize.special.title">特別獎</h3><p class="prize-amount" data-i18n="prize.special.amount">USD 2,000</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="explore">
+        <span class="compat-anchor" id="info" aria-hidden="true"></span><span class="compat-anchor" id="rules" aria-hidden="true"></span><span class="compat-anchor" id="judging" aria-hidden="true"></span>
+        <div class="reveal container"><div class="section-heading"><p class="section-kicker">Explore</p><h2 data-i18n="landing.title">快速找到你要的資訊</h2><p data-i18n="landing.subtitle">首頁保留關鍵資訊；完整命題、參賽規則與常見問答分頁整理。</p></div>
+          <div class="landing-board-grid">
+            <a class="landing-board-card" href="./challenges.html"><span class="landing-board-number">01</span><h3 data-i18n="landing.challenges.title">六大產業命題</h3><p data-i18n="landing.challenges.body">查看六題背景、核心可信問題與方向提示。</p><strong data-i18n="landing.challenges.cta">查看完整命題 →</strong></a>
+            <a class="landing-board-card" href="./guide.html"><span class="landing-board-number">02</span><h3 data-i18n="landing.guide.title">參賽與交件指南</h3><p data-i18n="landing.guide.body">時間軸、活動流程、資格、交件、評分與場地資訊。</p><strong data-i18n="landing.guide.cta">查看參賽指南 →</strong></a>
+            <a class="landing-board-card" href="#pre-events"><span class="landing-board-number">03</span><h3 data-i18n="landing.workshops.title">賽前工作坊</h3><p data-i18n="landing.workshops.body">查看 8/15 與 8/22 工作坊資訊及講者陣容。</p><strong data-i18n="landing.workshops.cta">前往工作坊 →</strong></a>
+            <a class="landing-board-card" href="./faq.html"><span class="landing-board-number">04</span><h3 data-i18n="landing.faq.title">常見問答</h3><p data-i18n="landing.faq.body">報名、組隊、技術、出席、交件、獎項與法務一次查找。</p><strong data-i18n="landing.faq.cta">查看全部 FAQ →</strong></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="judges">
+        <div class="reveal container">
+          <div class="section-heading"><p class="section-kicker">Network</p><h2 data-i18n="judges.title">Demo Day 評審陣容</h2><p data-i18n="judges.subtitle">八位來自學界、醫療、顧問、科技與投資領域的評審，將共同檢視作品的產業契合度、可信技術可行性、Demo 呈現與問題洞察。</p></div>
+          <div class="network-note-grid">
+            <article class="network-note network-note-people"><div class="network-lineup-header"><div class="network-note-main"><span class="network-note-icon" aria-hidden="true"><svg><use href="#icon-network"></use></svg></span><div><span class="network-note-number" aria-hidden="true">LINEUP</span><h3 data-i18n="judges.group">評審陣容</h3><p data-i18n="judges.pending">名單依正式公告順序呈現。</p></div></div><span class="network-note-status" data-judges-status><span aria-hidden="true"></span><span data-i18n="judges.toBeAnnounced">8 位評審</span></span></div><div class="judge-list" data-judges-list hidden></div></article>
+            <article class="network-note network-note-people" id="mentors" data-feature-flag="showMentors"><div class="network-lineup-header"><div class="network-note-main"><span class="network-note-icon" aria-hidden="true"><svg><use href="#icon-network"></use></svg></span><div><span class="network-note-number">MENTORS</span><h3 data-i18n="mentors.group">Mentor 陣容</h3><p data-i18n="mentors.pending">名單依正式公告順序呈現。</p></div></div><span class="network-note-status" data-mentors-status><span aria-hidden="true"></span><span data-i18n="mentors.count">4 位 Mentor</span></span></div><div class="judge-list" data-mentors-list hidden></div></article>
+          </div>
+        </div>
+      </section>
+
       <section class="statband-section" aria-label="活動數字" data-i18n="aria.eventNumbers" data-i18n-attr="aria-label">
         <div class="container">
           <div class="statband" role="group">
@@ -183,7 +223,7 @@
         </div>
       </section>
 
-      <section class="section" id="why">
+      <section class="section" id="why" hidden>
         <div class="reveal container compact-section">
           <div class="section-heading">
             <p class="section-kicker">01 / Why Now</p>
@@ -201,7 +241,7 @@
         </div>
       </section>
 
-      <section class="section" id="prizes">
+      <section class="section" id="legacy-prizes" hidden>
         <div class="reveal container">
           <div class="section-heading">
             <p class="section-kicker">02 / Prize</p>
@@ -346,8 +386,8 @@
         <div class="reveal container">
           <div class="section-heading">
             <p class="section-kicker">03 / Challenge Topics</p>
-            <h2 data-i18n="tracks.title">產業命題預告</h2>
-            <p data-tracks-body data-i18n="tracks.body">六道產業命題預告已全數公開。完整命題內容於入選後工作坊公布。</p>
+            <h2 data-i18n="tracks.landing.title">六大產業命題</h2>
+            <p data-i18n="tracks.landing.body">先快速瀏覽六題方向，再到命題專頁閱讀完整背景與問題。</p>
           </div>
           <div class="track-grid track-accordion challenge-grid">
             <article class="track-card challenge-card" data-challenge-id="01" data-reveal-state="revealed">
@@ -407,11 +447,11 @@
               <p class="challenge-bonus-note" data-i18n="challenge.06.note">加分題：可與 01–05 其中一題同時挑戰，作為加分項目。</p>
             </article>
           </div>
-          <p class="tracks-preview-note" data-i18n="tracks.note">完整命題（背景、核心可信問題、方向提示）將於入選後工作坊公布，屆時亦說明命題選擇方式。命題 06 為 Track 01 延伸的加分題，可與其他命題同時挑戰。</p>
+          <p class="tracks-preview-note"><a class="button button-primary" href="./challenges.html" data-i18n="tracks.landing.cta">閱讀完整命題</a></p>
         </div>
       </section>
 
-      <section class="section section-soft" id="benefits">
+      <section class="section section-soft" id="benefits" hidden>
         <div class="reveal container">
           <div class="section-heading">
             <p class="section-kicker">04 / Why Join</p>
@@ -476,7 +516,7 @@
         </div>
       </section>
 
-      <section class="section" id="info">
+      <section class="section" id="guide-info" hidden>
         <div class="reveal container">
           <div class="section-heading">
             <p class="section-kicker">06 / Event Info</p>
@@ -530,7 +570,7 @@
         </div>
       </section>
 
-      <section class="section" id="rules">
+      <section class="section" id="guide-rules" hidden>
         <div class="reveal container">
           <div class="section-heading">
             <p class="section-kicker">07 / Eligibility</p>
@@ -573,7 +613,7 @@
         </div>
       </section>
 
-      <section class="section section-soft" id="judging">
+      <section class="section section-soft" id="guide-judging" hidden>
         <div class="reveal container">
           <div class="section-heading">
             <p class="section-kicker">09 / Judging</p>
@@ -601,7 +641,7 @@
         </div>
       </section>
 
-      <section class="section" id="judges">
+      <section class="section" id="legacy-judges" hidden>
         <div class="reveal container">
           <div class="section-heading">
             <p class="section-kicker">10 / Network</p>
@@ -621,7 +661,21 @@
                 </div>
                 <span class="network-note-status" data-judges-status><span aria-hidden="true"></span><span data-i18n="judges.toBeAnnounced">8 位評審</span></span>
               </div>
-              <div class="judge-list" data-judges-list hidden></div>
+              <div class="judge-list" hidden></div>
+            </article>
+            <article class="network-note network-note-people" id="legacy-mentors">
+              <div class="network-lineup-header">
+                <div class="network-note-main">
+                  <span class="network-note-icon" aria-hidden="true"><svg><use href="#icon-network"></use></svg></span>
+                  <div>
+                    <span class="network-note-number">MENTORS</span>
+                    <h3 data-i18n="mentors.group">Mentor 陣容</h3>
+                    <p data-i18n="mentors.pending">名單依正式公告順序呈現。</p>
+                  </div>
+                </div>
+                <span class="network-note-status" data-mentors-status><span aria-hidden="true"></span><span data-i18n="mentors.count">4 位 Mentor</span></span>
+              </div>
+              <div class="judge-list" hidden></div>
             </article>
           </div>
         </div>
@@ -647,8 +701,8 @@
                 <a class="button button-small button-primary" href="https://luma.com/w6sjiy30" data-info-session-link target="_blank" rel="noopener" data-i18n="infoSession.register">前往 Luma 報名說明會</a>
               </div>
             </article>
-            <article class="workshop-card"><svg class="card-icon"><use href="#icon-shield"></use></svg><span data-i18n="workshops.card1.meta">8/15（六）14:00–16:00</span><h3 data-i18n="workshops.card1.title">Workshop #1（線上）</h3><p data-i18n="workshops.card1.body">可信 AI Agent 與數位憑證工具導覽；全體報名隊伍皆可參加，不限入選者。</p></article>
-            <article class="workshop-card"><svg class="card-icon"><use href="#icon-network"></use></svg><span data-i18n="workshops.card2.meta">8/22（六）10:30–11:00 報到，11:00–16:00 活動</span><h3 data-i18n="workshops.card2.title">Workshop #2（線下）</h3><p data-i18n="workshops.card2.body">六題完整命題公布、產業痛點說明與 POC 題目收斂；入選者可在本場持續媒合並確認最終隊伍。10:30–11:00 報到，11:00–16:00 活動，限入選隊伍參加。</p></article>
+            <a class="workshop-card" data-workshop-speaker-link="workshops/0815.html" data-i18n="workshops.card1.linkLabel" data-i18n-attr="aria-label"><svg class="card-icon"><use href="#icon-shield"></use></svg><span data-i18n="workshops.card1.meta">8/15（六）14:00–16:00</span><h3 data-i18n="workshops.card1.title">Workshop #1（線上）</h3><p data-i18n="workshops.card1.body">可信 AI Agent 與數位憑證工具導覽；全體報名隊伍皆可參加，不限入選者。</p></a>
+            <a class="workshop-card" data-workshop-speaker-link="workshops/0822.html" data-i18n="workshops.card2.linkLabel" data-i18n-attr="aria-label"><svg class="card-icon"><use href="#icon-network"></use></svg><span data-i18n="workshops.card2.meta">8/22（六）10:30–11:00 報到，11:00–16:00 活動</span><h3 data-i18n="workshops.card2.title">Workshop #2（線下）</h3><p data-i18n="workshops.card2.body">六題完整命題公布、產業痛點說明與 POC 題目收斂；入選者可在本場持續媒合並確認最終隊伍。10:30–11:00 報到，11:00–16:00 活動，限入選隊伍參加。</p></a>
           </div>
         </div>
       </section>
@@ -680,11 +734,14 @@
                 allowfullscreen></iframe>
               <a class="venue-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8D%97%E6%B8%AF%E5%8D%80%E5%B8%82%E6%B0%91%E5%A4%A7%E9%81%93%E4%B8%83%E6%AE%B5100%E8%99%9F" data-venue-map hidden target="_blank" rel="noopener" data-i18n="venue.map">在 Google 地圖開啟 ↗</a>
             </div>
+            <div class="cta-row venue-summary-action"><a class="button button-secondary" href="./guide.html#venue" data-i18n="venue.landing.cta">查看完整交通資訊</a></div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="faq">
+      <section class="section" id="faq"><div class="reveal container"><div class="section-heading narrow"><p class="section-kicker">FAQ</p><h2 data-i18n="faq.landing.title">還有問題？</h2><p data-i18n="faq.landing.body">完整 FAQ 已依報名資格、主題技術、時程交件、評分獎項分類整理。</p><a class="button button-primary" href="./faq.html" data-i18n="faq.landing.cta">前往 FAQ</a></div></div></section>
+
+      <section class="section" id="legacy-faq" hidden>
         <div class="reveal container">
           <div class="section-heading">
             <p class="section-kicker">13 / FAQ</p>
