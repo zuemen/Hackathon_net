@@ -338,14 +338,14 @@ window.TRANSLATIONS = {
     "workshop0822.group": "講者陣容",
     "workshop0822.count": "6 位講者",
     "judges.title": "Demo Day 評審陣容",
-    "judges.subtitle": "八位來自學界、醫療、顧問、科技與投資領域的評審，將共同檢視作品的產業契合度、可信技術可行性、Demo 呈現與問題洞察。",
+    "judges.subtitle": "九位來自學界、醫療、顧問、科技、投資與專業服務領域的評審，將共同檢視作品的產業契合度、可信技術可行性、Demo 呈現與問題洞察。",
     "judges.group": "評審陣容",
     "judges.pending": "名單依正式公告順序呈現。",
     "judges.sponsors": "贊助夥伴",
-    "judges.toBeAnnounced": "8 位評審",
+    "judges.toBeAnnounced": "9 位評審",
     "mentors.group": "Mentor 陣容",
     "mentors.pending": "名單依正式公告順序呈現。",
-    "mentors.count": "4 位 Mentor",
+    "mentors.count": "5 位 Mentor",
     "faq.title": "常見問答",
     "faq.body": "單人報名、組隊媒合、出席與交件，一次說清楚。",
     "venue.title": "場地與交通",
@@ -699,14 +699,14 @@ window.TRANSLATIONS = {
     "workshop0822.group": "Speakers",
     "workshop0822.count": "6 Speakers",
     "judges.title": "Demo Day Judging Panel",
-    "judges.subtitle": "Eight judges from academia, healthcare, advisory, technology, and investment will evaluate industry fit, trustworthy-technology feasibility, demo execution, and problem insight.",
+    "judges.subtitle": "Nine judges from academia, healthcare, advisory, technology, investment, and professional services will evaluate industry fit, trustworthy-technology feasibility, demo execution, and problem insight.",
     "judges.group": "Judging Panel",
     "judges.pending": "Listed in the official announced order.",
     "judges.sponsors": "Sponsoring Partners",
-    "judges.toBeAnnounced": "8 Judges",
+    "judges.toBeAnnounced": "9 Judges",
     "mentors.group": "Mentors",
     "mentors.pending": "Listed in the official announced order.",
-    "mentors.count": "4 Mentors",
+    "mentors.count": "5 Mentors",
     "faq.title": "FAQ",
     "faq.body": "Solo registration, team matching, attendance and deliverables — explained in one place.",
     "venue.title": "Venue & Access",
@@ -795,6 +795,15 @@ window.JUDGES = [
     imageJpg: "assets/judges/jeff-chuang.jpg",
     imageWebp: "assets/judges/jeff-chuang.webp",
     alt: { "zh-Hant": "莊孟儒 照片", en: "Portrait of Jeff Chuang" }
+  },
+  {
+    nameZh: "陳念平",
+    nameEn: "Neptune Chen",
+    affiliationZh: "資誠｜執行董事",
+    affiliationEn: "Partner, PwC Taiwan",
+    imageJpg: "assets/judges/neptune-chen.jpg",
+    imageWebp: "assets/judges/neptune-chen.webp",
+    alt: { "zh-Hant": "陳念平 照片", en: "Portrait of Neptune Chen" }
   }
 ];
 
@@ -834,6 +843,15 @@ window.MENTORS = [
     imageJpg: "assets/mentors/mentor-stanley-li.jpg",
     imageWebp: "assets/mentors/mentor-stanley-li.webp",
     alt: { "zh-Hant": "李旭清 照片", en: "Portrait of Stanley Li" }
+  },
+  {
+    nameZh: "SunSec",
+    nameEn: "Sun Huang",
+    affiliationZh: "鏈科股份有限公司｜資安長",
+    affiliationEn: "CISO, XREX",
+    imageJpg: "assets/mentors/mentor-sun-huang.jpg",
+    imageWebp: "assets/mentors/mentor-sun-huang.webp",
+    alt: { "zh-Hant": "SunSec 照片", en: "Portrait of Sun Huang" }
   }
 ];
 
