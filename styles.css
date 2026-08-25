@@ -8361,8 +8361,131 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
   margin-top: 4px;
 }
 
+.mentor-schedule {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 18px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(116, 216, 225, 0.18);
+}
+
+.mentor-schedule-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.mentor-schedule-heading h4,
+.mentor-schedule-heading p,
+.mentor-schedule-online p,
+.mentor-schedule-note {
+  margin: 0;
+}
+
+.mentor-schedule-heading h4 {
+  margin-top: 4px;
+  color: var(--text);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1.3;
+}
+
+.mentor-schedule-heading p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.mentor-schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.mentor-schedule-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(116, 216, 225, 0.22);
+  border-radius: 16px;
+  background: rgba(7, 25, 45, 0.7);
+}
+
+.mentor-schedule-time {
+  display: grid;
+  gap: 4px;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(116, 216, 225, 0.18);
+  background: rgba(11, 36, 64, 0.9);
+}
+
+.mentor-schedule-time strong {
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.mentor-schedule-time time {
+  color: var(--cyan-300);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.mentor-schedule-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 16px 18px 18px;
+  list-style: none;
+}
+
+.mentor-schedule-card li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.mentor-schedule-card li::before {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: var(--cyan-300);
+  content: "";
+}
+
+.mentor-schedule-online {
+  display: grid;
+  gap: 6px;
+  padding: 16px 18px;
+  border: 1px solid rgba(116, 216, 225, 0.22);
+  border-radius: 14px;
+  background: rgba(17, 43, 72, 0.7);
+}
+
+.mentor-schedule-online strong {
+  color: var(--cyan-300);
+  font-size: 0.95rem;
+}
+
+.mentor-schedule-online p,
+.mentor-schedule-note {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.mentor-schedule-note {
+  font-size: 0.9rem;
+}
+
 @media (max-width: 980px) {
   #judges .judge-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mentor-schedule-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -8412,6 +8535,17 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
 
   #judges .judge-affiliation-zh {
     margin-top: 10px;
+  }
+
+  .mentor-schedule-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .mentor-schedule-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
 
