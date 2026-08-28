@@ -277,12 +277,15 @@
       .map((person) => ({
         nameZh: person.nameZh || "",
         nameEn: person.nameEn || "",
+        roleZh: person.roleZh || "",
+        roleEn: person.roleEn || "",
         affiliationZh: person.affiliationZh || "",
         affiliationEn: person.affiliationEn || "",
         imageJpg: person.imageJpg || "",
         imageWebp: person.imageWebp || "",
         topicZh: person.topicZh || "",
         topicEn: person.topicEn || "",
+        featured: Boolean(person.featured),
         alt: localizedValue(person.alt)
       }))
       .filter((person) => person.nameZh || person.nameEn);
@@ -297,9 +300,10 @@
             </picture>`
           : "";
         return `
-          <article class="judge-card">
+          <article class="judge-card${person.featured ? " judge-card-featured" : ""}">
             ${image}
             <div class="judge-card-copy">
+              ${person.roleZh || person.roleEn ? `<p class="judge-role">${person.roleZh ? `<span lang="zh-Hant">${escapeHTML(person.roleZh)}</span>` : ""}${person.roleEn ? `<span lang="en">${escapeHTML(person.roleEn)}</span>` : ""}</p>` : ""}
               ${person.nameZh ? `<h4 class="judge-name-zh" lang="zh-Hant">${escapeHTML(person.nameZh)}</h4>` : ""}
               ${person.nameEn ? `<p class="judge-name-en" lang="en">${escapeHTML(person.nameEn)}</p>` : ""}
               ${person.affiliationZh ? `<p class="judge-affiliation judge-affiliation-zh" lang="zh-Hant">${escapeHTML(person.affiliationZh)}</p>` : ""}

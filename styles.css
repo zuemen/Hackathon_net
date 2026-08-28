@@ -8311,6 +8311,53 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
   border-radius: 0;
 }
 
+#judges [data-judges-list] .judge-card-featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.55fr);
+  border-color: rgba(255, 201, 77, 0.48);
+  background: linear-gradient(135deg, rgba(17, 43, 72, 0.96), rgba(7, 25, 45, 0.82));
+  box-shadow: 0 18px 44px rgba(1, 10, 21, 0.28), inset 0 1px 0 rgba(255, 201, 77, 0.12);
+}
+
+#judges [data-judges-list] .judge-card-featured picture {
+  height: 100%;
+  min-height: 360px;
+  aspect-ratio: auto;
+}
+
+#judges [data-judges-list] .judge-card-featured .judge-card-copy {
+  justify-content: center;
+  padding: clamp(24px, 4vw, 48px);
+}
+
+#judges [data-judges-list] .judge-card-featured .judge-name-zh {
+  font-size: clamp(1.65rem, 3vw, 2.4rem);
+}
+
+#judges [data-judges-list] .judge-card-featured .judge-name-en {
+  font-size: 1.05rem;
+}
+
+.judge-role {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: var(--gold-400);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.judge-role span + span::before {
+  margin-right: 8px;
+  color: rgba(255, 255, 255, 0.36);
+  content: "／";
+}
+
 /* Wei-Ting Wu's supplied portrait includes generous white margins. Keep the
    source asset intact and tighten only its card presentation. */
 #judges .judge-card img[src*="mentor-wei-ting-wu"] {
@@ -8535,6 +8582,29 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
 
   #judges .judge-affiliation-zh {
     margin-top: 10px;
+  }
+
+  #judges [data-judges-list] .judge-card-featured {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  #judges [data-judges-list] .judge-card-featured picture {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1;
+  }
+
+  #judges [data-judges-list] .judge-card-featured img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #judges [data-judges-list] .judge-card-featured .judge-card-copy {
+    padding: 20px;
   }
 
   .mentor-schedule-heading {

@@ -338,11 +338,11 @@ window.TRANSLATIONS = {
     "workshop0822.group": "講者陣容",
     "workshop0822.count": "6 位講者",
     "judges.title": "Demo Day 評審陣容",
-    "judges.subtitle": "九位來自學界、醫療、顧問、科技、投資與專業服務領域的評審，將共同檢視作品的產業契合度、可信技術可行性、Demo 呈現與問題洞察。",
+    "judges.subtitle": "由評審長與九位來自學界、醫療、顧問、科技、投資與專業服務領域的評審，共同檢視作品的產業契合度、可信技術可行性、Demo 呈現與問題洞察。",
     "judges.group": "評審陣容",
     "judges.pending": "名單依正式公告順序呈現。",
     "judges.sponsors": "贊助夥伴",
-    "judges.toBeAnnounced": "9 位評審",
+    "judges.toBeAnnounced": "1 位評審長＋9 位評審",
     "mentors.group": "Mentor 陣容",
     "mentors.pending": "名單依正式公告順序呈現。",
     "mentors.count": "6 位 Mentor",
@@ -713,11 +713,11 @@ window.TRANSLATIONS = {
     "workshop0822.group": "Speakers",
     "workshop0822.count": "6 Speakers",
     "judges.title": "Demo Day Judging Panel",
-    "judges.subtitle": "Nine judges from academia, healthcare, advisory, technology, investment, and professional services will evaluate industry fit, trustworthy-technology feasibility, demo execution, and problem insight.",
+    "judges.subtitle": "The jury chair and nine judges from academia, healthcare, advisory, technology, investment, and professional services will evaluate industry fit, trustworthy-technology feasibility, demo execution, and problem insight.",
     "judges.group": "Judging Panel",
     "judges.pending": "Listed in the official announced order.",
     "judges.sponsors": "Sponsoring Partners",
-    "judges.toBeAnnounced": "9 Judges",
+    "judges.toBeAnnounced": "1 Jury Chair + 9 Judges",
     "mentors.group": "Mentors",
     "mentors.pending": "Listed in the official announced order.",
     "mentors.count": "6 Mentors",
@@ -752,6 +752,18 @@ window.TRANSLATIONS = {
 };
 
 window.JUDGES = [
+  {
+    nameZh: "詹婷怡",
+    nameEn: "Ting-I Chan",
+    roleZh: "評審長",
+    roleEn: "Jury Chair",
+    affiliationZh: "財團法人人工智慧科技基金會｜董事長",
+    affiliationEn: "Chairperson, Artificial Intelligence Foundation",
+    imageJpg: "assets/judges/ting-i-chan.jpg",
+    imageWebp: "assets/judges/ting-i-chan.webp",
+    featured: true,
+    alt: { "zh-Hant": "詹婷怡 照片", en: "Portrait of Ting-I Chan" }
+  },
   {
     nameZh: "陳怡良",
     nameEn: "Jay Chen",
