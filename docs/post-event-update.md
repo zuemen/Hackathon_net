@@ -17,6 +17,10 @@
 - 評審與 Mentor 資料、公開 HTML、renderPeople 函式與其樣式保留。舊 Finalists 功能保留。
 - README 及規則補充文件的中英文獎項資訊已同步；既有 PDF、品牌圖片及外部字型資源保留，沒有安裝第三方套件。
 
+## 視覺精修
+
+後續視覺精修沿用以下所有雙語 key，沒有新增文案：得獎卡片將獎項、金額與「每隊」合併為同一列，放大隊名並移除重複冠軍徽章；桌機主視覺等比例縮小，Hero 改為單層容器，使賽後訊息與 CTA 可在首屏閱讀。手機浮動 Results 按鈕在得獎區進入視窗後隱藏，離開後恢復，並同步更新鍵盤焦點及 aria-hidden。評審、Mentor 與區塊順序保持原樣。
+
 ## 最終 i18n key 清單
 
 以下新增 45 個 key，皆同時存在於 `zh-Hant` 和 `en`：
@@ -125,4 +129,5 @@ node tests/post-event-browser.cjs
 - 評審、Mentor 資料與公開 HTML、renderPeople 函式對照 Git HEAD 保持一致（忽略 CRLF/LF 差異）。
 
 桌機及手機截圖保留於本機 `artifacts/post-event-results-{1440,390}-{zh-Hant,en}.png` 與 `artifacts/post-event-hero-{1440,390}-{zh-Hant,en}.png`，不納入程式碼提交。既有 artifacts 保留。
+視覺精修後截圖另存為 `artifacts/post-event-polish-{results,hero}-{1440,390}-{zh-Hant,en}.png`。瀏覽器測試也檢查隊名字級、桌機首屏 CTA 及浮動按鈕進出得獎區的行為（包含沒有 IntersectionObserver 的環境）。
 發布方式：提交後推送至 `https://github.com/zuemen/Hackathon_net` 的 `main` 分支。正式網站更新狀態以部署結果為準。

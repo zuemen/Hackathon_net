@@ -268,9 +268,10 @@
         <div class="prize-grid prize-grid-public${group.winners.length === 1 ? " prize-grid-conservative" : ""}">
           ${group.winners.map((winner) => `
             <article class="prize-card${group.featured ? " prize-main" : ""}"${group.featured ? ` data-award-label="${copy(group.awardKey)}"` : ""}>
-              <h3>${copy(group.awardKey)}</h3>
-              ${group.amountKey ? `<p class="prize-amount">${copy(group.amountKey)}</p>` : ""}
-              ${group.countKey ? `<p>${copy(group.countKey)}</p>` : ""}
+              <div class="card-title-row">
+                <h3>${copy(group.awardKey)}</h3>
+                ${group.amountKey ? `<p class="prize-amount">${copy(group.amountKey)}${group.countKey ? ` <span>${copy(group.countKey)}</span>` : ""}</p>` : ""}
+              </div>
               <h4>${copy(winner.nameKey)}</h4>
               ${winner.roleKey ? `<p>${copy(winner.roleKey)}</p>` : ""}
               <p>${copy(winner.descriptionKey)}</p>
@@ -1059,12 +1060,14 @@
     const cta = document.querySelector("[data-mobile-cta]");
     const hero = document.getElementById("hero");
     if (!cta || !hero) return;
+    const results = document.getElementById("results");
     const interactive = cta.matches("a[href], button");
     let requestedVisible = false;
+    let resultsVisible = false;
 
     const setVisible = (visible) => {
       requestedVisible = visible;
-      const show = requestedVisible && window.innerWidth <= 700 && !cta.hidden;
+      const show = requestedVisible && !resultsVisible && window.innerWidth <= 700 && !cta.hidden;
       cta.classList.toggle("is-visible", show);
       cta.setAttribute("aria-hidden", String(!show));
       if (interactive) cta.tabIndex = show ? 0 : -1;
@@ -1078,8 +1081,19 @@
         { threshold: 0.08 }
       );
       observer.observe(hero);
+      if (results) {
+        const resultsObserver = new IntersectionObserver(([entry]) => {
+          resultsVisible = entry.isIntersecting;
+          setVisible(requestedVisible);
+        });
+        resultsObserver.observe(results);
+      }
     } else {
-      const sync = () => setVisible(window.scrollY > hero.offsetHeight * 0.75);
+      const sync = () => {
+        const bounds = results?.getBoundingClientRect();
+        resultsVisible = Boolean(bounds && bounds.top < window.innerHeight && bounds.bottom > 0);
+        setVisible(window.scrollY > hero.offsetHeight * 0.75);
+      };
       sync();
       window.addEventListener("scroll", sync, { passive: true });
       window.addEventListener("resize", sync);

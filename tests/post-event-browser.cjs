@@ -65,14 +65,25 @@ const artifacts = path.resolve(__dirname, '../artifacts');
         assert.equal(state.resultsHidden, false);
         assert.equal(state.order, true);
         assert.equal(state.staleStatus, false);
+        if (width > 820) {
+          await page.evaluate(() => scrollTo(0, 0));
+          assert.ok(await page.locator('#hero .hero-cta').evaluate(n => n.getBoundingClientRect().bottom <= innerHeight), 'Hero CTA must fit in the first desktop viewport');
+        }
+        assert.ok(await page.locator('#results .prize-main').evaluate(n =>
+          parseFloat(getComputedStyle(n.querySelector('h4')).fontSize) > parseFloat(getComputedStyle(n.querySelector('.prize-amount')).fontSize)
+        ), 'Winner name must have greater visual emphasis than the amount');
         if (width <= 820) await page.locator('.nav-toggle').click();
         await page.locator('.site-nav a[href="#results"]').click();
         await page.waitForFunction(() => document.querySelector('#results-title').getBoundingClientRect().top >= document.querySelector('[data-header]').getBoundingClientRect().bottom);
         assert.equal(await page.locator('body').evaluate(n => n.classList.contains('nav-open')), false);
+        if (width <= 700) {
+          await page.waitForFunction(() => document.querySelector('[data-mobile-cta]').getAttribute('aria-hidden') === 'true');
+          assert.equal(await page.locator('[data-mobile-cta]').getAttribute('tabindex'), '-1');
+        }
         if ([1440, 390].includes(width)) {
-          await page.locator('#results').screenshot({ path: path.join(artifacts, `post-event-results-${width}-${locale}.png`) });
+          await page.locator('#results').screenshot({ path: path.join(artifacts, `post-event-polish-results-${width}-${locale}.png`) });
           await page.evaluate(() => scrollTo(0, 0));
-          await page.screenshot({ path: path.join(artifacts, `post-event-hero-${width}-${locale}.png`) });
+          await page.screenshot({ path: path.join(artifacts, `post-event-polish-hero-${width}-${locale}.png`) });
         }
       }
       assert.equal(await page.locator('#judges').innerHTML(), peopleBefore, 'people section changed after locale round trip');
@@ -101,6 +112,28 @@ const artifacts = path.resolve(__dirname, '../artifacts');
       await page.close();
     }
     console.log('PASS static SEO fallbacks and bilingual FAQ');
+    for (const [width, height] of [[1280, 720], [1024, 768]]) {
+      const page = await browser.newPage({ viewport: { width, height }, reducedMotion: 'reduce' });
+      for (const locale of ['zh-Hant', 'en']) {
+        await page.goto(`${base}/?lang=${locale}`);
+        assert.ok(await page.locator('#hero .hero-cta').evaluate(n => n.getBoundingClientRect().bottom <= innerHeight), `${width}x${height}/${locale}: Hero CTA below first fold`);
+      }
+      await page.close();
+    }
+    console.log('PASS laptop first-fold CTA in both languages');
+    // The floating CTA must leave the reading area clear, with and without observers.
+    for (const disableObserver of [false, true]) {
+      const page = await browser.newPage({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
+      if (disableObserver) await page.addInitScript(() => { delete window.IntersectionObserver; });
+      await page.goto(`${base}/?lang=en`, { waitUntil: 'load' });
+      for (const [id, expected] of [['prizes', 'false'], ['results', 'true'], ['tracks', 'false'], ['hero', 'true']]) {
+        // Move past the previous section, not to the anchor's sticky-header offset.
+        await page.locator(`#${id}`).evaluate(n => scrollTo(0, scrollY + n.getBoundingClientRect().top + 1));
+        await page.waitForFunction(value => document.querySelector('[data-mobile-cta]').getAttribute('aria-hidden') === value, expected);
+      }
+      await page.close();
+    }
+    console.log('PASS floating CTA show/hide transitions, including observer fallback');
   } catch (error) {
     console.error(error);
     throw error;
