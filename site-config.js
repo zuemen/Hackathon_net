@@ -9,7 +9,8 @@ window.SITE_CONFIG = {
   venue: "N24 台北方舟",
   venueMapUrl: "https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8D%97%E6%B8%AF%E5%8D%80%E5%B8%82%E6%B0%91%E5%A4%A7%E9%81%93%E4%B8%83%E6%AE%B5100%E8%99%9F",
 
-  selectedTeams: 22,
+  selectedTeams: 20,
+  demoDayTeams: 19,
   teamMin: 3,
   teamMax: 5,
   participantMin: 60,
@@ -26,8 +27,8 @@ window.SITE_CONFIG = {
   challengeRevealScheduleEnabled: false,
   workshopCount: 2,
 
-  showCountdown: true,
-  phase: "screening",
+  showCountdown: false,
+  phase: "post",
   registrationStatus: "closed",
   registrationOverride: "closed",
   registrationOpenAt: "2026-07-08T00:00:00+08:00",
@@ -43,7 +44,41 @@ window.SITE_CONFIG = {
   workshopDates: ["2026-08-15", "2026-08-22"],
 
   prizePoolUsd: 14000,
-  prizePoolMayIncrease: true,
+  prizePoolMayIncrease: false,
+
+  // Array order defines award groups and the official order within each group.
+  results: [
+    {
+      id: "champion", awardKey: "prize.grand.title", amountKey: "prize.grand.amount", featured: true,
+      winners: [{ nameKey: "results.winner.humanId.name", descriptionKey: "results.winner.humanId.description" }]
+    },
+    {
+      id: "runner", awardKey: "prize.runner.title", amountKey: "prize.runner.amount", countKey: "results.each", featured: false,
+      winners: [
+        { nameKey: "results.winner.buluanpay.name", descriptionKey: "results.winner.buluanpay.description" },
+        { nameKey: "results.winner.carbonTrio.name", descriptionKey: "results.winner.carbonTrio.description" }
+      ]
+    },
+    {
+      id: "third", awardKey: "prize.third.title", amountKey: "prize.third.amount", countKey: "results.each", featured: false,
+      winners: [
+        { nameKey: "results.winner.localKing.name", descriptionKey: "results.winner.localKing.description" },
+        { nameKey: "results.winner.stableBook.name", descriptionKey: "results.winner.stableBook.description" },
+        { nameKey: "results.winner.newJeans.name", descriptionKey: "results.winner.newJeans.description" }
+      ]
+    },
+    {
+      id: "special", awardKey: "prize.special.title", amountKey: "prize.special.amount", countKey: "results.each", featured: false,
+      winners: [
+        { nameKey: "results.winner.blocks.name", descriptionKey: "results.winner.blocks.description" },
+        { nameKey: "results.winner.angel.name", descriptionKey: "results.winner.angel.description" }
+      ]
+    },
+    {
+      id: "contribution", awardKey: "results.contribution.award", featured: false,
+      winners: [{ nameKey: "results.contribution.name", roleKey: "results.contribution.role", descriptionKey: "results.contribution.description" }]
+    }
+  ],
 
   showPrizeBreakdown: true,
   showWinnerCount: false,

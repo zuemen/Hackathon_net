@@ -9,7 +9,7 @@
 ### 1．獎金與特別獎
 
 **原規定**：《比賽辦法》載明主現金獎金池為 USD 12,000 起，特別獎以正式公告為準。  
-**→ 現行規定**：總獎金為 USD 14,000+，並將隨贊助加碼；冠軍 1 隊 USD 5,000、亞軍 2 隊各 USD 2,000、季軍 3 隊各 USD 1,000、特別獎 USD 2,000。特別獎隊數與分配方式以正式公告為準。
+**→ 現行規定（賽後確認）**：總獎金為 USD 14,000+；冠軍 1 隊 USD 5,000、亞軍 2 隊各 USD 2,000、季軍 3 隊各 USD 1,000、特別獎 2 隊各 USD 1,000。
 
 ### 2．報名截止時間
 
@@ -67,7 +67,7 @@ This addendum takes precedence over the Competition Rules PDF. Matters not addre
 ### 1. Prize Pool and Special Award
 
 **Previous rule**: The Competition Rules state that the main cash prize pool starts at USD 12,000, with special awards subject to official announcement.  
-**→ Current rule**: The total prize pool is USD 14,000+ and may increase with sponsorship: Champion, 1 team at USD 5,000; Runner-up, 2 teams at USD 2,000 each; Third Place, 3 teams at USD 1,000 each; and a Special Award of USD 2,000. The number of Special Award recipients and allocation method are subject to official announcement.
+**→ Current rule (confirmed after the event)**: The total prize pool is USD 14,000+: Champion, 1 team at USD 5,000; Runner-up, 2 teams at USD 2,000 each; Third Place, 3 teams at USD 1,000 each; and Special Award, 2 teams at USD 1,000 each.
 
 ### 2. Registration Deadline
 

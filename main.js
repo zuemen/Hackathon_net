@@ -259,6 +259,28 @@
       .join("");
   }
 
+  // Explicit inputs keep this renderer independently testable; all copy is escaped.
+  function renderResults(groups, locale, root = document.querySelector("[data-results-root]")) {
+    if (!root) return;
+    const copy = (key) => escapeHTML(t(key, locale));
+    root.innerHTML = groups.map((group) => `
+      <section class="results-group" aria-label="${copy(group.awardKey)}">
+        <div class="prize-grid prize-grid-public${group.winners.length === 1 ? " prize-grid-conservative" : ""}">
+          ${group.winners.map((winner) => `
+            <article class="prize-card${group.featured ? " prize-main" : ""}"${group.featured ? ` data-award-label="${copy(group.awardKey)}"` : ""}>
+              <h3>${copy(group.awardKey)}</h3>
+              ${group.amountKey ? `<p class="prize-amount">${copy(group.amountKey)}</p>` : ""}
+              ${group.countKey ? `<p>${copy(group.countKey)}</p>` : ""}
+              <h4>${copy(winner.nameKey)}</h4>
+              ${winner.roleKey ? `<p>${copy(winner.roleKey)}</p>` : ""}
+              <p>${copy(winner.descriptionKey)}</p>
+            </article>
+          `).join("")}
+        </div>
+      </section>
+    `).join("");
+  }
+
   function localizedValue(value) {
     if (typeof value === "string") return value;
     if (!value || typeof value !== "object") return "";
@@ -322,6 +344,8 @@
   }
 
   function renumberSectionKickers() {
+    // The homepage uses stable editorial numbers, including its hidden archive.
+    if (document.body.classList.contains("landing-home")) return;
     let index = 1;
     document.querySelectorAll("main > section[id]:not([hidden]) .section-kicker").forEach((kicker) => {
       kicker.textContent = kicker.textContent.replace(/^\d+\s*\//, `${String(index).padStart(2, "0")} /`);
@@ -336,7 +360,7 @@
     const phaseMap = {
       screening: { key: "phase.screening", href: null, disabled: true, hideMobile: true },
       "demo-day": { key: "phase.demoday", href: "#venue", disabled: false, hideMobile: false },
-      post: { key: "phase.post", href: null, disabled: true, hideMobile: true }
+      post: { key: "event.post.cta", href: `${assetBase}index.html#results`, disabled: false, hideMobile: false }
     };
     const phaseConfig = phaseMap[phase];
     if (!phaseConfig) return;
@@ -426,7 +450,7 @@
       name: config.eventName || "Trustworthy AI Hackathon｜可信 AI 黑客松",
       startDate: config.eventStart,
       endDate: config.eventEnd,
-      eventStatus: "https://schema.org/EventScheduled",
+      eventStatus: "https://schema.org/EventCompleted",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       location: {
         "@type": "Place",
@@ -639,7 +663,7 @@
   function updateInfoSessionLinks(now = getNow()) {
     const date = config.infoSessionDate || "2026-07-20";
     const endAt = new Date(config.infoSessionEndAt || `${date}T21:00:00+08:00`);
-    const isArchived = now > endAt;
+    const isArchived = config.phase === "post" || now > endAt;
     const showBanner = !isArchived;
     const applyUrl = config.infoSessionApplyUrl || config.registrationUrl || "#rules";
     const showRegistration = showBanner && Boolean(applyUrl);
@@ -694,6 +718,7 @@
     // dedicated FAQ page starts with an empty data container.
     if (!(initial && currentLocale === defaultLocale && faqRoot?.children.length)) renderFaq(currentLocale);
     renderFinalists();
+    renderResults(config.results || [], currentLocale);
     renderPeople("[data-judges-list]", judges);
     renderPeople("[data-mentors-list]", mentors);
     const workshopId = document.documentElement.dataset.workshopId;
@@ -863,7 +888,7 @@
 
   function initCountdown() {
     const el = document.querySelector("[data-countdown]");
-    if (!config.showCountdown) {
+    if (!config.showCountdown || config.phase === "post") {
       if (el) el.hidden = true;
       return;
     }

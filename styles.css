@@ -2473,7 +2473,7 @@ summary:focus-visible {
   box-shadow:0 0 42px rgba(255,209,92,.2);
 }
 .prize-main::before{
-  content:"CHAMPION"; position:absolute; top:14px; left:50%; transform:translateX(-50%);
+  content:attr(data-award-label); position:absolute; top:14px; left:50%; transform:translateX(-50%);
   padding:3px 12px; border-radius:999px; font-size:.68rem; font-weight:900; letter-spacing:.12em;
   color:var(--navy-900); background:var(--gold-400); box-shadow:0 0 18px rgba(255,209,92,.4);
 }
@@ -7384,8 +7384,7 @@ html[lang="en"] #tracks .challenge-card {
   display: none;
 }
 
-/* Confirmed special award: same hierarchy as the podium, with a restrained
-   cyan treatment. Recipient count and allocation are not stated. */
+/* Confirmed special award: same hierarchy as the podium. */
 .prize-podium .prize-special {
   grid-column: 1 / -1;
   order: 4;
@@ -8754,6 +8753,47 @@ body.js-on #partners .reveal.is-visible .partner-category:nth-child(5) {
 
 .content-page .challenge-card {
   scroll-margin-top: 100px;
+}
+
+/* Results reuse prize cards; only adjust flow and spacing for longer copy. */
+@media (min-width: 821px) {
+  .landing-home .site-nav {
+    flex-wrap: wrap;
+    gap: 4px 14px;
+  }
+
+  .landing-home .site-nav a {
+    white-space: nowrap;
+  }
+
+  .landing-home .header-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+#results .results-group + .results-group {
+  margin-top: 28px;
+}
+
+#results .prize-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
+#results .prize-card {
+  position: relative;
+  min-width: 0;
+  align-content: start;
+  overflow-wrap: anywhere;
+}
+
+#results .prize-card h4,
+#results .prize-card p {
+  margin-block: 0;
+}
+
+#results .prize-main h3 {
+  padding-top: 28px;
 }
 
 @media (max-width: 820px) {

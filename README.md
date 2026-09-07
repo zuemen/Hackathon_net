@@ -30,17 +30,17 @@ python -m http.server 8080
 - 預設語言：繁體中文。
 - 活動日期：2026/08/29–08/31。
 - 地點：N24 台北方舟。
-- 參賽隊伍：22 隊。
+- 50 隊報名、20 隊入選、19 隊完成 Demo Day 發表。
 - 每隊：3–5 人。
-- 預計參賽者：60-100 人。
+- 活動已於 2026/08/31 結束；首頁直接顯示五組得獎名單。
 - 報名：已於 2026/08/05 23:59（GMT+8）截止。
-- 尚未組隊或未滿員者可先行報名，於賽前工作坊媒合組隊；最終每隊 3–5 人。
+- 報名與組隊流程已結束；歷史規則保留在參賽指南與 FAQ。
 - 每位參賽者限加入一隊。
 - 產業命題：主辦方與產業夥伴共同命題共 6 題；網站僅預告題名與核心問題，完整命題於入選後工作坊公布。
 - 工作坊：2026/08/15 14:00–16:00 線上、2026/08/22 10:30–11:00 報到、11:00–16:00 線下實體。
-- 截止版的 `registrationUrl` 為 `null`，所有報名入口均改為非連結的截止訊息。
+- 賽後版的 `registrationUrl` 為 `null`，首頁主要入口改為得獎名單。
 - 組隊媒合於賽前工作坊進行，網站不再提供外部媒合平台連結。
-- 公開總現金獎金池為 USD 14,000 起；冠軍 USD 5,000、亞軍 2 隊各 USD 2,000、季軍 3 隊各 USD 1,000、特別獎 USD 2,000，並將隨贊助加碼。特別獎隊數與分配方式尚未公告。
+- 公開總獎金池為 USD 14,000+；冠軍 1 隊 USD 5,000、亞軍 2 隊各 USD 2,000、季軍 3 隊各 USD 1,000、特別獎 2 隊各 USD 1,000。可信 AI 治理創新貢獻獎未提供獎金資料，省略金額。
 - 未確認夥伴、資源、硬體、VC 活動流程與工作坊細節均不公開；六題命題的完整背景與方向提示亦不提前公開。
 
 ## 待辦
@@ -53,12 +53,11 @@ python -m http.server 8080
 
 ## CTA 狀態
 
-`main.js` 會依 `site-config.js` 的台灣時區時間控制 Hero 倒數與截止訊息：
+賽後版使用 `phase: "post"`、`showCountdown: false`、`prizePoolMayIncrease: false`。Header 與 Hero 顯示賽後狀態，主要 CTA 指向 `#results`；倒數 DOM 已移除，也不啟動 interval。
 
-- 2026/08/05 23:59:59 前：Hero 顯示距離報名截止的倒數。
-- 2026/08/05 23:59:59 起：Hero 改顯示中英文對應的報名截止與初選通知訊息，不顯示全零倒數。
+`site-config.js` 的 `results` 陣列控制分組、順序、featured 狀態及文字 key；所有雙語內容在 `content.js`，由 `main.js` 的 `renderResults(groups, locale, root)` 渲染。得獎名單不受 feature flag 控制。詳細 key 清單與驗證方式見 [賽後更新紀錄](docs/post-event-update.md)。
 
-截止版已在 `site-config.js` 將 `registrationStatus` 與 `registrationOverride` 設為 `closed`，並將 `challengeRevealScheduleEnabled` 設為 `false`，停用命題卡片的排程鎖定。
+`registrationStatus` 與 `registrationOverride` 維持 `closed`，`challengeRevealScheduleEnabled` 維持 `false`。
 
 ## Feature Flags
 
